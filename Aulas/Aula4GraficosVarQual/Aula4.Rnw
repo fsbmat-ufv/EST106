@@ -1,0 +1,671 @@
+\documentclass[14pt,aspectratio=1610]{beamer}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+%\UseRawInputEncoding
+\usepackage[T1]{fontenc}
+\usepackage{Sweave}
+\usepackage{animate}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[toc,page,title,titletoc]{appendix}
+%\usepackage[fixlanguage]{babelbib}
+%\usepackage[pdftex]{color}
+\usepackage{dsfont}
+\usepackage{esvect}
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
+%\usepackage{geometry, calc, color, setspace}%
+%\geometry{a4paper, headsep=1.0cm, footskip=1cm, lmargin=3cm, rmargin=2cm, tmargin=3cm, bmargin=2cm}
+\usepackage{graphicx}
+\usepackage{indentfirst}%Para indentar os parágrafos automáticamente
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{listings}%Inserir codigo do R no latex
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{natbib}
+\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
+\bibliographystyle{abbrvnat}
+%\usepackage{csquotes}
+%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
+%\addbibresource{bibliografia.bib}
+\usepackage[figuresright]{rotating}
+\usepackage{spalign}
+%\usepackage{pgfpages}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usepackage{color, colortbl}
+\usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+%\usepackage{grffile}
+
+\usepackage[all]{xy}
+
+
+
+\usetheme{Madrid}
+\usecolortheme[RGB={193,0,0}]{structure}
+
+%\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{footline}[text line]{%
+%  \parbox{\linewidth}{\vspace*{-8pt}\hfill\date{}\hfill\insertshortauthor\hfill\insertpagenumber}}
+\beamertemplatenavigationsymbolsempty
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Proposicao}{Proposição}
+\newtheorem{Definicao}{Definição}
+\newtheorem{Corolario}{Corolário}
+\newtheorem{Demonstracao}{Demonstração}
+\newcommand{\bx}{\ensuremath{\bar{x}}}
+\newcommand{\Ho}{\ensuremath{H_{0}}}
+\newcommand{\Hi}{\ensuremath{H_{1}}}
+
+
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\title{Estatística Básica}
+\author{Prof. Fernando de Souza Bastos\texorpdfstring{\\ fernando.bastos@ufv.br}{}}
+\institute{Instituto de Ciências Exatas e Tecnológicas\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Florestal}{}}
+\date{}
+\newcommand\mytext{Aula 4}
+\newcommand\mytextt{Fernando de Souza Bastos}
+\newcommand\mytexttt{\url{https://maf105.github.io/}}
+
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\mytext
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\mytextt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.35\paperwidth,ht=2.25ex,dp=1ex,right]{site in head/foot}%
+    \usebeamerfont{site in head/foot}\mytexttt\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+\providecommand{\arcsin}{} \renewcommand{\arcsin}{\hspace{2pt}\textrm{arcsen}}
+\providecommand{\sin}{} \renewcommand{\sin}{\hspace{2pt}\textrm{sen}}
+%\newtheorem{Teorema}{Teorema}
+%\newtheorem{Proposicao}{Proposição}
+%\newtheorem{Definicao}{Definição}
+%\newtheorem{Corolario}{Corolário}
+%\newtheorem{Demonstracao}{Demonstração}
+
+\titlegraphic{\hspace*{8cm}\href{https://fsbmat-ufv.github.io/}{\includegraphics[width=2cm]{figs/mylogo.png}}
+}
+
+
+\usepackage{hyperref,bookmark}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=red,
+  filecolor=blue,
+  urlcolor=blue,
+}
+
+% Layout da pagina
+\hypersetup{pdfpagelayout=SinglePage}
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\frame{\titlepage}
+
+\begin{frame}{}
+\frametitle{\bf Sumário}
+\tableofcontents
+\end{frame}
+
+\section{Introdução}
+\begin{frame}{}
+\frametitle{Visualizações Gráficas}
+\begin{block}{}
+\justifying
+Gráficos e tabelas são uma constante em periódicos como jornais diários, revistas, periódicos técnicos e relatórios, acadêmicos ou não. Apesar disso, não existe uma teoria complexa sobre gráficos nos livros de Matemática e/ou Estatística. Na verdade, não existe muita teoria. No entanto, essa é uma parte essencial na formação de qualquer profissional. Na verdade, é essencial para a formação de qualquer cidadão.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Visualizações Gráficas}
+\begin{block}{}
+\justifying
+As técnicas, os conceitos e o conteúdo sobre visualizações gráficas fazem parte da Estatística Descritiva e, conforme \cite{unwin}, é parte essencial da Análise de Dados.
+\end{block}
+\pause
+\begin{block}{Estatística Descritiva}
+\justifying
+A Estatística Descritiva emprega métodos numéricos e gráficos para investigar padrões em um conjunto de dados, resumir informações e apresentar resultados de maneira apropriada. 
+\end{block}
+\pause
+\begin{block}{}
+\justifying
+Um Gráfico Estatístico é uma representação visual dos dados e, tem a vantagem de, rápida e concisamente, informar sobre sua variabilidade. 
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Visualizações Gráficas}
+\begin{block}{Cuidado!}
+\justifying
+Existem vários tipos e formatos de gráficos e, tanto a escolha quanto a forma como são visualizados podem ter uma influência importante nas conclusões tiradas em relação a análise dos dados. Não há limites para o número de possibilidades de interpretações. Isso significa que você precisa adquirir experiência na criação e visualização de gráficos para aprender a apreciar o que eles podem e não podem mostrar.
+\end{block}
+\pause
+\begin{block}{}
+\justifying
+Não é o que você olha que importa, é o que você vê.
+\begin{flushright}
+Henry David Thoreau
+\end{flushright}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Visualizações Gráficas}
+\begin{block}{}
+\justifying
+Assim, a depender do tipo de variável considerada, temos diferentes tipos de gráficos. Veremos alguns a partir de agora!
+\end{block}
+\end{frame}
+
+\section{Gráficos para Variáveis Qualitativas}
+\subsection{Gráfico de Barras}
+\begin{frame}{}
+\frametitle{Gráfico de Barras}
+\begin{block}{}
+\justifying
+Tomemos como ilustração a variável Y: grau de instrução da Tabela \href{https://raw.githack.com/maf105/maf105.github.io/master/Aulas_MAF105/Aula1/CompanhiaMB.html}{CompanhiaMB}. Para organizar os dados provenientes de uma variável qualitativa, é usual fazer uma tabela de frequências, como a Tabela abaixo, antes de construir os gráficos.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Distribuições de Frequências}
+\vspace{-0.5cm}
+\begin{block}{}
+\justifying
+\begin{table}[H]
+\caption{Frequências e porcentagens dos 36 empregados da seção de orçamentos da Companhia MB segundo o grau de instrução.}
+\label{tab2}
+\begin{tabular}{c|c|c|c}
+\hline
+Grau de   &Frequência&Proporção&Porcentagem\\
+instrução &$n_{i}$   &$f_{i}$  &$100f_{i}$ \\
+\hline
+Fundamental&12       &0,3333   &33,33      \\
+Médio      &18       &0,5000   &50,00      \\
+Superior   & 6       &0,1667   &16,67      \\
+\hline
+Total      &36       &1,0000   &100,00     \\
+\hline
+\end{tabular}
+\subcaption*{\textbf{Fonte:} \cite{morettin2017estatistica}}
+\end{table}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Gráfico de Barras}
+\begin{block}{}
+\justifying
+O gráfico em barras consiste em construir retângulos ou barras, em que uma das dimensões é proporcional à magnitude a ser representada $(n_{i}\ \textrm{ou}\ f_{i}),$ sendo a outra arbitrária, porém igual para todas as barras. Essas barras são dispostas paralelamente umas às outras, horizontal ou verticalmente. Na próxima Figura temos o gráfico em barras (verticais) para a variável ``Grau de Instrução''.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Gráfico de Barras}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<bp1, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+#load(url(description = "https://www.ime.usp.br/~pam/dados.RData"))
+tab2_1<-read.table("CompanhiaMB.csv", dec=",", sep=";",h=TRUE)
+#head(tab2_1)
+x <- xtabs(~grau_instrucao, data=tab2_1)
+bp<- barplot(
+  table(tab2_1$grau_instrucao),
+  ylab="Frequência",
+  cex.names=0.9,
+  names.arg = c("Fundamental","Médio", "Superior"),
+  col=c("green", "red", "blue"),
+  border=NA,
+  main="FIG 1: Gráfico em barras para a variável Y: grau de instrução.",
+  axes=TRUE,
+  ylim=c(0,20),
+  sub = "Fonte: Morettin (2017)"
+  )
+## Acrescenta texto ao gráfico que está aberto.
+text(x=c(bp), y=x, labels=x, pos=3, cex = 1.5)
+@
+\end{center}
+% \justifying
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.5]{Fig3}
+%     \caption{Gráfico em barras para a variável $Y:$ grau de instrução (\cite{Morettin09}).}
+%     \label{Fig3_ex}
+%   \end{figure}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Gráfico de Barras}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<bpHorizontal, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+#load(url(description = "https://www.ime.usp.br/~pam/dados.RData"))
+tab2_1<-read.table("CompanhiaMB.csv", dec=",", sep=";",h=TRUE)
+#head(tab2_1)
+y <- xtabs(~grau_instrucao, data=tab2_1)
+bp<- barplot(
+  table(tab2_1$grau_instrucao),
+  xlab="Frequência",
+  cex.names=0.9,
+  names.arg = c("Fundamental","Médio", "Superior"),
+  col=c("green", "red", "blue"),
+  border=NA,
+  main="FIG 1: Gráfico em barras para a variável Y: grau de instrução.",
+  axes=TRUE,
+  horiz = TRUE,
+  xlim=c(0,20),
+  sub = "Fonte: Morettin (2017)"
+  )
+## Acrescenta texto ao gráfico que está aberto.
+text(y=c(bp), x=y, labels=y, pos=4, cex = 1.5)
+@
+\end{center}
+% \justifying
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.5]{Fig3}
+%     \caption{Gráfico em barras para a variável $Y:$ grau de instrução (\cite{Morettin09}).}
+%     \label{Fig3_ex}
+%   \end{figure}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Gráficos de Barras}
+\begin{block}{}
+\justifying
+O conjunto de dados Fleiss93 do pacote meta contém detalhes de sete estudos sobre o uso de aspirina após infarto do miocárdio. A Figura abaixo representa um gráfico de barras dos tamanhos dos estudos, com os estudos ordenados pelo número total de pacientes. 
+\end{block}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.3\linewidth}
+<<bp2, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+data(Fleiss93, package="meta")
+Fleiss93 <- within(Fleiss93, {
+total <- n.e + n.c
+st <- reorder(study, -(total)) })
+library(ggplot2)
+ggplot(Fleiss93, aes(st, total, fill=st)) + geom_bar(stat="identity", show.legend = FALSE) +
+xlab("") + ylab("") + ylim(0,20000) +
+  ggtitle("FIG 2: Gráfico de Barras com o tamanho de 7 estudos sobre \n infarto do miocárdio", subtitle = "Fonte:  Unwin (2015)")
+@
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{Gráfico de Barras}
+\frametitle{}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<bp3, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+data(mtcars)
+mtcars <- within(mtcars, {
+  am <- factor(am, labels=c('Automático','Manual'))
+})
+mtcars <- within(mtcars, {
+  vs <- factor(vs, labels=c('Não','Sim'))
+})
+par(bg="#fdf6e3") 
+
+contagem = table(mtcars$am)
+nomes = levels(mtcars$am)
+porcent = round(prop.table(contagem)*100,2)
+rotulo=paste(nomes," (",porcent,"%",")",sep="")
+barras<-barplot(table(mtcars$am), ylab="Frequência", main="FIG 3: Tipo de Câmbio", col=c("red","blue"), sub = "Fonte: Dados mtcars do R", ylim = c(0,20))
+text(barras, 0, rotulo,cex=1,pos=3,col ="#ffffff")
+
+@
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Gráficos de Barras}
+\begin{block}{}
+\justifying
+Os gráficos de barras são talvez o tipo de visualização de dados mais comumente usado. No entanto, para a representação de variáveis qualitativas, há também o gráfico de setores, popularmente conhecido como gráfico de pizza.
+\end{block}
+\end{frame}
+
+\subsection{Gráfico de Pareto}
+\begin{frame}{}
+\frametitle{Gráfico de Pareto}
+\begin{block}{}
+\justifying
+Um gráfico de Pareto é um gráfico de barras em que as barras são ordenadas da maior frequência de ocorrência para a menor frequência de ocorrência. No gráfico de Pareto também acrescentamos uma linha acima das barras com a frequência acumulada da variável.
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Gráfico de Pareto}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<pareto, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+############################################
+############################################
+tab2_1<-read.table("CompanhiaMB.csv", dec=",", sep=";",h=TRUE)
+x <- xtabs(~grau_instrucao, data=tab2_1)
+x <- as.data.frame(x)
+library(tidyverse)
+
+df <- x %>% 
+  arrange(desc(Freq)) %>%
+  mutate(
+    grau_instrucao = factor(grau_instrucao, levels=grau_instrucao),
+    cumulative = cumsum(Freq) / sum(Freq)
+  ) 
+
+f <- max(df$Freq)+18 # or df$Freq[1], as it is sorted descendingly
+ggplot(df, aes(x=grau_instrucao)) +  theme_bw(base_size = 12)+
+  geom_bar(aes(y=Freq, fill=grau_instrucao), stat="identity",show.legend = FALSE) +
+  geom_path(aes(y=cumulative*f, group=1),colour="red", size=0.9) +
+  geom_point(aes(y=cumulative*f, group=1),colour="red", size = 2.5) +
+  scale_y_continuous("Frequência", sec.axis = sec_axis(~./f, labels = scales::percent), n.breaks = 13) +
+  #scale_fill_grey() +
+  ggtitle("FIG 2: Gráfico de Pareto para a variável grau de instrução", subtitle = "Fonte: Elaborado pelo Autor")+
+  geom_text(aes(label=sprintf('%.0f%%', cumulative*100), y=cumulative*f), colour='black', nudge_y = 1.5, cex = 5) +
+  geom_text(aes(label=sprintf('%.0f%%', Freq/sum(Freq)*100), y=Freq), nudge_y = -1, cex = 5) +
+  theme(
+    axis.text = element_text(size=12),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.title.x=element_blank()
+  )
+############################################
+#############################################
+# tab2_1<-read.table("CompanhiaMB.csv", dec=",", sep=";",h=TRUE)
+# #head(tab2_1)
+# x <- xtabs(~grau_instrucao, data=tab2_1)
+# x <- as.data.frame(x)
+# library(tidyverse)
+# d <- arrange(x, desc(Freq)) %>%
+#         mutate(
+#                 cumsum = cumsum(Freq),
+#                 freq = round(Freq / sum(Freq), 3),
+#                 cum_freq = cumsum(freq)
+#                )
+# ## bar plot, pc will hold x values for bars
+# pc = barplot(d$Freq,  
+#              width = 1, space = 0.2, border = NA, axes = F,
+#              ylim = c(0, 1.05 * max(d$cumsum, na.rm = T)), 
+#              ylab = "Valores Acumulados" , cex.names = 0.9, 
+#              names.arg = d$grau_instrucao,
+#              col=c("green", "red", "blue"),
+#              main="FIG 2: Gráfico de Pareto para a variável grau de instrução", sub = "Fonte: Elaborado pelo Autor")
+# 
+# ## Cumulative counts line 
+# lines(pc, d$cumsum, type = "b", cex = 0.9, pch = 20, col="cyan4")
+# 
+# ## Framing plot
+# box(col = "grey62")
+# 
+# ## adding axes
+# axis(side = 2, at = c(0, d$cumsum), las = 1, col.axis = "grey62", col = "grey62", cex.axis = 0.8)
+# axis(side = 4, at = c(0, d$cumsum), labels = paste(c(0, round(d$cum_freq * 100)) ,"%",sep=""), 
+#      las = 1, col.axis = "cyan4", col = "cyan4", cex.axis = 0.8)
+
+@
+\end{center}
+% \justifying
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.5]{Fig3}
+%     \caption{Gráfico em barras para a variável $Y:$ grau de instrução (\cite{Morettin09}).}
+%     \label{Fig3_ex}
+%   \end{figure}
+\end{block}
+\end{frame}
+
+\subsection{Gráfico de Barras Empilhadas}
+\begin{frame}{}
+\frametitle{Gráfico de Barras Empilhadas}
+%\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\textwidth}
+<<empilhadas, echo=FALSE, width=7,include=TRUE,fig=TRUE>>=
+df <- tab2_1 %>% 
+  group_by(grau_instrucao) %>% 
+  summarise(frequencia = n())
+df <- df %>% mutate(Variavel="Grau de Instrução")
+
+ggplot(df, aes(x = Variavel, y = frequencia, fill = grau_instrucao)) +
+  geom_col() +
+  coord_flip()+
+  geom_text(aes(label = frequencia),
+            position = position_stack(vjust = 0.5)) +
+  scale_fill_brewer(palette = "Set2") +
+  theme_minimal(base_size = 16) +
+  ylab("Frequência") +
+  guides(fill=guide_legend(" "))+
+  xlab(NULL)+
+  ggtitle("Gráfico de Barras Empilhadas")+
+  theme(legend.position="bottom")
+@
+\end{center}
+%\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Gráfico de Barras Empilhadas}
+%\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\textwidth}
+<<empilhadas2, echo=FALSE, width=7,include=TRUE,fig=TRUE>>=
+df <- tab2_1 %>% 
+  group_by(grau_instrucao) %>% 
+  summarise(frequencia = 100*(n()/36))
+df <- df %>% mutate(Variavel="Grau de Instrução")
+
+ggplot(df, aes(x = Variavel, y = frequencia, fill = grau_instrucao)) +
+  geom_col() +
+  coord_flip()+
+  geom_text(aes(label = paste0(round(frequencia, digits = 2), "%")),
+            position = position_stack(vjust = 0.5)) +
+  scale_fill_brewer(palette = "Set2") +
+  theme_minimal(base_size = 16) +
+  ylab("Frequência") +
+  guides(fill=guide_legend(" "))+
+  xlab(NULL)+
+  ggtitle("Gráfico de Barras Empilhadas")+
+  theme(legend.position="bottom")
+@
+\end{center}
+%\end{block}
+\end{frame}
+
+\subsection{Gráfico de Setores}
+\begin{frame}{Gráfico de Setores}
+\frametitle{}
+\begin{block}{}
+\justifying
+O gráfico em setores é comumente utilizado para representar parte de um todo, geralmente em percentagens. Ele é bastante apropriado para mostrar frequências de ocorrências de variáveis qualitativas.
+\end{block}
+\end{frame}
+
+\begin{frame}{Gráfico de Setores}
+\frametitle{}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<pie1, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+data(mtcars)
+mtcars <- within(mtcars, {
+  am <- factor(am, labels=c('Automático','Manual'))
+})
+contagem = table(mtcars$am)
+nomes = levels(mtcars$am)
+dados = data.frame(round(contagem/sum(contagem)*100,2))
+dados <- within(dados, {
+  Var <- factor(Var1, labels=c('Automático','Manual'))
+})
+attach(dados)
+dados <- dados[order(Freq),] 
+detach(dados)
+blank_theme <- theme_minimal()+
+  theme(
+  axis.title.x = element_blank(),
+  axis.title.y = element_blank(),
+  panel.border = element_blank(),
+  panel.grid=element_blank(),
+  axis.ticks = element_blank(),
+  plot.title=element_text(size=14, face="bold")
+  )
+
+
+library(scales)
+pizza<-ggplot(dados, aes(x="", y=Freq, fill=Var))+
+  geom_bar(width = 1, stat = "identity")+
+  coord_polar("y")+ggtitle("Tipo de Câmbio (Pacote mtcars)")
+
+pizza + scale_fill_brewer(palette="Dark2") +  blank_theme +
+  theme(axis.text.x=element_blank()) +
+  geom_text(aes(y = Freq/2 + c(0, cumsum(Freq)[-length(Freq)]), 
+            label = percent(Freq/100)), data = dados, size=5)
+@
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<pie2, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+ni<-table(tab2_1$grau_instrucao) # Calcula a tabela de frequências absolutas e armazena o resultado em 'mytab'
+fi<-prop.table(ni) # Tabela de frequências relativas (f_i)
+p_fi<-100*prop.table(ni) # Porcentagem (100 f_i)
+
+# Adiciona linhas de total
+ni<-c(ni,sum(ni)) 
+fi<-c(fi,sum(fi))
+p_fi<-c(p_fi,sum(p_fi))
+names(ni)[4]<-"Total"
+tab2_2<-cbind(ni,fi=round(fi,digits=2),p_fi=round(p_fi,digits=2))
+labs<-paste(1:3,"(",tab2_2[1:3,1],";",round(tab2_2[1:3,3],1),"%)",sep="")
+pie(table(tab2_1$grau_instrucao),labels=labs, main = "Gráfico em setores para a variável
+Y: grau de instrução.",
+  sub = "Fonte: Morettin (2017)")
+#title("Figura 2.3: Gráfico em setores para a variável Y: grau de instrução")
+legend(-1.1,-0.8,legend=c("1=Fundamental, 2=Médio, 3=Superior"),border=NA,box.col=NA)
+@
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Um procedimento alternativo para resumir um conjunto de valores, com o objetivo de se
+obter uma idéia da forma de sua distribuição, é o ramo-e-folhas. Uma vantagem deste diagrama é que não perdemos (ou perdemos pouca) informação sobre os dados em si.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Diagrama de ramos e folhas para variáveis contínuas}
+\begin{block}{}
+\justifying
+Quando o número de observações é relativamente grande, este diagrama pode ser útil.
+\begin{table}[H]
+\caption{Diagrama de Ramos e Folhas da idade}
+\begin{tabular}{c|ccccccccccccccccc}
+Ramo&\multicolumn{17}{c}{Folhas}\\
+\hline
+2&0&3&5&6&6&7&8&9& & & & & & & & & \\
+3&0&1&1&2&2&3&3&4&4&5&5&6&6&7&7&8&9\\
+4&0&0&1&1&2&3&3&4&6&8& & & & & & & 
+\end{tabular}
+\end{table}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+\begin{table}[H]
+\caption{Diagrama de Ramos e Folhas dos Salários ($\times$ sal. Min)}
+\scalebox{0.6}{%
+\begin{tabular}{c|cccccccc}
+Ramo&\multicolumn{8}{c}{Folhas}\\
+\hline
+ 4&& 00&& 56&&   &&   \\
+ 5&& 25&& 73&&   &&   \\
+ 6&& 26&& 66&& 86&&   \\
+ 7&& 39&& 44&& 59&&   \\
+ 8&& 12&& 46&& 74&& 95\\
+ 9&& 13&& 35&& 77&& 80\\
+10&& 53&& 76&&   &&   \\
+11&& 06&& 59&&   &&   \\
+12&& 00&& 79&&   &&   \\
+13&& 23&& 60&& 85&&   \\
+14&& 69&& 71&&   &&   \\
+15&& 99&&   &&   &&   \\
+16&& 22&&   && 61&&   \\
+17&& 26&&   &&   &&   \\
+18&& 75&&   &&   &&   \\
+19&& 40&&   &&   &&   \\
+20&&   &&   &&   &&   \\
+21&&   &&   &&   &&   \\
+22&&   &&   &&   &&   \\
+23&&   && 30&&   &&   \\
+\end{tabular}}
+\end{table}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Algumas informações que se obtêm deste ramo-e-folhas são:
+\begin{enumerate}
+\item Há um destaque grande para o valor 23,30.\pause
+\item Os demais valores estão razoavelmente concentrados entre 4,00 e 19,40.\pause
+\item Um valor mais ou menos típico para este conjunto de dados poderia ser, por 
+exemplo, 10,00.\pause
+\item Há uma leve assimetria em direção aos valores grandes; a suposição de que estes dados possam ser considerados como amostra de uma população com distribuição simétrica, em forma de sino (a chamada distribuição normal), pode ser questionada.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}%[allowframebreaks]
+\frametitle{\bf Referências}
+\bibliography{Referencias.bib}
+\end{frame}
+
+
+\end{document}

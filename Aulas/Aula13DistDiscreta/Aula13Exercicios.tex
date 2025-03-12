@@ -1,0 +1,236 @@
+\documentclass[14pt,aspectratio=1610]{beamer}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+%\UseRawInputEncoding
+\usepackage[T1]{fontenc}
+%\usepackage{Sweave}
+\usepackage{animate}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[toc,page,title,titletoc]{appendix}
+%\usepackage[fixlanguage]{babelbib}
+%\usepackage[pdftex]{color}
+\usepackage{dsfont}
+\usepackage{esvect}
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
+%\usepackage{geometry, calc, color, setspace}%
+%\geometry{a4paper, headsep=1.0cm, footskip=1cm, lmargin=3cm, rmargin=2cm, tmargin=3cm, bmargin=2cm}
+\usepackage{graphicx}
+\usepackage{indentfirst}%Para indentar os parágrafos automáticamente
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{listings}%Inserir codigo do R no latex
+%\usepackage{slashbox}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{natbib}
+\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
+\bibliographystyle{abbrvnat}
+%\usepackage{csquotes}
+%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
+%\addbibresource{bibliografia.bib}
+\usepackage[figuresright]{rotating}
+\usepackage{spalign}
+%\usepackage{pgfpages}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usepackage{color, colortbl}
+\usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{Lightblue}{RGB}{50, 149, 168}
+%\usepackage{grffile}
+
+\usepackage[all]{xy}
+
+
+
+\usetheme{Madrid}
+\usecolortheme[RGB={193,0,0}]{structure}
+
+%\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{footline}[text line]{%
+%  \parbox{\linewidth}{\vspace*{-8pt}\hfill\date{}\hfill\insertshortauthor\hfill\insertpagenumber}}
+\beamertemplatenavigationsymbolsempty
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Proposicao}{Proposição}
+\newtheorem{Definicao}{Definição}
+\newtheorem{Corolario}{Corolário}
+\newtheorem{Demonstracao}{Demonstração}
+\newcommand{\bx}{\ensuremath{\bar{x}}}
+\newcommand{\Ho}{\ensuremath{H_{0}}}
+\newcommand{\Hi}{\ensuremath{H_{1}}}
+\everymath{\displaystyle}
+
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\title{Estatística I}
+\author{Prof. Fernando de Souza Bastos \texorpdfstring{\\ fernando.bastos@ufv.br}{}}
+\institute{Departamento de Estatística \texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Viçosa}{}}
+\date{}
+\newcommand\mytext{Aula de Exercícios}
+\newcommand\mytextt{Fernando de Souza Bastos}
+\newcommand\mytexttt{\url{https://ufvest.github.io/}}
+
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\mytext
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\mytextt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.35\paperwidth,ht=2.25ex,dp=1ex,right]{site in head/foot}%
+    \usebeamerfont{site in head/foot}\mytexttt\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+\providecommand{\arcsin}{} \renewcommand{\arcsin}{\hspace{2pt}\textrm{arcsen}}
+\providecommand{\sin}{} \renewcommand{\sin}{\hspace{2pt}\textrm{sen}}
+%\newtheorem{Teorema}{Teorema}
+%\newtheorem{Proposicao}{Proposição}
+%\newtheorem{Definicao}{Definição}
+%\newtheorem{Corolario}{Corolário}
+%\newtheorem{Demonstracao}{Demonstração}
+
+\titlegraphic{\hspace*{8cm}\href{https://fsbmat-ufv.github.io/}{\includegraphics[width=2cm]{figs/mylogo.png}}
+}
+
+
+\usepackage{hyperref,bookmark}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=red,
+  filecolor=blue,
+  urlcolor=blue,
+}
+
+% Layout da pagina
+\hypersetup{pdfpagelayout=SinglePage}
+\begin{document}
+%\input{Aula16-concordance}
+
+\frame{\titlepage}
+
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Sabe-se que 30\% dos indivíduos que recebem certo medicamento sofrem com alguns efeitos colaterais. Se esse medicamento for ministrado a cinco pacientes, qual a probabilidade de que no máximo 2 sofram efeitos colaterais?
+\begin{enumerate}
+\item Faça esse cálculo utilizando o modelo Binomial.
+\item Faça esse cálculo utilizando o modelo de Poisson. (Lembre-se que $\lambda=np$)
+\end{enumerate}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Uma empresa vende sementes de Jatobá (\emph{Hymenaea courbaril}) em pacotes com 5 unidades. Seja $X$ a variável aleatória discreta que informa o número de sementes que germinam por pacote, cuja distribuição de probabilidades é dada na tabela a seguir.
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{c|cccccc|c}
+$x$&0&1&2&3&4&5&Total \\ \hline
+$P\left[X=x\right]$&0,01&0,01&0,03&0,06&0,29&0,60&1,00\\
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+\item Se a firma vender 200 pacotes de sementes, em quantos destes pacotes espera-se que germinarão no máximo 2 sementes?
+\item Se a firma garante que um número mínimo de $x_0$ sementes germinarão por pacote, qual deve ser este valor $x_0$ para que $95\%$ dos pacotes atendam à esta garantia?
+\item Calcule a seguinte probabilidade condicional: $P \left[X=5\left.\right|3\leq X\leq5\right]$
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+\begin{table}[!ht]
+\centering
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{c|cccccc}
+\hline
+		$x_i$ & 4 & 5 & 6 & 7 & 8 & 9 \\
+\hline
+		 $P\left[X=x_i\right]$ & $\frac{1}{12}$ & $\frac{1}{12}$ & $\frac{1}{4}$ & $\frac{1}{4}$ & $k$ & $k$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+\item O valor de $k$ para que a distribuição acima seja uma distribuição de probabilidades?
+\item Se para $X$ carros lavados o funcionário tem um ganho de $2X-1$ reais, qual seria o seu ganho médio esperado?
+\item Se, devido a problemas financeiros, o proprietário do lava a jato precisar reduzir em 10\% o ganho do funcionário por carro lavado, qual seria agora o seu ganho médio esperado?
+\item  Enuncie pelo menos duas propriedades de variância, $V\left[X\right]$.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Um inspetor de qualidade extrai uma amostra de 10 tubos armazenados num depósito onde, de acordo com os padrões de produção, se espera um total de 20\% de tubos defeituosos. Pede-se:
+\begin{enumerate}
+\item Qual é a probabilidade de que não mais do que 2 tubos extraídos sejam defeituosos?
+\item Quantos tubos defeituosos espera-se encontrar nessa amostra?
+\item Cite as duas principais diferenças entre o modelo Binomial e o modelo de Poisson.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Suponha que, em média, uma delegacia de uma pequena cidade prenda 1 indivíduo por dia com sintomas de embriaguez. Qual a probabilidade de que nessa cidade:
+\begin{enumerate}
+\item\label{examp:Poi3a} em um certo dia sejam presos dois indivíduos com sintomas de embriaguez?
+\item\label{examp:Poi3b} em um certo dia sejam presos mais que dois indivíduos com sintomas de embriaguez?
+\item\label{examp:Poi3c} em quatro dias sejam presos pelo menos 3 indivíduos com sintomas de embriaguez?
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Suponha que o tempo (em minutos) que um jogador de futebol tem a posse da bola durante os 90 minutos de jogo possa ser aproximado por uma distribui\c{c}\~{a}o de Poisson com m\'{e}dia de tr\^{e}s minutos. A probabilidade de que em um jogo com prorroga\c{c}\~{a}o (120 minutos) um jogador tenha a possa da bola por pelo menos quatro minutos \'{e}:
+\begin{enumerate}
+\begin{multicols}{3}
+\item 0,3711;
+\item 0,4335;
+\item 0,3528;
+\item 0,1906;
+\item 0,0465;
+\item\label{corr03} n.d.r.a.
+\end{multicols}
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\end{document}

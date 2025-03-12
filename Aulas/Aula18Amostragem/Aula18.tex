@@ -1,0 +1,502 @@
+\documentclass[14pt,aspectratio=1610]{beamer}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+%\UseRawInputEncoding
+\usepackage[T1]{fontenc}
+%\usepackage{Sweave}
+\usepackage{animate}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[toc,page,title,titletoc]{appendix}
+%\usepackage[fixlanguage]{babelbib}
+%\usepackage[pdftex]{color}
+\usepackage{dsfont}
+\usepackage{esvect}
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
+%\usepackage{geometry, calc, color, setspace}%
+%\geometry{a4paper, headsep=1.0cm, footskip=1cm, lmargin=3cm, rmargin=2cm, tmargin=3cm, bmargin=2cm}
+\usepackage{graphicx}
+\usepackage{indentfirst}%Para indentar os parágrafos automáticamente
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{listings}%Inserir codigo do R no latex
+%\usepackage{slashbox}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{csquotes}
+\usepackage[citestyle=authoryear,maxcitenames=2,terseinits=true,natbib=true, style=abnt, maxbibnames=99]{biblatex}
+\addbibresource{Referencias/Referencias.bib}
+\usepackage[figuresright]{rotating}
+\usepackage{spalign}
+%\usepackage{pgfpages}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage{color, colortbl}
+\usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{Lightblue}{RGB}{50, 149, 168}
+%\usepackage{grffile}
+
+\usepackage[all]{xy}
+\usepackage{pifont}
+\usepackage{enumitem}
+
+
+\usetheme{Madrid}
+\usecolortheme[RGB={193,0,0}]{structure}
+
+%\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{footline}[text line]{%
+%  \parbox{\linewidth}{\vspace*{-8pt}\hfill\date{}\hfill\insertshortauthor\hfill\insertpagenumber}}
+\beamertemplatenavigationsymbolsempty
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Proposicao}{Proposição}
+\newtheorem{Definicao}{Definição}
+\newtheorem{Corolario}{Corolário}
+\newtheorem{Demonstracao}{Demonstração}
+\newcommand{\bx}{\ensuremath{\bar{x}}}
+\newcommand{\Ho}{\ensuremath{H_{0}}}
+\newcommand{\Hi}{\ensuremath{H_{1}}}
+\everymath{\displaystyle}
+
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\title{Estatística I}
+\author{Prof. Fernando de Souza Bastos \texorpdfstring{\\ fernando.bastos@ufv.br}{}}
+\institute{Departamento de Estatística \texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Viçosa}{}}
+\date{}
+\newcommand\mytext{Aula 18}
+\newcommand\mytextt{Fernando de Souza Bastos}
+\newcommand\mytexttt{\url{https://ufvest.github.io/}}
+
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\mytext
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\mytextt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.35\paperwidth,ht=2.25ex,dp=1ex,right]{site in head/foot}%
+    \usebeamerfont{site in head/foot}\mytexttt\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+\providecommand{\arcsin}{} \renewcommand{\arcsin}{\hspace{2pt}\textrm{arcsen}}
+\providecommand{\sin}{} \renewcommand{\sin}{\hspace{2pt}\textrm{sen}}
+%\newtheorem{Teorema}{Teorema}
+%\newtheorem{Proposicao}{Proposição}
+%\newtheorem{Definicao}{Definição}
+%\newtheorem{Corolario}{Corolário}
+%\newtheorem{Demonstracao}{Demonstração}
+
+\titlegraphic{\hspace*{8cm}\href{https://fsbmat-ufv.github.io/}{\includegraphics[width=2cm]{figs/mylogo.png}}
+}
+
+
+\usepackage{hyperref,bookmark}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=red,
+  filecolor=blue,
+  urlcolor=blue,
+}
+
+% Layout da pagina
+\hypersetup{pdfpagelayout=SinglePage}
+\begin{document}
+%\input{Aula21-concordance}
+
+\frame{\titlepage}
+
+\begin{frame}{}
+\frametitle{\bf Sumário}
+\tableofcontents
+\end{frame}
+
+\section{Introdução}
+\begin{frame}{}
+    \begin{block}{}
+    \justifying
+A Estatística constitui-se numa excelente ferramenta quando existem problemas de variabilidade na produção. É uma ciência que trata da coleta e da interpretação de dados, ajudando no estabelecimento de conclusões e de normas sobre o problema estudado.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Conceitos Fundamentais}
+    \begin{block}{}
+    \justifying
+\begin{itemize}[label={\ding{226}}]
+\item \textbf{População:} conjunto de todos os elementos sob investigação.
+\item \textbf{Amostra:} subconjunto da população.
+\item \textbf{Variável de interesse:} característica a ser observada em cada indivíduo da amostra.
+\end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Etapas da Análise Estatística}
+    \begin{block}{}
+    \justifying
+\begin{itemize}[label={\ding{228}}]
+\item Definir a população de interesse.\pause
+\item Estabelecer os objetivos da pesquisa.\pause
+\begin{itemize}[label={\ding{226}}]
+\item Definir critérios objetivos sobre quais dados coletar.\pause
+\item Postular a análise estatística a ser utilizada.\pause
+\end{itemize}
+\item Definir o método para coletar as amostras.\pause
+\begin{itemize}[label={\ding{226}}]
+\item Fonte de dados secundários (IBGE, Portal da Transparência, Microdados do ENEM, etc);\pause
+\item Banco de dados de uma empresa (observacional);\pause
+\item Experimentos em laboratórios e/ou campo;\pause
+\item Pesquisas amostrais.
+\end{itemize}
+\end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Etapas da Análise Estatística}
+    \begin{block}{}
+    \justifying
+\begin{itemize}[label={\ding{228}}]
+\item Coletar e organizar os dados.\pause
+\item Analisar os dados.\pause
+\begin{itemize}[label={\ding{226}}]
+\item Análise descritiva e exploratória (o que aconteceu, tem alguma informação inesperada?).\pause
+\item Análise inferencial.\pause
+\end{itemize}
+\end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Conceitos Importantes}
+    \begin{block}{}
+    \justifying
+\begin{itemize}[label={\ding{228}}]
+\item Pesquisa: Coleta de informações sobre uma característica de interesse de unidades de uma população, usando métodos e procedimentos bem definidos. Acompanhado da compilação dessas informações em uma forma resumida útil.\pause
+\item Amostragem: Consiste em selecionar parte de uma população para observar, de modo que seja possível estimar alguma coisa sobre toda a população.\pause
+\item Características desejáveis da amostra:\pause
+\begin{itemize}[label={\ding{227}}]
+\item Capacidade de generalização.\pause
+\item Imparcialidade e representatividade.\pause
+\item Capacidade de medir a precisão das estimativas.
+\end{itemize}
+\end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Como podemos obter amostras adequadas?}
+    \begin{block}{}
+    \justifying
+\tikzstyle{decision} = [diamond, draw, fill=blue!50]
+\tikzstyle{mybox1} = [rectangle, minimum width=5cm, minimum height=1cm, text centered, text width=5cm, draw=black, fill=gray!50]
+\tikzstyle{mybox2} = [rectangle, minimum width=5cm, minimum height=1cm, text centered, text width=5cm, draw=black, fill=green!50]
+\tikzstyle{mybox3} = [rectangle, minimum width=5cm, minimum height=1cm, text centered, draw=black, fill=orange!50]
+\tikzstyle{mybox4} = [rectangle, minimum width=5cm, minimum height=1cm, text centered, text width=5cm, draw=black, fill=green!30]
+\tikzstyle{mybox5} = [rectangle, minimum width=5cm, minimum height=1cm, text centered, text width=5cm, draw=black, fill=orange!30]
+\tikzstyle{line} = [draw, -stealth, thick]
+\tikzstyle{elli}=[draw, ellipse, fill=red!50,minimum height=8mm, text width=5em, text centered]
+\tikzstyle{block} = [draw, rectangle, fill=blue!50, text width=8em, text centered, minimum height=15mm, node distance=10em]
+\begin{tikzpicture}
+\node [mybox1] (n0) {Métodos de Amostragem};
+\node [mybox2, left of=n0, xshift=-8em, yshift=-3.3em] (n1) {Probabilística};
+\node [mybox3, right of=n0, xshift=8em, yshift=-3.3em] (n2) {Não Probabilística};\pause
+\node[mybox4, below of=n1, yshift=-0.5em](n11){Aleatória Simples};\pause
+\node[mybox4,below of=n1,yshift=-3em](n12){Sistemática};\pause
+\node[mybox4,below of=n1,yshift=-5.5em](n13){Estratificada};\pause
+\node[mybox4,below of=n1,yshift=-8em](n14){Por Conglomerados};\pause
+
+\node[mybox5, below of=n2, yshift=-0.5em](n21){Por Conveniência};\pause
+\node[mybox5,below of=n2,yshift=-3em](n22){Intencional};\pause
+\node[mybox5,below of=n2,yshift=-5.5em](n23){Bola de Neve};\pause
+\node[mybox5,below of=n2,yshift=-8em](n24){Por Cotas};
+%arrows
+\path [line] (n0) -- (n1);
+\path [line] (n0) -- (n2);
+\path [line] (n1) -- (n11);
+\path [line] (n2) -- (n21);
+%\draw [arrow] (n1) |-++ (n11);
+%\path [line] (decision1) -| node[yshift=0.5em, xshift=10em] {yes} (process1);
+%\path [line] (decision1) -| node[yshift=0.5em, xshift=-10em] {no} (process2);
+\end{tikzpicture}
+    \end{block}
+\end{frame}
+
+\section{Amostragem Aleatória Simples}
+\begin{frame}{Amostragem Aleatória Simples}
+\begin{block}{}
+    \justifying
+Procedimento do método:
+\begin{description}
+\item[(1)] Selecione uma unidade de $P$
+(população) com probabilidade $1/N$.\pause
+\item[(2)] Repita o passo \textbf{(1)} $n - 1$ vezes, sendo cada seleção independente das anteriores.
+\end{description}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\begin{block}{}
+\justifying
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{Vantagens}: 
+\smallskip
+\begin{itemize}[label={\ding{226}}]
+    \item Simplicidade;
+    \item Permite medir a precisão das estimativas;
+\end{itemize}
+\end{minipage}% % leave no gap
+\begin{minipage}[t]{0.5\textwidth}
+\textbf{Desvantagens}:
+\smallskip
+\begin{itemize}[label={\ding{227}}]
+    \item Custo Elevado (Amostra Dispersa);
+    \item Necessita de cadastro da população.
+\end{itemize}
+\end{minipage}
+\end{block}
+\end{frame}
+
+\begin{frame}{Aplicações}
+    \begin{block}{}
+    \justifying
+\begin{itemize}[label={\ding{228}}]
+\item Qualquer situação em que se tenha um cadastro da população.\pause
+\item Opinião dos alunos sobre alguma política estudantil.\pause
+\item Clima organizacional de uma empresa. \pause
+\item Satisfação dos alunos de Estatística básica com o ensino remoto.\pause
+\item Satisfação dos clientes de uma rede bancária.\pause
+\item Produtos retirados de um lote para inspeção.\pause
+\item Sorteio de pessoas para serem mesários nas eleições.
+\end{itemize}
+    \end{block}
+\end{frame}
+
+\section{Dimensionamento de Uma Amostra}
+\begin{frame}{Dimensionamento de Uma Amostra}
+    \begin{block}{}
+    \justifying
+\begin{minipage}[t]{0.45\textwidth}
+Na amostra, cada unidade é medida, sendo a média e o desvio padrão calculados
+através das seguintes fórmulas, respectivamente:
+\smallskip
+$$\bar{x}=\dfrac{\displaystyle{\sum_{i=1}^{n}x_{i}}}{n}$$
+\end{minipage}% % leave no gap
+\begin{minipage}[t]{0.5\textwidth}
+\begin{align*}
+s&=\sqrt{\dfrac{\displaystyle{\sum_{i=1}^{n}\Big(x_{i}-\bar{x}\Big)^{2}}}{n-1}}\\
+&=\sqrt{\dfrac{\displaystyle{\sum_{i=1}^{n}x_{i}-\frac{\Big(\displaystyle{\sum_{i=1}^{n}x_{i}}\Big)^{2}}{n}}}{n-1}}   
+\end{align*}
+\end{minipage}
+    \end{block}
+\end{frame}
+
+\begin{frame}{}
+\begin{block}{}
+\justifying
+Nas estimativas dos parâmetros de uma população, utilizando-se os resultados de uma amostra, há sempre um erro envolvido, denominado de erro de amostragem ou erro de estimativa, que aparece porque não se avaliou toda a população. Podendo ser estimado através da seguinte expressão:
+\end{block}
+\pause
+\begin{block}{}
+\begin{align*}
+e=t_{\frac{\alpha}{2}}s(\bar{x})=t_{\frac{\alpha}{2}}\dfrac{s}{\sqrt{n}},
+\end{align*}
+em que,\pause
+\begin{itemize}[label={\ding{228}}]
+    \item $e$ é erro de estimativa da média da população com base nos resultados de uma amostra de tamanho n;\pause
+    \item $t_{\frac{\alpha}{2}}$ é o quantil $\frac{\alpha}{2}$ na extremidade da cauda à direita da distribuição $t-$student com $n_{0}-1$ graus de liberdade;\pause
+    \item $s$ é o desvio-padrão de uma amostra piloto de tamanho $n_{0}.$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+    \begin{block}{}
+    \justifying
+O erro de amostragem $(e)$ pode ser pré fixado de acordo com os objetivos do
+estudo, permitindo assim, calcular o tamanho de uma amostra necessária para fornecer uma estimativa da média da população de acordo com um nível de significância $\alpha$, como segue:
+\begin{align*}
+    n=\Big(\dfrac{t_{\frac{\alpha}{2}s}}{e}\Big)^{2}
+\end{align*}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Exemplo}
+    \begin{block}{}
+    \justifying
+Para que o erro ao estimar o peso médio dos estudantes da Universidade
+fosse de, no máximo $3,0$ kg, o dimensionamento da amostra poderia ser feito com base numa amostra piloto constituída por $n_0 = 10$ estudantes $(75, 82, 94, 66, 81, 77, 68, 98, 84, 80),$ por exemplo. Deste modo, com base em $\alpha=5\%$, $t_{2,5\%}(9) = 2,26$ e $s = 10,07,$ a amostra deveria ter, no mínimo:
+\begin{align*}
+    n=\Big(\dfrac{2,26\times 10,07}{3}\Big)^{2}=59
+\end{align*}
+    \end{block}
+\end{frame}
+
+\section{Amostragem Sistemática}
+\begin{frame}{Amostragem Sistemática}
+    \begin{block}{}
+    \justifying
+Procedimento do método:
+Selecione uma unidade de partida $r$ ao
+acaso entre 1 e K, com probabilidade
+1/K.
+2. Selecione cada K-ésima unidade do
+cadastro a partir da primeira selecionada,
+isto é, r + K, r + 2K, etc.
+    \end{block}
+\end{frame}
+
+\begin{frame}{}
+\begin{block}{}
+\justifying
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{Vantagens}: 
+\smallskip
+\begin{itemize}[label={\ding{226}}]
+    \item Simplicidade;
+    \item Fácil de Estimar quantidades populacionais (Exceto Va\-riân\-cia);
+    \item Cadastro pode ser construído junto com a amostra.
+\end{itemize}
+\end{minipage}% % leave no gap
+\begin{minipage}[t]{0.5\textwidth}
+\textbf{Desvantagens}:
+\smallskip
+\begin{itemize}[label={\ding{227}}]
+    \item Custo Elevado (Amostra Dispersa);
+    \item Difícil para estimar a precisão da estimação;
+    \item A Periodicidade no cadastro pode impactar nas estimativas.
+\end{itemize}
+\end{minipage}
+\end{block}
+\end{frame}
+
+\begin{frame}{Aplicações}
+    \begin{block}{}
+    \justifying
+\begin{itemize}[label={\ding{228}}]
+\item Avaliação da qualidade de peças em uma linha de produção.\pause
+\item Avaliação de lotes de produtos que chegam em sequência.\pause
+\item Pesquisas de boca de urna.\pause
+\item Pode substituir a amostragem aleatória simples.\pause
+\item Plantas em um pomar ou lavoura.\pause
+\item Animais que passam por um corredor.\pause
+\item Pessoas em um teatro/cinema.
+\end{itemize}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Exemplo}
+    \begin{block}{}
+    \justifying
+A amostra sistemática apresenta características parecidas com a amostra
+aleatória simples, porém por um processo mais rápido e mais simples. Por exemplo, se for retirada uma amostra de 1.000 fichas de uma população de 5.000 fichas, pode-se retirar sistematicamente, uma ficha a cada cinco fichas (5000/1000 = 5).
+    \end{block}
+\end{frame}
+
+\section{Amostragem Aleatória Estratificada}
+\begin{frame}{Amostragem Aleatória Estratificada}
+    \begin{block}{}
+    \justifying
+Quando a população for heterogênea, não se deve usar a amostra aleatória
+simples ou a amostragem Sistemática, devido à baixa precisão das estimativas obtidas. Nesta situação, deve-se dividir a população em subpopulações de forma que dento das subpopulações haja homogeneidade.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Amostragem Aleatória Estratificada}
+    \begin{block}{}
+    \justifying
+Procedimento do método:
+\begin{description}
+    \item[1.~]Particione a população $U$ em $H$ grupos disjuntos e homogêneos, chamados de estratos.\pause
+    \item[2.~]Selecione uma amostra dentro de cada um dos estratos, independentemente.\pause
+    \item[3.~]A amostra a ser pesquisada é a união das amostras selecionadas nos estratos.\pause
+\end{description}
+Dentro de cada estrato pode ser necessário usar diferentes métodos de
+coleta e/ou amostragem.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Aplicações}
+    \begin{block}{}
+    \justifying
+\begin{itemize}[label={\ding{228}}]
+    \item Sempre que a população puder ser estratificada.\pause
+    \item Pesquisas eleitorais.\pause
+    \item Clima organizacional em diferentes setores de uma empresa.\pause
+    \item Pesquisas de opinião em populações fechadas e estratificadas. Ex. Na UFV podemos tomar como estratos os diferentes departamentos ou cursos.\pause
+    \item Amostragem de árvores por talhão na floresta.\pause
+    \item Amostragem de animais por rebanho.
+\end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Algumas medidas relacionadas aos estratos}
+    \begin{block}{}
+    \justifying
+Considerando que os h estratos estejam devidamente organizados, pode-se
+considerar a seguinte notação:
+\begin{itemize}[label={\ding{228}}]
+    \item $N_{h}:$ Número de elementos da população no estrato $h$;\pause
+    \item $n_{h}:$ Número de elementos da amostra no estrato $h$;\pause
+    \item $N=\displaystyle{\sum_{h=1}^{H}N_{h}}:$ Tamanho da população;\pause
+    \item $n=\displaystyle{\sum_{h=1}^{H}n_{h}}:$ Tamanho da amostra;
+\end{itemize}
+ \end{block}
+\end{frame}
+
+\begin{frame}{Algumas medidas relacionadas aos estratos}
+    \begin{block}{}
+    \justifying
+Em cada estrato, trabalha-se como se o processo envolvesse uma amostra
+aleatória simples. Assim, para o estrato $h,$ o estimador da média populacional $\mu_{h}$ e da variância populacional $\sigma_{h}^{2}$ são:
+\begin{minipage}[t]{0.45\textwidth}
+\smallskip
+$$\bar{x}_{h}=\dfrac{\displaystyle{\sum_{i=1}^{n_h}x_{hi}}}{n_{h}}$$
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{align*}
+s_{h}^{2}&=\dfrac{\displaystyle{\sum_{i=1}^{n_h}\Big(x_{hi}-\bar{x}_{h}\Big)^{2}}}{n_{h}-1}\\
+&=\dfrac{\displaystyle{\sum_{i=1}^{n_h}x_{hi}-\frac{\Big(\displaystyle{\sum_{i=1}^{n_{h}}x_{hi}}\Big)^{2}}{n_{h}}}}{n_{h}-1}  
+\end{align*}
+\end{minipage}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Algumas medidas relacionadas aos estratos}
+\begin{block}{}
+\justifying
+O estimador da média da população $\mu$, chamada de média estratificada, é obtido ponderando-se as médias dos estratos, pelo número de elementos do estrato, ou seja:
+\begin{align*}
+\bar{x}_{est}=\dfrac{\displaystyle{\sum_{h=1}^{H}N_{h}\bar{x}_{h}}}{N}
+\end{align*}
+\end{block}
+\nocite{Apostila}
+\end{frame}
+
+\begin{frame}%[allowframebreaks]
+\frametitle{\bf Referências}
+\printbibliography
+\end{frame}
+
+
+\end{document}

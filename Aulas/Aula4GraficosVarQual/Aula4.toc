@@ -1,0 +1,7 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Introdução}{3}{0}{1}
+\beamer@sectionintoc {2}{Gráficos para Variáveis Qualitativas}{15}{0}{2}
+\beamer@subsectionintoc {2}{1}{Gráfico de Barras}{16}{0}{2}
+\beamer@subsectionintoc {2}{2}{Gráfico de Pareto}{22}{0}{2}
+\beamer@subsectionintoc {2}{3}{Gráfico de Barras Empilhadas}{24}{0}{2}
+\beamer@subsectionintoc {2}{4}{Gráfico de Setores}{26}{0}{2}

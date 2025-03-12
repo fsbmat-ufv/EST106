@@ -1,0 +1,34 @@
+\documentclass[12pt]{report}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsbsy,amsfonts,amsmath,amssymb,amsthm}
+\usepackage{float}
+\usepackage{graphicx}
+
+\begin{document}
+\begin{itemize}
+    \item Slide 22
+\end{itemize}
+
+Quando $n$ tende ao infinito com $E(X_{1}^{4}) < \infty$, podemos analisar o comportamento da expressão $S^{2}$:
+
+$$S^{2} = \frac{n}{n-1} \left[ \frac{1}{n} \sum_{i=1}^{n} x_{i}^{2} - \bar{x}^{2} \right]$$
+
+Primeiro, vamos observar os termos da expressão:
+\begin{enumerate}
+
+\item $\frac{1}{n} \sum_{i=1}^{n} x_{i}^{2}$ representa a média dos quadrados dos elementos da amostra ($x_{i}$).
+
+\item $\bar{x}^{2}$ representa a média amostral ($\bar{x}$) dos elementos da amostra ao quadrado.
+
+Aqui, estamos interessados em como essa expressão se comporta quando $n$ tende ao infinito e $E(X_{1}^{4}) < \infty$.
+
+O termo $\frac{1}{n} \sum_{i=1}^{n} x_{i}^{2}$ se refere à média dos quadrados dos elementos da amostra. Conforme $n$ aumenta, a média dos quadrados tende a se aproximar do quarto momento ($E(X_{1}^{4})$) da distribuição, já que a lei dos grandes números sugere que a média amostral se aproxima do valor esperado.
+
+O termo $\bar{x}^{2}$ representa a média amostral dos elementos da amostra ao quadrado. Assim como explicado anteriormente, à medida que $n$ tende ao infinito, a média amostral se aproxima do valor esperado ($E(X)$), e portanto, $\bar{x}^{2}$ se aproxima de $E(X)^{2}$.
+
+O fator $\frac{n}{n-1}$ na frente da expressão é uma correção para a estimativa de variância quando se trabalha com amostras (em oposição à população completa). Quando $n$ é grande, a diferença entre $n$ e $n-1$ se torna menos significativa, e essa correção tende a 1.
+
+Portanto, sob as condições em que $E(X_{1}^{4}) < \infty$ e quando $n$ tende ao infinito, a expressão $S^{2}$ tende a se aproximar do valor esperado da quarta potência da variável aleatória ($E(X_{1}^{4})$) ou do quarto momento. Em outras palavras, $S^{2}$ se aproxima da variabilidade intrínseca da distribuição, refletindo a dispersão dos valores ao redor do valor esperado.
+\end{enumerate}
+\end{document}

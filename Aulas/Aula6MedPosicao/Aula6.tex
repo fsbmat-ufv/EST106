@@ -1,0 +1,404 @@
+\documentclass[14pt,aspectratio=1610]{beamer}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+%\UseRawInputEncoding
+\usepackage[T1]{fontenc}
+%\usepackage{Sweave}
+\usepackage{animate}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[toc,page,title,titletoc]{appendix}
+%\usepackage[fixlanguage]{babelbib}
+%\usepackage[pdftex]{color}
+\usepackage{dsfont}
+\usepackage{esvect}
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
+%\usepackage{geometry, calc, color, setspace}%
+%\geometry{a4paper, headsep=1.0cm, footskip=1cm, lmargin=3cm, rmargin=2cm, tmargin=3cm, bmargin=2cm}
+\usepackage{graphicx}
+\usepackage{indentfirst}%Para indentar os parágrafos automáticamente
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{listings}%Inserir codigo do R no latex
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{natbib}
+\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
+\bibliographystyle{abbrvnat}
+%\usepackage{csquotes}
+%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
+%\addbibresource{bibliografia.bib}
+\usepackage[figuresright]{rotating}
+\usepackage{spalign}
+%\usepackage{pgfpages}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usepackage{color, colortbl}
+\usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+%\usepackage{grffile}
+
+\usepackage[all]{xy}
+
+
+
+\usetheme{Madrid}
+\usecolortheme[RGB={193,0,0}]{structure}
+
+%\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{footline}[text line]{%
+%  \parbox{\linewidth}{\vspace*{-8pt}\hfill\date{}\hfill\insertshortauthor\hfill\insertpagenumber}}
+\beamertemplatenavigationsymbolsempty
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Proposicao}{Proposição}
+\newtheorem{Definicao}{Definição}
+\newtheorem{Corolario}{Corolário}
+\newtheorem{Demonstracao}{Demonstração}
+\newcommand{\bx}{\ensuremath{\bar{x}}}
+\newcommand{\Ho}{\ensuremath{H_{0}}}
+\newcommand{\Hi}{\ensuremath{H_{1}}}
+\everymath{\displaystyle}
+
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\title{Estatística I}
+\author{Prof. Fernando de Souza Bastos \texorpdfstring{\\ fernando.bastos@ufv.br}{}}
+\institute{Departamento de Estatística \texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Viçosa}{}}
+\date{}
+\newcommand\mytext{Aula 6}
+\newcommand\mytextt{Fernando de Souza Bastos}
+\newcommand\mytexttt{\url{https://ufvest.github.io/}}
+
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\mytext
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\mytextt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.35\paperwidth,ht=2.25ex,dp=1ex,right]{site in head/foot}%
+    \usebeamerfont{site in head/foot}\mytexttt\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+\providecommand{\arcsin}{} \renewcommand{\arcsin}{\hspace{2pt}\textrm{arcsen}}
+\providecommand{\sin}{} \renewcommand{\sin}{\hspace{2pt}\textrm{sen}}
+%\newtheorem{Teorema}{Teorema}
+%\newtheorem{Proposicao}{Proposição}
+%\newtheorem{Definicao}{Definição}
+%\newtheorem{Corolario}{Corolário}
+%\newtheorem{Demonstracao}{Demonstração}
+
+\titlegraphic{\hspace*{8cm}\href{https://fsbmat-ufv.github.io/}{\includegraphics[width=2cm]{figs/mylogo.png}}
+}
+
+
+\usepackage{hyperref,bookmark}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=red,
+  filecolor=blue,
+  urlcolor=blue,
+}
+
+% Layout da pagina
+\hypersetup{pdfpagelayout=SinglePage}
+\begin{document}
+%\input{Aula7-concordance}
+
+\frame{\titlepage}
+
+\begin{frame}{}
+\frametitle{\bf Sumário}
+\tableofcontents
+\end{frame}
+
+\section{Medidas de Posição}
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Vimos que o resumo de dados por meio de tabelas de frequências, ramo-e-folhas e até mesmo através de gráficos fornece muito mais informações sobre o comportamento de uma variável do que a própria tabela original de dados. 
+\nocite{Apostila}
+\end{block}
+\pause
+\begin{block}{}
+\justifying
+Muitas vezes, queremos resumir ainda mais estes dados, apresentando um ou alguns valores que sejam representativos da série toda. \textbf{Quando usamos um só valor, obtemos uma redução drástica dos dados.} Usualmente, emprega-se uma das seguintes medidas de posição (ou localização) central: \bf{média}, \bf{mediana} ou \bf{moda}.
+\end{block}
+\end{frame}
+
+\subsection{Moda}
+\begin{frame}{}
+\frametitle{Moda}
+\begin{block}{}
+\justifying
+A moda é definida como a realização mais frequente do conjunto de valores observados.
+
+\begin{itemize}
+\item No exemplo do número de filhos, $Mo=2.$\pause
+\item Em alguns casos, pode haver 
+mais de uma moda, ou seja, a distribuição dos valores pode ser bimodal, trimodal etc.
+\end{itemize}
+\end{block}
+\end{frame}
+\subsection{Mediana}
+\begin{frame}{}
+\frametitle{Mediana}
+\begin{block}{}
+\justifying
+A mediana é a realização que ocupa a posição central da série de observações, quando
+estão ordenadas em ordem crescente. Assim, se as cinco observações de uma variável forem $3, 4, 7, 8$ e $8,$ a mediana é o valor $7,$ correspondendo à terceira 
+observação. Quando o número de observações for par, usa-se como mediana a média aritmética das duas observações centrais. Acrescentando-se o valor $9$ à série acima, a mediana será $(7 + 8)/2 = 7,5.$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Mediana}
+\begin{block}{}
+\justifying
+Consideremos, agora, as observações ordenadas em ordem crescente. Vamos denotar a
+menor observação por $x_{(1)},$ a segunda por $x_{(2)},$ e assim por diante, obtendo-se
+\begin{equation}\label{est_ordem}
+x_{(1)}\leq x_{(2)}\leq \cdots \leq x_{(n-1)}\leq x_{(n)}.
+\end{equation}
+As observações ordenadas como em (\ref{est_ordem}) são chamadas {\bf estatísticas de ordem}. Com esta notação, a mediana da variável $X$ pode ser definida como:
+\[
+md(X)=\left\{
+\setlength\arraycolsep{0pt}
+\begin{array}{lr}
+X_{(\frac{n+1}{2})},                                             &\quad \textrm{se}\quad $n$\quad \textrm{é impar,}\\
+&\\
+\frac{X_{(\frac{n}{2})}+X_{(\frac{n}{2}+1)}}{2},  &\quad \textrm{se}\quad $n$\quad \textrm{é par.}\\
+\end{array}
+\right.
+\]
+\end{block}
+\end{frame}
+\subsection{Média Aritmética}
+\begin{frame}{}
+\frametitle{Média Aritmética}
+\begin{block}{}
+\justifying
+Finalmente, a média aritmética, conceito familiar ao leitor, é a soma das observações dividida pelo número de observações.
+\end{block}
+\end{frame}
+
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%Neste exemplo, as três medidas têm valores próximos e qualquer uma delas pode ser
+%usada como representativa da série toda. A média aritmética é, talvez, a medida mais usada.
+%Contudo, ela pode conduzir a erros de interpretação. Em muitas situações, a mediana é uma
+%medida mais adequada. Veremos algumas situações que ilustram tal afirmação.
+%\end{block}
+%\end{frame}
+
+\begin{frame}{}
+\frametitle{Média Aritmética}
+\begin{block}{}
+\justifying
+Se $x_{1},\cdots,x_{n}$ são os $n$ valores (distintos ou não) da variável $X,$ a média aritmética, ou simplesmente média, de $X$ pode ser escrita como:
+\begin{equation}
+\bx=\dfrac{x_{1}+\cdots+x_{n}}{n}=\dfrac{\displaystyle \sum_{i=1}^{n}{x_{i}}}{n}
+\end{equation}
+Agora, se tivermos $n$ observações da variável $X,$ das quais $n_{1}$ são iguais a $x_{1},$ $n_{2}$ são iguais
+a $x_{2},$ $n_{k}$ iguais a $x_{k},$ então a média de $X$ pode ser escrita como:
+\begin{equation}
+\bx=\dfrac{n_{1}x_{1}+\cdots+n_{k}x_{k}}{n_{1}+\cdots+n_{k}}=\dfrac{\displaystyle \sum_{i=1}^{k}n_{i}x_{i}}{n}
+\end{equation}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{Observação importante:}
+\justifying
+A mediana é uma medida mais robusta que a média, quando submetida a mudanças nos valores observados ou a incorporação de mais observações no conjunto de dados original.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+\begin{figure}[h]
+\centering
+\caption{Visualização Geométrica da moda, média e mediana de uma função densidade de probabilidade arbitrária}
+\begin{tikzpicture}[scale=1]
+\draw[line width=2, fill=green] (-4.9,1.7) .. controls (-4.2,2.4) and (-4.3,3.9) .. (-3.7,3.9) .. controls (-3,3.9) and (-2.5,2.3) .. (1.1,1.7) .. controls (-1,1.7) and (-2.1,1.7) .. (-4.9,1.7);
+\draw[line width=2] (-4.7,3.95) -- (-2.4,3.95);
+\draw[line width=2] (-3.7,3.95) -- (-3.7,1.2);
+\node at (-0.9,3.4) {\bf{Moda}};
+
+\draw[line width=2, fill=orange] (-4.9,-1.5) .. controls (-4.2,-0.8) and (-4.3,0.7) .. (-3.7,0.7) .. controls (-3,0.7) and (-2.5,-0.9) .. (1.1,-1.5) .. controls (-1,-1.5) and (-2.1,-1.5) .. (-4.9,-1.5);
+%\draw[line width=2] (-4.7,3.95) -- (-2.4,3.95);
+\draw[line width=2] (-2.8,0.5) -- (-2.8,-1.8);
+\node at (-3.5,-0.9) {\Large \bf{$50\%$}};
+\node at (-1.9,-0.9) {\Large \bf{$50\%$}};
+\node at (-0.9,0) {\bf{Mediana}};
+\draw[line width=2, fill=red] (2,0) .. controls (2.7,0.7) and (2.6,2.2) .. (3.2,2.2) .. controls (3.7,2.2) and (4.4,0.5) .. (8,0) .. controls (5.9,0) and (4.8,0) .. (2,0);
+%\draw[line width=2] (-4.7,3.95) -- (-2.4,3.95);
+\draw[line width=2] (-3.7,3.95) -- (-3.7,1.2);
+\draw[line width=2, fill=gray] (3.8,0) -- (3.3,-0.6) -- (4.3,-0.6) -- (3.8,0);
+\draw[line width=2] (3,-0.6) -- (4.6,-0.6);
+\draw[line width=1] (3.2,-0.6) -- (3,-0.8);
+\draw[line width=1] (3.4,-0.6) -- (3.2,-0.8);
+\draw[line width=1] (3.6,-0.6) -- (3.4,-0.8);
+\draw[line width=1] (3.8,-0.6) -- (3.6,-0.8);
+\draw[line width=1] (4,-0.6) -- (3.8,-0.8);
+\draw[line width=1] (4.2,-0.6) -- (4,-0.8);
+\draw[line width=1] (4.4,-0.6) -- (4.2,-0.8);
+\draw[line width=1] (4.6,-0.6) -- (4.4,-0.8);
+\draw (1.5,0.2) .. controls (1.3,0) and (1.3,-0.2) .. (1.5,-0.5);
+\draw (1.3,0.2) .. controls (1.1,0) and (1.1,-0.2) .. (1.3,-0.5);
+\draw (8.2,0.4) .. controls (8.4,0.2) and (8.4,-0.2) .. (8.3,-0.4);
+\draw (8.5,0.4) .. controls (8.7,0.2) and (8.7,-0.2) .. (8.6,-0.4);
+\node at (4.8,2) {\bf{Média}};
+\end{tikzpicture}
+\end{figure}
+\end{block}
+\end{frame}
+
+\section{Propriedades Importantes}
+\subsection{Média Aritmética}
+\begin{frame}{}
+\frametitle{}
+\begin{block}{Propriedade 1:}
+\justifying
+Sejam $X$ e $Y$ variáveis aleatórias e $k$ uma constante. Se $X=Y+k,$ então $\bar{X}=\bar{Y}+k$
+\end{block}
+\pause
+\begin{block}{Demonstração}
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+\bar{X}&=\dfrac{{\displaystyle \sum_{i=1}^{n}x_{i}}}{n}\\ 
+\vspace{0.1cm}
+       &=\dfrac{x_{1}+\cdots+x_{n}}{n}\\ \vspace{0.1cm}
+       &=\dfrac{(y_{1}+k)+\cdots+(y_{n}+k)}{n}\\
+\end{align*}
+\end{minipage}\pause\hfill
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+&=\dfrac{(y_{1}+\cdots+y_{n})+
+(k+\cdots+k)}{n}\\ \vspace{0.1cm}
+&=\dfrac{(y_{1}+\cdots+y_{n})+
+nk}{n}\\ \vspace{0.1cm}
+&=\dfrac{{\displaystyle \sum_{i=1}^{n}y_{i}}}{n}+k=\bar{Y}+k
+\end{align*}
+\end{minipage}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{Propriedade 2:}
+\justifying
+Sejam $X$ e $Z$ variáveis aleatórias e $k$ uma constante. Se $X=kZ,$ então $\bar{X}=k\bar{Z}$
+\end{block}
+\pause
+\begin{block}{Demonstração}
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+\bar{X}&=\dfrac{{\displaystyle \sum_{i=1}^{n}x_{i}}}{n}\\ 
+\vspace{0.1cm}
+       &=\dfrac{x_{1}+\cdots+x_{n}}{n}\\ \vspace{0.1cm}
+       &=\dfrac{(kz_{1})+\cdots+(kz_{n})}{n}\\
+\end{align*}
+\end{minipage}\pause\hfill
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+&=\dfrac{k(z_{1}+\cdots+z_{n})}{n}\\ \vspace{0.1cm}
+&=\dfrac{{\displaystyle k\sum_{i=1}^{n}z_{i}}}{n}=k\bar{Z}
+\end{align*}
+\end{minipage}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{Propriedade 3:}
+\justifying
+Seja $X$ uma variável aleatória qualquer. Considere $e_{i}=x_{i}-\bar{x}$ o i-ésimo desvio. Então $\sum_{i=1}^{n}e_{i}=0.$
+\end{block}
+\pause
+\begin{block}{Demonstração}
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+{\displaystyle \sum_{i=1}^{n}e_{i}}&=
+{\displaystyle \sum_{i=1}^{n}(x_{i}-\bar{x})}\\ 
+\vspace{0.1cm}
+       &={\displaystyle \sum_{i=1}^{n}x_{i}-\sum_{i=1}^{n}\bar{x}}\\ \vspace{0.1cm}
+       &={\displaystyle \sum_{i=1}^{n}x_{i}}-n\bar{x}\\
+\end{align*}
+\end{minipage}\pause\hfill
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+&={\displaystyle \sum_{i=1}^{n}x_{i}}-n \dfrac{{\displaystyle\sum_{i=1}^{n}x_{i}}}{n}\\ \vspace{0.1cm}
+&={\displaystyle \sum_{i=1}^{n}x_{i}}- {\displaystyle\sum_{i=1}^{n}x_{i}}\\ \vspace{0.1cm}
+&=0\\
+\end{align*}
+\end{minipage}
+\end{block}
+\end{frame}
+
+\subsection{Mediana}
+\begin{frame}{}
+\frametitle{}
+\begin{block}{Propriedade 1:}
+\justifying
+Sejam $X$ e $Y$ variáveis aleatórias e $k$ uma constante. Se $X=Y+k,$ então $Md(X)=Md(Y)+k$
+\end{block}
+\pause
+\begin{block}{Propriedade 2:}
+\justifying
+Sejam $X$ e $Z$ variáveis aleatórias e $k$ uma constante. Se $X=kZ,$ então $Md(X)=kMd(Z)$
+\end{block}
+\end{frame}
+
+\subsection{Moda}
+\begin{frame}{}
+\frametitle{}
+\begin{block}{Propriedade 1:}
+\justifying
+Sejam $X$ e $Y$ variáveis aleatórias e $k$ uma constante. Se $X=Y+k,$ então $Mo(X)=Mo(Y)+k$
+\end{block}
+\pause
+\begin{block}{Propriedade 2:}
+\justifying
+Sejam $X$ e $Z$ variáveis aleatórias e $k$ uma constante. Se $X=kZ,$ então $Mo(X)=kMo(Z)$
+\nocite{Morettin09} \nocite{eric}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}%[allowframebreaks]
+\frametitle{\bf Referências}
+\bibliography{Referencias/Referencias.bib}
+\end{frame}
+
+
+\end{document}

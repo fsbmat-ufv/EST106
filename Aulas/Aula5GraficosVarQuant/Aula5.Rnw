@@ -1,0 +1,550 @@
+\documentclass[14pt,aspectratio=1610]{beamer}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+%\UseRawInputEncoding
+\usepackage[T1]{fontenc}
+\usepackage{Sweave}
+\usepackage{animate}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[toc,page,title,titletoc]{appendix}
+%\usepackage[fixlanguage]{babelbib}
+%\usepackage[pdftex]{color}
+\usepackage{dsfont}
+\usepackage{esvect}
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
+%\usepackage{geometry, calc, color, setspace}%
+%\geometry{a4paper, headsep=1.0cm, footskip=1cm, lmargin=3cm, rmargin=2cm, tmargin=3cm, bmargin=2cm}
+\usepackage{graphicx}
+\usepackage{indentfirst}%Para indentar os parágrafos automáticamente
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{listings}%Inserir codigo do R no latex
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{natbib}
+\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
+\bibliographystyle{abbrvnat}
+%\usepackage{csquotes}
+%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
+%\addbibresource{bibliografia.bib}
+\usepackage[figuresright]{rotating}
+\usepackage{spalign}
+%\usepackage{pgfpages}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usepackage{color, colortbl}
+\usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+%\usepackage{grffile}
+
+\usepackage[all]{xy}
+
+
+
+\usetheme{Madrid}
+\usecolortheme[RGB={193,0,0}]{structure}
+
+%\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{footline}[text line]{%
+%  \parbox{\linewidth}{\vspace*{-8pt}\hfill\date{}\hfill\insertshortauthor\hfill\insertpagenumber}}
+\beamertemplatenavigationsymbolsempty
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Proposicao}{Proposição}
+\newtheorem{Definicao}{Definição}
+\newtheorem{Corolario}{Corolário}
+\newtheorem{Demonstracao}{Demonstração}
+\newcommand{\bx}{\ensuremath{\bar{x}}}
+\newcommand{\Ho}{\ensuremath{H_{0}}}
+\newcommand{\Hi}{\ensuremath{H_{1}}}
+
+
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\title{Estatística Básica}
+\author{Prof. Fernando de Souza Bastos\texorpdfstring{\\ fernando.bastos@ufv.br}{}}
+\institute{Instituto de Ciências Exatas e Tecnológicas\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Florestal}{}}
+\date{}
+\newcommand\mytext{Aula 5}
+\newcommand\mytextt{Fernando de Souza Bastos}
+\newcommand\mytexttt{\url{https://maf105.github.io/}}
+
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\mytext
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\mytextt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.35\paperwidth,ht=2.25ex,dp=1ex,right]{site in head/foot}%
+    \usebeamerfont{site in head/foot}\mytexttt\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+\providecommand{\arcsin}{} \renewcommand{\arcsin}{\hspace{2pt}\textrm{arcsen}}
+\providecommand{\sin}{} \renewcommand{\sin}{\hspace{2pt}\textrm{sen}}
+%\newtheorem{Teorema}{Teorema}
+%\newtheorem{Proposicao}{Proposição}
+%\newtheorem{Definicao}{Definição}
+%\newtheorem{Corolario}{Corolário}
+%\newtheorem{Demonstracao}{Demonstração}
+
+\titlegraphic{\hspace*{8cm}\href{https://fsbmat-ufv.github.io/}{\includegraphics[width=2cm]{figs/mylogo.png}}
+}
+
+
+\usepackage{hyperref,bookmark}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=red,
+  filecolor=blue,
+  urlcolor=blue,
+}
+
+% Layout da pagina
+\hypersetup{pdfpagelayout=SinglePage}
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\frame{\titlepage}
+
+\begin{frame}{}
+\frametitle{\bf Sumário}
+\tableofcontents
+\end{frame}
+
+\section{Gráficos para Variáveis Quantitativas}
+\begin{frame}{}
+\frametitle{Visualizações Gráficas}
+\begin{block}{}
+\justifying
+Para variáveis quantitativas podemos considerar uma variedade maior de representações gráficas. Podemos considerar gráficos de barra, gráfico de pontos, gráficos com barras empilhadas, gráficos de dispersão e outros.  
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Visualizações Gráficas}
+\begin{block}{}
+\justifying
+Tomemos como exemplo a variável Z: número de filhos da Tabela \href{https://raw.githack.com/maf105/maf105.github.io/master/Aulas_MAF105/Aula1/CompanhiaMB.html}{CompanhiaMB}.
+\begin{table}[ht]
+\centering
+\caption{Frequências e porcentagens dos
+empregados da seção de orçamentos
+da Companhia MB, segundo
+o número de filhos.}
+\begin{tabular}{c|c|c}
+  \hline
+ $N^{\circ}$ de filhos $(z_{i})$ & Frequência ($n_{f}$) & Porcentagem $(100f_{i})$ \\ 
+  \hline
+  0 & 4 & 20 \\ 
+  1 & 5 & 25 \\ 
+  2 & 7 & 35 \\ 
+  3 & 3 & 15 \\ 
+  5 & 1 & 5  \\ 
+  \hline
+Total& 20 & 100\\
+\hline
+\end{tabular}
+\subcaption*{\textbf{Fonte:} \cite{Morettin09}}
+\end{table}
+\end{block}
+\end{frame}
+
+%\begin{frame}{}
+%\frametitle{Visualizações Gráficas}
+%\begin{block}{}
+%% latex table generated in R 4.0.4 by xtable %1.8-4 package
+%% Sat Jun 26 18:16:51 2021
+%\begin{table}[ht]
+%\centering
+%\begin{tabular}{cc}
+%  \hline
+% Quant. Servidores & Quant. Filhos \\ 
+%  \hline
+%  0 &   4 \\ 
+%  1 &   5 \\ 
+%  2 &   7 \\ 
+%  3 &   3 \\ 
+%  5 &   1 \\ 
+%   \hline
+%\end{tabular}
+%\end{table}
+%\begin{center}
+%\setkeys{Gin}{width=0.5\linewidth}
+%<<bar1, echo=FALSE, out.width=".3\\textwidth"%, pdfcrop=TRUE, fig.width=4,fig.height=3%,include=TRUE,fig=TRUE>>=
+%library(tidyverse)
+%tab2_1<-read.table("CompanhiaMB.csv", dec=","%, sep=";",h=TRUE)
+%df <- as.data.frame(table(tab2_1$n_filhos)) 
+%names(df) <- c("Quant. Servidores", "Quant. %Filhos")
+%df %>% xtable::xtable()
+%@
+%\end{center}
+%\end{block}
+%\end{frame}
+
+\subsection{Gráfico de Barras}
+\begin{frame}{}
+\frametitle{Gráfico de Barras}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<bar1, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+library(tidyverse)
+tab2_1<-read.table("CompanhiaMB.csv", dec=",", sep=";",h=TRUE)
+df <- as.data.frame(table(tab2_1$n_filhos))
+df$Var1 <- as.numeric(as.character(df$Var1))
+#c4 <- c(4,0)
+#df <- rbind(df,c4)
+#df <- df[order(df$Var1, decreasing = F),]
+df %>% 
+  ggplot2::ggplot(aes(Var1, Freq))+
+  geom_bar(stat="identity", fill="steelblue")+ ggtitle("FIG 1: Gráfico em barras para a variável Z: número de filhos.")+
+  geom_text(aes(label=Freq), vjust=-0.3, size=5)+ xlab("Quantidade de Filhos") + ylab("Número de Servidores") + ylim(0,8) + 
+  scale_x_continuous(limits = c(-0.5,5.5), 
+                     breaks = seq(0,5, by=1))+
+  theme_bw()
+@
+\end{center}
+\end{block}
+\end{frame}
+\subsection{Gráficos de Dispersão Unidimensionais}
+\begin{frame}{}
+\frametitle{Gráficos de Dispersão Unidimensionais}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<point1, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+library(tidyverse)
+tab2_1<-read.table("CompanhiaMB.csv", dec=",", sep=";",h=TRUE)
+df <- as.data.frame(table(tab2_1$n_filhos))
+df$Var1 <- as.numeric(as.character(df$Var1))
+#c4 <- c(4,0)
+#df <- rbind(df,c4)
+#df <- df[order(df$Var1, decreasing = F),]
+df %>% 
+  ggplot2::ggplot(aes(Var1, Freq))+
+  geom_point(size=2)+ ggtitle("FIG 2: Gráficos de dispersão unidimensionais para a variável Z: \n número de filhos")+
+  geom_text(aes(label=Freq), vjust=-0.3, size=5)+ xlab("Quantidade de Filhos") + ylab("Número de Servidores") + ylim(0,8) + 
+  scale_x_continuous(limits = c(-0.5,5.5), 
+                     breaks = seq(0,5, by=1))+ 
+  theme_bw()
+@
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Gráficos de Dispersão Unidimensionais}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<point2, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+library(tidyverse)
+data.frame(var1=c(rep(0,4), 
+                  rep(1,5), 
+                  rep(2,7),
+                  rep(3,3),
+                  rep(5,1)), var2=c(seq(1:4), seq(1:5), seq(1:7), seq(1:3), 1)) %>% 
+  ggplot2::ggplot(aes(var1, var2))+
+  geom_point(size=2)+ ggtitle("FIG 3: Gráficos de dispersão unidimensionais para a variável Z: \n número de filhos")+
+  xlab("Quantidade de Filhos") + ylab("Número de Servidores") + 
+  scale_y_continuous(limits = c(1,8), breaks = seq(0,8,1))+ 
+  theme_bw()
+@
+\end{center}
+\end{block}
+\end{frame}
+
+
+\subsection{Histograma}
+\begin{frame}{}
+\frametitle{Histograma}
+\begin{block}{}
+\justifying
+O histograma é um gráfico de barras contíguas, com as bases proporcionais aos intervalos
+das classes e a área de cada retângulo proporcional à respectiva frequência. Pode-se
+usar tanto a frequência absoluta, $f_{i},$ como a relativa, $f_{ri}.$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+% \justifying
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.5]{Fig5}
+%     \caption{Histograma da variável $S:$ Salários (\cite{Morettin09}).}
+%     \label{Fig5_ex}
+%   \end{figure}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<hist2, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+tab2_1<-read.table("CompanhiaMB.csv", dec=",", sep=";",h=TRUE) %>% select(4)
+attach(tab2_1)
+df <- as.data.frame(table(tab2_1$n_filhos))
+df$pct <- round((df$Freq/sum(df$Freq))*100,1)
+df$Var1 <- as.numeric(as.character(df$Var1))
+c4 <- c(4,0,0)
+df <- rbind(df,c4)
+df <- df[order(df$Var1),]
+ggplot(tab2_1, aes(n_filhos)) +
+  geom_histogram(binwidth = 1, 
+                 fill = "white", 
+                 color = "black")+
+  geom_text(data=df, 
+            aes(x=Var1, 
+                y=Freq+0.2, 
+                label=paste0(round((Freq/sum(Freq))*100,1),"%")), size=4) + 
+  theme_bw() + xlab("Número de Filhos") + 
+  ylab("Densidade de Frequencias") + 
+  scale_x_continuous(limits=c(-0.5,5.5), breaks = seq(from = 0, to = 5, by = 1))+
+  ggtitle("FIG 5:  Histograma da variável Z: número de filhos.")
+@
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+\begin{table}[H]
+\caption{Frequências e porcentagens dos dos 36 empregados da seção de orçamentos da Companhia MB por faixa de salário.}
+\label{tab4}
+\begin{tabular}{c|c|c|c}
+\hline
+Classe de   &Ponto Médio&Frequência&Porcentagem\\
+Salários    &    $S_{i}$& $n_{i}$  &$100f_{i}$ \\
+\hline
+~4.00|-~8.00&  6        &10        &27.78      \\
+~8.00|-12.00& 10        &12        &33.33      \\
+12.00|-16.00& 14        &8         &22.22      \\
+16.00|-20.00& 18        &5         &13.89      \\
+20.00|-24.00& 22        &1         & 2.78      \\
+\hline
+Total       &   $-$     &36        &100.00     \\
+\hline
+\end{tabular}
+\subcaption*{\cite{Morettin09}}
+\end{table}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+% \justifying
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.5]{Fig5}
+%     \caption{Histograma da variável $S:$ Salários (\cite{Morettin09}).}
+%     \label{Fig5_ex}
+%   \end{figure}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<hist, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+tab2_1<-read.table("CompanhiaMB.csv", dec=",", sep=";",h=TRUE)
+fig27<-hist(tab2_1$salario, breaks = seq(4,24,by=4),right=FALSE,plot=F)
+aux<-with(fig27, 100 * density* diff(breaks)[1])
+labs <- paste(round(aux), "%", sep="")
+#quebras de linha apenas ilustrativas para facilitar a leitura
+plot(fig27, 
+     freq = FALSE, labels = labs, 
+     ylab="Densidade de Frequência",
+     xlab="Salário",
+     col="darkgrey",
+     border="white",
+     #labels=T,
+     main="FIG 4: Histograma da variável S: salários",
+     xlim=c(0,24), xaxp=c(0,24,6),
+     ylim=c(0,.1))
+@
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Exemplo: Dados Fictícios}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<idade1, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+set.seed(123)
+n <- 10000
+idade <- abs(round(rnorm(n, 35, 10),0))
+#summary(idade)
+ht <- hist(idade,
+           prob = TRUE,
+           breaks = seq(0, 75, 5),
+           ylim = c(0,0.04),
+           main = "Histograma",
+           xlab = "Idade",
+           ylab = "Frequência absoluta",
+           sub = "Dados Fictícios")
+rug(idade) 
+mtext(side = 4,
+      line = -1,
+      col = "gray70",
+      outer = TRUE,
+      adj = 0,
+      text = "Elaborado por Fernando Bastos - fernando.bastos@ufv.br")
+@
+\end{center}
+\end{block}
+\end{frame}
+
+\subsection{Gráfico de Densidade}
+\begin{frame}{}
+\frametitle{Gráfico de densidade}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<idade2, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+set.seed(123)
+n <- 10000
+idade <- abs(round(rnorm(n, 35, 10),0))
+#summary(idade)
+den <- density(idade)
+plot(den)
+rug(idade) 
+mtext(side = 4,
+      line = -1,
+      col = "gray70",
+      outer = TRUE,
+      adj = 0,
+      text = "Elaborado por Fernando Bastos - fernando.bastos@ufv.br")
+@
+\end{center}
+\end{block}
+\end{frame}
+
+\subsection{Gráfico de frequência acumulada empírica}
+\begin{frame}{}
+\frametitle{Gráfico de frequência acumulada empírica}
+\begin{block}{}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<idade3, echo=FALSE, out.width=".3\\textwidth", pdfcrop=TRUE, fig.width=4,fig.height=3,include=TRUE,fig=TRUE>>=
+set.seed(123)
+n <- 10000
+idade <- abs(round(rnorm(n, 35, 10),0))
+limits <- c(quantile(idade,probs = 0.25, type = 9), quantile(idade,probs = 0.75))
+prop <- prop.table(table(cut(idade,
+                             breaks = c(-Inf, limits, Inf))))
+cs <- cumsum(prop)[seq_along(limits)]
+#summary(idade)
+f <- ecdf(idade)
+plot(f,
+     xlab = "Idade",
+     ylab = "Frequência relativa acumulada",
+     main = "Gráfico de Frequência Acumulada",
+     xlim=c(3,80),
+     cex = NA,
+     verticals = TRUE)
+segments(x0 = quantile(idade,probs = 0.25),
+         y0 = 0,
+         x1 = quantile(idade,probs = 0.25),
+         y1 = 0.25,
+         lty = 3)
+segments(x0 = 0,
+         y0 = 0.25,
+         x1 = quantile(idade,probs = 0.25),
+         y1 = 0.25,
+         lty = 3)
+segments(x0 = median(idade),
+         y0 = 0,
+         x1 = median(idade),
+         y1 = 0.5,
+         lty = 2)
+segments(x0 = 0,
+         y0 = 0.5,
+         x1 = median(idade),
+         y1 = 0.5,
+         lty = 2)
+segments(x0 = quantile(idade,probs = 0.75),
+         y0 = 0,
+         x1 = quantile(idade,probs = 0.75),
+         y1 = 0.75,
+         lty = 1)
+segments(x0 = 0,
+         y0 = 0.75,
+         x1 = quantile(idade,probs = 0.75),
+         y1 = 0.75,
+         lty = 1)
+#arrows(x0 = limits[1],
+#       y0 = cs[1],
+#       x1 = limits[1],
+#       y1 = cs[2],
+#       code = 3,
+#       length = 0.15)
+text(x = 10,
+     y = 0.26,
+     labels = "Quartil 1",
+     srt = 0,
+     adj = c(0.5,-0.5))
+text(x = 20,
+     y = 0.52,
+     labels = "Mediana",
+     srt = 0,
+     adj = c(0.5,-0.5))
+text(x = 30,
+     y = 0.76,
+     labels = "Quartil 3",
+     srt = 0,
+     adj = c(0.5,-0.5))
+text(x = 60,
+     y = 0.8,
+     labels = paste0("Quartil 1"," = ",quantile(idade,probs = 0.25)),
+     srt = 0,
+     adj = c(0.5,-0.5))
+text(x = 60,
+     y = 0.7,
+     labels = paste0("Mediana"," = ",quantile(idade,probs = 0.5)),
+     srt = 0,
+     adj = c(0.5,-0.5))
+text(x = 60,
+     y = 0.6,
+     labels = paste0("Quartil 3"," = ",quantile(idade,probs = 0.75)),
+     srt = 0,
+     adj = c(0.5,-0.5))
+#plot(f)
+rug(idade) 
+mtext(side = 4,
+      line = -1,
+      col = "gray70",
+      outer = TRUE,
+      adj = 0,
+      text = "Elaborado por Fernando Bastos - fernando.bastos@ufv.br")
+@
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}%[allowframebreaks]
+\frametitle{\bf Referências}
+\bibliography{Referencias.bib}
+\end{frame}
+
+
+\end{document}

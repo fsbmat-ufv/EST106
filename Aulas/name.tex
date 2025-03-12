@@ -1,0 +1,863 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage[font={it,small},labelfont={sc,small}]{caption}
+\usepackage{datetime}
+\usepackage{fancyhdr}
+
+% For putting the revision date on the bottom of each page
+  % Needs fancyhdr, datetime packages
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LO,RE]{\thepage}
+\fancyhead[RO,LE]{\rightmark}
+\fancyfoot{}
+\fancyfoot[CO,CE]{\currenttime\ \today}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[C]{\currenttime\ \today\\ \scriptsize{See updates and corrections at \url{http://www.stat.cmu.edu/~cshalizi/mreg/}}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\newcommand{\Expect}[1]{\mathbb{E}\left[ #1 \right]}
+\newcommand{\Var}[1]{\mathrm{Var}\left[ #1 \right]}
+\newcommand{\Cov}[1]{\mathrm{Cov}\left[ #1 \right]}
+\newcommand{\Prob}[1]{\mathbb{P}\left( #1 \right)}
+\DeclareMathOperator*{\argmin}{argmin}
+
+\begin{document}
+\title{Lecture 5: The Method of Least Squares for Simple Linear Regression}
+\author{36-401, Fall 2015, Section B}
+\date{15 September 2015}
+\maketitle
+
+% Set global options for knitr
+
+<< echo=FALSE >>=
+library(knitr)
+opts_chunk$set(size='small', background='white', cache=TRUE, autodep=TRUE)
+@
+
+\tableofcontents
+
+\section{Recapitulation}
+
+Let's recap from last time.  The simple linear regression model is a
+statistical model for two variables, $X$ and $Y$.  We use $X$ --- the {\bf
+  predictor} variable --- to try to predict $Y$, the {\bf target} or {\bf
+  response}\footnote{Older terms would be ``independent'' and ``dependent''
+  variables, respectively.  These import an unwarranted suggestion of causality
+  or even deliberate manipulation on the part of $X$, so I will try to avoid
+  them.}.  The assumptions of the model are:
+\begin{enumerate}
+\item The distribution of $X$ is arbitrary (and perhaps $X$ is even non-random).
+\item If $X=x$, then $Y = \beta_0 + \beta_1 x + \epsilon$, for some constants
+  (``coefficients'', ``parameters'') $\beta_0$ and $\beta_1$, and some random
+  noise variable $\epsilon$.
+\item $\Expect{\epsilon|X=x} = 0$ (no matter what $x$ is), $\Var{\epsilon|X=x}
+  = \sigma^2$ (no matter what $x$ is).
+\item $\epsilon$ is uncorrelated across observations.
+\end{enumerate}
+
+In a typical situation, we also possess observations $(x_1, y_1), (x_2, y_2),
+\ldots (x_n, y_n)$, which we presume are a realization of the model.  Our goals
+are to estimate the parameters of the model, and to use those parameters to
+make predictions.
+
+In the notes for the last lecture, we saw that we could estimate the parameters
+by the {\bf method of least squares}: that is, of minimizing the in-sample
+mean squared error:
+\begin{equation}
+\widehat{MSE}(b_0, b_1) \equiv \frac{1}{n}\sum_{i=1}^{n}{(y_i - (b_0 + b_1 x_i))^2}
+\end{equation}
+
+In particular, we obtained the following results:
+
+\paragraph{Normal or estimating equations} The least-squares estimates solve the {\bf normal} or {\bf estimating} equations:
+\begin{eqnarray}
+\label{eqn:estimating-eqn-for-beta.0} \overline{y} - \hat{\beta}_0 - \hat{\beta}_1 \overline{x} & = & 0\\
+\label{eqn:estimating-eqn-for-beta.1} \overline{xy} - \hat{\beta}_0 \overline{x} - \hat{\beta}_1 \overline{x^2} & = & 0
+\end{eqnarray}
+
+\paragraph{Closed-form solutions} The solution to the estimating equations can
+be given in closed form:
+\begin{eqnarray}
+\label{eqn:closed-form-beta1-hat} \hat{\beta}_1 & = & \frac{c_{XY}}{s^2_X}\\
+\label{eqn:closed-form-beta0-hat} \hat{\beta}_0 & = & \overline{y} - \hat{\beta}_1 \overline{x}
+\end{eqnarray}
+
+\paragraph{Unbiasedness} The least-squares estimator is unbiased:
+\begin{eqnarray}
+\label{eqn:bias-of-beta0} \Expect{\hat{\beta}_0} & = & \beta_0 \\
+\Expect{\hat{\beta}_1} & = & \beta_1
+\end{eqnarray}
+
+\paragraph{Variance shrinks like $1/n$} The variance of the estimator goes to $0$ as $n\rightarrow \infty$, like $1/n$:
+\begin{eqnarray}
+\Var{\hat{\beta}_1} & = & \frac{\sigma^2}{n s^2_X}\\
+\label{eqn:var-of-beta0} \Var{\hat{\beta}_0} & = & \frac{\sigma^2}{n}\left(1 + \frac{\overline{x}^2}{s^2_X}\right)
+\end{eqnarray}
+
+In these notes, I will try to explain a bit more of the general picture
+underlying these results, and to explain what it has to do with prediction.
+
+\section{In-Sample MSE vs.\ True MSE}
+
+The true regression coefficients minimize the true MSE, which is (under
+the simple linear regression model):
+\begin{equation}
+(\beta_0, \beta_1) = \argmin_{(b_0, b_1)} {\Expect{(Y- (b_0 + b_1 X))^2}}
+\end{equation}
+What we minimize instead is the mean squared error on the data:
+\begin{equation}
+(\hat{\beta}_0, \hat{\beta}_1) = \argmin_{(b_0, b_1)}{\frac{1}{n}\sum_{i=1}^{n}{(y_i - (b_0 + b_1 x_i))^2}}
+\end{equation}
+This is the {\bf in-sample} or {\bf empirical} version of the MSE.  It's clear
+that it's a sample average, so for any {\em fixed} parameters $b_0, b_1$, when
+the law of large numbers applies, we should have
+\begin{equation}
+\frac{1}{n}\sum_{i=1}^{n}{(y_i - (b_0 + b_1 x_i))^2} \rightarrow \Expect{(Y- (b_0 + b_1 X))^2}
+\end{equation}
+as $n \rightarrow \infty$.  This should make it {\em plausible} that the
+minimum of the function of the left is going to converge on the minimum of the
+function on the right, but there can be tricky situations, with more complex
+models, where this convergence doesn't happen.
+
+To illustrate what I mean by this convergence, Figure \ref{fig:error-surfaces}
+shows a sequence of surfaces of the MSE as a function of $(b_0, b_1)$.  (The
+simulation code is in Figure \ref{fig:error-surface-code}.)  The first row
+shows different in-sample MSE surfaces at a small value of $n$; the next row at
+a larger value of $n$; the next row at a still larger value of $n$.  What you
+can see is that as $n$ grows, these surfaces all become more similar to each
+other, and the locations of the minima are also becoming more similar.  This
+isn't a {\em proof}, but shows why it's worth looking for a proof.
+
+\begin{figure}
+<<>>=
+# Simulate from a linear model with uniform X and t-distributed noise
+# Inputs: number of points; intercept; slope; width of uniform X distribution
+  # (symmetric around 0); degrees of freedom for t
+# Output: data frame with columns for X and Y
+sim.linmod <- function(n, beta.0, beta.1, width, df) {
+    # draw n points from a uniform distribution centered on 0
+    x <- runif(n, min=-width/2, max=width/2)
+    # draw n points from a t distribution with the given number of degrees
+    # of freedom
+    epsilon <- rt(n, df=df)
+    # make y from a linear model
+    y <- beta.0 + beta.1*x + epsilon
+    # return the data frame
+    return(data.frame(x=x, y=y))
+}
+
+# Calculate in-sample MSE of a linear model
+  # First define a function that works for just one slope/intercept pair at
+  # time
+  # Then "Vectorize" it to handle vectors of intercepts and slopes
+# Inputs: slope; intercept; data frame with "x" and "y" columns
+# Output: the in-sample MSE
+# Presumes: "y" is the target variable and "x" is the predictor
+mse.insample <- function(b.0, b.1, data) { mean((data$y-(b.0+b.1*data$x))^2) }
+mse.insample <- Vectorize(mse.insample, vectorize.args=c("b.0","b.1"))
+
+# Grids of possible intercepts and slopes
+b.0.seq <- seq(from=-10,to=10, length.out=20)
+b.1.seq <- seq(from=-10,to=10, length.out=20)
+
+# 3d wire-mesh ("perspective") plot of a linear model's error surface
+# Input: data set; maximum value for Z axis (for comparability across plots)
+# Output: Transformation matrix for adding new points/lines to the plot,
+  # invisibly --- see help(persp) under "Value".  (Ignored here)
+# ATTN: hard-coded slope/intercept sequences less than ideal
+in.sample.persp <- function(data, zmax=600) {
+    # Calculate the in-sample MSE for every combination of
+    z <- outer(b.0.seq, b.1.seq, mse.insample, data=data)
+    persp(b.0.seq, b.1.seq, z, zlim=c(0,zmax), xlab="Intercept",
+          ylab="Slope", zlab="MSE", ticktype="detailed")
+}
+@
+\caption{Code to simulate from a linear model with $t$-distributed noise and
+  uniformly distributed $X$ (to emphasize here needs anything to be Gaussian);
+  to calculate the MSE of a linear model on a given data sample; and to
+  plot the error surface on a given data set.}
+\label{fig:error-surface-code}
+\end{figure}
+
+\begin{figure}
+<<error-surfaces, echo=FALSE>>=
+par(mfrow=c(3,2))
+in.sample.persp(sim.linmod(n=10,beta.0=5,beta.1=-2,width=4,df=3))
+in.sample.persp(sim.linmod(n=10,beta.0=5,beta.1=-2,width=4,df=3))
+in.sample.persp(sim.linmod(n=100,beta.0=5,beta.1=-2,width=4,df=3))
+in.sample.persp(sim.linmod(n=100,beta.0=5,beta.1=-2,width=4,df=3))
+in.sample.persp(sim.linmod(n=1e5,beta.0=5,beta.1=-2,width=4,df=3))
+in.sample.persp(sim.linmod(n=1e5,beta.0=5,beta.1=-2,width=4,df=3))
+par(mfrow=c(1,1))
+@
+<<eval=FALSE>>=
+<<error-surfaces>>
+@
+\caption{Error surfaces for the linear model $Y=5-2X+\epsilon$, $\epsilon \sim
+  t_3$, $X \sim U(-2,2)$, at $n=10$ (top row), $n=100$ (middle) and $n=100000$
+  (bottom).  Each column is an independent run of the model.  Notice how these
+  become increasingly similar as $n$ grows.}
+\label{fig:error-surfaces}
+\end{figure}
+
+\subsection{Existence and Uniqueness}
+
+On any given finite data set, it is evident from Eqs.\
+\ref{eqn:closed-form-beta1-hat}--\ref{eqn:closed-form-beta0-hat} that there is
+always a least-squares estimate, {\em unless} $s^2_X = 0$, i.e., unless the
+sample variance of $X$ is zero, i.e., unless all the $x_i$ have the same value.
+(Obviously, with only one value of the $x$ coordinate, we can't work out the
+slope of a line!)  Moreover, if $s^2_X > 0$, then there is exactly {\em one}
+combination of slope and intercept which minimizes the MSE in-sample.
+
+One way to understand this algebraically is that the estimating equations give
+us a system of two linear equations in two unknowns.  As we remember from
+linear algebra (or earlier), such systems have a unique solution, unless one of
+the equations of the system is redundant.  (See Exercise
+\ref{exercise:linear-systems-of-estimating-equations}.)
+
+Notice that this existence and uniqueness of a least-squares estimate assumes
+{\em absolutely nothing} about the data-generating process.  In particular, it
+does {\em not} assume that the simple linear regression model is correct.
+There is always {\em some} straight line that comes closest to our data points,
+no matter how wrong, inappropriate or even just plain silly the simple linear
+model might be.
+
+
+\section{Constant-Plus-Noise Representations}
+
+In deriving the properties of the least-squares estimators, it is extremely
+helpful to re-write them so that they have the form ``constant $+$ noise'', and
+especially to try to write the noise as a sum of uncorrelated random variables.
+This sort of ``representation'' of the estimator makes it much simpler to
+determine its properties, because adding up constants and uncorrelated random
+variables is what the rules of algebra from Lecture 1 make easy for us.
+
+To this end, let's be explicit about writing out $\hat{\beta}_1$ in the
+form of a constant plus a sum of uncorrelated noise random variables.
+
+Begin with the fact that $\hat{\beta}_1$ is the ratio of the sample
+covariance to the sample variance of $X$:
+\begin{eqnarray}
+\hat{\beta}_1 & = & \frac{c_{XY}}{s^2_X}\\
+& = & \frac{\frac{1}{n}\sum_{i=1}^{n}{(x_i - \overline{x})(y_i - \overline{y})}}{s^2_X}\\
+& = & \frac{\frac{1}{n}\sum_{i=1}^{n}{(x_i - \overline{x})y_i} - \frac{1}{n}\sum_{i=1}^{n}{(x_i - \overline{x})\overline{y}}}{s^2_X}
+\end{eqnarray}
+At this point, we need to pause for a fundamental fact which we will use often:
+for {\em any} variable $z$,  the average difference from the sample mean is zero: $n^{-1}\sum_{i}{z_i - \overline{z}} = 0$.  To see this, break up the sum of
+the difference into a difference in sums:
+\begin{eqnarray}
+\frac{1}{n}\sum_{i=1}^{n}{z_i -\overline{z}} & = & \frac{1}{n}\sum_{i=1}^{n}{z_i} - \frac{1}{n}\sum_{i=1}^{n}{\overline{z}}\\
+& = & \overline{z} - \frac{n\overline{z}}{n} = 0
+\end{eqnarray}
+It follows that for any $w$ which is constant in $i$,
+\begin{equation}
+\label{eqn:average-difference-from-average-is-zero}
+\frac{1}{n}\sum_{i=1}^{n}{(z_i - \overline{z})w} = 0
+\end{equation}
+Thus
+\begin{equation}
+ \frac{1}{n}\sum_{i=1}^{n}{(x_i - \overline{x})\overline{y}} = 0
+\end{equation}
+So
+\begin{equation}
+\label{eqn:hat-beta1-in-terms-of-yi} \hat{\beta}_1  =  \frac{\frac{1}{n}\sum_{i=1}^{n}{(x_i - \overline{x})y_i}}{s^2_X}
+\end{equation}
+
+So far, we have not used any of our modeling assumptions.  We now
+do so.  Specifically, we use the assumption that
+\begin{equation}
+y_i = \beta_0 + \beta_1 x_i + \epsilon_i
+\end{equation}
+For reasons which should become clear momentarily, it will be more convenient
+to write this in terms of how far $x_i$ is from the sample mean $\overline{x}$:
+\begin{equation}
+y_i = \beta_0 + \beta_1 \overline{x} + \beta_1 (x_i - \overline{x}) + \epsilon_i
+\end{equation}
+to substitute the above expression for $y_i$ into Eq.\ \ref{eqn:hat-beta1-in-terms-of-yi}:
+\begin{eqnarray}
+\hat{\beta}_1 & = & \frac{\frac{1}{n}\sum_{i=1}^{n}{(x_i - \overline{x})(\beta_0 + \beta_1\overline{x} + \beta_1 (x_i-\overline{x}) + \epsilon_i)}}{s^2_X}\\
+& = & \frac{\frac{\beta_0+\beta_1 \overline{x}}{n}\sum_{i=1}^{n}{(x_i-\overline{x})} + \frac{\beta_1}{n}\sum_{i=1}^{n}{(x_i-\overline{x})^2} + \frac{1}{n}\sum_{i=1}^{n}{(x_i - \overline{x})\epsilon_i}}{s^2_X}
+\end{eqnarray}
+The first sum in the numerator is a constant times the average difference of
+$x_i$ from $\overline{x}$, so it's zero (by Eq.\
+\ref{eqn:average-difference-from-average-is-zero}).  The second sum in the
+numerator is just $s^2_X$ again.  In the third sum, because the $\epsilon_i$
+are {\em not} constant, is not (necessarily) zero.  Simplifying:
+\begin{equation}
+\label{eqn:hat-beta-1-is-constant-plus-noise}
+\hat{\beta}_1 = \beta_1 + \sum_{i=1}^{n}{\frac{x_i - \overline{x}}{ns^2_X}\epsilon_i}
+\end{equation}
+Notice the form of Eq.\ \ref{eqn:hat-beta-1-is-constant-plus-noise}: it writes
+our random estimator as a constant plus a weighted sum of the noise terms
+$\epsilon_i$.  In fact, by the fourth item in our listing of assumptions for
+the simple linear regression model, it writes $\hat{\beta_1}$ as a constant
+plus a weighted sum of {\em uncorrelated} noise terms.
+
+It is now very easy to work out the expected value:
+\begin{eqnarray}
+\Expect{\hat{\beta}_1} & = & \Expect{\beta_1 + \sum_{i=1}^{n}{\frac{x_i - \overline{x}}{ns^2_X}\epsilon_i}} \\
+& = & \beta_1 + \sum_{i=1}^{n}{\frac{x_i - \overline{x}}{s^2_X}\Expect{\epsilon_i}} = \beta_1
+\end{eqnarray}
+or the variance:
+\begin{eqnarray}
+\Var{\hat{\beta}_1} & = & \Var{\beta_1 + \sum_{i=1}^{n}{\frac{x_i - \overline{x}}{ns^2_X}\epsilon_i}}\\
+& = & \Var{\sum_{i=1}^{n}{\frac{x_i - \overline{x}}{ns^2_X}\epsilon_i}}\\
+& = & \sum_{i=1}^{n}{\frac{(x_i - \overline{x})^2}{n^2 s^4_X}\Var{\epsilon_i}}\\
+& = & \sigma^2 \frac{n s^2_X}{n^2 s^4_X} = \frac{\sigma^2}{ns^2_X}
+\end{eqnarray}
+where the last line uses the modeling assumption that all of the $\epsilon_i$
+have the same variance.  (The next-to-last line uses the assumption that they
+are uncorrelated.)
+
+So far, this is just re-capitulating stuff we've done already, but the exact
+same strategy works for any estimator (or test statistic, etc.) which we can
+manipulate into constant-plus-noise form.  It's not {\em always} possible to do
+this (though see the optional section \ref{sec:propagation-of-error}, and, for
+the ambitious, \citealt{van-der-Vaart-asymptotic-stats}), but it's a very
+powerful strategy when it works.  To illustrate its power, we'll now use
+it on predictions of the simple linear model, when estimated by least squares.
+
+
+\section{Predictions}
+\label{sec:prediction}
+
+Remember that we got into all this mess not because we want to know
+the numbers $\beta_0$ and $\beta_1$ for their own sake, but because we wanted
+to predict $Y$ from $X$.  How do we make those predictions, and how good
+are they?
+
+If we knew $\beta_0$ and $\beta_1$, and that $X=x$, then our
+prediction\footnote{This is called a {\bf point} prediction; think of it as
+  ``if you have to give one number, this is the best single number to give.''
+  We might also make {\bf interval} predictions (e.g., ``with probability $p$,
+  $Y$ will be in the interval $[l, u]$'') or {\bf distributional} predictions
+  (e.g., ``$Y$ will follow an $N(m,,v)$ distribution''.} for $Y$ would be
+$\beta_0 + \beta_1 x$.  This is, assuming the simple linear regression model is
+true, exactly $\Expect{Y|X=x}$, which we saw back in Lecture 1 is the best
+prediction we can make.  As $x$ changes, this prediction changes, but that's
+precisely what we want --- the predictions will just follow points on the line.
+
+Since we do not know $\beta_0$ and $\beta_1$, we fake it --- that is, we use
+our estimates of the coefficients.  At an {\em arbitrary} value of $X$, say $x$
+(sometimes called the {\bf operating point}), we predict that on average $Y$
+will be
+\begin{equation}
+\hat{m}(x) = \hat{\beta}_0 + \hat{\beta}_1 x
+\end{equation}
+This point prediction is called the {\bf fitted value}\footnote{The name
+  originates from thinking of $\epsilon$ as purely measurement error, so that
+  $\hat{m}(x)$ is our best-fitting estimate of the true value at $x$.} at $x$.
+
+Notice the fitted value $\hat{m}(x)$ is an {\em estimate} of $\Expect{Y|X=x}$.
+The latter is a perfectly deterministic quantity; it has the value $\beta_0 +
+\beta_1 x$, which is some number or other, and we just happen not to know it.
+But $\hat{m}(x)$ is a function of our data, which are random, hence
+$\hat{m}(x)$ is also random.  It inherits its randomness from $\hat{\beta}_0$
+and $\hat{\beta}_1$, which in turn inherit theirs from $\overline{y}$ and
+$c_{XY}$.
+
+To analyze the randomness in $\hat{m}(x)$, we will represent it as constants
+plus a weighted sum of uncorrelated noise terms.  Using Eqs.\ \ref{eqn:closed-form-beta0-hat},
+\begin{eqnarray}
+\hat{m}(x) & = & \hat{\beta}_0 + \hat{\beta}_1 x \\
+& = & \overline{y} - \hat{\beta}_1 \overline{x} + \hat{\beta}_1 x\\
+& = & \overline{y} + (x-\overline{x})\hat{\beta}_1
+\end{eqnarray}
+Using Eq.\ \ref{eqn:hat-beta-1-is-constant-plus-noise} and the definition of a
+sample mean,
+\begin{eqnarray}
+\hat{m}(x) & = & \frac{1}{n}\sum_{i=1}^{n}{y_i} + (x -\overline{x})\left( \beta_1 + \sum_{i=1}^{n}{\frac{x_i - \overline{x}}{ns^2_X}\epsilon_i} \right)\\
+& = & \frac{1}{n}\sum_{i=1}^{n}{(\beta_0 + \beta_1 x_i + \epsilon_i)}
++ (x -\overline{x})\left( \beta_1 + \sum_{i=1}^{n}{\frac{x_i - \overline{x}}{ns^2_X}\epsilon_i} \right)\\
+& = & \beta_0 + \beta_1 \overline{x} + \frac{1}{n}\sum_{i=1}^{n}{\epsilon_i}
++ (x-\overline{x})\beta_1 + (x-\overline{x})\sum_{i=1}^{n}{\frac{x_i - \overline{x}}{ns^2_X}\epsilon_i}\\
+& = & \beta_0 + \beta_1 x + \frac{1}{n}\sum_{i=1}^{n}{\left(1 + (x-\overline{x}) \frac{x_i - \overline{x}}{s^2_X} \right) \epsilon_i} \label{eqn:prediction-as-constant-plus-noise}
+\end{eqnarray}
+where in the last line I've canceled $\beta_1 \overline{x}$ terms of opposite
+sign, and combined terms in the $\epsilon_i$.  Also, the second line used the
+second assumption in the simple linear regression model, that $Y$ is a linear
+function of $X$ plus noise.
+
+Now we can check whether or not our predictions are biased:
+\begin{eqnarray}
+\Expect{\hat{m}(x)} & = & \Expect{\beta_0 + \beta_1 x + \frac{1}{n}\sum_{i=1}^{n}{\left(1 + (x-\overline{x}) \frac{x_i - \overline{x}}{s^2_X} \right) \epsilon_i}}\\
+& = & \beta_0 + \beta_1 x + \frac{1}{n}\sum_{i=1}^{n}{\left(1 + (x-\overline{x})\frac{x_i - \overline{x}}{s^2_x}\right)\Expect{\epsilon_i}}\\
+& = & \beta_0 + \beta_1 x
+\end{eqnarray}
+This is to say, no, under the simple linear model, the predictions of
+least squares are unbiased.
+
+Of course, our predictions are somewhat random, because (as I said) they're
+functions of the somewhat-random data we estimated the model on.  What is
+the variance of these predictions?
+\begin{eqnarray}
+\Var{\hat{m}(x)} & = & \Var{\beta_0 + \beta_1 x + \frac{1}{n}\sum_{i=1}^{n}{\left(1 + (x-\overline{x}) \frac{x_i - \overline{x}}{s^2_X} \right) \epsilon_i}}\\
+& = & \Var{\frac{1}{n}\sum_{i=1}^{n}{\left(1 + (x-\overline{x}) \frac{x_i - \overline{x}}{s^2_X} \right) \epsilon_i}}\\
+& = & \frac{1}{n^2}\sum_{i=1}^{n}{\left(1 + (x-\overline{x}) \frac{x_i - \overline{x}}{s^2_X} \right)^2 \Var{\epsilon_i}}\\
+& = & \frac{\sigma^2}{n^2}\sum_{i=1}^{n}{1 + 2 (x-\overline{x})\frac{x_i - \overline{x}}{s^2_X} + (x-\overline{x})^2 \frac{(x_i - \overline{x})^2}{s^4_X} }\\
+& = & \frac{\sigma^2}{n^2}\left(n + 0 + (x-\overline{x})^2\frac{ ns^2_X}{n s^4_X}\right)\\
+& = & \frac{\sigma^2}{n}\left(1 + \frac{(x-\overline{x})^2}{s^2_X}\right)
+\label{eqn:variance-of-prediction}
+\end{eqnarray}
+Notice what's going on here:
+\begin{itemize}
+\item The variance grows as $\sigma^2$ grows: the more noise there is around
+  the regression line, the harder we find it to estimate the regression line,
+  and the more of that noise will propagate into our predictions.
+\item The larger $n$ is, the smaller the variance: the more points we see, the
+  more exactly we can pin down the line, and so our predictions.
+\item The variance of our predictions is the sum of two terms.  The first,
+  which doesn't depend on $x$, is $\sigma^2/n$, which is the variance of
+  $\overline{y}$ (Exercise \ref{exercise:variance-of-y-bar}).  Since our line
+  has to go through the center of the data, this just how much noise there is
+  in the height of that center.
+\item The other term does change with $x$, specifically with
+  $(x-\overline{x})^2$: the further our operating point $x$ is from the center
+  of the data $\overline{x}$, the bigger our uncertainty.  This is the
+  uncertainty that comes with being unable to pin down the slope precisely; it
+  therefore shrinks with $s^2_X$, since it's easier to find the slope when the
+  points have a wide spread on the horizontal axis.
+\end{itemize}
+
+Again, Eq.\ \ref{eqn:variance-of-prediction} is conditional on the $x_i$.  If
+those are random, we need to use the law of total variance (as in the last
+lecture) to get the unconditional variance of $\hat{m}(x)$.
+
+Figure \ref{fig:scatter-of-regression-lines} illustrates how the spread in
+point predictions changes as we move away from the mean of the $x$ values.
+
+\begin{figure}
+<<scatter-of-regression-lines, echo=FALSE>>=
+# Create an empty plot (type="n" for "do Nothing")
+plot(0,type="n",xlim=c(-10,10),ylim=c(-10,10),xlab="x",ylab="y")
+# Add the true regression line; exaggerate width so it stands out
+abline(a=5, b=-2, lwd=5)
+# Repeat 10 times: do a simulation, fit a line to the sim., add the fitted
+# line to the plot
+invisible(replicate(20, abline(lm(y ~ x, data=sim.linmod(n=10,beta.0=5,
+                                             beta.1=-2,width=4,df=3)),
+                               col="grey")))
+@
+<<eval=FALSE>>=
+<<scatter-of-regression-lines>>
+@
+\caption{Scatter of estimated least-squares regression lines (thin, grey)
+  around the true regression line (thick, black).  Notice how the estimated
+  lines become more spread out as we move away from the center of the
+  distribution (here conveniently set at $X=0$).}
+\label{fig:scatter-of-regression-lines}
+\end{figure}
+
+\clearpage
+
+\section{Estimating $\sigma^2$; Sum of Squared Errors}
+
+Under the simple linear regression model, it is easy to show (Exercise \ref{exercise:sigmasq-is-generalization-mse}) that
+\begin{equation}
+\label{eqn:sigmasq-is-generalization-mse}
+\Expect{(Y-(\beta_0 + \beta_1 X))^2} = \sigma^2
+\end{equation}
+This suggests that the minimal value of the in-sample MSE,
+\begin{equation}
+\label{eqn:minimal-in-sample-mse}
+\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^{n}{(y_i - \hat{m}(x_i))^2}
+\end{equation}
+is a natural estimator for $\sigma^2$.  This is, in fact, a consistent
+estimator.  (You can prove this using the consistency of $\hat{\beta}_0$ and
+$\hat{\beta}_1$, and continuity.)  It is, however, a slightly biased estimator.
+Specifically (Exercise \ref{exercise:debiasing-mse})
+\begin{equation}
+\label{eqn:unbiased-in-sample-mse} s^2 = \frac{n}{n-2} \hat{\sigma}^2
+\end{equation}
+is an {\em un}-biased estimator of $\sigma^2$, though one with a larger
+variance.  Some people, accordingly, use Eq.\ \ref{eqn:unbiased-in-sample-mse},
+rather than Eq.\ \ref{eqn:minimal-in-sample-mse}, as their definition
+of ``MSE''.
+
+This is mostly something to be aware of when different pieces of R code,
+textbooks, papers, etc., differ in what they are calling ``MSE''; to get
+sensible results, you may need to apply conversion factors in one direction or
+the other.  As usual, if the difference between $1/n$ and $1/(n-2)$ is large
+enough to make a difference to your conclusions, you should really be asking
+yourself whether you have enough data to be doing any statistics at all.
+
+\paragraph{Sum of squared errors} The sum of squared errors for a fitted
+regression is just what it sounds like:
+\begin{equation}
+SSE = \sum_{i=1}^{n}{(y_i - \hat{m}(x_i))^2} = \sum_{i=1}^{n}{(y_i - (\hat{\beta}_0+\hat{\beta}_1 x_i))^2}
+\end{equation}
+It's mostly important as a historical relic, from the days when people fit
+regression models by hand, or with slide rules and adding machines, and so
+every bit of arithmetic you could avoid was a win.
+
+\section{Residuals}
+
+The {\bf residual} value at a data point is the difference between
+the actual value of the response $y_i$ and the fitted value $\hat{m}(x_i)$:
+\begin{equation}
+\label{eqn:ith-residual-defined}
+e_i = y_i - \hat{m}(x_i) = y_i - (\hat{\beta}_0 + \hat{\beta}_1 x_i)
+\end{equation}
+This may look like re-arranging the basic equation for the
+linear regression model,
+\begin{equation}
+\label{eqn:ith-noise-term}
+\epsilon_i = Y_i - (\beta_0 + \beta_1 x_i)
+\end{equation}
+and it {\em is} similar, but it's {\em not} the same.  The right-hand
+side of Eq.\ \ref{eqn:ith-noise-term} involves the true parameters.
+The right-hand side of Eq.\ \ref{eqn:ith-residual-defined} involves the
+{\em estimated} parameters, which are different.  In particular, the estimated
+parameters are functions of {\em all} the noise variables.  Therefore
+\begin{quotation}
+The residuals are not the noise terms;  $e_i \neq \epsilon_i$
+\end{quotation}
+
+There are some ways in which the residuals are {\em like} the noise terms.
+For example, the residuals are always uncorrelated with the $x_i$:
+\begin{equation}
+\frac{1}{n}\sum_{i=1}^{n}{e_i (x_i - \overline{x})} = 0
+\end{equation}
+However, this fact (and others like it, which you will get to prove in the
+homework) are consequences of the estimating equations, and are true {\em
+  whether or not} the simple linear regression model is actually true.  Another
+consequence of the estimating equations is that
+\begin{equation}
+\label{eqn:residuals-average-to-zero}
+\frac{1}{n}\sum_{i=1}^{n}{e_i} = 0
+\end{equation}
+This is {\em reminiscent} of $\Expect{\epsilon} = 0$, but generally
+$n^{-1}\sum_{i=1}^{n}{\epsilon_i} \neq 0$.  In fact, Eq.\
+\ref{eqn:residuals-average-to-zero} implies that the residuals are actually
+linearly dependent on each other, while the $\epsilon_i$ are not.
+
+Despite these differences, there is enough of a relationship between
+the $\epsilon_i$ and the $e_i$ that a lot of our model-checking and
+diagnostics will be done in terms of the residuals.  You should get used to
+looking at them for basically any model you estimate, or even think
+seriously about estimating.
+
+
+\section{Limitations of Least Squares}
+
+The results in this handout, and the last, almost exhaust the theory of
+statistical inference for least squares estimates in the simple linear
+regression model\footnote{The main exception is a result called the {\bf
+    Gauss-Markov theorem}: the least squares estimator has smaller variance
+  than any other unbiased estimator which is a linear function of the $y_i$.
+  This was more impressive when nobody had the computing power to use nonlinear
+  estimators\ldots}.  Going beyond the mean and variance of parameter estimates
+or predicted values is pretty much impossible, using {\em just} least squares
+and the simple linear regression model.
+
+In particular, we can't get {\bf sampling distributions} for anything --- we
+can't say what probability law $\hat{\beta}_1$ follows, even as a function of
+the true parameters $\beta_0, \beta_1, \sigma^2$.  There are just too many
+possibilities which are compatible with the model assumptions.  Since, as you
+remember from your mathematical statistics course, we need sampling
+distributions to form confidence intervals, evaluate the properties of
+hypothesis tests, etc., etc., there is really not much more to say about this
+combination of model and method.
+
+\paragraph{Chebyshev} If we absolutely must do some probability calculations
+under the least-squares assumptions, the best we can usually do is to invoke
+Chebyshev's inequality (the extra credit problem in homework 1): for any
+random variable $Z$ with expected value $\mu$ and variance $\sigma$, and any $r > 0$,
+\begin{equation}
+\Prob{|Z-\mu| \geq r} \leq \frac{\Var{Z}}{r^2}
+\end{equation}
+In particular, we can say that
+\begin{equation}
+\Prob{|Z-\mu| \geq k \sqrt{\Var{Z}}} \leq \frac{1}{k^2}
+\end{equation}
+These probability bounds are {\em very} loose, so if we do try to use them
+to do hypothesis tests, they have very little power (equivalently:
+the confidence intervals we get are huge).
+
+\paragraph{Asymptotic Gaussianity} The right-hand side of Eq.\
+\ref{eqn:hat-beta-1-is-constant-plus-noise} shows that $\hat{\beta}_1$ is
+$\beta_1$ plus a weighted average of the $\epsilon_i$.  If we add to the simple
+linear regression model the assumption that the $\epsilon_i$ are IID draws from
+a fixed, {\em not-necessarily-Gaussian} distribution, we might then try to use
+the central limit theorem to show that the weighted average tends towards a
+Gaussian as $n\rightarrow\infty$.  This can be done in some generality, but it
+needs more delicate probability theory than the rest of what we are doing, and
+if the initial distribution of the $\epsilon_i$ is, say, appreciably skewed,
+$n$ might have to be truly huge before the Gaussian approximation is any
+good\footnote{To those who think everything is Gaussian once $n \geq 30$, all I
+  can say is ``Bless your heart.''}.
+
+
+
+
+\section{Least-Squares in R}
+
+The basic command for fitting a linear model by least squares in R is
+\texttt{lm}.  It has a huge number of options, and can do a lot more than
+we will ask it to here, but for our purposes we use it as follows:
+<<eval=FALSE>>=
+lm(y ~ x, data=df)
+@
+Here \texttt{df} is a data frame containing the data we want to fit a
+regression to, and the first part, the {\bf formula}, tells \texttt{lm} that we
+want to regress the column of \texttt{df} called \texttt{y} on the column
+called \texttt{x}.  By default\footnote{There are ways to tweak this, some of
+  which we'll see later in the course.}, \texttt{lm} always fits its
+regression models by least squares.
+
+What \texttt{lm} returns is a rather complicated object.  If you just
+print it out, it seems to be only the intercept and the slope:
+<<>>=
+# Make a very small simulated data set from our running examing
+toy.data <- sim.linmod(n=10, beta.0=5, beta.1=-2, width=4, df=3)
+# Fit the simple linear regression model to it by least squares
+lm(y~x, data=toy.data)
+@
+In fact, \texttt{lm} has done {\em lots} of calculations as part of fitting
+the model, and stored many of the results into the object it returns; R just
+doesn't print all of that, unless you make it.  We can see some of what's
+in there, though:
+<<>>=
+names(lm(y~x, data=toy.data))
+@
+(See \texttt{help(lm)}, under ``Value'', for the gory details.)  It's
+annoying (and slow and error-prone) to keep having R re-estimate the model
+every time we want to refer back to it, so we usually store the estimated
+model under a new variable name:
+<<>>=
+# Fit a linear model to the toy data, and store as toy.lm
+  # The name of the estimated model needn't match that of the data, but it's
+  # often a good idea
+toy.lm <- lm(y~x, data=toy.data)
+@
+
+We can access some of what's in the \texttt{lm} object by using special
+functions.  A couple in particular will become close and familiar friends.
+\texttt{coefficients} gives us the vector of coefficients:
+<<>>=
+coefficients(toy.lm)
+@
+\texttt{fitted} gives us the vector of fitted values, in the order which
+the data points appeared:
+<<>>=
+fitted(toy.lm)
+@
+\texttt{residuals} gives us the vector of residuals (ditto order):
+<<>>=
+residuals(toy.lm)
+@
+(How would you use \texttt{residuals} to calculate $s^2$?  To calculate
+$\frac{n}{n-2}s^2$?)
+
+You might think that \texttt{plot(toy.lm)} would draw a picture of the fitted
+model; instead, it goes through a bunch of diagnostic plots, which we will get
+to later.  If we want to add a line based on the model to an existing plot, we
+use \texttt{abline}, as in Figure \ref{fig:toy-model}.
+
+\begin{figure}
+<<toy-model, echo=FALSE>>=
+plot(y~x, data=toy.data, xlab="x",ylab="y", main="Simulated ('toy') data")
+abline(toy.lm)
+@
+<<eval=FALSE>>=
+<<toy-model>>
+@
+\caption{Using \texttt{abline} to add the line of an estimated linear
+  regression model to a plot.}
+\label{fig:toy-model}
+\end{figure}
+
+\texttt{fitted} gives us the model's predictions at the particular $x_i$
+where we happened to have data.  In principle, though, the model has an
+opinion about what $\Expect{Y|X=x}$ should be at every possible value of
+$x$.  To extract that, we use a function called \texttt{predict}.  Naturally
+enough, we need to tell it both which model we want to use (since we could
+have more than one floating around), {\em and} where to make
+the predictions:
+<<eval=FALSE>>=
+predict(object, newdata)
+@
+Here the first argument, what \texttt{predict} somewhat obscurely calls
+\texttt{object}, is the estimated regression model, like our \texttt{toy.lm}.
+(It is {\em not} the name of the estimating function, like \texttt{lm}.)
+The second argument, \texttt{newdata}, is a data frame with a column whose
+name matches the column name of the predictor variable in our original
+data frame.  Thus
+<<>>=
+predict(toy.lm, newdata=data.frame(x=1:5))
+@
+gives us the fitted model's predictions at the integers from 1 to 5.
+
+You might well think that if \texttt{newdata} were missing, then
+\texttt{predict} would throw an error.  You might very well think that.
+<<>>=
+predict(toy.lm)
+predict(toy.lm, data=data.frame(x=1:5))  # What's wrong here?
+@
+For reasons best known to the designers of R\footnote{Really, the designers of
+  the predecessor language, S.}, when \texttt{newdata} is missing or
+mal-formed, \texttt{predict} returns the fitted values on the original data.
+On the other hand, you {\em will} get an error if \texttt{newdata}
+exists but doesn't contain the right column name:
+<<>>=
+predict(toy.lm, newdata=data.frame(zebra=1:5))
+@
+Extraneous columns, however, are just ignored:
+<<>>=
+predict(toy.lm, newdata=data.frame(x=1:5, zebra=6:10))
+@
+
+
+There is one further option to \texttt{predict} which is worth mentioning at
+this time.  If we set \texttt{se.fit=TRUE}, we get the standard errors of the
+fitted values, i.e., the square roots of the variances\footnote{If a homework
+  problem asks you to calculate the variance of a predicted value, it's
+  (generally) asking you to do the character-building work of actually putting
+  numbers into an algebraic formula by yourself, though you can use this to
+  check your work.}:
+<<>>=
+predict(toy.lm, newdata=data.frame(x=1:5), se.fit=TRUE)
+@
+Notice that what this gives us back is not a vector but a {\em list}, whose
+first two entries are vectors.  (We will come back to what the \texttt{df}
+means, but you should already be able to guess what \texttt{residual.scale}
+might be.)
+
+
+
+\section{Propagation of Error, {\em alias} ``The Delta Method''}
+\label{sec:propagation-of-error}
+
+\begin{quotation}
+An optional section, but a very useful one.
+\end{quotation}
+
+The constant-plus-sum-of-noise-terms trick is the core of an extremely handy
+technique for getting approximate variances and standard errors for functions
+of quantities which are themselves estimated with error.  It is known variously
+as ``propagation of error'' or (more obscurely) as ``the delta method''.
+
+Suppose we are trying to estimate some quantity $\theta$.  We compute an
+estimate $\widehat{\theta}$, based on our data.  Since our data is more or less
+random, so is $\widehat{\theta}$.  One convenient way of measuring the purely
+statistical noise or uncertainty in $\widehat{\theta}$ is its standard
+deviation.  This is the {\bf standard error} of our estimate of
+$\theta$.\footnote{It is not, of course, to be confused with the standard
+  deviation of the data.  It is not even to be confused with the standard error
+  of the mean, unless $\theta$ is the expected value of the data and
+  $\widehat{\theta}$ is the sample mean.}  Standard errors are not the only way
+of summarizing this noise, nor a completely sufficient way, but they are often
+useful.
+
+Suppose that our estimate $\widehat{\theta}$ is a function of some intermediate
+quantities $\widehat{\psi_1}, \widehat{\psi_2}, \ldots, \widehat{\psi_p}$,
+which are also estimated:
+\begin{equation}
+\widehat{\theta} = f(\widehat{\psi_1},\widehat{\psi_2}, \ldots  \widehat{\psi_p} )
+\end{equation}
+For instance, $\theta$ might be the difference in expected values between two
+groups, with $\psi_1$ and $\psi_2$ the expected values in the two groups, and
+$f(\psi_1,\psi_2) = \psi_1 - \psi_2$.  If we have a standard error for each of
+the original quantities $\widehat{\psi_i}$, it would seem like we should be
+able to get a standard error for the {\bf derived quantity} $\widehat{\theta}$.
+Propagation of error achieves this, by writing $\widehat{\theta}$ in
+the constant-plus-noise form.
+
+We start with a Taylor expansion.  We'll write $\psi_i^*$ for the true
+(population, distribution, ensemble) value which is estimated by
+$\widehat{\psi_i}$.
+\begin{eqnarray}
+f(\psi_1^*,\psi_2^*,\ldots \psi_p^*) & \approx & f(\widehat{\psi_1},\widehat{\psi_2},\ldots\widehat{\psi_p}) + \sum_{i=1}^{p}{(\psi_i^* - \widehat{\psi_i}) {\left.\frac{\partial f}{\partial \psi_i}\right|}_{\psi = \widehat{\psi}}}\\
+f(\widehat{\psi_1},\widehat{\psi_2},\ldots\widehat{\psi_p}) & \approx & f(\psi_1^*,\psi_2^*,\ldots \psi_p^*) + \sum_{i=1}^{p}{(\widehat{\psi_i}-\psi_i^*) {\left.\frac{\partial f}{\partial \psi_i}\right|}_{\psi = \widehat{\psi}}}\\
+\hat{\theta} & \approx & \theta^* + \sum_{i=1}^{p}{(\widehat{\psi_i} - \psi_i^*) f^{\prime}_i(\widehat{\psi})}
+\label{eqn:estimate-in-taylor-expansion}
+\end{eqnarray}
+introducing $f^{\prime}_i$ as an abbreviation for $\frac{\partial f}{\partial
+  \psi_i}$.  The left-hand side is now the quantity whose standard error we
+want.  I have done this manipulation because now $\hat{\theta}$ is a linear
+function (approximately!) of some random quantities whose variances we know,
+and some derivatives which we can calculate.
+
+Remember (from Lecture 1) the rules for arithmetic with variances: if $X$ and $Y$ are random variables, and $a$, $b$ and $c$ are constants,
+\begin{eqnarray}
+\Var{a} & = & 0\\
+\Var{a+bX} & = & b^2\Var{X}\\
+\Var{a+bX+cY} & = & b^2\Var{X} + c^2\Var{Y} + 2bc\Cov{X,Y}
+\end{eqnarray}
+While
+we don't know $f(\psi_1^*,\psi_2^*,\ldots \psi_p^*)$, it's constant, so it has
+variance 0. Similarly, $\Var{\widehat{\psi_i} - \psi_i^*} =
+\Var{\widehat{\psi_i}}$.   Repeatedly applying these rules to Eq.\ \ref{eqn:estimate-in-taylor-expansion},
+\begin{equation}
+\Var{\widehat{\theta}}  \approx  \sum_{i=1}^{p}{(f^{\prime}_i(\widehat{\psi}))^2 \Var{\widehat{\psi_i}}} + 2\sum_{i=1}^{p-1}{\sum_{j=i+1}^{p}{f^{\prime}_i(\widehat{\psi}) f^{\prime}_{j}(\widehat{\psi}) \Cov{\widehat{\psi_i},\widehat{\psi_j}}}}
+\label{eqn:prop-of-error-formula}
+\end{equation}
+The standard error for $\widehat{\theta}$ would then be the square root of this.
+
+If we follow this rule for the simple case of group differences, $f(\psi_1,\psi_2) = \psi_1 - \psi_2$, we find that
+\begin{equation}
+\Var{\widehat{\theta}} = \Var{\widehat{\psi_1}} + \Var{\widehat{\psi_2}} - 2\Cov{\widehat{\psi_1},\widehat{\psi_2}}
+\end{equation}
+just as we would find from the basic rules for arithmetic with variances.  The
+approximation in Eq.\ \ref{eqn:prop-of-error-formula} comes from the
+nonlinearities in $f$.
+
+If the estimates of the initial quantities are uncorrelated, Eq.\
+\ref{eqn:prop-of-error-formula} simplifies to
+\begin{equation}
+\Var{\widehat{\theta}}  \approx  \sum_{i=1}^{p}{(f^{\prime}_i(\widehat{\psi}))^2 \Var{\widehat{\psi_i}}} \label{eqn:uncorrelated-prop-of-error}
+\end{equation}
+and, again, the standard error of $\widehat{\theta}$ would be the square root
+of this.  The special case of Eq.\ \ref{eqn:uncorrelated-prop-of-error} is
+sometimes called {\em the} propagation of error formula, but I think it's
+better to use that name for the more general Eq.\
+\ref{eqn:prop-of-error-formula}.
+
+
+
+\section*{Exercises}
+
+To think through or practice on, not to hand in.
+
+\begin{enumerate}
+\item {\em True MSE of a linear model} Prove that the full-distribution MSE of
+  a linear model with intercept $b_0$ and slope $b_1$ is
+  \begin{equation}
+  \Var{Y} + (\Expect{Y})^2 - 2b_0 \Expect{Y} - 2b_1 \Cov{X,Y} - 2
+  b_1\Expect{X}\Expect{Y} + 2b_1 \Expect{X} + b_1^2\Var{X} + b_1^2
+  (\Expect{X})^2
+  \end{equation}
+\item \label{exercise:linear-systems-of-estimating-equations} Show that if all
+  $x_i = \overline{x}$, then the system of linear equations, Eqs.\
+  \ref{eqn:estimating-eqn-for-beta.0}--\ref{eqn:estimating-eqn-for-beta.1},
+  actually contains only one linearly-independent equation.  {\em Hint:} Write
+  the system of equations as a matrix multiplying the vector whose entries are
+  $(\hat{\beta}_0, \hat{\beta}_1)$, and consider the determinant of the matrix.
+  (How does the determinant of such a matrix relate to whether the equations
+  are all linearly independent?)
+\item \label{exercise:variance-of-y-bar} Show that, under the simple linear
+  regression model, $\Var{\overline{y}} = \sigma^2/n$.  You may treat the $x_i$
+  as fixed in this calculation.
+\item Derive Eqs.\ \ref{eqn:bias-of-beta0} and \ref{eqn:var-of-beta0} from the
+  results in \S \ref{sec:prediction}.  (Hint: $\hat{\beta}_0 = \hat{m}(x)$ for
+  what value of $x$?)  Is this a circular argument?
+\item \label{exercise:sigmasq-is-generalization-mse} Prove Eq.\ \ref{eqn:sigmasq-is-generalization-mse}.
+\item \label{exercise:debiasing-mse} Express the right-hand side of Eq.\ \ref{eqn:minimal-in-sample-mse} in
+  terms of $\beta_0$, $\beta_1$, the $x_i$ and the $\epsilon_i$.  Use this
+  expression to find $\Expect{\hat{\sigma}^2}$, and show that it equals
+  $\frac{n-2}{n}\sigma^2$.
+\end{enumerate}
+
+\bibliography{locusts}
+\bibliographystyle{crs}
+
+\end{document}
