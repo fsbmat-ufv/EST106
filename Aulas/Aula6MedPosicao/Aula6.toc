@@ -1,0 +1,9 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Medidas de Posição}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Moda}{6}{0}{1}
+\beamer@subsectionintoc {1}{2}{Mediana}{8}{0}{1}
+\beamer@subsectionintoc {1}{3}{Média Aritmética}{10}{0}{1}
+\beamer@sectionintoc {2}{Propriedades Importantes}{14}{0}{2}
+\beamer@subsectionintoc {2}{1}{Média Aritmética}{15}{0}{2}
+\beamer@subsectionintoc {2}{2}{Mediana}{24}{0}{2}
+\beamer@subsectionintoc {2}{3}{Moda}{26}{0}{2}

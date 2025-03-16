@@ -1,0 +1,6 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Gráficos para Variáveis Quantitativas}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Gráfico de Barras}{6}{0}{1}
+\beamer@subsectionintoc {1}{2}{Gráficos de Dispersão Unidimensionais}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{Histograma}{9}{0}{1}
+\beamer@subsectionintoc {1}{4}{Gráfico de Densidade}{14}{0}{1}

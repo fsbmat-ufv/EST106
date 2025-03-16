@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.16)  12 MAR 2025 15:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.10)  16 MAR 2025 13:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2035,8 +2035,9 @@ Overfull \vbox (31.87335pt too high) detected at line 120
 
 [1
 
-{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Fi
-les/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figs/mylogo.png>] (main.toc)
+{C:/Users/Fernando/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program
+ Files/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Program Files/MiKTeX/fonts/enc/dv
+ips/cm-super/cm-super-t1.enc} <./figs/mylogo.png>] (main.toc)
 
 [2
 
@@ -2324,24 +2325,24 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 59078 strings out of 473681
- 1326783 string characters out of 5729093
+ 59079 strings out of 473682
+ 1326819 string characters out of 5729105
  2394774 words of memory out of 5000000
- 80973 multiletter control sequences out of 15000+600000
+ 80972 multiletter control sequences out of 15000+600000
  632210 words of font info for 136 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,17n,123p,3247b,1874s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi450\ectt
-0800.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
-rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/font
-s/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvet
-ic/uhvbo8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:
-/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/Mi
-KTeX/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main.pdf (52 pages, 236832 bytes).
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/cm-super/sftt0800.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helveti
+c/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/
+Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKT
+eX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/fonts/type1/ur
+w/palatino/uplr8a.pfb>
+Output written on main.pdf (52 pages, 261610 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
+ 575 PDF objects out of 1000 (max. 8388607)
  114 named destinations out of 1000 (max. 500000)
  230 words of extra memory for PDF output out of 10000 (max. 10000000)
 

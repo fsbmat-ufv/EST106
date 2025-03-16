@@ -30,9 +30,9 @@
 \usepackage{listings}%Inserir codigo do R no latex
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 %\usepackage{csquotes}
 %\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
 %\addbibresource{bibliografia.bib}
@@ -52,8 +52,14 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -145,6 +151,7 @@ Para variáveis quantitativas podemos considerar uma variedade maior de represen
 \begin{frame}{}
 \frametitle{Visualizações Gráficas}
 \begin{block}{}
+	\footnotesize
 \justifying
 Tomemos como exemplo a variável Z: número de filhos da Tabela \href{https://raw.githack.com/ufvest/ufvest.github.io/master/Aulas_EST105/CompanhiaMB.html}{CompanhiaMB}.
 \begin{table}[ht]
@@ -206,6 +213,7 @@ Total& 20 & 100\\
 \subsection{Gráfico de Barras}
 \begin{frame}{}
 \frametitle{Gráfico de Barras}
+\vspace{-0.5cm}
 \begin{block}{}
 \begin{center}
 \setkeys{Gin}{width=0.5\linewidth}
@@ -217,6 +225,7 @@ Total& 20 & 100\\
 \begin{frame}{}
 \frametitle{Gráficos de Dispersão Unidimensionais}
 \begin{block}{}
+	\vspace{-0.5cm}
 \begin{center}
 \setkeys{Gin}{width=0.5\linewidth}
 \includegraphics{Aula5-point1}
@@ -227,6 +236,7 @@ Total& 20 & 100\\
 \begin{frame}{}
 \frametitle{Gráficos de Dispersão Unidimensionais}
 \begin{block}{}
+	\vspace{-0.5cm}
 \begin{center}
 \setkeys{Gin}{width=0.5\linewidth}
 \includegraphics{Aula5-point2}
@@ -340,7 +350,7 @@ Total       &   $-$     &36        &100.00     \\
 
 \begin{frame}%[allowframebreaks]
 \frametitle{\bf Referências}
-\bibliography{Referencias/Referencias.bib}
+\printbibliography
 \end{frame}
 
 

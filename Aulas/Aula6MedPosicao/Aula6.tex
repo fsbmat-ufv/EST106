@@ -30,12 +30,9 @@
 \usepackage{listings}%Inserir codigo do R no latex
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
-%\usepackage{csquotes}
-%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
-%\addbibresource{bibliografia.bib}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 \usepackage[figuresright]{rotating}
 \usepackage{spalign}
 %\usepackage{pgfpages}
@@ -52,8 +49,14 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -175,6 +178,7 @@ observação. Quando o número de observações for par, usa-se como mediana a m
 \begin{frame}{}
 \frametitle{Mediana}
 \begin{block}{}
+	\small
 \justifying
 Consideremos, agora, as observações ordenadas em ordem crescente. Vamos denotar a
 menor observação por $x_{(1)},$ a segunda por $x_{(2)},$ e assim por diante, obtendo-se
@@ -222,11 +226,11 @@ Se $x_{1},\cdots,x_{n}$ são os $n$ valores (distintos ou não) da variável $X,
 \begin{equation}
 \bx=\dfrac{x_{1}+\cdots+x_{n}}{n}=\dfrac{\displaystyle \sum_{i=1}^{n}{x_{i}}}{n}
 \end{equation}
-Agora, se tivermos $n$ observações da variável $X,$ das quais $n_{1}$ são iguais a $x_{1},$ $n_{2}$ são iguais
-a $x_{2},$ $n_{k}$ iguais a $x_{k},$ então a média de $X$ pode ser escrita como:
-\begin{equation}
-\bx=\dfrac{n_{1}x_{1}+\cdots+n_{k}x_{k}}{n_{1}+\cdots+n_{k}}=\dfrac{\displaystyle \sum_{i=1}^{k}n_{i}x_{i}}{n}
-\end{equation}
+%Agora, se tivermos $n$ observações da variável $X,$ das quais $n_{1}$ são iguais a $x_{1},$ $n_{2}$ são iguais
+%a $x_{2},$ $n_{k}$ iguais a $x_{k},$ então a média de $X$ pode ser escrita como:
+%\begin{equation}
+%\bx=\dfrac{n_{1}x_{1}+\cdots+n_{k}x_{k}}{n_{1}+\cdots+n_{k}}=\dfrac{\displaystyle \sum_{i=1}^{k}n_{i}x_{i}}{n}
+%\end{equation}
 \end{block}
 \end{frame}
 
@@ -285,6 +289,7 @@ A mediana é uma medida mais robusta que a média, quando submetida a mudanças 
 \section{Propriedades Importantes}
 \subsection{Média Aritmética}
 \begin{frame}{}
+	\small
 \frametitle{}
 \begin{block}{Propriedade 1:}
 \justifying
@@ -397,7 +402,7 @@ Sejam $X$ e $Z$ variáveis aleatórias e $k$ uma constante. Se $X=kZ,$ então $M
 
 \begin{frame}%[allowframebreaks]
 \frametitle{\bf Referências}
-\bibliography{Referencias/Referencias.bib}
+\printbibliography
 \end{frame}
 
 
