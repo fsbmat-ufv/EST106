@@ -1,0 +1,51 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{Apostila}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=622c698282c67ad16d20f293d69d96b1}{%
+           family={Peternelli},
+           familyi={P\bibinitperiod},
+           given={Luiz\bibnamedelima Alexandre},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{fullhash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{fullhashraw}{622c698282c67ad16d20f293d69d96b1}
+      \strng{bibnamehash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{authorbibnamehash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{authornamehash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{authorfullhash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{authorfullhashraw}{622c698282c67ad16d20f293d69d96b1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Formato slide Disponível no PVANet - Moodle}
+      \field{title}{Apostila (EST 106)}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -30,12 +30,9 @@
 \usepackage{listings}%Inserir codigo do R no latex
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
-%\usepackage{csquotes}
-%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
-%\addbibresource{bibliografia.bib}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 \usepackage[figuresright]{rotating}
 \usepackage{spalign}
 %\usepackage{pgfpages}
@@ -53,8 +50,14 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+%\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -176,10 +179,10 @@ média (5, em todos os casos) nada informa sobre suas diferentes variabilidades.
 \frametitle{}
 \begin{block}{}
 \justifying
-Um critério frequentemente usado para tal fim é aquele que mede a dispersão dos dados em torno de sua média. Duas medidas são as mais usadas: desvio médio e variância.
+Um critério frequentemente usado para tal fim é aquele que mede a dispersão dos dados em torno de sua média. A principal e mais conhecida é a variância amostral.
 \begin{align*}
-Dm(X) &=\displaystyle \dfrac{{\displaystyle \sum_{i=1}^{n}|x_{i}-\bar{x}|}}{n}&
-Var(X)&=\displaystyle \dfrac{{\displaystyle \sum_{i=1}^{n}(x_{i}-\bar{x})^{2}}}{n}
+%Dm(X) &=\displaystyle \dfrac{{\displaystyle \sum_{i=1}^{n}|x_{i}-\bar{x}|}}{n}&
+Var(X)&=\displaystyle \dfrac{{\displaystyle \sum_{i=1}^{n}(x_{i}-\bar{x})^{2}}}{n-1}
 \end{align*}
 O princípio básico é analisar os desvios das observações em relação à média dessas observações. Desvio é interpretado como o afastamento de uma observação em relação a uma determinada medida de posição.
 \end{block}
@@ -187,21 +190,24 @@ O princípio básico é analisar os desvios das observações em relação à m�
 
 \begin{frame}{}
     \frametitle{Variância Amostral}
+    \vspace{-0.5cm}
     \begin{block}{}
     \justifying
+    \small
     \begin{equation*}
 	S^2(X) = \dfrac{{SQD_X }}{{n - 1}} = \dfrac{{\sum\limits_{i = 1}^n {\left( {X_i  - \bar X} \right)^2 } }}{{n - 1}} = \dfrac{{\sum\limits_{i = 1}^n {X_i^2  - \dfrac{{\left( {\sum\limits_{i = 1}^n {X_i } } \right)^2 }}{n}} }}{{n - 1}}  = \dfrac{\sum\limits_{i = 1}^n {X_i^2  - n \bar{X}^2}}{n-1}
 	\end{equation*}
     \end{block}
     \pause
     \begin{block}{}
-    Medidas foram tomadas de 3 grupos, os resultados foram:
+    	\small
+    Medidas foram tomadas de 3 grupos, calcule a variância:
     	\begin{itemize}
 		\item Grupo 1 (em Kg): 1,3,5,7,9
 		\item Grupo 2 (em metros): 1.8,3.8,5.8,7.8,9.8 
 		\item Grupo 3 (em R\$): 1002,1004,1006,1008,1010
 	\end{itemize}
-	Calcule a variância destes 3 grupos!
+	%Calcule a variância destes 3 grupos!
     \end{block}
 \end{frame}
 
@@ -230,15 +236,20 @@ $D_{1}=\{10,20,30\}$ e $D_{2}=\{10000,10010,10020\}.$ Note que nestes casos $\ba
 \bar{x}_{2}=10010$ e $dp(x_{2})=10.$ Porém, em termos percentuais, o primeiro conjunto de dados é mais 
 heterogênio.
 \end{block}
-\pause
-\begin{block}{}
-\justifying
-\noindent \textbf{Obs.}: O C.V. é utilizado para avaliar qual o percentual da média que o desvio-padrão representa. Isso é chamado de homogeneidade. Na situação em que as amostras possuem a mesma média, a conclusão pode ser feita a partir da comparação de suas variâncias. Para amostras com médias diferentes, aquela que apresentar menor CV, é a mais homogênea.
-\end{block}
+
+\end{frame}
+
+\begin{frame}{}
+	\frametitle{Coeficiente de Variação}
+		\begin{block}{}
+		\justifying
+		\noindent \textbf{Obs.}: O C.V. é utilizado para avaliar qual o percentual da média que o desvio-padrão representa. Isso é chamado de homogeneidade. Na situação em que as amostras possuem a mesma média, a conclusão pode ser feita a partir da comparação de suas variâncias. Para amostras com médias diferentes, aquela que apresentar menor CV, é a mais homogênea.
+	\end{block}
 \end{frame}
 
 \begin{frame}{}
     \frametitle{Erro Padrão da Média}
+    \small
     \begin{block}{}
     \begin{equation*}
 	S(\overline{X}) = \sqrt{ \dfrac{S^2(X)}{n} }
@@ -282,206 +293,209 @@ $$AT_X = X_{(n)} - X_{(1)}$$
 
 Recorde que a notação $X_{(i)}$ indica estatísticas de ordem da amostra, isto é: $X_{(1)} \leq X_{(2)} \leq X_{(3)} \leq \cdots \leq X_{(n)}.$ Portanto, a amplitude total indica que o desvio entre duas observações quaisquer é no máximo igual a AT.
 \end{block}
-\end{frame}
-
-\section{Associação entre Variáveis Quantitativas}
-\begin{frame}[fragile]{}
-\frametitle{Coeficiente de Correlação Amostral}
-\vspace{-0.5cm}
-\begin{tabular}{cl}  
-        \begin{tabular}{c}
-          \parbox{0.5\linewidth}{
-          \begin{table}[h!]
-  \caption{Anos de Serviço $(X)$ versus\\ N$^{\circ}$ de Clientes $(Y)$}
-  \begin{tabular}{ccc}
-  \hline
-  Agente&X&Y\\
-  \hline
-  A&2&48\\
-  B&4&56\\
-  C&5&64\\
-  D&6&60\\
-  E&6&65\\
-  F&6&63\\
-  G&7&67\\
-  H&8&70\\
-  I&8&71\\
-  J&10&72\\
-  \hline
-  \hline
-  \end{tabular}
-  \end{table}
-          }
-        \end{tabular}
-           & 
-        \begin{tabular}{l}
-          \setkeys{Gin}{width=0.4\linewidth}
-\includegraphics{Aula10-001}
-         \end{tabular}  \\
-\end{tabular}
-\end{frame}
-
-\begin{frame}[fragile]{}
-\frametitle{}
-\vspace{-0.5cm}
-\begin{tabular}{cl}  
-        \begin{tabular}{c}
-          \parbox{0.5\linewidth}{
-          \begin{table}[h!]
-  \caption{Renda bruta mensal $(X)$ e porcentagem da renda gasta em saúde $(Y).$}
-  \begin{tabular}{ccc}
-  \hline
-  Família&X&Y\\
-  \hline
-  A&12&7.2\\
-  B&16&7.4\\
-  C&18&7.0\\
-  D&20&6.5\\
-  E&28&6.6\\
-  F&30&6.7\\
-  G&40&6.0\\
-  H&48&5.6\\
-  I&50&6.0\\
-  J&54&5.5\\
-  \hline
-  \hline
-  \end{tabular}
-  \end{table}
-          }
-        \end{tabular}
-           & 
-        \begin{tabular}{l}
-          \setkeys{Gin}{width=0.4\linewidth}
-\includegraphics{Aula10-002}
-         \end{tabular}  \\
-\end{tabular}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.5]{figs/correlacao}
-    \caption{Representação gráfica de diversos coeficientes de correlação.}
-    %\label{figRotulo}
-  \end{figure}
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{}
-\begin{center}
-\setkeys{Gin}{width=0.6\linewidth}
-\includegraphics{Aula10-003}
-\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{}
-\begin{center}
-\setkeys{Gin}{width=0.6\linewidth}
-\includegraphics{Aula10-004}
-\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{}
-\begin{center}
-\setkeys{Gin}{width=0.6\linewidth}
-\includegraphics{Aula10-005}
-\end{center}
-\end{frame}
-
-\begin{frame}[fragile]{}
-\begin{center}
-\setkeys{Gin}{width=0.6\linewidth}
-\includegraphics{Aula10-006}
-\end{center}
-\end{frame}
-
-\begin{frame}{Coeficiente de Correlação Amostral de Pearson}
-    \begin{block}{}
-    \justifying
-    O coeficiente de correlação $(r\ \textrm{ou}\ \hat{\rho})$ mede o grau de associação linear entre duas variáveis aleatórias $X$ e $Y.$ Considere,
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{c|cccc}
-             $X_{i}$&$X_{1}$ $X_{2}$ $\cdots$ $X_{n}$ \\
-             \hline
-             $Y_{i}$&$Y_{1}$ $Y_{2}$ $\cdots$ $Y_{n}$ 
-        \end{tabular}
-    \end{table}
-    Assim, o coeficiente de correlação entre $X$ e $Y$ é dado por:
-    
-    $$r_{XY}=\dfrac{S_{XY}}{\sqrt{S^{2}_{X}\cdot S_{Y}^{2}}}=
-    \dfrac{\dfrac{SPD_{XY}}{n-1}}{\sqrt{\dfrac{SQD_{X}}{n-1}\cdot\dfrac{SQD_{Y}}{n-1}}}= 
-    \dfrac{SPD_{XY}}{\sqrt{SQD_{X}\cdot SQD_{Y}}}$$
-    
-    \end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-%\vspace{-0.6cm}
-\begin{block}{}
-\justifying
-Temos,
-$$SPD_{XY}=\sum_{i=1}^{n}X_{i}Y_{i}-\dfrac{\Big({\displaystyle\sum_{i=1}^{n}X_{i}}\Big)\Big({\displaystyle\sum_{i=1}^{n}Y_{i}\Big)}}{n}$$
-\pause
-$$SQD_{X}=\displaystyle{\sum_{i=1}^{n}X_{i}^{2}}-\dfrac{\Big(\displaystyle{\sum_{i=1}^{n}X_{i}}\Big)^{2}}{n}\quad \textrm{e}\quad SQD_{Y}=\displaystyle{\sum_{i=1}^{n}Y_{i}^{2}}-\dfrac{\Big(\displaystyle{\sum_{i=1}^{n}Y_{i}}\Big)^{2}}{n}$$
-\end{block}
-\pause
-\vspace{-0.06cm}
-\begin{block}{}
-\justifying
-Não é difícil provar que o coeficiente de correlação satisfaz:
-$$-1\leq cor(X,Y)\leq 1$$
-\end{block}
-%\vspace{-0.8cm}
-\end{frame}
-
-\begin{frame}{}
-    \begin{block}{}
-\justifying
-{\bf DEF:} Dados $n$ pares de valores $(x_{1}, y_{1}), \cdots, (x_{n}, y_{n}),$ chamaremos de covariância entre as duas variáveis $X$ e $Y$ a igualdade:
-$$S_{XY}=cov(X,Y)={\displaystyle \sum_{i=1}^{n}\dfrac{(x_{i}-\bar{x})(y_{i}-\bar{y})}{n}}$$
-\end{block}
-\pause
-\begin{block}{}
-\justifying
-Com a definição acima, o coeficiente de correlação pode ser escrito como:
-$$r_{XY}=cor(X,Y)=\dfrac{cov(X,Y)}{dp(X)dp(Y)}$$
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-A covariância mede a relação linear entre duas variáveis. A covariância é semelhante à correlação entre duas variáveis, no entanto, elas diferem nas seguintes maneiras:
-\end{block}
-\pause
-\begin{block}{}
-\justifying
-\begin{itemize}
-\item Os coeficientes de correlação são padronizados. Assim, um relacionamento linear perfeito resulta em um coeficiente de correlação 1. A correlação mede tanto a força como a direção da relação linear entre duas variáveis.
-\end{itemize}
-\end{block}
-\pause
-\begin{block}{}
-\justifying
-\begin{itemize}
-\item Os valores de covariância não são padronizados. Como os dados não são padronizadas, é difícil determinar a força da relação entre as variáveis.
-\end{itemize}
 \nocite{Apostila}
-\end{block}
 \end{frame}
+
+
 
 \begin{frame}%[allowframebreaks]
 \frametitle{\bf Referências}
-\bibliography{Referencias/Referencias.bib}
+\printbibliography
 \end{frame}
 
 
 \end{document}
+
+\section{Associação entre Variáveis Quantitativas}
+\begin{frame}[fragile]{}
+	\frametitle{Coeficiente de Correlação Amostral}
+	\vspace{-0.5cm}
+	\begin{tabular}{cl}  
+		\begin{tabular}{c}
+			\parbox{0.5\linewidth}{
+				\begin{table}[h!]
+					\caption{Anos de Serviço $(X)$ versus\\ N$^{\circ}$ de Clientes $(Y)$}
+					\begin{tabular}{ccc}
+						\hline
+						Agente&X&Y\\
+						\hline
+						A&2&48\\
+						B&4&56\\
+						C&5&64\\
+						D&6&60\\
+						E&6&65\\
+						F&6&63\\
+						G&7&67\\
+						H&8&70\\
+						I&8&71\\
+						J&10&72\\
+						\hline
+						\hline
+					\end{tabular}
+				\end{table}
+			}
+		\end{tabular}
+		& 
+		\begin{tabular}{l}
+			\setkeys{Gin}{width=0.4\linewidth}
+			\includegraphics{Aula10-001}
+		\end{tabular}  \\
+	\end{tabular}
+\end{frame}
+
+\begin{frame}[fragile]{}
+	\frametitle{}
+	\vspace{-0.5cm}
+	\begin{tabular}{cl}  
+		\begin{tabular}{c}
+			\parbox{0.5\linewidth}{
+				\begin{table}[h!]
+					\caption{Renda bruta mensal $(X)$ e porcentagem da renda gasta em saúde $(Y).$}
+					\begin{tabular}{ccc}
+						\hline
+						Família&X&Y\\
+						\hline
+						A&12&7.2\\
+						B&16&7.4\\
+						C&18&7.0\\
+						D&20&6.5\\
+						E&28&6.6\\
+						F&30&6.7\\
+						G&40&6.0\\
+						H&48&5.6\\
+						I&50&6.0\\
+						J&54&5.5\\
+						\hline
+						\hline
+					\end{tabular}
+				\end{table}
+			}
+		\end{tabular}
+		& 
+		\begin{tabular}{l}
+			\setkeys{Gin}{width=0.4\linewidth}
+			\includegraphics{Aula10-002}
+		\end{tabular}  \\
+	\end{tabular}
+\end{frame}
+
+\begin{frame}{}
+	\frametitle{}
+	\begin{block}{}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{figs/correlacao}
+			\caption{Representação gráfica de diversos coeficientes de correlação.}
+			%\label{figRotulo}
+		\end{figure}
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{}
+	\begin{center}
+		\setkeys{Gin}{width=0.6\linewidth}
+		\includegraphics{Aula10-003}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{}
+	\begin{center}
+		\setkeys{Gin}{width=0.6\linewidth}
+		\includegraphics{Aula10-004}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{}
+	\begin{center}
+		\setkeys{Gin}{width=0.6\linewidth}
+		\includegraphics{Aula10-005}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{}
+	\begin{center}
+		\setkeys{Gin}{width=0.6\linewidth}
+		\includegraphics{Aula10-006}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Coeficiente de Correlação Amostral de Pearson}
+	\begin{block}{}
+		\justifying
+		O coeficiente de correlação $(r\ \textrm{ou}\ \hat{\rho})$ mede o grau de associação linear entre duas variáveis aleatórias $X$ e $Y.$ Considere,
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{c|cccc}
+				$X_{i}$&$X_{1}$ $X_{2}$ $\cdots$ $X_{n}$ \\
+				\hline
+				$Y_{i}$&$Y_{1}$ $Y_{2}$ $\cdots$ $Y_{n}$ 
+			\end{tabular}
+		\end{table}
+		Assim, o coeficiente de correlação entre $X$ e $Y$ é dado por:
+		
+		$$r_{XY}=\dfrac{S_{XY}}{\sqrt{S^{2}_{X}\cdot S_{Y}^{2}}}=
+		\dfrac{\dfrac{SPD_{XY}}{n-1}}{\sqrt{\dfrac{SQD_{X}}{n-1}\cdot\dfrac{SQD_{Y}}{n-1}}}= 
+		\dfrac{SPD_{XY}}{\sqrt{SQD_{X}\cdot SQD_{Y}}}$$
+		
+	\end{block}
+\end{frame}
+
+\begin{frame}{}
+	\frametitle{}
+	%\vspace{-0.6cm}
+	\begin{block}{}
+		\justifying
+		Temos,
+		$$SPD_{XY}=\sum_{i=1}^{n}X_{i}Y_{i}-\dfrac{\Big({\displaystyle\sum_{i=1}^{n}X_{i}}\Big)\Big({\displaystyle\sum_{i=1}^{n}Y_{i}\Big)}}{n}$$
+		\pause
+		$$SQD_{X}=\displaystyle{\sum_{i=1}^{n}X_{i}^{2}}-\dfrac{\Big(\displaystyle{\sum_{i=1}^{n}X_{i}}\Big)^{2}}{n}\quad \textrm{e}\quad SQD_{Y}=\displaystyle{\sum_{i=1}^{n}Y_{i}^{2}}-\dfrac{\Big(\displaystyle{\sum_{i=1}^{n}Y_{i}}\Big)^{2}}{n}$$
+	\end{block}
+	\pause
+	\vspace{-0.06cm}
+	\begin{block}{}
+		\justifying
+		Não é difícil provar que o coeficiente de correlação satisfaz:
+		$$-1\leq cor(X,Y)\leq 1$$
+	\end{block}
+	%\vspace{-0.8cm}
+\end{frame}
+
+\begin{frame}{}
+	\begin{block}{}
+		\justifying
+		{\bf DEF:} Dados $n$ pares de valores $(x_{1}, y_{1}), \cdots, (x_{n}, y_{n}),$ chamaremos de covariância entre as duas variáveis $X$ e $Y$ a igualdade:
+		$$S_{XY}=cov(X,Y)={\displaystyle \sum_{i=1}^{n}\dfrac{(x_{i}-\bar{x})(y_{i}-\bar{y})}{n}}$$
+	\end{block}
+	\pause
+	\begin{block}{}
+		\justifying
+		Com a definição acima, o coeficiente de correlação pode ser escrito como:
+		$$r_{XY}=cor(X,Y)=\dfrac{cov(X,Y)}{dp(X)dp(Y)}$$
+	\end{block}
+\end{frame}
+
+\begin{frame}{}
+	\frametitle{}
+	\begin{block}{}
+		\justifying
+		A covariância mede a relação linear entre duas variáveis. A covariância é semelhante à correlação entre duas variáveis, no entanto, elas diferem nas seguintes maneiras:
+	\end{block}
+	\pause
+	\begin{block}{}
+		\justifying
+		\begin{itemize}
+			\item Os coeficientes de correlação são padronizados. Assim, um relacionamento linear perfeito resulta em um coeficiente de correlação 1. A correlação mede tanto a força como a direção da relação linear entre duas variáveis.
+		\end{itemize}
+	\end{block}
+	\pause
+	\begin{block}{}
+		\justifying
+		\begin{itemize}
+			\item Os valores de covariância não são padronizados. Como os dados não são padronizadas, é difícil determinar a força da relação entre as variáveis.
+		\end{itemize}
+		\nocite{Apostila}
+	\end{block}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
