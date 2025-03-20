@@ -31,12 +31,9 @@
 %\usepackage{slashbox}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
-%\usepackage{csquotes}
-%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
-%\addbibresource{bibliografia.bib}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 \usepackage[figuresright]{rotating}
 \usepackage{spalign}
 %\usepackage{pgfpages}
@@ -54,8 +51,14 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -153,29 +156,29 @@ Informalmente, uma variável aleatória (v.a.) é uma variável que tem um únic
 \end{block}
 \end{frame}
 
-\begin{frame}{}
-\frametitle{Exemplos}
-\begin{block}{}
-\justifying
-\begin{itemize}
-\item A contagem do número de alunos presentes a uma aula é uma variável aleatória;\pause
-\item O número de vitórias do Corinthians no ano;\pause
-\item A quantidade de leite que uma vaca produz em um dia;\pause
-\item A quantidade de água que sai de uma torneira durante ao lavar um prato;\pause
-\item O número de crianças que nascem por dia em uma cidade;\pause
-\item O número de pessoas que morrem por dia em uma cidade e etc.
-\end{itemize}
-\end{block}
-\end{frame}
+%\begin{frame}{}
+%\frametitle{Exemplos}
+%\begin{block}{}
+%\justifying
+%\begin{itemize}
+%\item \justifying A contagem do número de alunos presentes a uma aula é uma variável aleatória;\pause
+%\item O número de vitórias do Corinthians no ano;\pause
+%\item A quantidade de leite que uma vaca produz em um dia;\pause
+%\item \justifying A quantidade de água que sai de uma torneira durante ao lavar um prato;\pause
+%\item \justifying O número de crianças que nascem por dia em uma cidade;\pause
+%\item \justifying O número de pessoas que morrem por dia em uma cidade e etc.
+%\end{itemize}
+%\end{block}
+%\end{frame}
 
 \begin{frame}{}
 \frametitle{}
 \begin{block}{}
 \justifying
-\textbf{Observação 1:} Utilizaremos letras maiúsculas ($X,Y, Z,\ldots $ e etc.) para representar uma v.a. e a correspondente letra minúscula ($x,y,z,\ldots$ etc.) para 
+\textbf{Observação 1:} \justifying Utilizaremos letras maiúsculas ($X,Y, Z,\ldots $ e etc.) para representar uma v.a. e a correspondente letra minúscula ($x,y,z,\ldots$ etc.) para 
 representar um de seus valores.
 
-\textbf{Observação 2:} Cada possível valor $x_{i}$ de $X$ representa um evento que é um subconjunto do espaço amostral.
+\textbf{Observação 2:} \justifying Cada possível valor $x_{i}$ de $X$ representa um evento que é um subconjunto do espaço amostral.
 \end{block}
 \end{frame}
 
@@ -184,7 +187,7 @@ representar um de seus valores.
 \begin{block}{}
 \justifying
 \begin{itemize}
-\item Lançar uma moeda $2$ vezes e observar a sequência de caras (c) e coroas (k) obtidas. Uma variável aleatória associada a esse experimento pode ser: 
+\item \justifying Lançar uma moeda $2$ vezes e observar a sequência de caras (c) e coroas (k) obtidas. Uma variável aleatória associada a esse experimento pode ser: 
 $X=$ ``o número de caras obtidas", de onde: $X=\{0,1,2\}.$ Fazendo uma correspondência entre $\Omega$ e $X,$ temos:
 $$
 \begin{tabular}{cc}
@@ -212,7 +215,7 @@ $$
 \textbf{Exemplos:}
 
 \begin{itemize}
-\item Lançar uma moeda $2$ vezes e observar a sequência de caras (c) e coroas (k) obtidas. O número de caras obtidas é uma variável aleatória dis\-cre\-ta, pois pode assumir uma quantidade finita de valores;
+\item \justifying Lançar uma moeda $2$ vezes e observar a sequência de caras (c) e coroas (k) obtidas. O número de caras obtidas é uma variável aleatória dis\-cre\-ta, pois pode assumir uma quantidade finita de valores;
 \end{itemize}
 \end{block}
 \end{frame}
@@ -223,10 +226,10 @@ $$
 \begin{block}{}
 \justifying
 \begin{itemize}
-\item A contagem do número de alunos presentes a uma aula é uma variável aleatória discreta;\pause
+\item \justifying A contagem do número de alunos presentes a uma aula é uma variável aleatória discreta;\pause
 \item O número de vitórias do Corinthians no ano;\pause
-\item O número de crianças que nascem por dia em uma cidade;\pause
-\item O número de pessoas que morrem por dia em uma cidade;\pause
+\item \justifying O número de crianças que nascem por dia em uma cidade;\pause
+\item \justifying O número de pessoas que morrem por dia em uma cidade;\pause
 \item O número de ovos que uma galinha bota em um dia.
 \end{itemize}
 \end{block}
@@ -237,7 +240,7 @@ $$
 \frametitle{}
 \begin{block}{}
 \justifying
-\textbf{Definição:} A função de probabilidade de uma v.a.d. é uma função que atribue probabilidade a cada um dos possíveis valores assumidos pela variável, isto é, 
+\textbf{Definição:} \justifying A função de probabilidade de uma v.a.d. é uma função que atribue probabilidade a cada um dos possíveis valores assumidos pela variável, isto é, 
 sendo $X$ uma variável com valores $x_{1}, x_{2},\ldots,$ temos para $i=1,2,\ldots,$ $$p(x_{i})=P(X=x_{i}).$$
 \end{block}
 \end{frame}
@@ -250,7 +253,7 @@ A função de probabilidade de $X$ em $(\Omega, \mathcal{F},P)$ satisfaz:
 $\newline$
 \begin{enumerate}
 \item $0\leq p(x_{i})\leq 1, \forall i=1,2,\ldots;$\pause
-\item $\displaystyle \sum_{i}p(x_{i})=1;$ com a soma percorrendo todos os possíveis valores (eventualmente infinitos).
+\item \justifying $\displaystyle \sum_{i}p(x_{i})=1;$ com a soma percorrendo todos os possíveis valores (eventualmente infinitos).
 \end{enumerate}
 \end{block}
 \end{frame}
@@ -260,7 +263,7 @@ $\newline$
 \begin{block}{}
 \justifying
 \begin{description}
-\item[a)] Considere dois lançamentos independentes de uma moeda equilibrada. Com o espaço de probabilidade sendo o usual, defina $X$ como sendo o número de caras nos dois lançamentos. A variável $X$ será discreta e sua função de probabilidade será dada por:
+\item[a)] \justifying Considere dois lançamentos independentes de uma moeda equilibrada. Com o espaço de probabilidade sendo o usual, defina $X$ como sendo o número de caras nos dois lançamentos. A variável $X$ será discreta e sua função de probabilidade será dada por:
 $$
 \begin{tabular}{c|ccc}
 $X$ &            0 &            1 & 2 \\
@@ -275,10 +278,11 @@ $$
 
 \begin{frame}{}
 \frametitle{}
+\small
 \begin{block}{}
 \justifying
 \begin{description}
-\item[b)] Suponha que no lançamento de um dado viciado a probabilidade é proporcional ao valor obtido no lançamento. Considere $\Omega=\{1,2,3,4,5,6\}.$ Suponhamos que estamos interessados na avaliação da variável aleatória $X=\{\textrm{resultado obtido}\}.$ Assim, os possíveis valores que $X$ pode assumir são $X=\{1,2,3,4,5,6\}$ com as respectivas probabilidades: $$p+2p+3p+4p+5p+6p=1,$$ de onde, $$p=\dfrac{1}{21}$$
+\item[b)] \justifying Suponha que no lançamento de um dado viciado a probabilidade é proporcional ao valor obtido no lançamento. Considere $\Omega=\{1,2,3,4,5,6\}.$ Suponhamos que estamos interessados na avaliação da variável aleatória $X=\{\textrm{resultado obtido}\}.$ Assim, os possíveis valores que $X$ pode assumir são $X=\{1,2,3,4,5,6\}$ com as respectivas probabilidades: $$p+2p+3p+4p+5p+6p=1,$$ de onde, $$p=\dfrac{1}{21}$$
 \end{description}
 \end{block}
 \end{frame}
@@ -297,26 +301,17 @@ O comportamento de uma v.a. é descrito por sua distribuição de probabilidade.
 \frametitle{}
 \begin{block}{}
 \justifying
-\textbf{Definição:} Uma variável aleatória X em $(\Omega, \mathcal{F},P)$ é contínua (v.a.c) se pode assumir infinitos valores e esses valores podem ser associados 
-com medidas em uma escala contínua.\pause
-
-\textbf{Exemplos:}
-
-\begin{itemize}
-\item Seja $X=$ a quantidade de leite que uma vaca produz em um dia. Essa é uma variável aleatória contínua pois pode assumir qualquer valor em um intervalo contínuo. 
-Seria por exemplo possível uma vaca produzir um número irracional de litros de leite, pois uma vaca não, necessariamente, produz quantidades discretas de 0, 1, 2, ou 
-mais litros.\pause
-\end{itemize}
+\textbf{Definição:} Uma variável aleatória X em $(\Omega, \mathcal{F},P)$ é contínua (v.a.c) se pode assumir infinitos valores e esses valores podem ser associados com medidas em uma escala contínua.
 \end{block}
 \end{frame}
 
 \begin{frame}{}
 \frametitle{}
-\begin{block}{}
-\justifying
+\begin{block}{Exemplos:}
 \begin{itemize}
-\item A medida de tensão de uma bateria de carro é uma variável contínua.\pause
-\item A vazão da torneira da cozinha de uma casa é uma v.a.c.
+\item \justifying Seja $X=$ a quantidade de leite que uma vaca produz em um dia. Essa é uma variável aleatória contínua pois pode assumir qualquer valor em um intervalo contínuo. \pause
+\item \justifying A medida de tensão de uma bateria de carro é uma variável contínua.\pause
+\item \justifying A vazão da torneira da cozinha de uma casa é uma v.a.c.
 \end{itemize}
 \end{block}
 \end{frame}
@@ -498,6 +493,12 @@ Para as variáveis contínuas, a função de distribuição acumulada pode ser d
 Notem que $$P(c<X\leq d)=F(d)-F(c)=\int_{c}^{d}f(x)dx.$$ Notem também que $f(x)=\dfrac{d}{dx}F(x)$ em todos os pontos de continuidade de $f(x),$ isto é, a derivada da
 função de distribuição é a função densidade de probabilidade.
 \end{block}
+\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{\bf Referências}
+\printbibliography
 \end{frame}
 
 

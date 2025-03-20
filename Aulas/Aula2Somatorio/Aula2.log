@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.16)  12 MAR 2025 14:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.10)  20 MAR 2025 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1901,8 +1901,9 @@ Overfull \vbox (31.87335pt too high) detected at line 122
 
 [1
 
-{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Fi
-les/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figs/mylogo.png>] (Aula2.toc)
+{C:/Users/Fernando/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program
+ Files/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Program Files/MiKTeX/fonts/enc/dv
+ips/cm-super/cm-super-t1.enc} <./figs/mylogo.png>] (Aula2.toc)
 
 [2
 
@@ -2014,6 +2015,24 @@ Overfull \vbox (38.16399pt too high) detected at line 305
 [20
 
 ]
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 332.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 332.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 3
+32.
+ (C:\Program Files\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+
+[21
+
+ <C:/Program Files/MiKTeX/tex/latex/beamer/beamericonarticle.pdf>]
+
+[22
+
+
+]
 \tf@nav=\write7
 \openout7 = `Aula2.nav'.
 
@@ -2033,32 +2052,29 @@ Package logreq Info: Writing requests to 'Aula2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53610 strings out of 473681
- 1174941 string characters out of 5729093
- 2224965 words of memory out of 5000000
- 75683 multiletter control sequences out of 15000+600000
- 606276 words of font info for 104 fonts, out of 8000000 for 9000
+ 53749 strings out of 473682
+ 1178027 string characters out of 5729105
+ 2225301 words of memory out of 5000000
+ 75799 multiletter control sequences out of 15000+600000
+ 618460 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,17n,123p,3248b,1872s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{cite.0@wikiGauss} has been referenced but does not 
-exist, replaced by a fixed one
-
- <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi450\ectt08
-00.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C
-:/Program Files/MiKTeX/fonts/type1/public/doublestroke/dsrom12.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/public/doublestroke/dsrom8.pfb><C:/Program Files/MiKTe
-X/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/
-helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.p
-fb>
-Output written on Aula2.pdf (20 pages, 188000 bytes).
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmss8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Pr
+ogram Files/MiKTeX/fonts/type1/public/doublestroke/dsrom12.pfb><C:/Program File
+s/MiKTeX/fonts/type1/public/doublestroke/dsrom8.pfb><C:/Program Files/MiKTeX/fo
+nts/type1/public/cm-super/sftt0800.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/cm-super/sftt1095.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhv
+b8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fo
+nts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Aula2.pdf (22 pages, 270159 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 333 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

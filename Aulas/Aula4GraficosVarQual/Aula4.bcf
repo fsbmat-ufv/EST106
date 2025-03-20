@@ -2378,10 +2378,26 @@
     <bcf:citekey order="3" intorder="1">unwin</bcf:citekey>
     <bcf:citekey order="4" intorder="1">morettin2017estatistica</bcf:citekey>
     <bcf:citekey order="5" intorder="1">morettin2017estatistica</bcf:citekey>
-    <bcf:citekey order="6" intorder="1" nocite="1">Apostila</bcf:citekey>
-    <bcf:citekey order="7" intorder="1" nocite="1">Apostila</bcf:citekey>
-    <bcf:citekey order="8" intorder="1" nocite="1">Apostila</bcf:citekey>
-    <bcf:citekey order="9" intorder="1" nocite="1">Apostila</bcf:citekey>
+    <bcf:citekey order="6" intorder="1" nocite="1">Morettin09</bcf:citekey>
+    <bcf:citekey order="7" intorder="2" nocite="1">Apostila</bcf:citekey>
+    <bcf:citekey order="8" intorder="3" nocite="1">eric</bcf:citekey>
+    <bcf:citekey order="9" intorder="4" nocite="1">montgomery2016</bcf:citekey>
+    <bcf:citekey order="10" intorder="5" nocite="1">Bastos2025</bcf:citekey>
+    <bcf:citekey order="11" intorder="1" nocite="1">Morettin09</bcf:citekey>
+    <bcf:citekey order="12" intorder="2" nocite="1">Apostila</bcf:citekey>
+    <bcf:citekey order="13" intorder="3" nocite="1">eric</bcf:citekey>
+    <bcf:citekey order="14" intorder="4" nocite="1">montgomery2016</bcf:citekey>
+    <bcf:citekey order="15" intorder="5" nocite="1">Bastos2025</bcf:citekey>
+    <bcf:citekey order="16" intorder="1" nocite="1">Morettin09</bcf:citekey>
+    <bcf:citekey order="17" intorder="2" nocite="1">Apostila</bcf:citekey>
+    <bcf:citekey order="18" intorder="3" nocite="1">eric</bcf:citekey>
+    <bcf:citekey order="19" intorder="4" nocite="1">montgomery2016</bcf:citekey>
+    <bcf:citekey order="20" intorder="5" nocite="1">Bastos2025</bcf:citekey>
+    <bcf:citekey order="21" intorder="1" nocite="1">Morettin09</bcf:citekey>
+    <bcf:citekey order="22" intorder="2" nocite="1">Apostila</bcf:citekey>
+    <bcf:citekey order="23" intorder="3" nocite="1">eric</bcf:citekey>
+    <bcf:citekey order="24" intorder="4" nocite="1">montgomery2016</bcf:citekey>
+    <bcf:citekey order="25" intorder="5" nocite="1">Bastos2025</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -31,12 +31,9 @@
 %\usepackage{slashbox}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
-%\usepackage{csquotes}
-%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
-%\addbibresource{bibliografia.bib}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 \usepackage[figuresright]{rotating}
 \usepackage{spalign}
 %\usepackage{pgfpages}
@@ -54,8 +51,14 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -502,11 +505,13 @@ Observe que $P(A|B) > P(A)$ se $P(B|A) > P(B).$
 \end{frame}
 
 \begin{frame}{}
-\frametitle{Exemplo 5.14}% (\cite{Morettin09})}
+\frametitle{Exemplo}
+\small
   \begin{block}{}
   \justifying
 Temos cinco urnas, cada uma com seis bolas. Duas dessas urnas (tipo $C_1$) têm 3 bolas brancas, duas outras (tipo $C_2$) têm 2 bolas brancas, e a última urna (tipo $C_3$) tem 6 bolas brancas. Escolhemos uma urna ao acaso e dela retiramos uma bola. Qual a probabilidade de a urna escolhida ser do tipo $C_3,$ sabendo-se que a bola sorteada é branca?
 \end{block}
+\vspace{-0.5cm}
     \begin{figure}[H]
     \centering
     \includegraphics[height=0.3\textwidth,width=15cm]{figs/ex5_14}
@@ -561,12 +566,11 @@ P(C_{3}|B)&=\dfrac{P(C_{3})P(B|C_{3})}{P(B)}\\
 \end{align}
 \nocite{roteiro}
 \end{block}
+\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}
 \end{frame}
 
-
-
-\begin{frame}{}
-\frametitle{Referências Bibliográficas}
-\bibliography{bibliografia}
+\begin{frame}[allowframebreaks]
+\frametitle{\bf Referências}
+\printbibliography
 \end{frame}
 \end{document}

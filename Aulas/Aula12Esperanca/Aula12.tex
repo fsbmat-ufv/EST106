@@ -31,12 +31,9 @@
 %\usepackage{slashbox}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
-%\usepackage{csquotes}
-%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
-%\addbibresource{bibliografia.bib}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 \usepackage[figuresright]{rotating}
 \usepackage{spalign}
 %\usepackage{pgfpages}
@@ -54,8 +51,14 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -279,6 +282,7 @@ A covariância mede o grau de dispersão conjunta de duas variáveis aleatórias
 $$\rho(X,Y)=\dfrac{cov(X,Y)}{\sigma_{X}\sigma_{Y}}=E\left[\left(\dfrac{X-E(X)}{\sigma_{X}}\right)\left(\dfrac{Y-E(Y)}{\sigma_{Y}}\right)\right]$$
 \end{block}
 \nocite{roteiro}
+\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}
 \end{frame}
 
 % \begin{frame}{}
@@ -829,9 +833,11 @@ $$\rho(X,Y)=\dfrac{cov(X,Y)}{\sigma_{X}\sigma_{Y}}=E\left[\left(\dfrac{X-E(X)}{\
 % \end{block}
 % \end{frame}
 
-\begin{frame}%[allowframebreaks]
+
+
+\begin{frame}[allowframebreaks]
 \frametitle{\bf Referências}
-\bibliography{Referencias.bib}
+\printbibliography
 \end{frame}
 
 

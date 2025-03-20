@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.10)  16 MAR 2025 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.10)  20 MAR 2025 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2205,7 +2205,7 @@ Package pdftex.def Info: Aula4-pie2.pdf  used on input line 428.
 [30
 
 ]
-Overfull \vbox (58.60173pt too high) detected at line 490
+Overfull \vbox (11.43053pt too high) detected at line 491
  []
 
 
@@ -2230,9 +2230,20 @@ Overfull \vbox (58.60173pt too high) detected at line 490
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 511.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 512.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 5
+12.
+ (C:\Program Files\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+Overfull \hbox (7.2898pt too wide) in paragraph at lines 512--512
+[][][]\T1/phv/m/n/14.4 Morettin, P.A. e W.O Bus-sab (2023).[] \T1/phv/b/sl/14.4
+ Es-ta-tís-tica bá-sica\T1/phv/b/n/14.4 .[] \T1/phv/m/n/12 10\TS1/phv/m/n/12 ª 
+\T1/phv/m/n/12 ed.
+ []
 
-Overfull \hbox (8.5148pt too wide) in paragraph at lines 511--511
+
+Overfull \hbox (8.5148pt too wide) in paragraph at lines 512--512
 [][][]\T1/phv/m/n/14.4 Unwin, An-tony (2015).[] \T1/phv/b/sl/14.4 Graphi-cal da
 ta analy-sis with R\T1/phv/b/n/14.4 .[] \T1/phv/m/n/12 Vol. 27.
  []
@@ -2242,6 +2253,11 @@ ta analy-sis with R\T1/phv/b/n/14.4 .[] \T1/phv/m/n/12 Vol. 27.
 [36
 
  <C:/Program Files/MiKTeX/tex/latex/beamer/beamericonarticle.pdf>]
+
+[37
+
+
+]
 \tf@nav=\write7
 \openout7 = `Aula4.nav'.
 
@@ -2251,8 +2267,7 @@ ta analy-sis with R\T1/phv/b/n/14.4 .[] \T1/phv/m/n/12 Vol. 27.
 \tf@snm=\write9
 \openout9 = `Aula4.snm'.
 
-
-(Aula4.aux)
+ (Aula4.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
@@ -2262,24 +2277,25 @@ Package logreq Info: Writing requests to 'Aula4.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54043 strings out of 473682
- 1183156 string characters out of 5729105
- 2238211 words of memory out of 5000000
- 76051 multiletter control sequences out of 15000+600000
- 645085 words of font info for 162 fonts, out of 8000000 for 9000
+ 54110 strings out of 473682
+ 1184414 string characters out of 5729105
+ 2238451 words of memory out of 5000000
+ 76105 multiletter control sequences out of 15000+600000
+ 650879 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,17n,123p,3239b,1874s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
  Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/cm-super/sftt0800.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helveti
-c/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/
-Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKT
-eX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/fonts/type1/ur
-w/palatino/uplr8a.pfb>
-Output written on Aula4.pdf (36 pages, 366557 bytes).
+1/public/cm-super/sftt0800.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-s
+uper/sftt1200.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files
+/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/type
+1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/up
+lr8a.pfb>
+Output written on Aula4.pdf (37 pages, 404839 bytes).
 PDF statistics:
- 486 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
+ 509 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
  170 words of extra memory for PDF output out of 10000 (max. 10000000)
 

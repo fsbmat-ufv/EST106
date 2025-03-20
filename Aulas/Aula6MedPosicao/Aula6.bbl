@@ -19,6 +19,34 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{Bastos2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2802275559c59ec8447df33c4e1784aa}{%
+           family={Bastos},
+           familyi={B\bibinitperiod},
+           given={Fernando\bibnamedelimb de\bibnamedelima Souza},
+           giveni={F\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{fullhash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{fullhashraw}{2802275559c59ec8447df33c4e1784aa}
+      \strng{bibnamehash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{authorbibnamehash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{authornamehash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{authorfullhash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{authorfullhashraw}{2802275559c59ec8447df33c4e1784aa}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponível online: \url{https://ufvest.shinyapps.io/ApostilaInterativa/}}
+      \field{title}{Apostila Interativa}
+      \field{year}{2025}
+      \true{nocite}
+    \endentry
     \entry{eric}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=02b107ba4c045c764057a3261a4aa312}{%
@@ -55,11 +83,51 @@
       \field{year}{2020}
       \true{nocite}
       \verb{urlraw}
-      \verb https://www.unifal-mg.edu.br/bibliotecas/system/files/imce/EBR_Unifal.pdf
+      \verb https://www.unifal-mg.edu.br/bibliotecas/wp-content/uploads/sites/125/2021/12/32-EBR_Unifal.pdf
       \endverb
       \verb{url}
-      \verb https://www.unifal-mg.edu.br/bibliotecas/system/files/imce/EBR_Unifal.pdf
+      \verb https://www.unifal-mg.edu.br/bibliotecas/wp-content/uploads/sites/125/2021/12/32-EBR_Unifal.pdf
       \endverb
+    \endentry
+    \entry{montgomery2016}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=715badfd1c8a22d771ef5233487a019d}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={D.\bibnamedelimi C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=45998111dd12ad7787110d28e2516e4f}{%
+           family={Runger},
+           familyi={R\bibinitperiod},
+           given={G.\bibnamedelimi C},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {São Paulo}%
+      }
+      \list{publisher}{1}{%
+        {Grupo Gen-LTC}%
+      }
+      \strng{namehash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{fullhash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{fullhashraw}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{bibnamehash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{authorbibnamehash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{authornamehash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{authorfullhash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{authorfullhashraw}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6}
+      \field{title}{Estatística Aplicada E Probabilidade Para Engenheiros.}
+      \field{year}{2016}
+      \true{nocite}
     \endentry
     \entry{Morettin09}{book}{}{}
       \name{author}{2}{}{%
@@ -96,9 +164,9 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{6}
+      \field{edition}{10}
       \field{title}{Estatística básica}
-      \field{year}{2009}
+      \field{year}{2023}
       \true{nocite}
     \endentry
     \entry{Apostila}{book}{}{}

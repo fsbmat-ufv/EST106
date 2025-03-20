@@ -1,0 +1,5 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Variáveis Aleatórias Bidimensionais}{3}{0}{1}
+\beamer@sectionintoc {2}{Distribuição Conjunta de duas variáveis aleatórias}{5}{0}{2}
+\beamer@sectionintoc {3}{Distribuição Marginal}{10}{0}{3}
+\beamer@sectionintoc {4}{Variáveis Aleatórias Independentes}{16}{0}{4}

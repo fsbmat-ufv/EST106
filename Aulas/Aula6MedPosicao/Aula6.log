@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.10)  16 MAR 2025 13:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.10)  20 MAR 2025 16:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2113,10 +2113,10 @@ Overfull \hbox (21.9537pt too wide) detected at line 318
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 406.
 
-Overfull \hbox (0.61787pt too wide) in paragraph at lines 406--406
-[][][]\T1/phv/m/n/14.4 Morettin, P.A. e W.O Bus-sab (2009).[] \T1/phv/b/sl/14.4
- Es-ta-tís-tica bá-sica\T1/phv/b/n/14.4 .[] \T1/phv/m/n/12 6\TS1/phv/m/n/12 ª \
-T1/phv/m/n/12 ed.
+Overfull \hbox (7.2898pt too wide) in paragraph at lines 406--406
+[][][]\T1/phv/m/n/14.4 Morettin, P.A. e W.O Bus-sab (2023).[] \T1/phv/b/sl/14.4
+ Es-ta-tís-tica bá-sica\T1/phv/b/n/14.4 .[] \T1/phv/m/n/12 10\TS1/phv/m/n/12 ª 
+\T1/phv/m/n/12 ed.
  []
 
 
@@ -2124,6 +2124,11 @@ T1/phv/m/n/12 ed.
 [28
 
  <C:/Program Files/MiKTeX/tex/latex/beamer/beamericonarticle.pdf>]
+
+[29
+
+
+]
 \tf@nav=\write7
 \openout7 = `Aula6.nav'.
 
@@ -2133,8 +2138,7 @@ T1/phv/m/n/12 ed.
 \tf@snm=\write9
 \openout9 = `Aula6.snm'.
 
-
-(Aula6.aux)
+ (Aula6.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
@@ -2144,10 +2148,10 @@ Package logreq Info: Writing requests to 'Aula6.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54030 strings out of 473682
- 1182087 string characters out of 5729105
- 2219061 words of memory out of 5000000
- 76022 multiletter control sequences out of 15000+600000
+ 54045 strings out of 473682
+ 1182475 string characters out of 5729105
+ 2219191 words of memory out of 5000000
+ 76033 multiletter control sequences out of 15000+600000
  663190 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,17n,123p,3218b,1874s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2162,9 +2166,9 @@ eX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw
 /helvetic/uhvbo8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.
 pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program F
 iles/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on Aula6.pdf (28 pages, 258816 bytes).
+Output written on Aula6.pdf (29 pages, 264245 bytes).
 PDF statistics:
- 383 PDF objects out of 1000 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
+ 395 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

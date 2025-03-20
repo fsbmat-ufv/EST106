@@ -31,12 +31,9 @@
 %\usepackage{slashbox}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
-%\usepackage{csquotes}
-%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
-%\addbibresource{bibliografia.bib}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 \usepackage[figuresright]{rotating}
 \usepackage{spalign}
 %\usepackage{pgfpages}
@@ -54,8 +51,14 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -167,7 +170,7 @@ valor do par $(X, Y )$ deve satisfazer as seguintes condições:
 \begin{block}{Exemplo}
 \justifying
 \begin{enumerate}
-\item Seja o experimento de se lançar simultaneamente um dado e uma moeda, observando o resultado da face superior de ambos. Teremos então a seguinte
+\item \justifying Seja o experimento de se lançar simultaneamente um dado e uma moeda, observando o resultado da face superior de ambos. Teremos então a seguinte
 função de probabilidade, onde:
 $$X= \textrm{face superior do dado,\ e}\ \ Y=\textrm{face superior da moeda}$$
 \end{enumerate}
@@ -334,7 +337,12 @@ As v.a. $X$ e $Y$ admitem a seguinte distribuição conjunta de probabilidade.
 
 Encontre $a$ e $b$ para que as v.a. $X$ e $Y$ sejam independentes.
 \end{block}
+\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}
 \end{frame}
 
+\begin{frame}[allowframebreaks]
+\frametitle{\bf Referências}
+\printbibliography
+\end{frame}
 
 \end{document}

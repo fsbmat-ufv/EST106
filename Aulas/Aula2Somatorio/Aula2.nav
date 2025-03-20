@@ -41,8 +41,15 @@
 \headcommand {\beamer@framepages {19}{19}}
 \headcommand {\slideentry {3}{0}{2}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\beamer@partpages {1}{20}}
-\headcommand {\beamer@subsectionpages {19}{20}}
 \headcommand {\beamer@sectionpages {19}{20}}
-\headcommand {\beamer@documentpages {20}}
-\headcommand {\gdef \inserttotalframenumber {14}}
+\headcommand {\beamer@subsectionpages {19}{20}}
+\headcommand {\sectionentry {4}{Refer\^encias}{21}{Refer\^encias}{0}}
+\headcommand {\slideentry {4}{0}{0}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {4}{0}{0}{21/22}{}{0}}
+\headcommand {\beamer@framepages {21}{22}}
+\headcommand {\beamer@partpages {1}{22}}
+\headcommand {\beamer@subsectionpages {19}{22}}
+\headcommand {\beamer@sectionpages {19}{22}}
+\headcommand {\beamer@documentpages {22}}
+\headcommand {\gdef \inserttotalframenumber {16}}

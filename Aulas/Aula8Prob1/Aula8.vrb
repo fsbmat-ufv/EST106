@@ -1,0 +1,30 @@
+\frametitle{}
+\frametitle{}
+\begin{block}{}
+\justifying
+%\begin{Schunk}
+%\begin{Sinput}
+\begin{verbatim}
+birthday=function(x){
+   a=1-exp(-(x^2)/(2*365))
+   return(a)
+}
+birthday(23)
+0.5155095
+\end{verbatim}
+\pause
+%\end{Sinput}
+%\begin{Soutput}
+
+%\end{Soutput}
+%\begin{Sinput}
+\begin{verbatim}
+birthday(50)
+0.9674396
+\end{verbatim}
+\pause
+%\end{Sinput}
+%\begin{Soutput}
+
+Para outros valores de $n$ \href{https://ufvest.shinyapps.io/ApostilaInterativa/#section-exemplos-classicos}{clique aqui!}
+\end{block}

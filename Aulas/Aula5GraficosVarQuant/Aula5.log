@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.10)  16 MAR 2025 13:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.10)  20 MAR 2025 16:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2081,10 +2081,10 @@ Overfull \vbox (24.39345pt too high) detected at line 327
 <Aula5-idade2.pdf, id=190, 433.62pt x 433.62pt>
 File: Aula5-idade2.pdf Graphic file (type pdf)
 <use Aula5-idade2.pdf>
-Package pdftex.def Info: Aula5-idade2.pdf  used on input line 338.
+Package pdftex.def Info: Aula5-idade2.pdf  used on input line 339.
 (pdftex.def)             Requested size: 199.1693pt x 199.16988pt.
 
-Overfull \vbox (24.39345pt too high) detected at line 338
+Overfull \vbox (24.39345pt too high) detected at line 339
  []
 
 
@@ -2093,16 +2093,34 @@ Overfull \vbox (24.39345pt too high) detected at line 338
 
  <./Aula5-idade2.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 354.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 355.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 355.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 355.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 355.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 355.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 355.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 355.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 355.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 355.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 355.
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 3
-54.
+55.
  (C:\Program Files\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
-Overfull \hbox (0.61787pt too wide) in paragraph at lines 354--354
-[][][]\T1/phv/m/n/14.4 Morettin, P.A. e W.O Bus-sab (2009).[] \T1/phv/b/sl/14.4
- Es-ta-tís-tica bá-sica\T1/phv/b/n/14.4 .[] \T1/phv/m/n/12 6\TS1/phv/m/n/12 ª \
-T1/phv/m/n/12 ed.
+Overfull \hbox (7.2898pt too wide) in paragraph at lines 355--355
+[][][]\T1/phv/m/n/14.4 Morettin, P.A. e W.O Bus-sab (2023).[] \T1/phv/b/sl/14.4
+ Es-ta-tís-tica bá-sica\T1/phv/b/n/14.4 .[] \T1/phv/m/n/12 10\TS1/phv/m/n/12 ª 
+\T1/phv/m/n/12 ed.
  []
 
 
@@ -2110,6 +2128,11 @@ T1/phv/m/n/12 ed.
 [15
 
  <C:/Program Files/MiKTeX/tex/latex/beamer/beamericonarticle.pdf>]
+
+[16
+
+
+]
 \tf@nav=\write7
 \openout7 = `Aula5.nav'.
 
@@ -2119,8 +2142,7 @@ T1/phv/m/n/12 ed.
 \tf@snm=\write9
 \openout9 = `Aula5.snm'.
 
-
-(Aula5.aux)
+ (Aula5.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
@@ -2130,23 +2152,24 @@ Package logreq Info: Writing requests to 'Aula5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53867 strings out of 473682
- 1179947 string characters out of 5729105
- 2216124 words of memory out of 5000000
- 75921 multiletter control sequences out of 15000+600000
- 632017 words of font info for 140 fonts, out of 8000000 for 9000
+ 53929 strings out of 473682
+ 1180995 string characters out of 5729105
+ 2216303 words of memory out of 5000000
+ 75972 multiletter control sequences out of 15000+600000
+ 653148 words of font info for 172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,17n,123p,3218b,1874s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
  Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/cm-super/sftt0800.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helveti
-c/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/
-Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKT
-eX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Aula5.pdf (15 pages, 195724 bytes).
+1/public/cm-super/sftt0800.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-s
+uper/sftt1200.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files
+/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/type
+1/urw/helvetic/uhvro8a.pfb>
+Output written on Aula5.pdf (16 pages, 234054 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
+ 308 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
  137 words of extra memory for PDF output out of 10000 (max. 10000000)
 

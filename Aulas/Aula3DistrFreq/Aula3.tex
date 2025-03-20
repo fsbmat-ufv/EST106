@@ -1,0 +1,537 @@
+\documentclass[12pt]{beamer}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{animate}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[toc,page,title,titletoc]{appendix}
+\usepackage{dsfont}
+\usepackage{esvect}
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
+\usepackage{graphicx}
+\usepackage{indentfirst}%Para indentar os paragrafos automáticamente
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{listings}%Inserir codigo do R no latex
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
+\usepackage[figuresright]{rotating}
+\usepackage{spalign}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{tikz}
+\usepackage{color, colortbl}
+\usepackage[most]{tcolorbox}
+\usepackage{url}
+\usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+\usepackage[all]{xy}
+\usepackage{hyperref,bookmark}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=red,
+  filecolor=blue,
+  urlcolor=blue,
+}
+
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
+%\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{footline}[text line]{%
+%  \parbox{\linewidth}{\vspace*{-8pt}\hfill\date{}\hfill\insertshortauthor\hfill\insertpagenumber}}
+\beamertemplatenavigationsymbolsempty
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Proposicao}{Proposição}
+\newtheorem{Definicao}{Definição}
+\newtheorem{Corolario}{Corolário}
+\newtheorem{Demonstracao}{Demonstração}
+\newcommand{\bx}{\ensuremath{\bar{x}}}
+\newcommand{\Ho}{\ensuremath{H_{0}}}
+\newcommand{\Hi}{\ensuremath{H_{1}}}
+
+
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\title{Estatística I}
+\author{Prof. Fernando de Souza Bastos \texorpdfstring{\\ fernando.bastos@ufv.br}{}}
+\institute{Departamento de Estatística\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Viçosa}{}}
+\date{}
+\newcommand\mytext{Aula 3}
+\newcommand\mytextt{Fernando de Souza Bastos}
+\newcommand\mytexttt{\url{https://ufvest.github.io/}}
+
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\mytext
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\mytextt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.35\paperwidth,ht=2.25ex,dp=1ex,right]{site in head/foot}%
+    \usebeamerfont{site in head/foot}\mytexttt\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+\providecommand{\arcsin}{} \renewcommand{\arcsin}{\hspace{2pt}\textrm{arcsen}}
+\providecommand{\sin}{} \renewcommand{\sin}{\hspace{2pt}\textrm{sen}}
+%\newtheorem{Teorema}{Teorema}
+%\newtheorem{Proposicao}{Proposição}
+%\newtheorem{Definicao}{Definição}
+%\newtheorem{Corolario}{Corolário}
+%\newtheorem{Demonstracao}{Demonstração}
+
+\titlegraphic{\hspace*{8cm}\href{https://fsbmat-ufv.github.io/}{\includegraphics[width=2cm]{figs/mylogo.png}}
+}
+
+% Layout da pagina
+\hypersetup{pdfpagelayout=SinglePage}
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+
+\frame{\titlepage}
+
+\begin{frame}{}
+\frametitle{\bf Sumário}
+\tableofcontents
+\end{frame}
+
+\section{Introdução}
+\begin{frame}{}
+\frametitle{Introdução}
+\vspace{-0.3cm}
+\begin{block}{Estatística}
+\justifying
+É uma ciência que possui uma coleção de métodos para planejar experimentos, obter, organizar, resumir, analisar, interpretar dados e deles extrair conhecimento.
+\end{block}
+
+\end{frame}
+
+\begin{frame}{}
+	\frametitle{Introdução}
+	\begin{block}{Estatística Descritiva}
+		\justifying
+		É a parte da Estatística que procura somente descrever e avaliar um certo grupo, seja ele a população ou a amostra. É importante ressaltar que todo trabalho científico pode ser resumido em algumas etapas:
+	\end{block}
+	\pause
+	\begin{enumerate}
+		\item Definição do problema;\pause
+		\item Planejamento (Inclui a revisão de literatura);\pause
+		\item Coleta, limpeza e organização dos dados;\pause
+		\item Apresentação dos dados;\pause
+		\item Descrição dos dados;\pause
+		\item Análise, modelagem e estabelecimento de inferências.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Conceitos básicos}
+\vspace{-0.3cm}
+\begin{block}{População}
+\justifying
+Conjunto de dados que têm alguma característica em comum.
+\end{block}
+\pause
+\begin{block}{Amostra}
+\justifying
+Qualquer conjunto não vazio de elementos retirado da população.
+\end{block}
+\pause
+\begin{block}{Parâmetro}
+\justifying
+Característica numérica qualquer da população.
+\end{block}
+\pause
+\begin{block}{Estimador}
+\justifying
+Qualquer função dos elementos amostrais que seja usada para encontrar uma estimativa de um parâmetro.
+\end{block}
+\pause
+\begin{block}{Estimativa}
+\justifying
+Qualquer valor numérico assumido por um estimador.
+\end{block}
+\end{frame}
+
+\section{Tipo de Variáveis}
+\begin{frame}{}
+\frametitle{Tipo de Variáveis}
+\begin{block}{Variável Aleatória}
+\justifying
+característica da população sujeita a variação.
+\end{block}
+\pause
+\begin{block}{}
+\justifying
+Conhecer o tipo da variável é importante porque os métodos estatísticos que você pode utilizar em sua análise variam de acordo com o tipo de variável. Existem dois 
+tipos principais para variáveis:
+\begin{itemize}
+\item {\bf Variáveis categóricas} (ou {\bf Variáveis qualitativas}) apresentam valores que podem somente ser posicionados em categorias tais como sim e não. \pause
+\item {\bf Variáveis numéricas} (ou {\bf Variáveis quantitativas}) apresentam valores que representam quantidades.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Tipo de Variáveis}
+\begin{block}{}
+\justifying
+Dentre as variáveis qualitativas, ainda podemos fazer uma distinção entre dois tipos: \textbf{variável qualitativa nominal}, para a qual não existe nenhuma ordenação nas
+possíveis realizações, e \textbf{variável qualitativa ordinal}, para a qual existe uma ordem nos seus resultados.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Variáveis numéricas podem ser, ainda, identificadas como \textbf{variáveis discretas} ou \textbf{variáveis contínuas}.
+\end{block}
+\pause
+\begin{block}{}
+\justifying
+\textbf{Variáveis discretas} apresentam valores numéricos que surgem a partir de um processo de contagem. ``A quantidade de canais de TV a Cabo Premium que você 
+assina'' é um exemplo de uma variável numérica discreta, uma vez que a resposta corresponde a um entre uma quantidade finita de números inteiros.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+\textbf{Variáveis contínuas} produzem respostas numéricas que surgem a partir de um processo de medição. O tempo que você espera pelo atendimento de um caixa no banco 
+é um exemplo de variável numérica contínua, uma vez que a resposta pode assumir qualquer valor dentro dos limites de um continuum, ou de um intervalo.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+\begin{figure}[H]
+    \centering
+    \caption{Classificação de uma variável}
+    \begin{tikzpicture}
+    \node at (-8,0) {Variável};
+    \draw[->](-7,0)--(-5,1);
+    \draw[->](-7,0)--(-5,-1);
+    \node at (-4,1) {Qualitativa};
+    \node at (-3.9,-1) {Quantitativa};
+    \draw[->](-3,1)--(0,1.5);
+    \draw[->](-3,1)--(0,0.5);
+    \node at (1,1.5) {Nominal};
+    \node at (1,0.5) {Ordinal};
+    \draw[->](-2.8,-1)--(0,-0.5);
+    \draw[->](-2.8,-1)--(0,-1.5);
+    \node at (1,-0.5) {Discreta};
+    \node at (1,-1.5) {Contínua};
+    \end{tikzpicture}
+    %\subcaption*{\textbf{Fonte:} \cite{morettin2017estatistica}}
+    \label{Fig2_ex}
+  \end{figure}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Em uma primeira análise, identificar o tipo da variável pode parecer fácil, embora algumas variáveis que você poderia desejar estudar possam ser categóricas ou numéricas, dependendo do modo como você as define. Por exemplo, ``idade'' aparentaria ser uma variável numérica evidente, mas o que acontece se você estiver interessado em comparar os hábitos de compra de crianças, adolescentes, pessoas de meia-idade e pessoas com idade para aposentadoria? Nesse caso, definir ``idade'' como uma variável categórica faria mais sentido. 
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Assim, apesar de não indicado na maioria das vezes, podemos transformar variáveis quantitativas em qualitativas. Considere, por exemplo, que a estatura de um homem adulto varie entre $1,40$ e $2,20$ m. Quando coletarmos dados dos elementos da população, podemos encontrar absolutamente qualquer valor dentro deste intervalo. Caso não queira usar os dados em seu estado bruto, quantitativo, podemos transformar a variável em qualitativa categorizando-a em grupos, por exemplo, baixos (menor que $1,60$ m), médios ($1,60-1,80$ m) e altos (maior que $1,80$m). 
+\end{block}
+\pause
+\begin{block}{}
+Notem, no entanto, que perdemos muita informação nesse tipo de transformação!
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Podemos também atribuir valores numéricos às várias qualidades ou atributos (ou, ainda, classes) de uma variável qualitativa e depois proceder-se à análise como se esta fosse quantitativa, desde que o procedimento seja passível de interpretação. 
+\end{block}
+\pause
+\begin{block}{}
+	\justifying
+Por exemplo, variáveis dicotômicas para as quais só podem ocorrer duas realizações, usualmente chamadas sucesso e fracasso. Podemos nesse caso associar o fracasso ao valor zero e o sucesso ao valor 1.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Para cada tipo de variável existem técnicas apropriadas para resumir as informações e o maior interesse do pesquisador é conhecer o comportamento da variável, analisando a ocorrência de suas possíveis realizações. Vejamos uma maneira de se dispor um conjunto de realizações, para se ter uma ideia global sobre elas, ou seja, de sua distribuição. 
+\end{block}
+
+\end{frame}
+
+\section{Distribuições de Frequências}
+\begin{frame}{}
+\frametitle{Banco de Dados}
+\begin{block}{}
+\justifying
+Um pesquisador está interessado em fazer um levantamento sobre alguns aspectos socioeconômicos dos empregados da seção de orçamentos da Companhia MB. Usando informações obtidas do departamento pessoal, ele elaborou a Tabela \href{https://raw.githack.com/ufvest/ufvest.github.io/master/Aulas_EST105/CompanhiaMB.html}{CompanhiaMB}.
+%\begin{table}[H]
+%%\caption{My caption}
+%\label{tab1}
+%\begin{tabular}{c|c}
+%\hline
+%Variável             &Representação\\
+%\hline
+%Estado Civil         &$X$\\
+%Grau de Instrução    &$Y$\\
+%Número de filhos     &$Z$\\
+%Salário              &$S$\\
+%Idade                &$U$\\
+%Região de Procedência&$V$\\
+%\hline
+%\end{tabular}
+%\end{table}
+\end{block}
+\end{frame}
+
+
+%\begin{frame}{}
+%\frametitle{Distribuições de Frequências}
+%\begin{block}{}
+%\justifying
+%Quando se estuda uma variável, o maior %interesse do pesquisador é conhecer o %comportamento dessa variável, analisando a %ocorrência de suas possíveis realizações. 
+%Vejamos uma maneira de se dispor um conjunto %de realizações, para se ter uma idéia global %sobre elas, ou seja, de sua distribuição.
+%\end{block}
+%\end{frame}
+
+\begin{frame}{}
+\frametitle{Distribuições de Frequências}
+\vspace{-0.5cm}
+\begin{block}{}
+\justifying
+\begin{table}[H]
+\caption{Frequências e porcentagens dos 36 empregados da seção de orçamentos da Companhia MB segundo o grau de instrução.}
+\label{tab2}
+\begin{tabular}{c|c|c|c}
+\hline
+Grau de   &Frequência&Proporção&Porcentagem\\
+instrução &$n_{i}$   &$f_{i}$  &$100f_{i}$ \\
+\hline
+Fundamental&12       &0,3333   &33,33      \\
+Médio      &18       &0,5000   &50,00      \\
+Superior   & 6       &0,1667   &16,67      \\
+\hline
+Total      &36       &1,0000   &100,00     \\
+\hline
+\end{tabular}
+\subcaption*{\textbf{Fonte:} \cite{morettin2017estatistica}}
+\end{table}
+\end{block}
+\pause
+\vspace{-0.3cm}
+\begin{block}{}
+\justifying
+Observando os resultados da segunda coluna, vê-se que dos 36 empregados da companhia,
+12 têm o ensino fundamental, 18 o ensino médio e 6 possuem curso superior.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Uma medida bastante útil na interpretação de tabelas de frequências é a proporção de
+cada realização em relação ao total, pois podem ser utilizadas quando se quer comparar
+resultados de duas pesquisas distintas.
+\end{block}
+\pause
+\begin{block}{}
+\justifying
+Por exemplo, suponhamos que se queira comparar a variável grau de instrução para empregados da seção de orçamentos com a mesma variável para todos os empregados da Companhia MB. Digamos que a empresa tenha 2.000 empregados e que a distribuição de frequências seja a da próxima Tabela.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\vspace{-1cm}
+\begin{block}{}
+\justifying
+\begin{table}[H]
+\caption{frequências e porcentagens dos dos 2.000 empregados da Companhia MB segundo o grau de instrução.}
+\label{tab3}
+\begin{tabular}{c|c|c|c}
+\hline
+Grau de   &Frequência&Proporção&Porcentagem\\
+instrução &$n_{i}$   &$f_{i}$  &$100f_{i}$ \\
+\hline
+Fundamental&650      &0.325    &32.50      \\
+Médio      &1.020    &0.51     &51.00      \\
+Superior   & 330     &0.165    &16.50      \\
+\hline
+Total      &2.000    &1,0000   &100.00     \\
+\hline
+\end{tabular}
+%\subcaption*{\textbf{Fonte:} \cite{morettin2017estatistica}}
+\end{table}
+\end{block}
+\pause
+\vspace{-1.2cm}
+\begin{block}{}
+	\justifying
+Não podemos comparar diretamente as colunas das frequências das Tabelas \ref{tab2} e \ref{tab3}, pois os totais de empregados são diferentes nos dois casos. Mas 
+as colunas das porcentagens são comparáveis, pois reduzimos as frequências a um mesmo total (no caso 100).
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+A construção de tabelas de frequências para variáveis contínuas necessita de certo
+cuidado. Por exemplo, a construção da tabela de frequências para a variável salário,
+usando o mesmo procedimento acima, \textbf{não resumirá as 36 observações} num grupo
+menor, pois não existem observações iguais. A solução empregada é agrupar os dados
+por faixas de salário.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+\begin{table}[H]
+\caption{Frequências e porcentagens dos dos 2.000 empregados da seção de orçamentos da Companhia MB por faixa de salário.}
+\label{tab4}
+\begin{tabular}{c|c|c}
+\hline
+Classe de   &Frequência&Porcentagem\\
+Salários    &$n_{i}$   &$100f_{i}$ \\
+\hline
+4,00|-8,00  &10        &27,78      \\
+8,00|-12,00 &12        &33,33      \\
+12,00|-16,00&8         &22,22      \\
+16,00|-20,00&5         &13,89      \\
+20,00|-24,00&1         & 2,78      \\
+\hline
+Total       &36        &100,00     \\
+\hline
+\end{tabular}
+\end{table}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Procedendo-se desse modo, ao resumir os dados referentes a uma variável contínua,
+perde-se alguma informação. Por exemplo, não sabemos quais são os oito salários da
+classe de 12 a 16, a não ser que investiguemos a tabela original. Sem perda de muita precisão, poderíamos supor que todos os oito salários daquela classe fossem iguais ao ponto médio da referida classe, isto é, 14.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Note que estamos usando a notação $a|-b$ para o intervalo de números contendo o extremo $a$ mas não contendo o extremo $b.$ Podemos também usar a notação $[a, b)$ para designar o mesmo intervalo $a|-b$. 
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+A escolha dos intervalos é arbitrária e a familiaridade do pesquisador com os dados é
+que lhe indicará quantas e quais classes (intervalos) devem ser usadas.
+\begin{itemize}
+\item Número pequeno de classes $\rightarrow$ perda de informação;\pause
+\item Número grande de classes $\rightarrow$ perda da visão geral dos dados
+como um conjunto;\pause
+\item A sugestão é usar de 5 a 15 classes com a mesma amplitude;
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Para construir uma distribuição de frequências separando por classes uma determinada variável podemos utilizar:
+\begin{itemize}
+	\justifying
+\item número de classes($n_{c}$)$\approx \sqrt{n}$ ou usamos a regra de Sturges $n_{c}=\ln{(n)};$\pause
+\item Amplitude da classe $(c)$: $$c=\dfrac{AT}{n_{c}}$$ 
+\end{itemize}
+em que $AT=\textrm{Maior valor} - \textrm{Menor valor}.$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\begin{block}{}
+Considere
+\begin{itemize}
+    \item $x_{(1)}$ como o menor valor do conjunto de dados;
+    \item $x_{(n)}$ como o maior valor do conjunto de dados; 
+\end{itemize}
+\end{block}
+\vspace{-0.5cm}
+\pause
+\begin{block}{}
+\begin{itemize}
+	\justifying
+\item Defina $Li_{1}=x_{(1)},$ $Ls_{k}=Li_{k}+c,\ 1\leq k \leq n_{c}$ e
+$Li_{k}=Ls_{(k-1)},2 \leq k \leq n_{c}.$ Em que $Li_{k}$ representa o limite inferior da classe $k$ e $Ls_{k}$ representa o limite superior da classe $k.$\pause
+\item A frequência absoluta $(f_{a})$ de uma classe $k$ é encontrada contabilizando os valores $x_{1},x_{2},\cdots,x_{n}$ que pertencem ao intervalo $[Li_{k},Ls_{k}).$
+\end{itemize}
+\end{block}
+\nocite{Morettin09, Apostila, eric, montgomery2016, Bastos2025}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{}
+\printbibliography
+\end{frame}
+
+
+\end{document}
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%Na página da disciplina há um material sobre %distribuição de frequências com um exemplo. Para %acessá-lo, \href{https://rawgit.com/maf105/maf105.githu%b.io/master/Materiais/Dist_freq.pdf}{clique aqui}!
+%\end{block}
+%\end{frame}
