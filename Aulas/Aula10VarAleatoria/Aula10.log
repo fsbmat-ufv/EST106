@@ -1,16 +1,16 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.10)  20 MAR 2025 16:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.9)  9 APR 2025 15:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./Aula10.tex
 (Aula10.tex
-LaTeX2e <2024-11-01>
-L3 programming layer <2024-11-02>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
 (C:\Program Files\MiKTeX\tex/latex/beamer\beamer.cls
-Document Class: beamer 2024/01/06 v3.71 A class for typesetting presentations
+Document Class: beamer 2025/02/04 v3.72 A class for typesetting presentations
 (C:\Program Files\MiKTeX\tex/latex/beamer\beamerbasemodes.sty
 (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count196
 )
 \beamer@tempbox=\box52
@@ -26,7 +26,7 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \beamer@modecount=\count267
 )
 (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+Package: iftex 2024/12/12 v1.0g TeX engine tests
 )
 \headdp=\dimen141
 \footheight=\dimen142
@@ -676,15 +676,15 @@ Package: amsthm 2020/05/29 v2.20.6
 )
 (C:\Program Files\MiKTeX\tex/latex/beamer\beamerouterthemedefault.sty)))
 (C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2024/11/08 v24.13 The multilingual framework for pdfLaTeX, LuaLa
-TeX and XeLaTeX
+Package: babel 2025/03/27 v25.6 The multilingual framework for pdfLaTeX, LuaLaT
+eX and XeLaTeX
 \babel@savecnt=\count345
 \U@D=\dimen295
 \l@unhyphenated=\language79
 
 (C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read3
-LaTeX Info: Redefining \textlatin on input line 3835.
+LaTeX Info: Redefining \textlatin on input line 3860.
 \bbl@dirlevel=\count346
 
 *************************************
@@ -853,7 +853,7 @@ Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 (C:\Program Files\MiKTeX\tex/latex/lipsum\lipsum.sty
 (C:\Program Files\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
 (C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2024-11-02 L3 programming layer (loader) 
+Package: expl3 2025-01-18 L3 programming layer (loader) 
 )
 Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
 )
@@ -929,7 +929,7 @@ File: listings.cfg 2024/09/23 1.10c listings configuration
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
 
 (C:\Program Files\MiKTeX\tex/latex/multirow\multirow.sty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip82
 \multirow@cntb=\count391
 \multirow@dima=\skip83
@@ -1251,7 +1251,7 @@ File: biblatex.cfg
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
 Package biblatex Info: ... and expl3
-(biblatex)             2024-11-02 L3 programming layer (loader) 
+(biblatex)             2025-01-18 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
 
@@ -1669,7 +1669,10 @@ LaTeX Font Info:    Trying to load font information for T1+phv on input line 13
 0.
 (C:\Program Files\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-) (Aula10.aux)
+) (Aula10.aux
+Package babel Info: 'brazil' activates 'portuges' shorthands.
+(babel)             Reported  on input line 14.
+)
 \openout1 = `Aula10.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
@@ -1938,9 +1941,8 @@ Overfull \vbox (34.74834pt too high) detected at line 133
 
 [1
 
-{C:/Users/Fernando/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program
- Files/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Program Files/MiKTeX/fonts/enc/dv
-ips/cm-super/cm-super-t1.enc} <./figs/mylogo.png>] (Aula10.toc)
+{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Fi
+les/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figs/mylogo.png>] (Aula10.toc)
 
 [2
 
@@ -2185,37 +2187,37 @@ Overfull \hbox (7.2898pt too wide) in paragraph at lines 502--502
 
  (Aula10.aux)
  ***********
-LaTeX2e <2024-11-01>
-L3 programming layer <2024-11-02>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
  ***********
 Package logreq Info: Writing requests to 'Aula10.run.xml'.
 \openout1 = `Aula10.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54084 strings out of 473682
- 1183114 string characters out of 5729105
- 2215340 words of memory out of 5000000
- 76046 multiletter control sequences out of 15000+600000
- 657035 words of font info for 190 fonts, out of 8000000 for 9000
+ 54097 strings out of 473522
+ 1183318 string characters out of 5724677
+ 2217702 words of memory out of 5000000
+ 76205 multiletter control sequences out of 15000+600000
+ 657803 words of font info for 190 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,17n,123p,3219b,1874s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/mathpazo/fplmbb
-.pfb><C:/Program Files/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files/MiKTeX/f
-onts/type1/public/cm-super/sftt0800.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
-blic/cm-super/sftt1200.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uh
-vb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Prog
-ram Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/f
-onts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/pa
-latino/uplr8a.pfb>
-Output written on Aula10.pdf (46 pages, 310320 bytes).
+ 128i,17n,123p,3219b,1876s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
+1200.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi45
+0\ectt0800.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/mat
+hpazo/fplmbb.pfb><C:/Program Files/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb
+><C:/Program Files/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Fi
+les/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/urw/helvetic/uhvbo8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic
+/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on Aula10.pdf (46 pages, 265312 bytes).
 PDF statistics:
- 542 PDF objects out of 1000 (max. 8388607)
+ 591 PDF objects out of 1000 (max. 8388607)
  106 named destinations out of 1000 (max. 500000)
  110 words of extra memory for PDF output out of 10000 (max. 10000000)
 

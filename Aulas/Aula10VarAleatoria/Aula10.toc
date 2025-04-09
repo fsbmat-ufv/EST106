@@ -2,6 +2,6 @@
 \beamer@sectionintoc {1}{Variáveis Aleatórias}{3}{0}{1}
 \beamer@sectionintoc {2}{Variáveis Aleatórias Discretas}{8}{0}{2}
 \beamer@sectionintoc {3}{Função de Probabilidade}{15}{0}{3}
-\beamer@sectionintoc {4}{Variaveis Aleatórias Contínuas}{22}{0}{4}
+\beamer@sectionintoc {4}{Variáveis Aleatórias Contínuas}{22}{0}{4}
 \beamer@sectionintoc {5}{Função Densidade de Probabilidade}{27}{0}{5}
 \beamer@sectionintoc {6}{Função de Distribuição Acumulada}{33}{0}{6}
