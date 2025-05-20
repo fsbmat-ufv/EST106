@@ -149,7 +149,6 @@
       \field{edition}{6}
       \field{title}{Estatística Aplicada E Probabilidade Para Engenheiros.}
       \field{year}{2016}
-      \true{nocite}
     \endentry
     \entry{Morettin09}{book}{}
       \name{author}{2}{}{%
@@ -214,7 +213,6 @@
       \true{nocite}
     \endentry
   \enddatalist
-  \missing{roteiro}
 \endrefsection
 \endinput
 

@@ -31,9 +31,9 @@
 %\usepackage{slashbox}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 %\usepackage{csquotes}
 %\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
 %\addbibresource{bibliografia.bib}
@@ -54,8 +54,14 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -147,6 +153,7 @@ Sabe-se que 30\% dos indivíduos que recebem certo medicamento sofrem com alguns
 \frametitle{}
 \begin{block}{}
 \justifying
+\footnotesize
 Uma empresa vende sementes de Jatobá (\emph{Hymenaea courbaril}) em pacotes com 5 unidades. Seja $X$ a variável aleatória discreta que informa o número de sementes que germinam por pacote, cuja distribuição de probabilidades é dada na tabela a seguir.
 \begin{table}[!htbp]
 \centering
@@ -168,6 +175,7 @@ $P\left[X=x\right]$&0,01&0,01&0,03&0,06&0,29&0,60&1,00\\
 \frametitle{}
 \begin{block}{}
 \justifying
+\footnotesize
 \begin{table}[!ht]
 \centering
 \renewcommand{\arraystretch}{1.8}
@@ -231,6 +239,13 @@ Suponha que o tempo (em minutos) que um jogador de futebol tem a posse da bola d
 \end{multicols}
 \end{enumerate}
 \end{block}
+\nocite{roteiro}
+\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{\bf Referências}
+\printbibliography
 \end{frame}
 
 \end{document}

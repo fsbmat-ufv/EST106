@@ -15,7 +15,6 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage[toc,page,title,titletoc]{appendix}
-\usepackage[fixlanguage]{babelbib}
 %\usepackage[pdftex]{color}
 \usepackage{dsfont}
 \usepackage{esvect}
@@ -31,39 +30,37 @@
 \usepackage{mathtools}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\bibliographystyle{abbrvnat}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
+%\usepackage{csquotes}
+%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
+%\addbibresource{bibliografia.bib}
 \usepackage[figuresright]{rotating}
 \usepackage{spalign}
 %\usepackage{pgfpages}
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage{tikz}
 \usepackage{color, colortbl}
 \usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
 \definecolor{Gray}{gray}{0.9}
 \definecolor{LightCyan}{rgb}{0.88,1,1}
-
+\definecolor{Lightblue}{RGB}{50, 149, 168}
+%\usepackage{grffile}
 
 \usepackage[all]{xy}
-\usepackage{hyperref,bookmark}
-\hypersetup{
-  colorlinks=true,
-  linkcolor=blue,
-  citecolor=red,
-  filecolor=blue,
-  urlcolor=blue,
-}
 
 
-%\setcitestyle{authoryear, open={(},close={)}}
-%\usepackage{pgf}
-%\usepackage[small,bf,singlelinecheck=off]{caption}
-%\usepackage[figuresright]{rotating}
 
-%\usepackage[font=Times,timeinterval=10, timeduration=2.0, timedeath=0, fillcolorwarningsecond=white!60!yellow,
-%timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -154,25 +151,25 @@ como problemas de teste de hipóteses.
 Suponha que um engenheiro esteja projetando um sistema de escape da tripulação de uma aeronave, que consiste em um assento de ejeção e um motor de foguete 
 que energiza o assento. O motor de foguete contém um propelente. Para o assento de ejeção funcionar apropriadamente, o propelente deve ter uma taxa mínima de 
 queima de $50$ cm/s. Se a taxa de queima for muito baixa, o assento de ejeção poderá não funcionar apropriadamente, levando a uma ejeção não segura. Taxas maiores 
-de queima podem implicar instabilidade no propelente ou um assento de ejeção muito potente, levando outra vez a insegurança da injeção. Dessa maneira, a questão 
-prática de engenharia que tem de ser respondida é: a taxa média de queima do propelente é igual a $50$ cm/s ou é igual a algum outro valor 
-(maior ou menor)?
+de queima podem implicar instabilidade no propelente ou um assento de ejeção muito potente, levando outra vez a insegurança da injeção. 
 \end{block}
 \end{frame}
 
 \begin{frame}{}
-\frametitle{Testes de hipóteses}
-\begin{block}{Hipótese Estatística:}
-Uma hipótese estatística é uma afirmação sobre os parâmetros de uma ou mais populações.
- \end{block}
+	\frametitle{Testes de hipóteses}
+	\begin{block}{}
+		\justifying
+		Dessa maneira, a questão 
+		prática de engenharia que tem de ser respondida é: a taxa média de queima do propelente é igual a $50$ cm/s ou é igual a algum outro valor 
+		(maior ou menor)?
+	\end{block}
 \end{frame}
 
 \begin{frame}{}
 \frametitle{Testes de hipóteses}
 \begin{block}{}
 \justifying
-Considere o sistema de escape da tripulação descrito no exemplo anterior. Suponha que estejamos interessados na taxa de queima do propelente sólido. Agora, a taxa de 
-queima é uma variável aleatória que pode ser descrita por uma distribuição de probabilidades. Suponha que nosso interesse esteja focado na taxa média de queima 
+A taxa de queima é uma variável aleatória que pode ser descrita por uma distribuição de probabilidades. Suponha que nosso interesse esteja focado na taxa média de queima 
 (um parâmetro dessa distribuição). Especificamente, estamos interessados em decidir se a taxa média de queima é ou não 50 centímetros por segundo. Podemos 
 expressar isso formalmente como:
 \begin{align}\label{H0eH1}
@@ -182,6 +179,14 @@ H_{0}: \mu&=50 cm/s\\
 \end{align}
  \end{block}
 \end{frame}
+
+\begin{frame}{}
+	\frametitle{Testes de hipóteses}
+	\begin{block}{Hipótese Estatística:}
+		Uma hipótese estatística é uma afirmação sobre os parâmetros de uma ou mais populações.
+	\end{block}
+\end{frame}
+
 %\begin{frame}{}
 %\frametitle{Testes de hipóteses}
 %\begin{block}{}
@@ -195,6 +200,7 @@ H_{0}: \mu&=50 cm/s\\
 %\end{frame}
 \begin{frame}{}
 \frametitle{Testes de hipóteses}
+\vspace{-0.5cm}
 \begin{block}{}
 \justifying
 A afirmação $H_{0}: \mu=50$ centímetros por segundo na Equação \ref{H0eH1} é chamada de hipótese nula, e a afirmação $H_{1}:\mu \neq 50$ centímetros por segundo 
@@ -202,8 +208,9 @@ A afirmação $H_{0}: \mu=50$ centímetros por segundo na Equação \ref{H0eH1} 
 segundo, ela é chamada de hipótese alternativa bilateral.
 \end{block}
 \pause
+\vspace{-0.5cm}
 \begin{block}{}
-Em algumas situações, podemos desejar formular uma hipótese alternativa unilateral, como em:
+Em algumas situações, podemos ter uma hipótese alternativa unilateral, como em:
 \begin{flalign}
 \begin{aligned} 
 	\begin{cases}
@@ -232,28 +239,30 @@ implícita na hipótese nula será $\geq$ e quando a hipótese alternativa for e
 \end{block}
 \end{frame}
 
-\begin{frame}{}
-\frametitle{Testes de hipóteses}
-\begin{block}{}
-\justifying
-É importante lembrar que hipóteses são sempre afirmações sobre a população ou distribuição sob estudo, não afirmações sobre a amostra. O valor do parâmetro 
-especificado da população na hipótese nula (50 centímetros por segundo no exemplo anterior) é geralmente determinado em uma das três maneiras. 
-\begin{enumerate}
-\item experiência passada, conhecimento do processo ou experimentos prévios. O objetivo nesse caso é determinar se o valor do parâmetro variou;\pause
-\item alguma teoria ou modelo relativo ao processo sob estudo. Aqui, o objetivo do teste é verificar a teoria ou modelo;\pause
-\item considerações externas, tais como projeto ou especificações de engenharia, ou a partir de obrigações contratuais. Nessa situação, o objetivo usual é avaliar a 
-correção das especificações.
-\end{enumerate}
- \end{block}
-\end{frame}
+%\begin{frame}{}
+%\frametitle{Testes de hipóteses}
+%\begin{block}{}
+%\justifying
+%É importante lembrar que hipóteses são sempre afirmações sobre a população ou distribuição sob estudo, não afirmações sobre a amostra. O valor do parâmetro 
+%especificado da população na hipótese nula (50 centímetros por segundo no exemplo anterior) é geralmente determinado em uma das três maneiras. 
+%\begin{enumerate}
+%\item experiência passada, conhecimento do processo ou experimentos prévios. O objetivo nesse caso é determinar se o valor do parâmetro variou;\pause
+%\item alguma teoria ou modelo relativo ao processo sob estudo. Aqui, o objetivo do teste é verificar a teoria ou modelo;\pause
+%\item considerações externas, tais como projeto ou especificações de engenharia, ou a partir de obrigações contratuais. Nessa situação, o objetivo usual é avaliar a 
+%correção das especificações.
+%\end{enumerate}
+%\end{block}
+%\end{frame}
 
 \begin{frame}{}
 \frametitle{Testes de hipóteses}
+\vspace{-0.5cm}
 \begin{block}{}
 \justifying
 \textbf{Teste de hipóteses se apoiam no uso de informações de uma amostra aleatória proveniente da população de interesse}. É importante ressaltar que a verdade ou 
 falsidade de uma hipótese particular pode nunca ser conhecida com certeza, a menos que possamos examinar a população inteira. Testar uma hipótese envolve: 
 \begin{itemize}
+	\justifying
 \item considerar uma amostra aleatória; \pause
 \item computar uma estatística de teste a partir de dados amostrais \pause
 \item e então usar a estatística de teste para tomar uma decisão a respeito da hipótese nula.
@@ -263,6 +272,7 @@ falsidade de uma hipótese particular pode nunca ser conhecida com certeza, a me
 
 \begin{frame}{}
 \frametitle{ Testes de Hipóteses Estatísticas}
+\small
 \begin{block}{}
 \justifying
 A hipótese nula corresponde à taxa média de queima ser igual a 50 centímetros por segundo e a alternativa corresponde a essa taxa não ser igual a $50$ centímetros 
@@ -281,11 +291,13 @@ uma média amostral que seja consideravelmente diferente de $50$ cm/s evidencia 
 
 \begin{frame}{}
 \frametitle{Testes de hipóteses}
+\vspace{-0.5cm}
 \begin{block}{}
 \justifying
 A média amostral pode assumir muitos valores diferentes. Suponha que se $48,5 \leq \bar{x}\leq 51,5,$ não rejeitaremos a hipótese nula $H_{0}:\mu = 50$ e se 
 $\bar{x} < 48,5$ ou $\bar{x} > 51,5,$ rejeitaremos a hipótese nula em favor da hipótese alternativa $H_{1}:\mu \neq 50.$ Isso é ilustrado na Figura abaixo:
  \end{block}\pause
+ \vspace{-1.5cm}
 \begin{block}{}
 \begin{figure}
 \centering
@@ -332,6 +344,7 @@ de $H_{1}$, se a estatística de teste cair na região crítica e falhamos em re
 \section{Tipos de Erros}
 \begin{frame}{}
 \frametitle{Testes de hipóteses}
+\small
 \begin{block}{}
 \justifying
 Esse procedimento pode levar a duas conclusões erradas. Por exemplo, a taxa média verdadeira de queima do propelente poderia ser igual a 50 centímetros por segundo. 
@@ -356,6 +369,7 @@ Agora, suponha que a taxa média verdadeira de queima seja diferente de 50 cent�
 aceitação. Nesse caso, falharíamos em rejeitar $H_{0}$, quando ela fosse falsa. Esse tipo de conclusão errada é chamado de \textbf{erro tipo II}.
 \end{block}
 \pause
+\small
 \begin{block}{Erro Tipo II}
 \begin{tikzpicture}
 \node[draw,align=center, fill=gray!30] at (0,-1) {A falha em rejeitar a hipótese nula, quando ela é falsa, é definida como\\ \textbf{erro tipo II}.};
@@ -365,13 +379,15 @@ aceitação. Nesse caso, falharíamos em rejeitar $H_{0}$, quando ela fosse fals
 
 \begin{frame}{}
 \frametitle{Testes de hipóteses}
+\vspace{-0.5cm}
+\small
 \begin{block}{}
 \justifying
 Assim, testando qualquer hipótese estatística, quatro situações diferentes determinam se a decisão final está correta ou errada. Pelo fato de a nossa decisão estar 
 baseada em variáveis aleatórias, probabilidades podem ser associadas aos erros tipo I e tipo II. A probabilidade de cometer o erro tipo I é denotada pela letra grega 
 $\alpha$.
  \end{block}
-
+\vspace{-1.5cm}
 \begin{block}{}
 \begin{center}
 \begin{table}[]
@@ -410,6 +426,7 @@ $\dfrac{\sigma}{\sqrt{n}}=\dfrac{2.5}{\sqrt{10}}=0.79$.
 
 \begin{frame}{}
 \frametitle{Testes de hipóteses}
+\small
 \begin{block}{}
 A probabilidade de cometer o \textbf{erro tipo I} (ou o nível de significância de nosso teste) é igual à soma das 
 áreas sombreadas nas extremidades da distribuição normal na Figura abaixo:
@@ -456,6 +473,7 @@ A probabilidade de cometer o \textbf{erro tipo I} (ou o nível de significância
 
 \begin{frame}{}
 \frametitle{}
+\small
 \begin{block}{}
 \justifying
 Os valores de z que correspondem aos valores críticos $48,5$ e $51,5$ são
@@ -475,6 +493,7 @@ região de aceitação.
 
 \begin{frame}{}
 \frametitle{}
+\small
 \begin{block}{}
 \justifying
 Por exemplo, se considerarmos os valores críticos $48$ e $52,$ o valor de $\alpha$ será:
@@ -641,70 +660,70 @@ a formulação das hipóteses.
 %\end{block}
 %\end{frame}
 
-\section{Hipóteses Unilaterais e Bilaterais}
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-Na construção de hipóteses, sempre vamos estabelecer a hipótese nula como uma igualdade, de modo que a probabilidade do erro tipo I, $\alpha$, pode ser controlada em 
-um valor específico. A hipótese alternativa tanto pode ser unilateral como bilateral, dependendo da conclusão a ser retirada se $\Ho$ é rejeitada. Se o objetivo é fazer uma 
-alegação envolvendo afirmações, tais como \textbf{maior que}, \textbf{menor que}, \textbf{superior a},\textbf{ excede}, \textbf{no mínimo}, e assim por diante, uma alternativa 
-unilateral é apropriada. Se nenhuma direção é implicada pela alegação, ou se a alegação ``\textbf{não igual a}'' for feita, uma alternativa bilateral deve ser usada.
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-Em alguns problemas do mundo real, em que os procedimentos de testes unilaterais sejam indicados, é ocasionalmente difícil escolher uma formulação apropriada da 
-hipótese alternativa. Por exemplo, suponha que um engarrafador de refrigerantes compre 10 garrafas de uma companhia de vidro. O engarrafador quer 
-estar certo de que as garrafas satisfazem as especificações de pressão interna média, que, para as tais garrafas, a resistência mínima 
-é 200g/l. O engarrafador decidiu formular o procedimento de decisão para um lote específico de garrafas como um problema de teste de hipóteses. Há duas formulações 
-possíveis para esse problema:
-\begin{flalign}
-\begin{aligned} 
-\begin{cases}
-H_{0}: \mu=200 g/l\\
-H_{1}:\mu> 200 g/l
-\end{cases}
-\end{aligned}
-\quad\textrm{ou}\quad
-\begin{aligned}
-\begin{cases}
-H_{0}: \mu=200 g/l\\
-H_{1}:\mu< 200 g/l
-\end{cases} \\
-\end{aligned}
-\end{flalign}
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-Considere a formulação com $H_{1}:\mu> 200 g/l$. Se a hipótese nula for rejeitada, as garrafas serão julgadas satisfatórias; se $\Ho$ não for rejeitada, a implicação é 
-que as garrafas não obedecem às especificações e não devem ser usadas. Como rejeitar $\Ho$ é uma conclusão forte, essa formulação força o fabricante de garrafas a 
-``demonstrar'' que a resistência média à explosão das garrafas excede a especificação. Agora considere a formulação $H_{1}:\mu< 200 g/l$. Nessa situação, as garrafas 
-serão julgadas satisfatórias, a menos que $\Ho$ seja rejeitada. Ou seja, concluímos que as garrafas são satisfatórias, a menos que haja forte evidência do contrário.
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-Qual formulação é a correta? $H_{1}:\mu> 200 g/l$ ou $H_{1}:\mu< 200 g/l$? \pause A resposta é ``depende'' do objetivo da análise.
-\end{block}
-\pause
-\begin{block}{}
-Na formulação de hipóteses unilaterais, devemos lembrar que rejeitar $\Ho$ é sempre uma conclusão forte. Consequentemente, devemos estabelecer uma afirmação 
-acerca do que é importante para fazer uma conclusão forte na hipótese alternativa. Em problemas do mundo real, isso dependerá frequentemente de nosso ponto de 
-vista e experiência com a situação.
-\end{block}
-\end{frame}
+%\section{Hipóteses Unilaterais e Bilaterais}
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%Na construção de hipóteses, sempre vamos estabelecer a hipótese nula como uma igualdade, de modo que a probabilidade do erro tipo I, $\alpha$, pode ser controlada em 
+%um valor específico. A hipótese alternativa tanto pode ser unilateral como bilateral, dependendo da conclusão a ser retirada se $\Ho$ é rejeitada. Se o objetivo é fazer uma 
+%alegação envolvendo afirmações, tais como \textbf{maior que}, \textbf{menor que}, \textbf{superior a},\textbf{ excede}, \textbf{no mínimo}, e assim por diante, uma alternativa 
+%unilateral é apropriada. Se nenhuma direção é implicada pela alegação, ou se a alegação ``\textbf{não igual a}'' for feita, uma alternativa bilateral deve ser usada.
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%Em alguns problemas do mundo real, em que os procedimentos de testes unilaterais sejam indicados, é ocasionalmente difícil escolher uma formulação apropriada da 
+%hipótese alternativa. Por exemplo, suponha que um engarrafador de refrigerantes compre 10 garrafas de uma companhia de vidro. O engarrafador quer 
+%estar certo de que as garrafas satisfazem as especificações de pressão interna média, que, para as tais garrafas, a resistência mínima 
+%é 200g/l. O engarrafador decidiu formular o procedimento de decisão para um lote específico de garrafas como um problema de teste de hipóteses. Há duas formulações 
+%possíveis para esse problema:
+%        \begin{flalign}
+	%\begin{aligned} 
+	%\begin{cases}
+	%H_{0}: \mu=200 g/l\\
+	%H_{1}:\mu> 200 g/l
+	%\end{cases}
+	%\end{aligned}
+	%\quad\textrm{ou}\quad
+	%\begin{aligned}
+	%\begin{cases}
+	%H_{0}: \mu=200 g/l\\
+	%H_{1}:\mu< 200 g/l
+	%\end{cases} \\
+	%\end{aligned}
+	%\end{flalign}
+	%\end{block}
+	%\end{frame}
+	%
+	%\begin{frame}{}
+	%\frametitle{}
+	%\begin{block}{}
+	%\justifying
+	%Considere a formulação com $H_{1}:\mu> 200 g/l$. Se a hipótese nula for rejeitada, as garrafas serão julgadas satisfatórias; se $\Ho$ não for rejeitada, a implicação é 
+	%que as garrafas não obedecem às especificações e não devem ser usadas. Como rejeitar $\Ho$ é uma conclusão forte, essa formulação força o fabricante de garrafas a 
+	%``demonstrar'' que a resistência média à explosão das garrafas excede a especificação. Agora considere a formulação $H_{1}:\mu< 200 g/l$. Nessa situação, as garrafas 
+	%serão julgadas satisfatórias, a menos que $\Ho$ seja rejeitada. Ou seja, concluímos que as garrafas são satisfatórias, a menos que haja forte evidência do contrário.
+	%\end{block}
+	%\end{frame}
+	%
+	%\begin{frame}{}
+	%\frametitle{}
+	%\begin{block}{}
+	%\justifying
+	%Qual formulação é a correta? $H_{1}:\mu> 200 g/l$ ou $H_{1}:\mu< 200 g/l$? \pause A resposta é ``depende'' do objetivo da análise.
+	%\end{block}
+	%\pause
+	%\begin{block}{}
+	%Na formulação de hipóteses unilaterais, devemos lembrar que rejeitar $\Ho$ é sempre uma conclusão forte. Consequentemente, devemos estabelecer uma afirmação 
+	%acerca do que é importante para fazer uma conclusão forte na hipótese alternativa. Em problemas do mundo real, isso dependerá frequentemente de nosso ponto de 
+	%vista e experiência com a situação.
+	%\end{block}
+	%\end{frame}
 
 %\section{Valor-p ou p-Valor}
 %\begin{frame}{}
@@ -800,10 +819,13 @@ vista e experiência com a situação.
 \section{Procedimento geral para Testes de Hipóteses}
 \begin{frame}{}
 \frametitle{}
+\vspace{-0.5cm}
+\small
 \begin{block}{}
 \justifying
 O uso da seguinte sequência de etapas na metodologia de aplicação de testes de hipóteses é recomendado.
 \begin{enumerate}
+	\justifying
 \item Parâmetro de interesse: A partir do contexto do problema, identifique o parâmetro de interesse.\pause
 \item Hipótese nula, $\Ho$: Estabeleça a hipótese nula $\Ho$. \pause
 \item Hipótese alternativa, $\Hi$: Especifique uma hipótese alternativa apropriada, $\Hi$.\pause
@@ -813,11 +835,12 @@ O uso da seguinte sequência de etapas na metodologia de aplicação de testes d
 \item Conclusões: Decida se $\Ho$ deve ou não ser rejeitada e reporte isso no contexto do problema.
 \end{enumerate}
 \end{block}
+\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}
 \end{frame}
 
-\begin{frame}{}
-\frametitle{Referências Bibliográficas}
-\bibliography{Referencias/Referencias.bib}
+\begin{frame}[allowframebreaks]
+\frametitle{\bf Referências}
+\printbibliography
 \end{frame}
 
 \end{document}

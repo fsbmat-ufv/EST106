@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.15)  30 APR 2025 13:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.15)  20 MAY 2025 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Aula12.tex
-(Aula12.tex
+**./Aula14.tex
+(Aula14.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
@@ -1794,7 +1794,7 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 )
 \BKM@id=\count560
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 126.
+Package hyperref Info: Option `colorlinks' set `true' on input line 129.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -1806,32 +1806,32 @@ Package: pgfplotsthemetol 2017/01/23 PGFplots colors based on Paul Tol's SRON t
 echnical note
 )
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 13
-0.
+3.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-(Aula12.aux)
-\openout1 = `Aula12.aux'.
+(Aula14.aux)
+\openout1 = `Aula14.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1893,49 +1893,49 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 130.
+Package hyperref Info: Link coloring ON on input line 133.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/ppl/m/n --> OT1/cmss/m/n on input line 130.
+(Font)                  OT1/ppl/m/n --> OT1/cmss/m/n on input line 133.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/ppl/b/n --> OT1/cmss/b/n on input line 130.
+(Font)                  OT1/ppl/b/n --> OT1/cmss/b/n on input line 133.
 \symnumbers=\mathgroup8
 \sympureletters=\mathgroup9
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/ppl/m/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 130.
+(Font)                  OT1/cmss/m/n --> T1/ppl/m/n on input line 133.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/zplm/b/n --> T1/phv/b/n on input line 130.
+(Font)                  OT1/zplm/b/n --> T1/phv/b/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/zplm/b/n --> T1/phv/b/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 130.
+(Font)                  OT1/zplm/b/n --> T1/phv/b/n on input line 133.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/phv/m/n on input line 130.
+(Font)                  OT1/cmss/m/n --> T1/phv/m/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/phv/m/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 130.
+(Font)                  OT1/cmss/bx/n --> T1/phv/m/n on input line 133.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/ppl/m/it --> T1/phv/m/it on input line 130.
+(Font)                  OT1/ppl/m/it --> T1/phv/m/it on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/ppl/b/it --> T1/phv/m/it on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 130.
+(Font)                  OT1/ppl/b/it --> T1/phv/m/it on input line 133.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 130.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 130.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 133.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/phv/m/n --> T1/phv/b/n on input line 130.
+(Font)                  T1/phv/m/n --> T1/phv/b/n on input line 133.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/phv/m/it --> T1/phv/b/it on input line 130.
+(Font)                  T1/phv/m/it --> T1/phv/b/it on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/ppl/b/n on input line 130.
+(Font)                  OT1/cmss/b/n --> T1/ppl/b/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/phv/b/n --> T1/phv/b/n on input line 130.
+(Font)                  T1/phv/b/n --> T1/phv/b/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/phv/m/n --> T1/phv/b/n on input line 130.
+(Font)                  T1/phv/m/n --> T1/phv/b/n on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/phv/m/it --> T1/phv/b/it on input line 130.
+(Font)                  T1/phv/m/it --> T1/phv/b/it on input line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 130.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 133.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-
 basic-dictionary-English.dict
@@ -1995,11 +1995,11 @@ File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout5 = `Aula12.bcf'.
+\openout5 = `Aula14.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Aula12.bbl' found.
- (Aula12.bbl
+Package biblatex Info: ... file 'Aula14.bbl' found.
+ (Aula14.bbl
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
@@ -2008,103 +2008,103 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 130.
-Package biblatex Info: Reference segment=0 on input line 130.
+Package biblatex Info: Reference section=0 on input line 133.
+Package biblatex Info: Reference segment=0 on input line 133.
 
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-130.
+133.
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-130.
+133.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-130.
+133.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 130
+LaTeX Font Info:    Trying to load font information for U+msa on input line 133
 .
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 130
+LaTeX Font Info:    Trying to load font information for U+msb on input line 133
 .
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-130.
+133.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.fd
 File: uesvect.fd 
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-130.
+133.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 133.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 133.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
-Package xypdf Info: Line width: 0.57599pt on input line 130.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 133.
+Package xypdf Info: Line width: 0.57599pt on input line 133.
 
-(Aula12.nav)
+(Aula14.nav)
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-30.
+33.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 130.
+(Font)              scaled to size 6.25204pt on input line 133.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 130.
+(Font)              scaled to size 5.21004pt on input line 133.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 130.
+(Font)              scaled to size 6.25204pt on input line 133.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 130.
+(Font)              scaled to size 5.21004pt on input line 133.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 133.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 133.
 <figs/mylogo.png, id=15, 272.01625pt x 195.73125pt>
 File: figs/mylogo.png Graphic file (type png)
 <use figs/mylogo.png>
-Package pdftex.def Info: figs/mylogo.png  used on input line 133.
+Package pdftex.def Info: figs/mylogo.png  used on input line 140.
 (pdftex.def)             Requested size: 56.9055pt x 40.94647pt.
 
-Overfull \vbox (69.74646pt too high) detected at line 133
+Overfull \vbox (69.74646pt too high) detected at line 140
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 
  []
 
 
-Overfull \vbox (34.74834pt too high) detected at line 133
+Overfull \vbox (34.74834pt too high) detected at line 140
  []
 
 [1
 
 {C:/Users/fsbmat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/fsb
 mat/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figs/mylogo.p
-ng>] (Aula12.toc) [2
+ng>] (Aula14.toc) [2
 
 ] [3
 
@@ -2112,157 +2112,956 @@ ng>] (Aula12.toc) [2
 
 ] [5
 
+] [6
+
 ]
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 17
-1.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 18
+3.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
-[6
+[7
 
-] [7
-
-]
-Overfull \vbox (10.02383pt too high) detected at line 195
- []
-
-[8
+] [8
 
 ]
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-210.
- (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [9
+<figs/uniform.jpg, id=105, 466.74374pt x 184.43906pt>
+File: figs/uniform.jpg Graphic file (type jpg)
+<use figs/uniform.jpg>
+Package pdftex.def Info: figs/uniform.jpg  used on input line 196.
+(pdftex.def)             Requested size: 233.37129pt x 92.2193pt.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 196.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 196.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 196.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 196.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 196.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 196.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 196.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 196.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 196.
+ [9
 
-] [10
+ <./figs/uniform.jpg>] [10
 
 ] [11
 
-] [12
+]
+File: figs/uniform.jpg Graphic file (type jpg)
+<use figs/uniform.jpg>
+Package pdftex.def Info: figs/uniform.jpg  used on input line 237.
+(pdftex.def)             Requested size: 233.37129pt x 92.2193pt.
+ [12
 
 ] [13
 
 ] [14
 
-] [15
+]
+Overfull \vbox (63.91559pt too high) detected at line 273
+ []
+
+[15
 
 ]
-Overfull \hbox (38.702pt too wide) detected at line 244
-\T1/phv/m/sl/14.4 cov\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/cmss/m/n/14.4 
-, \T1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ) = \T1/phv/m/sl/14.4 E\OT1/zplm/m/n/14
-.4 (\T1/phv/m/sl/14.4 XY\OT1/zplm/m/n/14.4 ) \OMS/zplm/m/n/14.4 ^^@ \T1/phv/m/s
-l/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/zplm/m/n/14.4 )\T1/phv/m/sl
-/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ) = \T1/phv/m/
-sl/14.4 E\OT1/zplm/m/n/14.4 [(\T1/phv/m/sl/14.4 X \OMS/zplm/m/n/14.4 ^^@ \T1/ph
-v/m/sl/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/zplm/m/n/14.4 ))(\T1/p
-hv/m/sl/14.4 Y \OMS/zplm/m/n/14.4 ^^@ \T1/phv/m/sl/14.4 E\OT1/zplm/m/n/14.4 (\T
-1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ))]\OT1/cmss/m/n/14.4 .
+Overfull \vbox (63.91559pt too high) detected at line 273
  []
 
 [16
 
 ]
-Overfull \hbox (38.702pt too wide) detected at line 244
-\T1/phv/m/sl/14.4 cov\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/cmss/m/n/14.4 
-, \T1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ) = \T1/phv/m/sl/14.4 E\OT1/zplm/m/n/14
-.4 (\T1/phv/m/sl/14.4 XY\OT1/zplm/m/n/14.4 ) \OMS/zplm/m/n/14.4 ^^@ \T1/phv/m/s
-l/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/zplm/m/n/14.4 )\T1/phv/m/sl
-/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ) = \T1/phv/m/
-sl/14.4 E\OT1/zplm/m/n/14.4 [(\T1/phv/m/sl/14.4 X \OMS/zplm/m/n/14.4 ^^@ \T1/ph
-v/m/sl/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/zplm/m/n/14.4 ))(\T1/p
-hv/m/sl/14.4 Y \OMS/zplm/m/n/14.4 ^^@ \T1/phv/m/sl/14.4 E\OT1/zplm/m/n/14.4 (\T
-1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ))]\OT1/cmss/m/n/14.4 .
+Overfull \vbox (46.99477pt too high) detected at line 292
  []
 
 [17
 
-] [18
+]
+Overfull \vbox (46.99477pt too high) detected at line 292
+ []
 
-] [19
+[18
 
-] [20
+]
+Overfull \vbox (46.99477pt too high) detected at line 292
+ []
 
-] [21
+[19
+
+]
+Overfull \vbox (46.99477pt too high) detected at line 292
+ []
+
+[20
+
+]
+Overfull \vbox (46.99477pt too high) detected at line 292
+ []
+
+[21
 
 ] [22
 
 ] [23
 
-] [24
-
 ]
+\openout4 = `Aula14.vrb'.
 
-LaTeX Warning: Citation 'roteiro' undefined on input line 286.
+ (Aula14.vrb
+<Aula14-001.pdf, id=225, 433.62pt x 433.62pt>
+File: Aula14-001.pdf Graphic file (type pdf)
+<use Aula14-001.pdf>
+Package pdftex.def Info: Aula14-001.pdf  used on input line 7.
+(pdftex.def)             Requested size: 199.1693pt x 199.16988pt.
+)
+Overfull \vbox (20.35631pt too high) detected at line 312
+ []
 
+[24
+
+ <./Aula14-001.pdf>]
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 3
+25.
+
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
 [25
 
 ]
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 291.
+Overfull \vbox (58.70862pt too high) detected at line 338
+ []
+
+[26
+
+]
+Overfull \vbox (58.70862pt too high) detected at line 338
+ []
+
+[27
+
+]
+Overfull \vbox (58.70862pt too high) detected at line 338
+ []
+
+[28
+
+] [29
+
+]
+Overfull \vbox (45.622pt too high) detected at line 360
+ []
+
+[30
+
+]
+<Amplitude_interquartil.jpg, id=287, 401.24907pt x 432.11438pt>
+File: Amplitude_interquartil.jpg Graphic file (type jpg)
+<use Amplitude_interquartil.jpg>
+Package pdftex.def Info: Amplitude_interquartil.jpg  used on input line 371.
+(pdftex.def)             Requested size: 318.69147pt x 239.00212pt.
+ [31
+
+ <./Amplitude_interquartil.jpg>]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 3
+82.
+
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+) [32
+
+] [33
+
+]
+<Aula14-002.pdf, id=314, 433.62pt x 433.62pt>
+File: Aula14-002.pdf Graphic file (type pdf)
+<use Aula14-002.pdf>
+Package pdftex.def Info: Aula14-002.pdf  used on input line 398.
+(pdftex.def)             Requested size: 258.91765pt x 258.9301pt.
+ [34
+
+ <./Aula14-002.pdf>] [35
+
+] [36
+
+] [37
+
+]
+Overfull \vbox (9.01173pt too high) detected at line 515
+ []
+
+[38
+
+] [39
+
+]
+Overfull \vbox (11.34442pt too high) detected at line 549
+ []
+
+[40
+
+]
+Overfull \hbox (129.28398pt too wide) detected at line 586
+[]
+ []
+
+
+Overfull \hbox (200.09007pt too wide) in paragraph at lines 586--586
+ [][] 
+ []
+
+[41
+
+]
+Overfull \vbox (12.32076pt too high) detected at line 604
+ []
+
+[42
+
+] [43
+
+] [44
+
+]
+\openout4 = `Aula14.vrb'.
+
+ (Aula14.vrb
+<exemplos/qnorm1.png, id=413, 501.875pt x 250.9375pt>
+File: exemplos/qnorm1.png Graphic file (type png)
+<use exemplos/qnorm1.png>
+Package pdftex.def Info: exemplos/qnorm1.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm1.png> <a0,fr0>
+<exemplos/qnorm2.png, id=417, 501.875pt x 250.9375pt>
+File: exemplos/qnorm2.png Graphic file (type png)
+<use exemplos/qnorm2.png>
+Package pdftex.def Info: exemplos/qnorm2.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm2.png> <a0,fr1>
+<exemplos/qnorm3.png, id=421, 501.875pt x 250.9375pt>
+File: exemplos/qnorm3.png Graphic file (type png)
+<use exemplos/qnorm3.png>
+Package pdftex.def Info: exemplos/qnorm3.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm3.png> <a0,fr2>
+<exemplos/qnorm4.png, id=425, 501.875pt x 250.9375pt>
+File: exemplos/qnorm4.png Graphic file (type png)
+<use exemplos/qnorm4.png>
+Package pdftex.def Info: exemplos/qnorm4.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm4.png>
+<a0,fr3>
+<exemplos/qnorm5.png, id=429, 501.875pt x 250.9375pt>
+File: exemplos/qnorm5.png Graphic file (type png)
+<use exemplos/qnorm5.png>
+Package pdftex.def Info: exemplos/qnorm5.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm5.png> <a0,fr4>
+<exemplos/qnorm6.png, id=433, 501.875pt x 250.9375pt>
+File: exemplos/qnorm6.png Graphic file (type png)
+<use exemplos/qnorm6.png>
+Package pdftex.def Info: exemplos/qnorm6.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm6.png> <a0,fr5>
+<exemplos/qnorm7.png, id=437, 501.875pt x 250.9375pt>
+File: exemplos/qnorm7.png Graphic file (type png)
+<use exemplos/qnorm7.png>
+Package pdftex.def Info: exemplos/qnorm7.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm7.png> <a0,fr6>
+<exemplos/qnorm8.png, id=441, 501.875pt x 250.9375pt>
+File: exemplos/qnorm8.png Graphic file (type png)
+<use exemplos/qnorm8.png>
+Package pdftex.def Info: exemplos/qnorm8.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm8.png> <a0,fr7>
+<exemplos/qnorm9.png, id=445, 501.875pt x 250.9375pt>
+File: exemplos/qnorm9.png Graphic file (type png)
+<use exemplos/qnorm9.png>
+Package pdftex.def Info: exemplos/qnorm9.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm9.png> <a0,fr8>
+<exemplos/qnorm10.png, id=449, 501.875pt x 250.9375pt>
+File: exemplos/qnorm10.png Graphic file (type png)
+<use exemplos/qnorm10.png>
+Package pdftex.def Info: exemplos/qnorm10.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm10.png> <a0,fr9>
+<exemplos/qnorm11.png, id=453, 501.875pt x 250.9375pt>
+File: exemplos/qnorm11.png Graphic file (type png)
+<use exemplos/qnorm11.png>
+Package pdftex.def Info: exemplos/qnorm11.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm11.png>
+<a0,fr10>
+<exemplos/qnorm12.png, id=457, 501.875pt x 250.9375pt>
+File: exemplos/qnorm12.png Graphic file (type png)
+<use exemplos/qnorm12.png>
+Package pdftex.def Info: exemplos/qnorm12.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm12.png> <a0,fr11>
+<exemplos/qnorm13.png, id=461, 501.875pt x 250.9375pt>
+File: exemplos/qnorm13.png Graphic file (type png)
+<use exemplos/qnorm13.png>
+Package pdftex.def Info: exemplos/qnorm13.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm13.png>
+<a0,fr12>
+<exemplos/qnorm14.png, id=465, 501.875pt x 250.9375pt>
+File: exemplos/qnorm14.png Graphic file (type png)
+<use exemplos/qnorm14.png>
+Package pdftex.def Info: exemplos/qnorm14.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm14.png> <a0,fr13>
+<exemplos/qnorm15.png, id=469, 501.875pt x 250.9375pt>
+File: exemplos/qnorm15.png Graphic file (type png)
+<use exemplos/qnorm15.png>
+Package pdftex.def Info: exemplos/qnorm15.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm15.png>
+<a0,fr14>
+<exemplos/qnorm16.png, id=473, 501.875pt x 250.9375pt>
+File: exemplos/qnorm16.png Graphic file (type png)
+<use exemplos/qnorm16.png>
+Package pdftex.def Info: exemplos/qnorm16.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm16.png> <a0,fr15>
+<exemplos/qnorm17.png, id=477, 501.875pt x 250.9375pt>
+File: exemplos/qnorm17.png Graphic file (type png)
+<use exemplos/qnorm17.png>
+Package pdftex.def Info: exemplos/qnorm17.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm17.png>
+<a0,fr16>
+<exemplos/qnorm18.png, id=481, 501.875pt x 250.9375pt>
+File: exemplos/qnorm18.png Graphic file (type png)
+<use exemplos/qnorm18.png>
+Package pdftex.def Info: exemplos/qnorm18.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm18.png> <a0,fr17>
+<exemplos/qnorm19.png, id=485, 501.875pt x 250.9375pt>
+File: exemplos/qnorm19.png Graphic file (type png)
+<use exemplos/qnorm19.png>
+Package pdftex.def Info: exemplos/qnorm19.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm19.png>
+<a0,fr18>
+<exemplos/qnorm20.png, id=489, 501.875pt x 250.9375pt>
+File: exemplos/qnorm20.png Graphic file (type png)
+<use exemplos/qnorm20.png>
+Package pdftex.def Info: exemplos/qnorm20.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm20.png> <a0,fr19>
+<exemplos/qnorm21.png, id=493, 501.875pt x 250.9375pt>
+File: exemplos/qnorm21.png Graphic file (type png)
+<use exemplos/qnorm21.png>
+Package pdftex.def Info: exemplos/qnorm21.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm21.png>
+<a0,fr20>
+<exemplos/qnorm22.png, id=497, 501.875pt x 250.9375pt>
+File: exemplos/qnorm22.png Graphic file (type png)
+<use exemplos/qnorm22.png>
+Package pdftex.def Info: exemplos/qnorm22.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm22.png> <a0,fr21>
+<exemplos/qnorm23.png, id=501, 501.875pt x 250.9375pt>
+File: exemplos/qnorm23.png Graphic file (type png)
+<use exemplos/qnorm23.png>
+Package pdftex.def Info: exemplos/qnorm23.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm23.png>
+<a0,fr22>
+<exemplos/qnorm24.png, id=505, 501.875pt x 250.9375pt>
+File: exemplos/qnorm24.png Graphic file (type png)
+<use exemplos/qnorm24.png>
+Package pdftex.def Info: exemplos/qnorm24.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm24.png> <a0,fr23>
+<exemplos/qnorm25.png, id=509, 501.875pt x 250.9375pt>
+File: exemplos/qnorm25.png Graphic file (type png)
+<use exemplos/qnorm25.png>
+Package pdftex.def Info: exemplos/qnorm25.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm25.png>
+<a0,fr24>
+<exemplos/qnorm26.png, id=513, 501.875pt x 250.9375pt>
+File: exemplos/qnorm26.png Graphic file (type png)
+<use exemplos/qnorm26.png>
+Package pdftex.def Info: exemplos/qnorm26.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm26.png> <a0,fr25>
+<exemplos/qnorm27.png, id=517, 501.875pt x 250.9375pt>
+File: exemplos/qnorm27.png Graphic file (type png)
+<use exemplos/qnorm27.png>
+Package pdftex.def Info: exemplos/qnorm27.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm27.png>
+<a0,fr26>
+<exemplos/qnorm28.png, id=521, 501.875pt x 250.9375pt>
+File: exemplos/qnorm28.png Graphic file (type png)
+<use exemplos/qnorm28.png>
+Package pdftex.def Info: exemplos/qnorm28.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm28.png> <a0,fr27>
+<exemplos/qnorm29.png, id=525, 501.875pt x 250.9375pt>
+File: exemplos/qnorm29.png Graphic file (type png)
+<use exemplos/qnorm29.png>
+Package pdftex.def Info: exemplos/qnorm29.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm29.png>
+<a0,fr28>
+<exemplos/qnorm30.png, id=529, 501.875pt x 250.9375pt>
+File: exemplos/qnorm30.png Graphic file (type png)
+<use exemplos/qnorm30.png>
+Package pdftex.def Info: exemplos/qnorm30.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm30.png> <a0,fr29>
+<exemplos/qnorm31.png, id=533, 501.875pt x 250.9375pt>
+File: exemplos/qnorm31.png Graphic file (type png)
+<use exemplos/qnorm31.png>
+Package pdftex.def Info: exemplos/qnorm31.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm31.png>
+<a0,fr30>
+<exemplos/qnorm32.png, id=537, 501.875pt x 250.9375pt>
+File: exemplos/qnorm32.png Graphic file (type png)
+<use exemplos/qnorm32.png>
+Package pdftex.def Info: exemplos/qnorm32.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm32.png> <a0,fr31>
+<exemplos/qnorm33.png, id=541, 501.875pt x 250.9375pt>
+File: exemplos/qnorm33.png Graphic file (type png)
+<use exemplos/qnorm33.png>
+Package pdftex.def Info: exemplos/qnorm33.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm33.png>
+<a0,fr32>
+<exemplos/qnorm34.png, id=545, 501.875pt x 250.9375pt>
+File: exemplos/qnorm34.png Graphic file (type png)
+<use exemplos/qnorm34.png>
+Package pdftex.def Info: exemplos/qnorm34.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm34.png> <a0,fr33>
+<exemplos/qnorm35.png, id=549, 501.875pt x 250.9375pt>
+File: exemplos/qnorm35.png Graphic file (type png)
+<use exemplos/qnorm35.png>
+Package pdftex.def Info: exemplos/qnorm35.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm35.png>
+<a0,fr34>
+<exemplos/qnorm36.png, id=553, 501.875pt x 250.9375pt>
+File: exemplos/qnorm36.png Graphic file (type png)
+<use exemplos/qnorm36.png>
+Package pdftex.def Info: exemplos/qnorm36.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm36.png> <a0,fr35>
+<exemplos/qnorm37.png, id=557, 501.875pt x 250.9375pt>
+File: exemplos/qnorm37.png Graphic file (type png)
+<use exemplos/qnorm37.png>
+Package pdftex.def Info: exemplos/qnorm37.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm37.png>
+<a0,fr36>
+<exemplos/qnorm38.png, id=561, 501.875pt x 250.9375pt>
+File: exemplos/qnorm38.png Graphic file (type png)
+<use exemplos/qnorm38.png>
+Package pdftex.def Info: exemplos/qnorm38.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm38.png> <a0,fr37>
+<exemplos/qnorm39.png, id=565, 501.875pt x 250.9375pt>
+File: exemplos/qnorm39.png Graphic file (type png)
+<use exemplos/qnorm39.png>
+Package pdftex.def Info: exemplos/qnorm39.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm39.png>
+<a0,fr38>
+<exemplos/qnorm40.png, id=569, 501.875pt x 250.9375pt>
+File: exemplos/qnorm40.png Graphic file (type png)
+<use exemplos/qnorm40.png>
+Package pdftex.def Info: exemplos/qnorm40.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm40.png> <a0,fr39>
+<exemplos/qnorm41.png, id=573, 501.875pt x 250.9375pt>
+File: exemplos/qnorm41.png Graphic file (type png)
+<use exemplos/qnorm41.png>
+Package pdftex.def Info: exemplos/qnorm41.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm41.png>
+<a0,fr40>
+<exemplos/qnorm42.png, id=577, 501.875pt x 250.9375pt>
+File: exemplos/qnorm42.png Graphic file (type png)
+<use exemplos/qnorm42.png>
+Package pdftex.def Info: exemplos/qnorm42.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm42.png> <a0,fr41>
+<exemplos/qnorm43.png, id=581, 501.875pt x 250.9375pt>
+File: exemplos/qnorm43.png Graphic file (type png)
+<use exemplos/qnorm43.png>
+Package pdftex.def Info: exemplos/qnorm43.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm43.png>
+<a0,fr42>
+<exemplos/qnorm44.png, id=585, 501.875pt x 250.9375pt>
+File: exemplos/qnorm44.png Graphic file (type png)
+<use exemplos/qnorm44.png>
+Package pdftex.def Info: exemplos/qnorm44.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm44.png> <a0,fr43>
+<exemplos/qnorm45.png, id=589, 501.875pt x 250.9375pt>
+File: exemplos/qnorm45.png Graphic file (type png)
+<use exemplos/qnorm45.png>
+Package pdftex.def Info: exemplos/qnorm45.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm45.png>
+<a0,fr44>
+<exemplos/qnorm46.png, id=593, 501.875pt x 250.9375pt>
+File: exemplos/qnorm46.png Graphic file (type png)
+<use exemplos/qnorm46.png>
+Package pdftex.def Info: exemplos/qnorm46.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm46.png> <a0,fr45>
+<exemplos/qnorm47.png, id=597, 501.875pt x 250.9375pt>
+File: exemplos/qnorm47.png Graphic file (type png)
+<use exemplos/qnorm47.png>
+Package pdftex.def Info: exemplos/qnorm47.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm47.png>
+<a0,fr46>
+<exemplos/qnorm48.png, id=601, 501.875pt x 250.9375pt>
+File: exemplos/qnorm48.png Graphic file (type png)
+<use exemplos/qnorm48.png>
+Package pdftex.def Info: exemplos/qnorm48.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm48.png> <a0,fr47>
+<exemplos/qnorm49.png, id=605, 501.875pt x 250.9375pt>
+File: exemplos/qnorm49.png Graphic file (type png)
+<use exemplos/qnorm49.png>
+Package pdftex.def Info: exemplos/qnorm49.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm49.png>
+<a0,fr48>
+<exemplos/qnorm50.png, id=609, 501.875pt x 250.9375pt>
+File: exemplos/qnorm50.png Graphic file (type png)
+<use exemplos/qnorm50.png>
+Package pdftex.def Info: exemplos/qnorm50.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm50.png> <a0,fr49>
+<exemplos/qnorm51.png, id=613, 501.875pt x 250.9375pt>
+File: exemplos/qnorm51.png Graphic file (type png)
+<use exemplos/qnorm51.png>
+Package pdftex.def Info: exemplos/qnorm51.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm51.png>
+<a0,fr50>
+<exemplos/qnorm52.png, id=617, 501.875pt x 250.9375pt>
+File: exemplos/qnorm52.png Graphic file (type png)
+<use exemplos/qnorm52.png>
+Package pdftex.def Info: exemplos/qnorm52.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm52.png> <a0,fr51>
+<exemplos/qnorm53.png, id=621, 501.875pt x 250.9375pt>
+File: exemplos/qnorm53.png Graphic file (type png)
+<use exemplos/qnorm53.png>
+Package pdftex.def Info: exemplos/qnorm53.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm53.png>
+<a0,fr52>
+<exemplos/qnorm54.png, id=625, 501.875pt x 250.9375pt>
+File: exemplos/qnorm54.png Graphic file (type png)
+<use exemplos/qnorm54.png>
+Package pdftex.def Info: exemplos/qnorm54.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm54.png> <a0,fr53>
+<exemplos/qnorm55.png, id=629, 501.875pt x 250.9375pt>
+File: exemplos/qnorm55.png Graphic file (type png)
+<use exemplos/qnorm55.png>
+Package pdftex.def Info: exemplos/qnorm55.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm55.png>
+<a0,fr54>
+<exemplos/qnorm56.png, id=633, 501.875pt x 250.9375pt>
+File: exemplos/qnorm56.png Graphic file (type png)
+<use exemplos/qnorm56.png>
+Package pdftex.def Info: exemplos/qnorm56.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm56.png> <a0,fr55>
+<exemplos/qnorm57.png, id=637, 501.875pt x 250.9375pt>
+File: exemplos/qnorm57.png Graphic file (type png)
+<use exemplos/qnorm57.png>
+Package pdftex.def Info: exemplos/qnorm57.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm57.png>
+<a0,fr56>
+<exemplos/qnorm58.png, id=641, 501.875pt x 250.9375pt>
+File: exemplos/qnorm58.png Graphic file (type png)
+<use exemplos/qnorm58.png>
+Package pdftex.def Info: exemplos/qnorm58.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm58.png> <a0,fr57>
+<exemplos/qnorm59.png, id=645, 501.875pt x 250.9375pt>
+File: exemplos/qnorm59.png Graphic file (type png)
+<use exemplos/qnorm59.png>
+Package pdftex.def Info: exemplos/qnorm59.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm59.png>
+<a0,fr58>
+<exemplos/qnorm60.png, id=649, 501.875pt x 250.9375pt>
+File: exemplos/qnorm60.png Graphic file (type png)
+<use exemplos/qnorm60.png>
+Package pdftex.def Info: exemplos/qnorm60.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm60.png> <a0,fr59>
+<exemplos/qnorm61.png, id=653, 501.875pt x 250.9375pt>
+File: exemplos/qnorm61.png Graphic file (type png)
+<use exemplos/qnorm61.png>
+Package pdftex.def Info: exemplos/qnorm61.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm61.png>
+<a0,fr60>
+<exemplos/qnorm62.png, id=657, 501.875pt x 250.9375pt>
+File: exemplos/qnorm62.png Graphic file (type png)
+<use exemplos/qnorm62.png>
+Package pdftex.def Info: exemplos/qnorm62.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm62.png> <a0,fr61>
+<exemplos/qnorm63.png, id=661, 501.875pt x 250.9375pt>
+File: exemplos/qnorm63.png Graphic file (type png)
+<use exemplos/qnorm63.png>
+Package pdftex.def Info: exemplos/qnorm63.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm63.png>
+<a0,fr62>
+<exemplos/qnorm64.png, id=665, 501.875pt x 250.9375pt>
+File: exemplos/qnorm64.png Graphic file (type png)
+<use exemplos/qnorm64.png>
+Package pdftex.def Info: exemplos/qnorm64.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm64.png> <a0,fr63>
+<exemplos/qnorm65.png, id=669, 501.875pt x 250.9375pt>
+File: exemplos/qnorm65.png Graphic file (type png)
+<use exemplos/qnorm65.png>
+Package pdftex.def Info: exemplos/qnorm65.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm65.png>
+<a0,fr64>
+<exemplos/qnorm66.png, id=673, 501.875pt x 250.9375pt>
+File: exemplos/qnorm66.png Graphic file (type png)
+<use exemplos/qnorm66.png>
+Package pdftex.def Info: exemplos/qnorm66.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm66.png> <a0,fr65>
+<exemplos/qnorm67.png, id=677, 501.875pt x 250.9375pt>
+File: exemplos/qnorm67.png Graphic file (type png)
+<use exemplos/qnorm67.png>
+Package pdftex.def Info: exemplos/qnorm67.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm67.png>
+<a0,fr66>
+<exemplos/qnorm68.png, id=681, 501.875pt x 250.9375pt>
+File: exemplos/qnorm68.png Graphic file (type png)
+<use exemplos/qnorm68.png>
+Package pdftex.def Info: exemplos/qnorm68.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm68.png> <a0,fr67>
+<exemplos/qnorm69.png, id=685, 501.875pt x 250.9375pt>
+File: exemplos/qnorm69.png Graphic file (type png)
+<use exemplos/qnorm69.png>
+Package pdftex.def Info: exemplos/qnorm69.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm69.png>
+<a0,fr68>
+<exemplos/qnorm70.png, id=689, 501.875pt x 250.9375pt>
+File: exemplos/qnorm70.png Graphic file (type png)
+<use exemplos/qnorm70.png>
+Package pdftex.def Info: exemplos/qnorm70.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm70.png> <a0,fr69>
+<exemplos/qnorm71.png, id=693, 501.875pt x 250.9375pt>
+File: exemplos/qnorm71.png Graphic file (type png)
+<use exemplos/qnorm71.png>
+Package pdftex.def Info: exemplos/qnorm71.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm71.png>
+<a0,fr70>
+<exemplos/qnorm72.png, id=697, 501.875pt x 250.9375pt>
+File: exemplos/qnorm72.png Graphic file (type png)
+<use exemplos/qnorm72.png>
+Package pdftex.def Info: exemplos/qnorm72.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm72.png> <a0,fr71>
+<exemplos/qnorm73.png, id=701, 501.875pt x 250.9375pt>
+File: exemplos/qnorm73.png Graphic file (type png)
+<use exemplos/qnorm73.png>
+Package pdftex.def Info: exemplos/qnorm73.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm73.png>
+<a0,fr72>
+<exemplos/qnorm74.png, id=705, 501.875pt x 250.9375pt>
+File: exemplos/qnorm74.png Graphic file (type png)
+<use exemplos/qnorm74.png>
+Package pdftex.def Info: exemplos/qnorm74.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm74.png> <a0,fr73>
+<exemplos/qnorm75.png, id=709, 501.875pt x 250.9375pt>
+File: exemplos/qnorm75.png Graphic file (type png)
+<use exemplos/qnorm75.png>
+Package pdftex.def Info: exemplos/qnorm75.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm75.png>
+<a0,fr74>
+<exemplos/qnorm76.png, id=713, 501.875pt x 250.9375pt>
+File: exemplos/qnorm76.png Graphic file (type png)
+<use exemplos/qnorm76.png>
+Package pdftex.def Info: exemplos/qnorm76.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm76.png> <a0,fr75>
+<exemplos/qnorm77.png, id=717, 501.875pt x 250.9375pt>
+File: exemplos/qnorm77.png Graphic file (type png)
+<use exemplos/qnorm77.png>
+Package pdftex.def Info: exemplos/qnorm77.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm77.png>
+<a0,fr76>
+<exemplos/qnorm78.png, id=721, 501.875pt x 250.9375pt>
+File: exemplos/qnorm78.png Graphic file (type png)
+<use exemplos/qnorm78.png>
+Package pdftex.def Info: exemplos/qnorm78.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm78.png> <a0,fr77>
+<exemplos/qnorm79.png, id=725, 501.875pt x 250.9375pt>
+File: exemplos/qnorm79.png Graphic file (type png)
+<use exemplos/qnorm79.png>
+Package pdftex.def Info: exemplos/qnorm79.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm79.png>
+<a0,fr78>
+<exemplos/qnorm80.png, id=729, 501.875pt x 250.9375pt>
+File: exemplos/qnorm80.png Graphic file (type png)
+<use exemplos/qnorm80.png>
+Package pdftex.def Info: exemplos/qnorm80.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm80.png> <a0,fr79>
+<exemplos/qnorm81.png, id=733, 501.875pt x 250.9375pt>
+File: exemplos/qnorm81.png Graphic file (type png)
+<use exemplos/qnorm81.png>
+Package pdftex.def Info: exemplos/qnorm81.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm81.png>
+<a0,fr80>
+<exemplos/qnorm82.png, id=737, 501.875pt x 250.9375pt>
+File: exemplos/qnorm82.png Graphic file (type png)
+<use exemplos/qnorm82.png>
+Package pdftex.def Info: exemplos/qnorm82.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm82.png> <a0,fr81>
+<exemplos/qnorm83.png, id=741, 501.875pt x 250.9375pt>
+File: exemplos/qnorm83.png Graphic file (type png)
+<use exemplos/qnorm83.png>
+Package pdftex.def Info: exemplos/qnorm83.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm83.png>
+<a0,fr82>
+<exemplos/qnorm84.png, id=745, 501.875pt x 250.9375pt>
+File: exemplos/qnorm84.png Graphic file (type png)
+<use exemplos/qnorm84.png>
+Package pdftex.def Info: exemplos/qnorm84.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm84.png> <a0,fr83>
+<exemplos/qnorm85.png, id=749, 501.875pt x 250.9375pt>
+File: exemplos/qnorm85.png Graphic file (type png)
+<use exemplos/qnorm85.png>
+Package pdftex.def Info: exemplos/qnorm85.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm85.png>
+<a0,fr84>
+<exemplos/qnorm86.png, id=753, 501.875pt x 250.9375pt>
+File: exemplos/qnorm86.png Graphic file (type png)
+<use exemplos/qnorm86.png>
+Package pdftex.def Info: exemplos/qnorm86.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm86.png> <a0,fr85>
+<exemplos/qnorm87.png, id=757, 501.875pt x 250.9375pt>
+File: exemplos/qnorm87.png Graphic file (type png)
+<use exemplos/qnorm87.png>
+Package pdftex.def Info: exemplos/qnorm87.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm87.png>
+<a0,fr86>
+<exemplos/qnorm88.png, id=761, 501.875pt x 250.9375pt>
+File: exemplos/qnorm88.png Graphic file (type png)
+<use exemplos/qnorm88.png>
+Package pdftex.def Info: exemplos/qnorm88.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm88.png> <a0,fr87>
+<exemplos/qnorm89.png, id=765, 501.875pt x 250.9375pt>
+File: exemplos/qnorm89.png Graphic file (type png)
+<use exemplos/qnorm89.png>
+Package pdftex.def Info: exemplos/qnorm89.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm89.png>
+<a0,fr88>
+<exemplos/qnorm90.png, id=769, 501.875pt x 250.9375pt>
+File: exemplos/qnorm90.png Graphic file (type png)
+<use exemplos/qnorm90.png>
+Package pdftex.def Info: exemplos/qnorm90.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm90.png> <a0,fr89>
+<exemplos/qnorm91.png, id=773, 501.875pt x 250.9375pt>
+File: exemplos/qnorm91.png Graphic file (type png)
+<use exemplos/qnorm91.png>
+Package pdftex.def Info: exemplos/qnorm91.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm91.png>
+<a0,fr90>
+<exemplos/qnorm92.png, id=777, 501.875pt x 250.9375pt>
+File: exemplos/qnorm92.png Graphic file (type png)
+<use exemplos/qnorm92.png>
+Package pdftex.def Info: exemplos/qnorm92.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm92.png> <a0,fr91>
+<exemplos/qnorm93.png, id=781, 501.875pt x 250.9375pt>
+File: exemplos/qnorm93.png Graphic file (type png)
+<use exemplos/qnorm93.png>
+Package pdftex.def Info: exemplos/qnorm93.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm93.png>
+<a0,fr92>
+<exemplos/qnorm94.png, id=785, 501.875pt x 250.9375pt>
+File: exemplos/qnorm94.png Graphic file (type png)
+<use exemplos/qnorm94.png>
+Package pdftex.def Info: exemplos/qnorm94.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm94.png> <a0,fr93>
+<exemplos/qnorm95.png, id=789, 501.875pt x 250.9375pt>
+File: exemplos/qnorm95.png Graphic file (type png)
+<use exemplos/qnorm95.png>
+Package pdftex.def Info: exemplos/qnorm95.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm95.png>
+<a0,fr94>
+<exemplos/qnorm96.png, id=793, 501.875pt x 250.9375pt>
+File: exemplos/qnorm96.png Graphic file (type png)
+<use exemplos/qnorm96.png>
+Package pdftex.def Info: exemplos/qnorm96.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm96.png> <a0,fr95>
+<exemplos/qnorm97.png, id=797, 501.875pt x 250.9375pt>
+File: exemplos/qnorm97.png Graphic file (type png)
+<use exemplos/qnorm97.png>
+Package pdftex.def Info: exemplos/qnorm97.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm97.png>
+<a0,fr96>
+<exemplos/qnorm98.png, id=801, 501.875pt x 250.9375pt>
+File: exemplos/qnorm98.png Graphic file (type png)
+<use exemplos/qnorm98.png>
+Package pdftex.def Info: exemplos/qnorm98.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm98.png> <a0,fr97>
+<exemplos/qnorm99.png, id=805, 501.875pt x 250.9375pt>
+File: exemplos/qnorm99.png Graphic file (type png)
+<use exemplos/qnorm99.png>
+Package pdftex.def Info: exemplos/qnorm99.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm99.png>
+<a0,fr98>
+<exemplos/qnorm100.png, id=809, 501.875pt x 250.9375pt>
+File: exemplos/qnorm100.png Graphic file (type png)
+<use exemplos/qnorm100.png>
+Package pdftex.def Info: exemplos/qnorm100.png  used on input line 5.
+(pdftex.def)             Requested size: 501.87376pt x 250.93687pt.
+ <./exemplos/qnorm100.png> <a0,fr99>) [45
+
+]
+\openout4 = `Aula14.vrb'.
+
+ (Aula14.vrb
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 291.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 291.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 291.
+(Font)              scaled to size 7.91925pt on input line 9.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 291.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 291.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 291.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 291.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 291.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 291.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
-91.
- (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+(Font)              scaled to size 7.91925pt on input line 9.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7.6> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 9.
+
+Overfull \hbox (42.95628pt too wide) in paragraph at lines 9--35
+ [] 
+ []
+
 )
-Overfull \hbox (7.2898pt too wide) in paragraph at lines 291--291
+Overfull \vbox (73.92897pt too high) detected at line 749
+ []
+
+[46
+
+]
+\openout4 = `Aula14.vrb'.
+
+ (Aula14.vrb
+Overfull \hbox (42.95628pt too wide) in paragraph at lines 9--35
+ [] 
+ []
+
+
+LaTeX Warning: Citation 'roteiro' undefined on input line 37.
+
+)
+Overfull \vbox (73.92897pt too high) detected at line 789
+ []
+
+[47
+
+]
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 794.
+
+Overfull \hbox (7.2898pt too wide) in paragraph at lines 794--794
 [][][]\T1/phv/m/n/14.4 Morettin, P.A. e W.O Bus-sab (2023).[] \T1/phv/b/sl/14.4
  Es-ta-tís-tica bá-sica\T1/phv/b/n/14.4 .[] \T1/phv/m/n/12 10\TS1/phv/m/n/12 ª 
 \T1/phv/m/n/12 ed.
  []
 
-[26
+[48
 
  <C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonarti
-cle.pdf>] [27
+cle.pdf>] [49
 
 
 ]
 \tf@nav=\write7
-\openout7 = `Aula12.nav'.
+\openout7 = `Aula14.nav'.
 
 \tf@toc=\write8
-\openout8 = `Aula12.toc'.
+\openout8 = `Aula14.toc'.
 
 \tf@snm=\write9
-\openout9 = `Aula12.snm'.
+\openout9 = `Aula14.snm'.
 
- (Aula12.aux)
+ (Aula14.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-Package logreq Info: Writing requests to 'Aula12.run.xml'.
-\openout1 = `Aula12.run.xml'.
+Package logreq Info: Writing requests to 'Aula14.run.xml'.
+\openout1 = `Aula14.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53660 strings out of 474486
- 1191969 string characters out of 5743283
- 2188251 words of memory out of 5000000
- 74876 multiletter control sequences out of 15000+600000
- 648009 words of font info for 177 fonts, out of 8000000 for 9000
+ 56048 strings out of 474486
+ 1250837 string characters out of 5743283
+ 2212531 words of memory out of 5000000
+ 77196 multiletter control sequences out of 15000+600000
+ 658539 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,17n,123p,3219b,1865s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,17n,123p,3219b,2385s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\fsbmat\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ect
 t1200.pk> <C:\Users\fsbmat\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
 450\ectt0800.pk><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -2271,18 +3070,18 @@ type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/fsbmat/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/fsbmat/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/fsbm
-at/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Use
-rs/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><
-C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr
-i.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/u
-hvb8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvet
-ic/uhvbo8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/h
-elvetic/uhvr8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/u
-rw/helvetic/uhvro8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/urw/palatino/uplr8a.pfb>
-Output written on Aula12.pdf (27 pages, 226390 bytes).
+at/AppData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom12.pfb><C
+:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.
+pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/
+fplmri.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helve
+tic/uhvb8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/h
+elvetic/uhvbo8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/
+urw/helvetic/uhvr8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/urw/helvetic/uhvro8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fon
+ts/type1/urw/palatino/uplr8a.pfb>
+Output written on Aula14.pdf (49 pages, 701814 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1164 PDF objects out of 1200 (max. 8388607)
+ 111 named destinations out of 1000 (max. 500000)
+ 1284 words of extra memory for PDF output out of 10000 (max. 10000000)
 

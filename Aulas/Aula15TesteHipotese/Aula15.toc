@@ -1,0 +1,4 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Testes de Hipóteses}{3}{0}{1}
+\beamer@sectionintoc {2}{Tipos de Erros}{20}{0}{2}
+\beamer@sectionintoc {3}{Procedimento geral para Testes de Hipóteses}{45}{0}{3}

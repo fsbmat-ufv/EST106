@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Aula13Exercicios.blg'
+[107] biber-MSWIN64:340> INFO - === 
+[144] Biber.pm:419> INFO - Reading 'Aula13Exercicios.bcf'
+[255] Biber.pm:979> INFO - Found 7 citekeys in bib section 0
+[270] Biber.pm:4419> INFO - Processing section 0
+[282] Biber.pm:4610> INFO - Looking for bibtex file '../Referencias/Referencias.bib' for section 0
+[336] bibtex.pm:1713> INFO - LaTeX decoding ...
+[353] bibtex.pm:1519> INFO - Found BibTeX data source '../Referencias/Referencias.bib'
+[413] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[413] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[413] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'pt-BR'
+[413] Biber.pm:4245> INFO - No sort tailoring available for locale 'pt-BR'
+[422] bbl.pm:660> INFO - Writing 'Aula13Exercicios.bbl' with encoding 'UTF-8'
+[425] bbl.pm:763> INFO - Output to Aula13Exercicios.bbl
+[425] Biber.pm:131> WARN - I didn't find a database entry for 'roteiro' (section 0)
+[425] Biber.pm:133> INFO - WARNINGS: 1

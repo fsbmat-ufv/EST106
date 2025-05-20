@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.15)  30 APR 2025 13:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.15)  20 MAY 2025 18:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Aula12.tex
-(Aula12.tex
+**./Aula15.tex
+(Aula15.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
@@ -809,84 +809,63 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/animate\animate.sty
-Package: animate 2024/10/14 PDF & SVG animations from files and inline graphics
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count338
+\lst@gtempboxa=\box76
+\lst@token=\toks48
+\lst@length=\count339
+\lst@currlwidth=\dimen295
+\lst@column=\count340
+\lst@pos=\count341
+\lst@lostspace=\dimen296
+\lst@width=\dimen297
+\lst@newlines=\count342
+\lst@lineno=\count343
+\lst@maxwidth=\dimen298
+
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count344
+\lst@skipnumbers=\count345
+\lst@framebox=\box77
+)
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+{C:/Users/fsbmat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/fsb
+mat/AppData/Local/Programs/MiKTeX/fonts/map/dvips/sansmathaccent/sansmathaccent
+.map
+
+pdfTeX warning: pdflatex.exe (file C:/Users/fsbmat/AppData/Local/Programs/MiKTe
+X/fonts/map/dvips/sansmathaccent/sansmathaccent.map): fontmap entry for `mathke
+rncmssi8' already exists, duplicates ignored
 
 
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-)
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\ifdraft.sty
-Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
-)
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
-Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count338
-\calc@Bcount=\count339
-\calc@Adimen=\dimen295
-\calc@Bdimen=\dimen296
-\calc@Askip=\skip65
-\calc@Bskip=\skip66
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count340
-\calc@Cskip=\skip67
-)
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/media9\pdfbase.sty
-Package: pdfbase 2024/09/16 v0.59 driver independent access to low-level PDF fe
-atures
+pdfTeX warning: pdflatex.exe (file C:/Users/fsbmat/AppData/Local/Programs/MiKTe
+X/fonts/map/dvips/sansmathaccent/sansmathaccent.map): fontmap entry for `mathke
+rncmssi9' already exists, duplicates ignored
 
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
-ftex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count341
-\l__pdf_internal_box=\box76
-)
-\g_pbs_page_int=\count342
-\g_pbs_oc_int=\count343
-)
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-abspage.sty
-Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
 
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-base.sty
-Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
+pdfTeX warning: pdflatex.exe (file C:/Users/fsbmat/AppData/Local/Programs/MiKTe
+X/fonts/map/dvips/sansmathaccent/sansmathaccent.map): fontmap entry for `mathke
+rncmssi10' already exists, duplicates ignored
 
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.st
-y
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-Package zref Info: New property list: main on input line 767.
-Package zref Info: New property: default on input line 768.
-Package zref Info: New property: page on input line 769.
-)
-\c@abspage=\count344
-Package zref Info: New property: abspage on input line 67.
-) (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/ocgx2\ocgbase.sty
-Package: ocgbase 2024/09/15 v0.24 support package for ocgx2.sty
-)
-\@anim@box=\box77
-\@anim@measbox=\box78
-\@anim@tmpdima=\dimen297
-\@anim@tmpdimb=\dimen298
-\@anim@num=\count345
-\@anim@curframe=\count346
-\@anim@curframe@zb=\count347
-\@anim@resizeflags=\count348
-\@anim@skipfram=\count349
-\@anim@mulframecnt=\count350
-\@anim@@tmlnfile=\read4
-\@anim@tmpcnt=\count351
-\c@@anim@ltxcnt=\count352
-\@anim@curlayer=\count353
-\@anim@lineno=\count354
-\@anim@curfield=\count355
-\@anim@@resizeflags=\count356
-)
+
+pdfTeX warning: pdflatex.exe (file C:/Users/fsbmat/AppData/Local/Programs/MiKTe
+X/fonts/map/dvips/sansmathaccent/sansmathaccent.map): fontmap entry for `mathke
+rncmssi12' already exists, duplicates ignored
+
+
+pdfTeX warning: pdflatex.exe (file C:/Users/fsbmat/AppData/Local/Programs/MiKTe
+X/fonts/map/dvips/sansmathaccent/sansmathaccent.map): fontmap entry for `mathke
+rncmssi17' already exists, duplicates ignored
+}
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count357
-\c@@ppsavesec=\count358
-\c@@ppsaveapp=\count359
+\c@@pps=\count346
+\c@@ppsavesec=\count347
+\c@@ppsaveapp=\count348
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\dsfont.st
 y
@@ -915,36 +894,31 @@ Package caption Info: beamer document class detected.
 File: caption-beamer.sto 2022/01/06 v2.0c Adaption of the caption package to th
 e beamer document classes (AR)
 ))
-\c@caption@flags=\count360
-\c@continuedfloat=\count361
+\c@caption@flags=\count349
+\c@continuedfloat=\count350
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
 (caption)             because hyperref has stopped early.
+Package caption Info: listings package is loaded.
 )
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
-Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
-Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count362
-Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count363
-) (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count364
-\float@exts=\toks48
-\float@box=\box79
-\@float@everytoks=\toks49
-\@floatcapt=\box80
+\c@float@type=\count351
+\float@exts=\toks49
+\float@box=\box78
+\@float@everytoks=\toks50
+\@floatcapt=\box79
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/fncychap\fncychap.sty
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
-\RW=\skip68
-\mylen=\skip69
-\myhi=\skip70
-\px=\skip71
-\py=\skip72
-\pyy=\skip73
-\pxx=\skip74
-\backskip=\skip75
+\RW=\skip65
+\mylen=\skip66
+\myhi=\skip67
+\px=\skip68
+\py=\skip69
+\pyy=\skip70
+\pxx=\skip71
+\backskip=\skip72
 ) (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.st
 y
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
@@ -953,108 +927,103 @@ Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 keys2e.sty
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2024-01-04 L3 programming layer (loader) 
-)
+
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
+ftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count352
+\l__pdf_internal_box=\box80
+))
 Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count365
-\l__lipsum_a_int=\count366
-\l__lipsum_b_int=\count367
+\g__lipsum_par_int=\count353
+\l__lipsum_a_int=\count354
+\l__lipsum_b_int=\count355
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)
 ) (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
-\LTleft=\skip76
-\LTright=\skip77
-\LTpre=\skip78
-\LTpost=\skip79
-\LTchunksize=\count368
+\LTleft=\skip73
+\LTright=\skip74
+\LTpre=\skip75
+\LTpost=\skip76
+\LTchunksize=\count356
 \LTcapwidth=\dimen307
 \LT@head=\box81
 \LT@firsthead=\box82
 \LT@foot=\box83
 \LT@lastfoot=\box84
 \LT@gbox=\box85
-\LT@cols=\count369
-\LT@rows=\count370
-\c@LT@tables=\count371
-\c@LT@chunks=\count372
-\LT@p@ftn=\toks50
+\LT@cols=\count357
+\LT@rows=\count358
+\c@LT@tables=\count359
+\c@LT@chunks=\count360
+\LT@p@ftn=\toks51
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.st
 y
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
-
+ (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count361
+\calc@Bcount=\count362
+\calc@Adimen=\dimen308
+\calc@Bdimen=\dimen309
+\calc@Askip=\skip77
+\calc@Bskip=\skip78
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count363
+\calc@Cskip=\skip79
+)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count373
-\l_MT_multwidth_dim=\dimen308
+\g_MT_multlinerow_int=\count364
+\l_MT_multwidth_dim=\dimen310
 \origjot=\skip80
-\l_MT_shortvdotswithinadjustabove_dim=\dimen309
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen310
-\l_MT_above_intertext_sep=\dimen311
-\l_MT_below_intertext_sep=\dimen312
-\l_MT_above_shortintertext_sep=\dimen313
-\l_MT_below_shortintertext_sep=\dimen314
+\l_MT_shortvdotswithinadjustabove_dim=\dimen311
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen312
+\l_MT_above_intertext_sep=\dimen313
+\l_MT_below_intertext_sep=\dimen314
+\l_MT_above_shortintertext_sep=\dimen315
+\l_MT_below_shortintertext_sep=\dimen316
 \xmathstrut@box=\box86
-\xmathstrut@dim=\dimen315
+\xmathstrut@dim=\dimen317
 )
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count374
-\lst@gtempboxa=\box87
-\lst@token=\toks51
-\lst@length=\count375
-\lst@currlwidth=\dimen316
-\lst@column=\count376
-\lst@pos=\count377
-\lst@lostspace=\dimen317
-\lst@width=\dimen318
-\lst@newlines=\count378
-\lst@lineno=\count379
-\lst@maxwidth=\dimen319
-
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count380
-\lst@skipnumbers=\count381
-\lst@framebox=\box88
-)
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2023/02/27 1.9 listings configuration
-))
-Package: listings 2023/02/27 1.9 (Carsten Heinz)
-
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip81
-\multirow@cntb=\count382
+\multirow@cntb=\count365
 \multirow@dima=\skip82
-\bigstrutjot=\dimen320
+\bigstrutjot=\dimen318
 ) (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count383
-\mult@box=\box89
-\multicol@leftmargin=\dimen321
-\c@unbalance=\count384
-\c@collectmore=\count385
-\doublecol@number=\count386
-\multicoltolerance=\count387
-\multicolpretolerance=\count388
-\full@width=\dimen322
-\page@free=\dimen323
-\premulticols=\dimen324
-\postmulticols=\dimen325
+\c@tracingmulticols=\count366
+\mult@box=\box87
+\multicol@leftmargin=\dimen319
+\c@unbalance=\count367
+\c@collectmore=\count368
+\doublecol@number=\count369
+\multicoltolerance=\count370
+\multicolpretolerance=\count371
+\full@width=\dimen320
+\page@free=\dimen321
+\premulticols=\dimen322
+\postmulticols=\dimen323
 \multicolsep=\skip83
 \multicolbaselineskip=\skip84
-\partial@page=\box90
-\last@line=\box91
-\mc@boxedresult=\box92
-\maxbalancingoverflow=\dimen326
-\mult@rightbox=\box93
-\mult@grightbox=\box94
-\mult@firstbox=\box95
-\mult@gfirstbox=\box96
+\partial@page=\box88
+\last@line=\box89
+\mc@boxedresult=\box90
+\maxbalancingoverflow=\dimen324
+\mult@rightbox=\box91
+\mult@grightbox=\box92
+\mult@firstbox=\box93
+\mult@gfirstbox=\box94
+\@tempa=\box95
+\@tempa=\box96
 \@tempa=\box97
 \@tempa=\box98
 \@tempa=\box99
@@ -1089,26 +1058,24 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box128
 \@tempa=\box129
 \@tempa=\box130
-\@tempa=\box131
-\@tempa=\box132
-\c@minrows=\count389
-\c@columnbadness=\count390
-\c@finalcolumnbadness=\count391
-\last@try=\dimen327
-\multicolovershoot=\dimen328
-\multicolundershoot=\dimen329
-\mult@nat@firstbox=\box133
-\colbreak@box=\box134
-\mc@col@check@num=\count392
+\c@minrows=\count372
+\c@columnbadness=\count373
+\c@finalcolumnbadness=\count374
+\last@try=\dimen325
+\multicolovershoot=\dimen326
+\multicolundershoot=\dimen327
+\mult@nat@firstbox=\box131
+\colbreak@box=\box132
+\mc@col@check@num=\count375
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count393
-\csq@gtype=\count394
-\csq@glevel=\count395
-\csq@qlevel=\count396
-\csq@maxlvl=\count397
-\csq@tshold=\count398
+\csq@reset=\count376
+\csq@gtype=\count377
+\csq@glevel=\count378
+\csq@qlevel=\count379
+\csq@maxlvl=\count380
+\csq@tshold=\count381
 \csq@ltx@everypar=\toks52
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
@@ -1124,54 +1091,57 @@ Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count399
+\lrq@indent=\count382
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count400
-\c@listtotal=\count401
-\c@listcount=\count402
-\c@liststart=\count403
-\c@liststop=\count404
-\c@citecount=\count405
-\c@citetotal=\count406
-\c@multicitecount=\count407
-\c@multicitetotal=\count408
-\c@instcount=\count409
-\c@maxnames=\count410
-\c@minnames=\count411
-\c@maxitems=\count412
-\c@minitems=\count413
-\c@citecounter=\count414
-\c@maxcitecounter=\count415
-\c@savedcitecounter=\count416
-\c@uniquelist=\count417
-\c@uniquename=\count418
-\c@refsection=\count419
-\c@refsegment=\count420
-\c@maxextratitle=\count421
-\c@maxextratitleyear=\count422
-\c@maxextraname=\count423
-\c@maxextradate=\count424
-\c@maxextraalpha=\count425
-\c@abbrvpenalty=\count426
-\c@highnamepenalty=\count427
-\c@lownamepenalty=\count428
-\c@maxparens=\count429
-\c@parenlevel=\count430
-\blx@tempcnta=\count431
-\blx@tempcntb=\count432
-\blx@tempcntc=\count433
-\c@blx@maxsection=\count434
-\blx@maxsegment@0=\count435
-\blx@notetype=\count436
-\blx@parenlevel@text=\count437
-\blx@parenlevel@foot=\count438
-\blx@sectionciteorder@0=\count439
-\blx@sectionciteorderinternal@0=\count440
-\blx@entrysetcounter=\count441
-\blx@biblioinstance=\count442
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count383
+\c@listtotal=\count384
+\c@listcount=\count385
+\c@liststart=\count386
+\c@liststop=\count387
+\c@citecount=\count388
+\c@citetotal=\count389
+\c@multicitecount=\count390
+\c@multicitetotal=\count391
+\c@instcount=\count392
+\c@maxnames=\count393
+\c@minnames=\count394
+\c@maxitems=\count395
+\c@minitems=\count396
+\c@citecounter=\count397
+\c@maxcitecounter=\count398
+\c@savedcitecounter=\count399
+\c@uniquelist=\count400
+\c@uniquename=\count401
+\c@refsection=\count402
+\c@refsegment=\count403
+\c@maxextratitle=\count404
+\c@maxextratitleyear=\count405
+\c@maxextraname=\count406
+\c@maxextradate=\count407
+\c@maxextraalpha=\count408
+\c@abbrvpenalty=\count409
+\c@highnamepenalty=\count410
+\c@lownamepenalty=\count411
+\c@maxparens=\count412
+\c@parenlevel=\count413
+\blx@tempcnta=\count414
+\blx@tempcntb=\count415
+\blx@tempcntc=\count416
+\c@blx@maxsection=\count417
+\blx@maxsegment@0=\count418
+\blx@notetype=\count419
+\blx@parenlevel@text=\count420
+\blx@parenlevel@foot=\count421
+\blx@sectionciteorder@0=\count422
+\blx@sectionciteorderinternal@0=\count423
+\blx@entrysetcounter=\count424
+\blx@biblioinstance=\count425
 \labelnumberwidth=\skip85
 \labelalphawidth=\skip86
 \biblabelsep=\skip87
@@ -1180,12 +1150,12 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \bibinitsep=\skip90
 \bibparsep=\skip91
 \bibhang=\skip92
-\blx@bcfin=\read5
+\blx@bcfin=\read4
 \blx@bcfout=\write5
 \blx@langwohyphens=\language80
-\c@mincomprange=\count443
-\c@maxcomprange=\count444
-\c@mincompwidth=\count445
+\c@mincomprange=\count426
+\c@maxcomprange=\count427
+\c@mincompwidth=\count428
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1196,74 +1166,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count446
-\c@savedafterword=\count447
-\c@annotator=\count448
-\c@savedannotator=\count449
-\c@author=\count450
-\c@savedauthor=\count451
-\c@bookauthor=\count452
-\c@savedbookauthor=\count453
-\c@commentator=\count454
-\c@savedcommentator=\count455
-\c@editor=\count456
-\c@savededitor=\count457
-\c@editora=\count458
-\c@savededitora=\count459
-\c@editorb=\count460
-\c@savededitorb=\count461
-\c@editorc=\count462
-\c@savededitorc=\count463
-\c@foreword=\count464
-\c@savedforeword=\count465
-\c@holder=\count466
-\c@savedholder=\count467
-\c@introduction=\count468
-\c@savedintroduction=\count469
-\c@namea=\count470
-\c@savednamea=\count471
-\c@nameb=\count472
-\c@savednameb=\count473
-\c@namec=\count474
-\c@savednamec=\count475
-\c@translator=\count476
-\c@savedtranslator=\count477
-\c@shortauthor=\count478
-\c@savedshortauthor=\count479
-\c@shorteditor=\count480
-\c@savedshorteditor=\count481
-\c@labelname=\count482
-\c@savedlabelname=\count483
-\c@institution=\count484
-\c@savedinstitution=\count485
-\c@lista=\count486
-\c@savedlista=\count487
-\c@listb=\count488
-\c@savedlistb=\count489
-\c@listc=\count490
-\c@savedlistc=\count491
-\c@listd=\count492
-\c@savedlistd=\count493
-\c@liste=\count494
-\c@savedliste=\count495
-\c@listf=\count496
-\c@savedlistf=\count497
-\c@location=\count498
-\c@savedlocation=\count499
-\c@organization=\count500
-\c@savedorganization=\count501
-\c@origlocation=\count502
-\c@savedoriglocation=\count503
-\c@origpublisher=\count504
-\c@savedorigpublisher=\count505
-\c@publisher=\count506
-\c@savedpublisher=\count507
-\c@language=\count508
-\c@savedlanguage=\count509
-\c@origlanguage=\count510
-\c@savedoriglanguage=\count511
-\c@pageref=\count512
-\c@savedpageref=\count513
+\c@afterword=\count429
+\c@savedafterword=\count430
+\c@annotator=\count431
+\c@savedannotator=\count432
+\c@author=\count433
+\c@savedauthor=\count434
+\c@bookauthor=\count435
+\c@savedbookauthor=\count436
+\c@commentator=\count437
+\c@savedcommentator=\count438
+\c@editor=\count439
+\c@savededitor=\count440
+\c@editora=\count441
+\c@savededitora=\count442
+\c@editorb=\count443
+\c@savededitorb=\count444
+\c@editorc=\count445
+\c@savededitorc=\count446
+\c@foreword=\count447
+\c@savedforeword=\count448
+\c@holder=\count449
+\c@savedholder=\count450
+\c@introduction=\count451
+\c@savedintroduction=\count452
+\c@namea=\count453
+\c@savednamea=\count454
+\c@nameb=\count455
+\c@savednameb=\count456
+\c@namec=\count457
+\c@savednamec=\count458
+\c@translator=\count459
+\c@savedtranslator=\count460
+\c@shortauthor=\count461
+\c@savedshortauthor=\count462
+\c@shorteditor=\count463
+\c@savedshorteditor=\count464
+\c@labelname=\count465
+\c@savedlabelname=\count466
+\c@institution=\count467
+\c@savedinstitution=\count468
+\c@lista=\count469
+\c@savedlista=\count470
+\c@listb=\count471
+\c@savedlistb=\count472
+\c@listc=\count473
+\c@savedlistc=\count474
+\c@listd=\count475
+\c@savedlistd=\count476
+\c@liste=\count477
+\c@savedliste=\count478
+\c@listf=\count479
+\c@savedlistf=\count480
+\c@location=\count481
+\c@savedlocation=\count482
+\c@organization=\count483
+\c@savedorganization=\count484
+\c@origlocation=\count485
+\c@savedoriglocation=\count486
+\c@origpublisher=\count487
+\c@savedorigpublisher=\count488
+\c@publisher=\count489
+\c@savedpublisher=\count490
+\c@language=\count491
+\c@savedlanguage=\count492
+\c@origlanguage=\count493
+\c@savedoriglanguage=\count494
+\c@pageref=\count495
+\c@savedpageref=\count496
 \shorthandwidth=\skip93
 \shortjournalwidth=\skip94
 \shortserieswidth=\skip95
@@ -1290,19 +1260,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count514
-\c@textcitetotal=\count515
-\c@textcitemaxnames=\count516
-\c@biburlbigbreakpenalty=\count517
-\c@biburlbreakpenalty=\count518
-\c@biburlnumpenalty=\count519
-\c@biburlucpenalty=\count520
-\c@biburllcpenalty=\count521
+\c@textcitecount=\count497
+\c@textcitetotal=\count498
+\c@textcitemaxnames=\count499
+\c@biburlbigbreakpenalty=\count500
+\c@biburlbreakpenalty=\count501
+\c@biburlnumpenalty=\count502
+\c@biburlucpenalty=\count503
+\c@biburllcpenalty=\count504
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count522
+\c@smartand=\count505
 )
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
@@ -1325,8 +1295,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.
 bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count523
-\c@bbx:relatedtotal=\count524
+\c@bbx:relatedcount=\count506
+\c@bbx:relatedtotal=\count507
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
@@ -1365,17 +1335,17 @@ Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 ))
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count525
+\c@r@tfl@t=\count508
 \rotFPtop=\skip107
 \rotFPbot=\skip108
-\rot@float@box=\box135
+\rot@float@box=\box133
 \rot@mess@toks=\toks53
 ) (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/spalign\spalign.sty
 Package: spalign 2016/10/05 aligns delimited by spaces
-\spalignsystabspace=\dimen330
-\spalign@curcols=\count526
+\spalignsystabspace=\dimen328
+\spalign@curcols=\count509
 \spaligntoks=\toks54
-\spalignmaxcols=\count527
+\spalignmaxcols=\count510
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.re
@@ -1390,7 +1360,7 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
 eshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box136
+\pgfnodeparttextbox=\box134
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
 eplot.code.tex
@@ -1399,8 +1369,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
 omp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen331
-\pgf@nodesepend=\dimen332
+\pgf@nodesepstart=\dimen329
+\pgf@nodesepend=\dimen330
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
 omp-version-1-18.sty
@@ -1411,8 +1381,8 @@ ty
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor
 .code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen333
-\pgffor@skip=\dimen334
+\pgffor@iter=\dimen331
+\pgffor@skip=\dimen332
 \pgffor@stack=\toks55
 \pgffor@toks=\toks56
 ))
@@ -1423,34 +1393,34 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
 raryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count528
-\pgfplotmarksize=\dimen335
+\pgf@plot@mark@count=\count511
+\pgfplotmarksize=\dimen333
 )
-\tikz@lastx=\dimen336
-\tikz@lasty=\dimen337
-\tikz@lastxsaved=\dimen338
-\tikz@lastysaved=\dimen339
-\tikz@lastmovetox=\dimen340
-\tikz@lastmovetoy=\dimen341
-\tikzleveldistance=\dimen342
-\tikzsiblingdistance=\dimen343
-\tikz@figbox=\box137
-\tikz@figbox@bg=\box138
-\tikz@tempbox=\box139
-\tikz@tempbox@bg=\box140
-\tikztreelevel=\count529
-\tikznumberofchildren=\count530
-\tikznumberofcurrentchild=\count531
-\tikz@fig@count=\count532
+\tikz@lastx=\dimen334
+\tikz@lasty=\dimen335
+\tikz@lastxsaved=\dimen336
+\tikz@lastysaved=\dimen337
+\tikz@lastmovetox=\dimen338
+\tikz@lastmovetoy=\dimen339
+\tikzleveldistance=\dimen340
+\tikzsiblingdistance=\dimen341
+\tikz@figbox=\box135
+\tikz@figbox@bg=\box136
+\tikz@tempbox=\box137
+\tikz@tempbox@bg=\box138
+\tikztreelevel=\count512
+\tikznumberofchildren=\count513
+\tikznumberofcurrentchild=\count514
+\tikz@fig@count=\count515
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
 ematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count533
-\pgfmatrixcurrentcolumn=\count534
-\pgf@matrix@numberofcolumns=\count535
+\pgfmatrixcurrentrow=\count516
+\pgfmatrixcurrentcolumn=\count517
+\pgf@matrix@numberofcolumns=\count518
 )
-\tikz@expandcount=\count536
+\tikz@expandcount=\count519
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibrarytopaths.code.tex
@@ -1463,9 +1433,9 @@ e.code.tex
 \t@pgfplots@toka=\toks57
 \t@pgfplots@tokb=\toks58
 \t@pgfplots@tokc=\toks59
-\pgfplots@tmpa=\dimen344
-\c@pgfplots@coordindex=\count537
-\c@pgfplots@scanlineindex=\count538
+\pgfplots@tmpa=\dimen342
+\c@pgfplots@coordindex=\count520
+\c@pgfplots@scanlineindex=\count521
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplot
 ssysgeneric.code.tex))
@@ -1490,13 +1460,13 @@ re\pgfplotsliststructure.code.tex)
 re\pgfplotsliststructureext.code.tex)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructu
 re\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count539
+\c@pgfplotsarray@tmp=\count522
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructu
 re\pgfplotsmatrix.code.tex)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pg
 fplotstableshared.code.tex
-\c@pgfplotstable@counta=\count540
+\c@pgfplotstable@counta=\count523
 \t@pgfplotstable@a=\toks63
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructu
@@ -1509,7 +1479,7 @@ tsbinary.data.code.tex))
 tsutil.verb.code.tex)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflib
 rarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count541
+\c@pgfplotslibrarysurf@no=\count524
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibr
 arypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -1541,16 +1511,16 @@ ths.code.tex)
 kz/libraries\tikzlibrarydecorations.code.tex
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
 edecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen345
-\pgfdecoratedremainingdistance=\dimen346
-\pgfdecoratedinputsegmentcompleteddistance=\dimen347
-\pgfdecoratedinputsegmentremainingdistance=\dimen348
-\pgf@decorate@distancetomove=\dimen349
-\pgf@decorate@repeatstate=\count542
-\pgfdecorationsegmentamplitude=\dimen350
-\pgfdecorationsegmentlength=\dimen351
+\pgfdecoratedcompleteddistance=\dimen343
+\pgfdecoratedremainingdistance=\dimen344
+\pgfdecoratedinputsegmentcompleteddistance=\dimen345
+\pgfdecoratedinputsegmentremainingdistance=\dimen346
+\pgf@decorate@distancetomove=\dimen347
+\pgf@decorate@repeatstate=\count525
+\pgfdecorationsegmentamplitude=\dimen348
+\pgfdecorationsegmentlength=\dimen349
 )
-\tikz@lib@dec@box=\box141
+\tikz@lib@dec@box=\box139
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibrarydecorations.pathmorphing.code.tex
@@ -1562,13 +1532,13 @@ kz/libraries\tikzlibrarydecorations.pathreplacing.code.tex
 tions\pgflibrarydecorations.pathreplacing.code.tex))
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzli
 brarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count543
-\pgfplots@xmin@reg=\dimen352
-\pgfplots@xmax@reg=\dimen353
-\pgfplots@ymin@reg=\dimen354
-\pgfplots@ymax@reg=\dimen355
-\pgfplots@zmin@reg=\dimen356
-\pgfplots@zmax@reg=\dimen357
+\pgfplots@numplots=\count526
+\pgfplots@xmin@reg=\dimen350
+\pgfplots@xmax@reg=\dimen351
+\pgfplots@ymin@reg=\dimen352
+\pgfplots@ymax@reg=\dimen353
+\pgfplots@zmin@reg=\dimen354
+\pgfplots@zmax@reg=\dimen355
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibraryplotmarks.code.tex
@@ -1583,17 +1553,17 @@ Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen358
-\ar@mcellbox=\box142
-\extrarowheight=\dimen359
+\col@sep=\dimen356
+\ar@mcellbox=\box140
+\extrarowheight=\dimen357
 \NC@list=\toks64
 \extratabsurround=\skip109
 \backup@length=\skip110
-\ar@cellbox=\box143
+\ar@cellbox=\box141
 )
 \everycr=\toks65
 \minrowclearance=\skip111
-\rownum=\count544
+\rownum=\count527
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
@@ -1622,49 +1592,49 @@ Bootstrap'ing: catcodes, docmode,
  Xy-pic is free software: see the User's Guide for details.
 
 Loading kernel: messages; fonts; allocations: state,
-\X@c=\dimen360
-\Y@c=\dimen361
-\U@c=\dimen362
-\D@c=\dimen363
-\L@c=\dimen364
-\R@c=\dimen365
+\X@c=\dimen358
+\Y@c=\dimen359
+\U@c=\dimen360
+\D@c=\dimen361
+\L@c=\dimen362
+\R@c=\dimen363
 \Edge@c=\toks66
-\X@p=\dimen366
-\Y@p=\dimen367
-\U@p=\dimen368
-\D@p=\dimen369
-\L@p=\dimen370
-\R@p=\dimen371
+\X@p=\dimen364
+\Y@p=\dimen365
+\U@p=\dimen366
+\D@p=\dimen367
+\L@p=\dimen368
+\R@p=\dimen369
 \Edge@p=\toks67
-\X@origin=\dimen372
-\Y@origin=\dimen373
-\X@xbase=\dimen374
-\Y@xbase=\dimen375
-\X@ybase=\dimen376
-\Y@ybase=\dimen377
-\X@min=\dimen378
-\Y@min=\dimen379
-\X@max=\dimen380
-\Y@max=\dimen381
-\lastobjectbox@=\box144
-\zerodotbox@=\box145
-\almostz@=\dimen382
+\X@origin=\dimen370
+\Y@origin=\dimen371
+\X@xbase=\dimen372
+\Y@xbase=\dimen373
+\X@ybase=\dimen374
+\Y@ybase=\dimen375
+\X@min=\dimen376
+\Y@min=\dimen377
+\X@max=\dimen378
+\Y@max=\dimen379
+\lastobjectbox@=\box142
+\zerodotbox@=\box143
+\almostz@=\dimen380
  direction,
-\d@X=\dimen383
-\d@Y=\dimen384
-\K@=\count545
-\KK@=\count546
-\Direction=\count547
-\K@dXdY=\dimen385
-\K@dYdX=\dimen386
-\xyread@=\read6
+\d@X=\dimen381
+\d@Y=\dimen382
+\K@=\count528
+\KK@=\count529
+\Direction=\count530
+\K@dXdY=\dimen383
+\K@dYdX=\dimen384
+\xyread@=\read5
 \xywrite@=\write6
-\csp@=\count548
-\quotPTK@=\dimen387
+\csp@=\count531
+\quotPTK@=\dimen385
 
 utility macros; pictures: \xy, positions,
 \swaptoks@@=\toks68
-\connectobjectbox@@=\box146
+\connectobjectbox@@=\box144
  objects,
 \styletoks@=\toks69
  decorations;
@@ -1679,15 +1649,15 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
  Xy-pic option: All features v.3.8
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycurve.tex
  Xy-pic option: Curve and Spline extension v.3.12 curve,
-\crv@cnt@=\count549
+\crv@cnt@=\count532
 \crvpts@=\toks70
-\splinebox@=\box147
-\splineval@=\dimen388
-\splinedepth@=\dimen389
-\splinetol@=\dimen390
-\splinelength@=\dimen391
+\splinebox@=\box145
+\splineval@=\dimen386
+\splinedepth@=\dimen387
+\splinetol@=\dimen388
+\splinelength@=\dimen389
  circles,
-\L@=\dimen392
+\L@=\dimen390
  loaded)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyframe.tex
  Xy-pic option: Frame and Bracket extension v.3.14 loaded)
@@ -1697,7 +1667,7 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
  Xy-pic option: More Tips extension v.3.11 loaded) loaded)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyline.tex
  Xy-pic option: Line styles extension v.3.10
-\xylinethick@=\dimen393
+\xylinethick@=\dimen391
  loaded)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrotate.tex
  Xy-pic option: Rotate and Scale extension v.3.8 loaded)
@@ -1705,13 +1675,13 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
  Xy-pic option: Colour extension v.3.11 loaded)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xymatrix.tex
  Xy-pic option: Matrix feature v.3.14
-\Row=\count550
-\Col=\count551
+\Row=\count533
+\Col=\count534
 \queue@=\toks71
 \queue@@=\toks72
-\qcount@=\count552
-\qcount@@=\count553
-\matrixsize@=\count554
+\qcount@=\count535
+\qcount@@=\count536
+\matrixsize@=\count537
  loaded)
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
@@ -1779,22 +1749,11 @@ Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS)
 ) (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
-\c@Teorema=\count555
-\c@Proposicao=\count556
-\c@Definicao=\count557
-\c@Corolario=\count558
-\c@Demonstracao=\count559
-
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
-Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
-
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.de
-f
-File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
-)
-\BKM@id=\count560
-))
-Package hyperref Info: Option `colorlinks' set `true' on input line 126.
+\c@Teorema=\count538
+\c@Proposicao=\count539
+\c@Definicao=\count540
+\c@Corolario=\count541
+\c@Demonstracao=\count542
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -1805,33 +1764,33 @@ Package csquotes Info: Redefining alias 'default' -> 'brazil'.
 Package: pgfplotsthemetol 2017/01/23 PGFplots colors based on Paul Tol's SRON t
 echnical note
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 13
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 12
 0.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-(Aula12.aux)
-\openout1 = `Aula12.aux'.
+(Aula15.aux)
+\openout1 = `Aula15.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1871,16 +1830,16 @@ LaTeX Font Info:    ... okay on input line 130.
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count561
-\scratchdimen=\dimen394
-\scratchbox=\box148
-\nofMPsegments=\count562
-\nofMParguments=\count563
+\scratchcounter=\count543
+\scratchdimen=\dimen392
+\scratchbox=\box146
+\nofMPsegments=\count544
+\nofMParguments=\count545
 \everyMPshowfont=\toks75
-\MPscratchCnt=\count564
-\MPscratchDim=\dimen395
-\MPnumerator=\count565
-\makeMPintoPDFobject=\count566
+\MPscratchCnt=\count546
+\MPscratchDim=\dimen393
+\MPnumerator=\count547
+\makeMPintoPDFobject=\count548
 \everyMPtoPDFconversion=\toks76
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
@@ -1893,49 +1852,53 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 130.
+Package hyperref Info: Link coloring OFF on input line 120.
+ (Aula15.out) (Aula15.out)
+\@outlinefile=\write7
+\openout7 = `Aula15.out'.
+
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/ppl/m/n --> OT1/cmss/m/n on input line 130.
+(Font)                  OT1/ppl/m/n --> OT1/cmss/m/n on input line 120.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/ppl/b/n --> OT1/cmss/b/n on input line 130.
+(Font)                  OT1/ppl/b/n --> OT1/cmss/b/n on input line 120.
 \symnumbers=\mathgroup8
 \sympureletters=\mathgroup9
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/ppl/m/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 130.
+(Font)                  OT1/cmss/m/n --> T1/ppl/m/n on input line 120.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/zplm/b/n --> T1/phv/b/n on input line 130.
+(Font)                  OT1/zplm/b/n --> T1/phv/b/n on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/zplm/b/n --> T1/phv/b/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 130.
+(Font)                  OT1/zplm/b/n --> T1/phv/b/n on input line 120.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/phv/m/n on input line 130.
+(Font)                  OT1/cmss/m/n --> T1/phv/m/n on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/phv/m/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 130.
+(Font)                  OT1/cmss/bx/n --> T1/phv/m/n on input line 120.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/ppl/m/it --> T1/phv/m/it on input line 130.
+(Font)                  OT1/ppl/m/it --> T1/phv/m/it on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/ppl/b/it --> T1/phv/m/it on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 130.
+(Font)                  OT1/ppl/b/it --> T1/phv/m/it on input line 120.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 130.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 130.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 120.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/phv/m/n --> T1/phv/b/n on input line 130.
+(Font)                  T1/phv/m/n --> T1/phv/b/n on input line 120.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/phv/m/it --> T1/phv/b/it on input line 130.
+(Font)                  T1/phv/m/it --> T1/phv/b/it on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/ppl/b/n on input line 130.
+(Font)                  OT1/cmss/b/n --> T1/ppl/b/n on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/phv/b/n --> T1/phv/b/n on input line 130.
+(Font)                  T1/phv/b/n --> T1/phv/b/n on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/phv/m/n --> T1/phv/b/n on input line 130.
+(Font)                  T1/phv/m/n --> T1/phv/b/n on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/phv/m/it --> T1/phv/b/it on input line 130.
+(Font)                  T1/phv/m/it --> T1/phv/b/it on input line 120.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 130.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 120.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-
 basic-dictionary-English.dict
@@ -1961,9 +1924,9 @@ Dictionary: translator-numbers-dictionary, Language: English
 theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
+\c@lstlisting=\count549
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
-Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
@@ -1971,7 +1934,6 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count567
 Package biblatex Info: Trying to load language 'brazil'...
 Package biblatex Info: ... file 'brazil.lbx' found.
 
@@ -1995,185 +1957,198 @@ File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout5 = `Aula12.bcf'.
+\openout5 = `Aula15.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Aula12.bbl' found.
- (Aula12.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                roteiro
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
-Package biblatex Info: Reference section=0 on input line 130.
-Package biblatex Info: Reference segment=0 on input line 130.
+Package biblatex Info: ... file 'Aula15.bbl' found.
+ (Aula15.bbl)
+Package biblatex Info: Reference section=0 on input line 120.
+Package biblatex Info: Reference segment=0 on input line 120.
 
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-130.
+120.
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-130.
+120.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-130.
+120.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 130
+LaTeX Font Info:    Trying to load font information for U+msa on input line 120
 .
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 130
+LaTeX Font Info:    Trying to load font information for U+msb on input line 120
 .
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-130.
+120.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.fd
 File: uesvect.fd 
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-130.
+120.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 120.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 120.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
-Package xypdf Info: Line width: 0.57599pt on input line 130.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 120.
+Package xypdf Info: Line width: 0.57599pt on input line 120.
 
-(Aula12.nav)
+(Aula15.nav)
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-30.
+20.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 130.
+(Font)              scaled to size 6.25204pt on input line 120.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 130.
+(Font)              scaled to size 5.21004pt on input line 120.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 130.
+(Font)              scaled to size 6.25204pt on input line 120.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 130.
+(Font)              scaled to size 5.21004pt on input line 120.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 120.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
-<figs/mylogo.png, id=15, 272.01625pt x 195.73125pt>
-File: figs/mylogo.png Graphic file (type png)
-<use figs/mylogo.png>
-Package pdftex.def Info: figs/mylogo.png  used on input line 133.
-(pdftex.def)             Requested size: 56.9055pt x 40.94647pt.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 120.
 
-Overfull \vbox (69.74646pt too high) detected at line 133
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
 
  []
 
 
-Overfull \vbox (34.74834pt too high) detected at line 133
+Overfull \vbox (34.74834pt too high) detected at line 127
  []
 
 [1
 
-{C:/Users/fsbmat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/fsb
-mat/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figs/mylogo.p
-ng>] (Aula12.toc) [2
+{C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+(Aula15.toc) [2
 
 ] [3
 
 ] [4
 
-] [5
+]
+Overfull \vbox (3.65727pt too high) detected at line 156
+ []
+
+[5
+
+] [6
+
+] [7
+
+] [8
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 17
-1.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 23
+0.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
-[6
-
-] [7
-
-]
-Overfull \vbox (10.02383pt too high) detected at line 195
+Overfull \vbox (10.70285pt too high) detected at line 230
  []
 
-[8
+[9
 
 ]
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-210.
- (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [9
+Overfull \vbox (10.70285pt too high) detected at line 230
+ []
 
-] [10
+[10
 
 ] [11
 
-] [12
+]
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
+71.
 
-] [13
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+Overfull \vbox (8.39194pt too high) detected at line 271
+ []
 
-] [14
-
-] [15
+[12
 
 ]
-Overfull \hbox (38.702pt too wide) detected at line 244
-\T1/phv/m/sl/14.4 cov\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/cmss/m/n/14.4 
-, \T1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ) = \T1/phv/m/sl/14.4 E\OT1/zplm/m/n/14
-.4 (\T1/phv/m/sl/14.4 XY\OT1/zplm/m/n/14.4 ) \OMS/zplm/m/n/14.4 ^^@ \T1/phv/m/s
-l/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/zplm/m/n/14.4 )\T1/phv/m/sl
-/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ) = \T1/phv/m/
-sl/14.4 E\OT1/zplm/m/n/14.4 [(\T1/phv/m/sl/14.4 X \OMS/zplm/m/n/14.4 ^^@ \T1/ph
-v/m/sl/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/zplm/m/n/14.4 ))(\T1/p
-hv/m/sl/14.4 Y \OMS/zplm/m/n/14.4 ^^@ \T1/phv/m/sl/14.4 E\OT1/zplm/m/n/14.4 (\T
-1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ))]\OT1/cmss/m/n/14.4 .
+Overfull \vbox (8.39194pt too high) detected at line 271
+ []
+
+[13
+
+]
+Overfull \vbox (8.39194pt too high) detected at line 271
+ []
+
+[14
+
+]
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 289.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 289.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 289.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 289.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 289.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 289.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 289.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 289.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 289.
+ [15
+
+]
+Overfull \hbox (34.20833pt too wide) in paragraph at lines 323--323
+ [] 
+ []
+
+
+Overfull \vbox (17.14127pt too high) detected at line 323
  []
 
 [16
 
 ]
-Overfull \hbox (38.702pt too wide) detected at line 244
-\T1/phv/m/sl/14.4 cov\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/cmss/m/n/14.4 
-, \T1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ) = \T1/phv/m/sl/14.4 E\OT1/zplm/m/n/14
-.4 (\T1/phv/m/sl/14.4 XY\OT1/zplm/m/n/14.4 ) \OMS/zplm/m/n/14.4 ^^@ \T1/phv/m/s
-l/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/zplm/m/n/14.4 )\T1/phv/m/sl
-/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ) = \T1/phv/m/
-sl/14.4 E\OT1/zplm/m/n/14.4 [(\T1/phv/m/sl/14.4 X \OMS/zplm/m/n/14.4 ^^@ \T1/ph
-v/m/sl/14.4 E\OT1/zplm/m/n/14.4 (\T1/phv/m/sl/14.4 X\OT1/zplm/m/n/14.4 ))(\T1/p
-hv/m/sl/14.4 Y \OMS/zplm/m/n/14.4 ^^@ \T1/phv/m/sl/14.4 E\OT1/zplm/m/n/14.4 (\T
-1/phv/m/sl/14.4 Y\OT1/zplm/m/n/14.4 ))]\OT1/cmss/m/n/14.4 .
+Overfull \hbox (34.20833pt too wide) in paragraph at lines 323--323
+ [] 
+ []
+
+
+Overfull \vbox (17.14127pt too high) detected at line 323
  []
 
 [17
@@ -2192,77 +2167,147 @@ hv/m/sl/14.4 Y \OMS/zplm/m/n/14.4 ^^@ \T1/phv/m/sl/14.4 E\OT1/zplm/m/n/14.4 (\T
 
 ] [24
 
+] [25
+
+] [26
+
+] [27
+
+] [28
+
+] [29
+
+] [30
+
 ]
+Overfull \vbox (2.0715pt too high) detected at line 514
+ []
 
-LaTeX Warning: Citation 'roteiro' undefined on input line 286.
+[31
 
-[25
+]
+Overfull \vbox (2.0715pt too high) detected at line 514
+ []
+
+[32
+
+] [33
+
+] [34
+
+] [35
+
+]
+Overfull \vbox (31.34239pt too high) detected at line 578
+ []
+
+[36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
+
+] [42
+
+] [43
+
+] [44
+
+] [45
+
+]
+Overfull \vbox (16.55432pt too high) detected at line 839
+ []
+
+[46
+
+]
+Overfull \vbox (16.55432pt too high) detected at line 839
+ []
+
+[47
+
+]
+Overfull \vbox (16.55432pt too high) detected at line 839
+ []
+
+[48
+
+]
+Overfull \vbox (16.55432pt too high) detected at line 839
+ []
+
+[49
+
+]
+Overfull \vbox (16.55432pt too high) detected at line 839
+ []
+
+[50
+
+]
+Overfull \vbox (16.55432pt too high) detected at line 839
+ []
+
+[51
+
+]
+Overfull \vbox (16.55432pt too high) detected at line 839
+ []
+
+[52
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 291.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 291.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 291.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 291.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 291.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 291.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 291.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 291.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 291.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 291.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
-91.
- (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)
-Overfull \hbox (7.2898pt too wide) in paragraph at lines 291--291
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 844.
+
+Overfull \hbox (7.2898pt too wide) in paragraph at lines 844--844
 [][][]\T1/phv/m/n/14.4 Morettin, P.A. e W.O Bus-sab (2023).[] \T1/phv/b/sl/14.4
  Es-ta-tís-tica bá-sica\T1/phv/b/n/14.4 .[] \T1/phv/m/n/12 10\TS1/phv/m/n/12 ª 
 \T1/phv/m/n/12 ed.
  []
 
-[26
+[53
 
  <C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonarti
-cle.pdf>] [27
+cle.pdf>] [54
 
 
 ]
-\tf@nav=\write7
-\openout7 = `Aula12.nav'.
+\tf@nav=\write8
+\openout8 = `Aula15.nav'.
 
-\tf@toc=\write8
-\openout8 = `Aula12.toc'.
+\tf@toc=\write9
+\openout9 = `Aula15.toc'.
 
-\tf@snm=\write9
-\openout9 = `Aula12.snm'.
+\tf@snm=\write10
+\openout10 = `Aula15.snm'.
 
- (Aula12.aux)
+ (Aula15.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-Package logreq Info: Writing requests to 'Aula12.run.xml'.
-\openout1 = `Aula12.run.xml'.
+Package rerunfilecheck Info: File `Aula15.out' has not changed.
+(rerunfilecheck)             Checksum: 9DF4F7776F5F3135162CCE279CCAF926;643.
+Package logreq Info: Writing requests to 'Aula15.run.xml'.
+\openout1 = `Aula15.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53660 strings out of 474486
- 1191969 string characters out of 5743283
- 2188251 words of memory out of 5000000
- 74876 multiletter control sequences out of 15000+600000
- 648009 words of font info for 177 fonts, out of 8000000 for 9000
+ 53166 strings out of 474486
+ 1183786 string characters out of 5743283
+ 2148470 words of memory out of 5000000
+ 74348 multiletter control sequences out of 15000+600000
+ 654628 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,17n,123p,3219b,1865s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,24n,123p,3219b,2053s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\fsbmat\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ect
 t1200.pk> <C:\Users\fsbmat\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
 450\ectt0800.pk><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -2271,18 +2316,16 @@ type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/fsbmat/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/fsbmat/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/fsbm
-at/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Use
-rs/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><
-C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr
-i.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/u
-hvb8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvet
-ic/uhvbo8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/h
-elvetic/uhvr8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/u
-rw/helvetic/uhvro8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/urw/palatino/uplr8a.pfb>
-Output written on Aula12.pdf (27 pages, 226390 bytes).
+at/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Use
+rs/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:
+/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pf
+b><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8
+a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/u
+hvro8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palat
+ino/uplr8a.pfb>
+Output written on Aula15.pdf (54 pages, 259028 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 573 PDF objects out of 1000 (max. 8388607)
+ 121 named destinations out of 1000 (max. 500000)
+ 75 words of extra memory for PDF output out of 10000 (max. 10000000)
 

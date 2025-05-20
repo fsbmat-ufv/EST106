@@ -1,0 +1,6 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Distribuições Contínuas}{3}{0}{1}
+\beamer@sectionintoc {2}{Distribuição Uniforme}{6}{0}{2}
+\beamer@sectionintoc {3}{Distribuição Exponencial}{13}{0}{3}
+\beamer@sectionintoc {4}{Distribuição Normal}{22}{0}{4}
+\beamer@sectionintoc {5}{Uso da Tabela}{39}{0}{5}

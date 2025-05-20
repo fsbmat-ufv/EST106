@@ -31,9 +31,9 @@
 %\usepackage{slashbox}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 %\usepackage{csquotes}
 %\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
 %\addbibresource{bibliografia.bib}
@@ -54,8 +54,15 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
+
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -315,7 +322,7 @@ particular será constituída de uma seqüência de sucessos e fracassos, ou, al
 \justifying
 Por exemplo, repetindo um ensaio de Bernoulli cinco vezes $(n = 5),$ um particular resultado pode ser FSSFS ou a quíntupla ordenada $(0, 1, 1, 0, 1).$ Usando a notação 
 $P(S) = p,$ a probabilidade de tal amostra será:
-$$(1-p)pp(1-p)p=p^{3}*(1-p^{2})$$
+$$(1-p)pp(1-p)p=p^{3}(1-p)^{2}$$
 O número de sucessos nessa amostra é igual a 3, sendo 2 o número de fracassos.
 \end{block}
 \end{frame}
@@ -422,12 +429,13 @@ Denotaremos uma v.a. $N$ com distribuição de Poisson de parâmetro $\lambda$ p
 
 $$N\sim Poisson(\lambda)$$
 \end{block}
-\nocite{Apostila}
+\nocite{roteiro}
+\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}
 \end{frame}
 
-\begin{frame}%[allowframebreaks]
+\begin{frame}[allowframebreaks]
 \frametitle{\bf Referências}
-\bibliography{Referencias/Referencias.bib}
+\printbibliography
 \end{frame}
 
 
