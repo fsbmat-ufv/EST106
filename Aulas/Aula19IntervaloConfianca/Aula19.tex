@@ -19,7 +19,6 @@
 \usepackage[labelfont=bf]{caption}
 \usepackage{subcaption}
 \usepackage{float}
-\usepackage{verbatim}
 \usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
 %\usepackage{geometry, calc, color, setspace}%
 %\geometry{a4paper, headsep=1.0cm, footskip=1cm, lmargin=3cm, rmargin=2cm, tmargin=3cm, bmargin=2cm}
@@ -33,8 +32,8 @@
 \usepackage{multirow}
 \usepackage{multicol}
 \usepackage{csquotes}
-\usepackage[citestyle=authoryear,maxcitenames=2,terseinits=true,natbib=true, style=abnt, maxbibnames=99]{biblatex}
-\addbibresource{Referencias/Referencias.bib}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 \usepackage[figuresright]{rotating}
 \usepackage{spalign}
 %\usepackage{pgfpages}
@@ -52,8 +51,14 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -653,9 +658,10 @@ $$
 %((zcrit * sigma)/erro)^2    
 %\end{verbatim}
 \end{block}
+\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}
 \end{frame}
 
-\begin{frame}%[allowframebreaks]
+\begin{frame}[allowframebreaks]
 \frametitle{\bf Referências}
 \printbibliography
 \end{frame}
