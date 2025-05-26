@@ -443,7 +443,7 @@
 		
 		Se construirmos 100 intervalos de confiança de 95\%, usando 100 amostras diferentes, \textbf{esperamos que 95 deles contenham $\mu$}, e 5 não contenham.
 		
-		\textbf{Importante:} \textit{Não dizemos que "a chance de $\mu$ estar no intervalo é 95\%". $\mu$ não é aleatório. O que é aleatório é o intervalo.}
+		\textbf{Importante:} \textit{Não dizemos que "a probabilidade de $\mu$ estar no intervalo é 95\%". $\mu$ não é aleatório. O que é aleatório é o intervalo.}
 	\end{block}
 \end{frame}
 
@@ -461,87 +461,119 @@
 	\begin{frame}{Exemplo}
 		\begin{block}{}
 			\justifying
-			Uma empresa de computadores deseja estimar o tempo médio de horas semanais que as pessoas utilizam o computador. Uma amostra aleatória de 25 pessoas apresentou um tempo médio de uso de 22,4 horas. Com base em estudos anteriores, a empresa assume que $\sigma = 5,2$ horas, e que os tempos são normalmente distribuídos. Construa um intervalo de confiança para a média $\mu$ com coeficiente de confiança de 95%.   
-		\end{block}
-		\pause 
-		\begin{block}{}
-			%\begin{verbatim}
-			%xbar <- 22.4
-			%n <- 25
-			%sigma <- 5.2
-			%zcrit <- qnorm(.975)
-			%erro <- zcrit * sigma/sqrt(n)
-			%c(xbar - erro, xbar + erro)
-			$(20.36164\leq \mu\leq24.43836)$
-			%\end{verbatim}   
-		\end{block}
-	\end{frame}
-	
-	\section{Intervalos de confiança para a média: $\sigma$ desconhecido}
-	\begin{frame}{Intervalos de confiança para a média: $\sigma$ desconhecido}
-		\begin{block}{Estimativa da variância amostral}
-			\justifying
-			Na maioria das situações práticas, não sabemos o verdadeiro valor do desvio padrão populacional $\sigma$. Se o desvio padrão é desconhecido, ele precisa ser estimado. Sendo $(X_1, \ldots, X_n)$ VAs onde $X \sim \text{N}(\mu, \sigma^2)$, vimos que o ``melhor'' estimador para $\sigma^2$ é a variância amostral
-			$$
-			S^2 = \frac{1}{n-1} (\sum_{i=1}^{n} X_i^2 - n\bar{X}^2)
-			$$   
-			que é não viciada e consistente para $\sigma^2$.   
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{A distribuição $t$ de Student}
-		\begin{block}{}
-			\justifying
-			Definindo a variável padronizada
-			$$
-			T = \frac{\bar{X} - \mu}{\sqrt{S^2/n}} = \frac{\bar{X} - \mu}{S/\sqrt{n}}
-			$$   
-			o denominador $S^2$ fará com que a função densidade de $T$ seja diferente da Normal. Essa nova densidade é denominada \textbf{$t$ de Student}, e seu parâmetro é
-			denominado \textbf{graus de liberdade}, que nesse caso é $n-1$. Assim:
-			$$
-			T = \frac{\bar{X} - \mu}{S/\sqrt{n}} \, \sim \, t(n-1)
-			$$   
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{}
-		\begin{block}{Valores Críticos de $t$}
-			\justifying
-			Com a definição do \textbf{nível de confiança} e sabendo o tamanho da amostra $n$, sabemos então o valor de $\gamma$ e dos gl, e devemos encontrar o \textbf{valor crítico} de $t_{\gamma/2}$. Usando como exemplo $\gamma = 0,95$ e uma amostra de $n=7$
+			Uma empresa de marketing deseja estimar quanto tempo, em m\'edia, as pessoas passam no WhatsApp por semana.
 			
-			\begin{itemize}
-				\item Temos que $n=7 \Rightarrow gl = n-1 = 6$
-				
-				\item Na tabela da distribuição $t$ de Student procure a linha correspondente aos gl, e  coluna correspondente ao valor de $1 - \gamma = 1 - 0,95 = 0,05 = 5\%$
-				
-				\item O valor de $t_{\gamma/2}$ será determinado pelos valores correspondentes \textbf{no corpo da tabela}. Nesse caso, $t_{\gamma/2} = 2,447$ é o valor crítico procurado.
-			\end{itemize}   
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{}
-		\begin{block}{}
-			\justifying
-			\begin{figure}
-				\centering
-				\includegraphics[scale=0.6]{figs/ICtStudent.jpeg}
-			\end{figure}  
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{Intervalo de confiança}
-		\begin{block}{}
-			\justifying
-			Com estas definições, podemos construir um \textbf{intervalo de confiança} para $\mu$, com \textbf{coeficiente de confiança} $\gamma$, e
-			$\sigma$ desconhecido:
-			$$
-			\text{IC}(\mu, \gamma) = \left[ \bar{X} - t_{\gamma/2} \cdot
-			\left(\frac{S}{\sqrt{n}}\right) ; \bar{X} + t_{\gamma/2} \cdot
-			\left(\frac{S}{\sqrt{n}}\right)  \right]
-			$$   
+			Eles selecionaram, aleatoriamente, uma amostra de 25 pessoas. O tempo m\'edio de uso foi de \textbf{22,4 horas por semana} \textendash{} isso mesmo, quase um emprego de meio per\'iodo s\'o no zap!
 			
+			Com base em estudos anteriores, eles assumem que o desvio padr\~ao populacional \'e $\sigma = 5,2$ horas e que o tempo de uso tem distribui\c{c}\~ao normal.
+			
+			Construa um intervalo de confian\c{c}a de 95\% para a m\'edia populacional $\mu$.
+		\end{block}
+		
+	\end{frame}
+	
+	\begin{frame}{Exemplo}
+	
+		\begin{block}{Solu\c{c}\~ao}
+			\[
+			\bar{X} = 22,4, \quad n = 25, \quad \sigma = 5,2
+			\]
+			\[
+			z_{0,025} = 1,96
+			\]
+			\[
+			e = 1,96 \cdot \frac{5,2}{\sqrt{25}} = 2,038
+			\]
+			\[
+			IC = \left[22,4 - 2,038 \; ; \; 22,4 + 2,038\right]
+			\]
+			\[
+			(20,362 \leq \mu \leq 24,438)
+			\]
+			\textbf{Interpreta\c{c}\~ao:} Com 95\% de confian\c{c}a, o tempo m\'edio que as pessoas passam no WhatsApp por semana est\'a entre aproximadamente \textbf{20,4 e 24,4 horas}.
 		\end{block}
 	\end{frame}
+	
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Intervalos de Confiança para a Média: $\sigma$ desconhecido}
+
+\begin{frame}{Quando $\sigma$ é Desconhecido}
+	\small
+	\begin{block}{Estimativa da Variância Amostral}
+		\justifying
+		Na maioria das situações práticas, não sabemos o verdadeiro valor do desvio padrão populacional ($\sigma$). Se $\sigma$ é desconhecido, ele precisa ser estimado a partir da amostra.
+		
+		Sendo $(X_1, \ldots, X_n)$ uma amostra aleatória de uma variável aleatória $X \sim \text{N}(\mu, \sigma^2)$, o estimador da variância populacional é a variância amostral:
+		
+		\[
+		S^2 = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar{X})^2
+		\]
+		
+		Esse estimador é \textbf{não viciado} e \textbf{consistente} para $\sigma^2$.
+	\end{block}
+\end{frame}
+
+\begin{frame}{A Distribuição $t$ de Student}
+	\small
+	\begin{block}{}
+		\justifying
+		Quando substituímos $\sigma$ pela estimativa $S$, a variável padronizada passa a ser:
+		
+		\[
+		T = \frac{\bar{X} - \mu}{S / \sqrt{n}}
+		\]
+		
+		Essa variável não segue mais a distribuição normal. Ela segue uma \textbf{distribuição $t$ de Student} com \textbf{$n-1$ graus de liberdade}:
+		
+		\[
+		T \sim t(n-1)
+		\]
+		
+		A distribuição $t$ é mais "espalhada" que a normal, pois leva em conta a incerteza adicional de estimar $\sigma$.
+	\end{block}
+\end{frame}
+
+\begin{frame}{Valores Críticos da Distribuição $t$}
+	\begin{block}{}
+		\justifying
+		Para determinar o valor crítico $t_{\gamma/2}$, usamos:
+		\begin{itemize}
+			\item O nível de confiança ($\gamma$);
+			\item O número de graus de liberdade ($gl = n - 1$).
+		\end{itemize}
+		
+		Exemplo:
+		\begin{itemize}
+			\item $\gamma = 95\%$ e $n = 7 \Rightarrow gl = 6$
+			\item Buscamos na tabela $t$ a linha dos $gl = 6$ e a coluna correspondente a $5\%$ (2,5\% em cada cauda)
+			\item Encontramos: $t_{0,025} = 2,447$
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Distribuição $t$ de Student}
+	\centering
+	\includegraphics[width=0.5\linewidth]{figs/ICtStudent.jpeg}
+	
+	\vspace{-0.3cm}
+	\small\textit{Distribuição $t$ de Student: mais "espalhada" que a normal, especialmente para amostras pequenas.}
+\end{frame}
+
+\begin{frame}{Fórmula do Intervalo de Confiança ($\sigma$ desconhecido)}
+	\begin{block}{}
+		\justifying
+		O intervalo de confiança para $\mu$, quando $\sigma$ é desconhecido, é:
+		
+		\[
+		\left[ \bar{X} - t_{\gamma/2} \cdot \frac{S}{\sqrt{n}} \; ; \;
+		\bar{X} + t_{\gamma/2} \cdot \frac{S}{\sqrt{n}} \right]
+		\]
+		
+		\textbf{Interpretação:} Intervalo de valores plausíveis para $\mu$, levando em conta a incerteza tanto da variabilidade amostral quanto da estimativa do desvio padrão.
+	\end{block}
+\end{frame}
 	
 	\begin{frame}{Procedimentos para a construção de intervalos de confiança}
 		\begin{block}{}
@@ -561,36 +593,92 @@
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{}
-		\begin{block}{Exemplo}
+	\begin{frame}{Exemplo}
+		
+		\begin{block}{}
 			\justifying
-			Em um teste da eficácia do alho na dieta para a redução do colesterol, 51 pessoas foram avaliadas e seus níveis de colesterol foram medidos antes e depois do tratamento. As \textbf{mudanças} nos níveis de colesterol apresentaram média de 0,4 e desvio-padrão de
-			21. 
-			\begin{description}
-				\item[a)~]Para um nível de confiança de 95\%, calcule o intervalo para a verdadeira média das mudanças no nível de colesterol;
-				\item[b)~]O que o intervalo de confiança sugere sobre a eficácia do uso do alho na dieta para a redução do colesterol?
-				\item[c)~]Resolva o mesmo exemplo supondo que o $\sigma = s$ é conhecido (ou seja, usando a distribuição $Z$). Compare os dois métodos.
-			\end{description}
+			
+			Uma turma de Estatística, conhecida por conversar bastante durante as aulas, fez uma prova com nota máxima 100.
+			
+			Foram selecionadas, aleatoriamente, as notas de \textbf{15 alunos}. A média da amostra foi \textbf{62,4} e o desvio padrão amostral foi \textbf{18,5}.
+			
+			Segundo relatos, há alguns poucos alunos que prestam muita atenção e puxam as notas para cima, enquanto o resto... conversa.
+			
+			Construa um intervalo de confiança de 95\% para a média verdadeira das notas dessa turma.
+			
+		\end{block}
+		
+	\end{frame}
+	
+	\begin{frame}{Exemplo}
+		
+	\small	
+		\begin{block}{Solução}
+			
+			\[
+			\bar{X} = 62,4, \quad S = 18,5, \quad n = 15
+			\]
+			\[
+			gl = n - 1 = 14
+			\]
+			\[
+			t_{0,025, 14} = 2,145
+			\]
+			\[
+			e = 2,145 \cdot \frac{18,5}{\sqrt{15}} = 10,24
+			\]
+			\[
+			IC = \left[62,4 - 10,24 \; ; \; 62,4 + 10,24\right]
+			\]
+			\[
+			(52,16 \leq \mu \leq 72,64)
+			\]
+			
+			\textbf{Interpretação:} Com 95\% de confiança, a média real das notas da turma está entre aproximadamente \textbf{52,2 e 72,6}.
+			
+		\end{block}
+		
+	\end{frame}
+	
+	
+	
+	\section{Intervalo de Confiança para Proporção}
+	
+	\begin{frame}{Intervalo de Confiança para Proporção}
+		\small
+		\begin{block}{Distribuição da proporção amostral}
+			\justifying
+			Seja uma variável aleatória binária com:
+			\begin{itemize}
+				\item Sucesso: probabilidade $p$;
+				\item Fracasso: probabilidade $1-p$.
+			\end{itemize}
+			
+			A proporção amostral é:
+			
+			\[
+			\hat{p} = \frac{x}{n} = \frac{\text{número de sucessos}}{\text{tamanho da amostra}}
+			\]
+			
+			
 		\end{block}
 	\end{frame}
 	
-	\section{Intervalo de Confiança para Proporção}
 	\begin{frame}{Intervalo de Confiança para Proporção}
-		\vspace{-0.3cm}
+		\small
 		\begin{block}{}
-			\justifying
-			A proporção amostral
-			$$
-			\hat{p} = \frac{x}{n} = \frac{\text{número de sucessos}}{\text{total de
-					tentativas}}
-			$$   
-			é a ``melhor estimativa'' para a proporção populacional $p.$ Através do estudo da distribuição amostral da proporção, chegamos aos seguintes resultados:
 			
+				
+			\textbf{Propriedades da distribuição amostral de $\hat{p}$:}
 			\begin{itemize}
-				\item A proporção amostral $\hat{p}$ \textbf{tende} para o valor da proporção populacional $p$
-				\item A distribuição das proporções amostrais tende a ser uma \textbf{distribuição normal}
-				\item $\text{E}(\hat{p}) = \mu_{\hat{p}} = p$
-				\item $\text{Var}(\hat{p}) = \sigma^{2}_{\hat{p}} = \frac{p(1-p)}{n}$
+				\justifying
+				\item $\hat{p}$ é um estimador não-viesado de $p$.
+				\item Se $n$ é suficientemente grande, $\hat{p}$ segue aproximadamente uma distribuição normal:
+				\[
+				\hat{p} \sim \text{N} \left( p, \frac{p(1-p)}{n} \right)
+				\]
+				\item Esperança: $\text{E}(\hat{p}) = p$;
+				\item Variância: $\text{Var}(\hat{p}) = \frac{p(1-p)}{n}$.
 			\end{itemize}
 		\end{block}
 	\end{frame}
@@ -598,188 +686,348 @@
 	\begin{frame}{Distribuição amostral da proporção $\hat{p}$}
 		\begin{block}{}
 			\justifying
-			Assim, sabemos que
-			$$
-			\hat{p} \sim \text{N} \left( p, \frac{p(1-p)}{n} \right)
-			$$   
-			É possível mostrar que a quantidade
-			$$
-			Z = \frac{\hat{p} - p}{\sqrt{\frac{p(1-p)}{n}}} \, \sim \, \text{N}(0,1)
-			$$   
+			Se a condição de normalidade é satisfeita, podemos padronizar a proporção amostral:
+			
+			\[
+			Z = \frac{\hat{p} - p}{\sqrt{\frac{p(1-p)}{n}}} \sim \text{N}(0,1)
+			\]
+			
+			Isso permite construir intervalos de confiança para $p$ usando a distribuição normal padrão.
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{}
-		\begin{block}{Intervalo de Confiança}
+	\begin{frame}{Fórmula do Intervalo de Confiança}
+		\begin{block}{}
 			\justifying
-			Logo, podemos construir um \textbf{intervalo de confiança} para $p$, com \textbf{coeficiente de confiança} $\gamma$
-			$$
-			\text{IC}(p, \gamma) = \left[ \hat{p} - z_{\gamma/2} \cdot
-			\sqrt{\frac{p(1-p)}{n}} ;
-			\hat{p} + z_{\gamma/2} \cdot
-			\sqrt{\frac{p(1-p)}{n}}
+			O intervalo de confiança para a proporção populacional $p$, com nível de confiança $\gamma$, é dado por:
+			
+			\[
+			\text{IC}(p, \gamma) =
+			\left[
+			\hat{p} - z_{\gamma/2} \cdot \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}} \; ; \;
+			\hat{p} + z_{\gamma/2} \cdot \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}
 			\right]
-			$$
+			\]
+			
+			\textbf{Interpretação:} Fornece uma faixa de valores plausíveis para a verdadeira proporção da população.
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{Procedimentos para a construção de intervalos de confiança}
+	\begin{frame}{Passos para Construção do Intervalo de Confiança}
+		\footnotesize
+		\vspace{-0.5cm}
 		\begin{block}{}
 			\justifying
 			\begin{enumerate}
-				\item Verifique se as suposições necessárias estão satisfeitas
+				\item Verifique as suposições:
 				\begin{itemize}
-					\item Temos uma AAS
-					\item As condições para a distribuição binomial são satisfeitas:
+					\item A amostra é uma AAS;
+					\item As condições da binomial são satisfeitas:
 					\begin{itemize}
-						\item as tentativas são independentes;
-						\item há duas categorias de resultado (``sucesso'', ``fracasso'');
-						\item a probabilidade de sucesso $p$ permanece constante;
+						\item Tentativas independentes;
+						\item Dois resultados possíveis (sucesso/fracasso);
+						\item Probabilidade de sucesso constante.
 					\end{itemize}
-					\item A distribuição normal pode ser usada como aproximação para a    distribuição binomial, ou seja, $np \geq 5$ e $np(1-p) \geq 5$
+					\item Condição para aproximação normal:
+					\[
+					n\hat{p} \geq 5 \text{ e } n(1 - \hat{p}) \geq 5
+					\]
 				\end{itemize}
 				
-				\item Determine o nível de confiança $\gamma$, e encontre o valor crítico $z_{\gamma/2}$
-				\item Calcule a margem de erro $e = z_{\gamma/2} \cdot \sqrt{\frac{p(1-p)}{n}}$
-				\item Calcule $\text{IC}(\mu, \gamma)$
-			\end{enumerate}   
+				\item Defina o nível de confiança $\gamma$ e encontre $z_{\gamma/2}$.
+				
+				\item Calcule a margem de erro e o intervalo:
+				\[
+				e = z_{\gamma/2} \cdot \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}\Rightarrow 
+				\hat{p} \pm e
+				\]
+			\end{enumerate}
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{}
-		\begin{block}{Exemplo}
-			\justifying
-			Em uma pesquisa realizada por um instituto de pesquisa Norte-Americano, 1500 adultos foram selecionados aleatoriamente para responder à pergunta se acreditam ou não no aquecimento global. 1050 entrevistados responderam que sim. Com isso:
-			
-			\begin{description}
-				\item[a)~]Para um nível de confiança de 95\%, calcule o intervalo de confiança para a verdadeira proporção de pessoas que acreditam no aquecimento global, utilizando:
-				$(i)\ p = \hat{p} \text{ e } (ii)\ p = 0,5$ e compare os resultados.
-				\item[b)~]Com base nesses resultados, podemos concluir que a maioria dos adultos acredita no aquecimento global?
-			\end{description}   
-		\end{block}
-	\end{frame}
-	
-	\section{Determinação do tamanho amostral ($\sigma$ conhecido)}
-	\begin{frame}{Determinação do tamanho amostral}
+	\begin{frame}{Exemplo - Proporção}
 		\begin{block}{}
 			\justifying
-			Nosso objetivo é coletar dados para estimar a \textbf{média populacional} $\mu$. A questão é:
+			Durante uma aula de Estatística, o professor percebe que a turma está mais no WhatsApp do que prestando atenção. Para investigar, ele sorteia uma amostra de 40 alunos e verifica que 28 estavam usando o celular na hora da explicação.
+			
+			A proporção amostral é:
+			
+			\[
+			\hat{p} = \frac{28}{40} = 0,70
+			\]
+			
+			Construa um intervalo de confiança de 95\% para a proporção de alunos que usam o celular durante a aula.
+		\end{block}
+		
+	\end{frame}
+	
+	\begin{frame}{Exemplo - Proporção}
+		
+		\begin{block}{Solução}
+			\[
+			\hat{p} = 0,70, \; n = 40, \; z_{0,025} = 1,96
+			\]
+			\[
+			e = 1,96 \cdot \sqrt{\frac{0,70 \cdot 0,30}{40}} = 0,144
+			\]
+			\[
+			IC = [0,70 - 0,144 \; ; \; 0,70 + 0,144] = [0,556 \; ; \; 0,844]
+			\]
+			
+			\textbf{Interpretação:} Com 95\% de confiança, entre 55,6\% e 84,4\% dos alunos usam o celular durante a aula.
+		\end{block}
+	\end{frame}
+	
+	\section{Determinação do Tamanho Amostral ($\sigma$ conhecido)}
+	
+	\begin{frame}{Determinação do Tamanho Amostral}
+		\begin{block}{}
+			\justifying
+			Nosso objetivo é coletar dados para estimar a \textbf{média populacional} $\mu$.
+			
+			A grande pergunta é:
+			
 			\begin{center}
-				\textbf{Quantos elementos (itens, objetos, pessoas, ...) devemos amostrar?}   
+				\textbf{Quantos elementos (pessoas, objetos, itens...) devemos amostrar?}
 			\end{center}
 			
-			Já vimos que, de maneira (bem) geral, $n>30$ é um tamanho de amostra mínimo para a maioria dos casos. Será que podemos ter uma estimativa melhor de quantos elementos devem ser amostrados para estimarmos a média populacional com uma precisão conhecida?   
+			Sabemos que, de forma geral, $n > 30$ costuma ser suficiente para muitas situações.
+			
+			Mas... podemos ser mais inteligentes que isso! 
+			
+			\textbf{Existe uma fórmula que permite calcular exatamente o tamanho de amostra necessário, baseado na precisão desejada.}
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{}
-		\begin{block}{}
-			\justifying
-			A partir da equação do \textbf{erro máximo provável}
-			$$
+	\begin{frame}{Fórmula para o Tamanho Amostral}
+		\begin{block}{Derivação}
+			Sabemos que a \textbf{margem de erro} para a média é dada por:
+			
+			\[
 			e = z_{\gamma/2} \cdot \frac{\sigma}{\sqrt{n}}
-			$$ 
-			podemos isolar $n$ e chegar na seguinte equação para a determinação do tamanho amostral
-			$$
-			n = \left[ \frac{z_{\gamma/2} \cdot \sigma}{e} \right]^2
-			$$
+			\]
+			
+			Isolando $n$:
+			
+			\[
+			n = \left( \frac{z_{\gamma/2} \cdot \sigma}{e} \right)^2
+			\]
+			
+			\textbf{Esta é a fórmula que usamos para calcular o tamanho amostral necessário.}
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{}
-		\begin{block}{}
-			\justifying
-			Note que, em
-			$$
-			n = \left[ \frac{z_{\gamma/2} \cdot \sigma}{e} \right]^2
-			$$
+	\begin{frame}{Interpretando a Fórmula}
+		\begin{block}{O que influencia o tamanho amostral?}
+			
+			\[
+			n = \left( \frac{z_{\gamma/2} \cdot \sigma}{e} \right)^2
+			\]
+			
+			\textbf{O tamanho amostral depende de:}
 			\begin{itemize}
-				\item O tamanho amostral $n$ \textbf{não} depende do tamanho populacional $N;$
-				\item O tamanho amostral depende:
-				\begin{itemize}
-					\item do nível de confiança desejado (expresso pelo valor crítico $z_{\gamma/2}$);
-					\item do erro máximo \textsl{desejado}
-					\item do desvio-padrão $\sigma$ (embora veremos que não é estritamente necessário)
-				\end{itemize}
-				\item Como o tamanho amostral precisa ser um número inteiro, arredondamos sempre o valor para o \textbf{maior} número inteiro mais próximo.
+				\item O \textbf{nível de confiança} desejado ($z_{\gamma/2}$);
+				\item O \textbf{erro máximo admissível} ($e$) \textendash{} \textit{precisão desejada};
+				\item O \textbf{desvio padrão populacional} ($\sigma$).
 			\end{itemize}
+			
+			\textbf{Não depende} do tamanho da população (se for muito grande).
+			
+			\textbf{Importante:} Sempre arredondamos $n$ para o \textbf{próximo número inteiro superior}.
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{}
-		\begin{block}{Exemplo}
-			\justifying
-			Seja $X \sim \text{N}(\mu,36)$
-			\begin{description}
-				\item[a)~]Calcule o tamanho da amostra, para que com 95\% de probabilidade, a média amostral não difira da média populacional por mais de 
-				\begin{itemize}
-					\item $(i)\ 0,5 \text{ unidades} \quad (ii)\ 2 \text{ unidades}$
-				\end{itemize}
-				\item[b)~]Qual o impacto do erro máximo assumido para o tamanho da amostra?
-				\item[c)~]Calcule o tamanho da amostra, para que a diferença da média amostral para a média populacional (em valor absoluto) seja menor ou igual a 2 unidades, com níveis de confiança de
-				\begin{itemize}
-					\item $(i)\ 90\% \quad (ii)\ 95\%$
-				\end{itemize}
-				\item[d)~] Compare as estimativas do item anterior e analise o impacto do nível de confiança para a determinação do tamanho amostral.
-			\end{description}
-		\end{block}
-	\end{frame}
-	
-	\section{Determinação do tamanho amostral ($\sigma$ desconhecido)}
-	\begin{frame}{Determinação do tamanho amostral ($\sigma$ desconhecido)}
+	\begin{frame}{Exemplo - Determinação do Tamanho Amostral}
 		\begin{block}{}
 			\justifying
-			Se $\sigma$ for desconhecido?
-			\begin{itemize}
-				\item Estime o valor de $\sigma$ com base em algum estudo feito anteriormente
-				\item Faça uma amostra piloto e estime o desvio padrão amostral $s$, e use-o como uma aproximação para o desvio-padrão populacional $\sigma$
-				\item Use a \textbf{regra empírica} da amplitude para dados com distribuição (aproximadamente) normal
-			\end{itemize}
+			Queremos estimar o tempo médio que alunos passam no WhatsApp por semana.
+			
+			Desejamos um intervalo de confiança de 95\%, com \textbf{margem de erro de no máximo 2 horas}. Estudos anteriores indicam que o desvio padrão é \textbf{5,2 horas}.
+			
+			Qual deve ser o tamanho da amostra?
+		\end{block}
+	
+	\end{frame}
+	
+	\begin{frame}{Exemplo - Determinação do Tamanho Amostral}
+
+		\begin{block}{Solução}
+			\[
+			\sigma = 5,2, \; e = 2, \; z_{0,025} = 1,96
+			\]
+			\[
+			n = \left( \frac{1,96 \cdot 5,2}{2} \right)^2 = \left(5,096\right)^2 = 25,97
+			\]
+			\[
+			n = 26 \text{ (arredondado para o inteiro superior)}
+			\]
+			
+			\textbf{Conclusão:} Precisamos de uma amostra com pelo menos 26 alunos.
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{Regra empírica para uma distribuição normal}
+
+	
+\section{Determinação do Tamanho Amostral ($\sigma$ desconhecido)}
+
+\begin{frame}{Determinação do Tamanho Amostral ($\sigma$ desconhecido)}
+	\vspace{-0.5cm}
+	\small
+	\begin{block}{}
+		\justifying
+		Se \(\sigma\) for desconhecido, temos algumas estratégias práticas:
+			\vspace{-0.3cm}
+		\begin{itemize}
+			\justifying
+			\item Utilizar uma \textbf{estimativa de $\sigma$} baseada em estudos anteriores ou literatura;
+			\item Realizar uma \textbf{amostra piloto} e utilizar o desvio padrão amostral ($s$) como aproximação de $\sigma$;
+			\item Usar a \textbf{regra empírica da amplitude}, válida para dados aproximadamente normais:
+			\[
+			\sigma \approx \frac{\text{amplitude}}{4}
+			\]
+			onde amplitude é \(\max - \min\) de valores típicos (sem outliers extremos).
+		\end{itemize}
+		
+	\end{block}
+\end{frame}
+
+\begin{frame}{Regra Empírica para Estimar $\sigma$}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figs/ICEmpirico.png}
+	
+	\vspace{0.3cm}
+	\small\textit{Aproximadamente 95\% dos dados de uma distribuição normal estão entre \(\mu - 2\sigma\) e \(\mu + 2\sigma\).}
+\end{frame}
+
+\begin{frame}{Aplicando a Regra Empírica}
+	\vspace{-0.5cm}
+		\small
+	\begin{block}{}
+		\justifying
+		Definimos como \textbf{valores usuais} aqueles que não são extremos.
+		
+		Para uma distribuição aproximadamente normal, sabemos que:
+		
+		\[
+		4\sigma \approx \text{amplitude} = \max - \min
+		\]
+		
+		Portanto, uma estimativa prática para \(\sigma\) é:
+		
+		\[
+		\sigma \approx \frac{\max - \min}{4}
+		\]
+		
+		Essa técnica é muito útil quando não temos dados prévios ou quando queremos uma estimativa rápida e prática.
+	\end{block}
+\end{frame}
+	
+	\begin{frame}{Exemplo - Determinação do Tamanho Amostral}
+		
 		\begin{block}{}
 			\justifying
-			\begin{figure}
-				\centering
-				\includegraphics[scale=0.6]{figs/ICEmpirico.png}
-			\end{figure}
+			Uma clínica deseja estimar o \textbf{tempo médio de espera dos pacientes para atendimento}.
+			
+			Eles querem garantir que a média amostral esteja, no máximo, \textbf{5 minutos distante da média real}, com \textbf{90\% de confiança}.
+			
+			Sabe-se que os tempos de espera costumam variar entre \textbf{10 e 50 minutos}.
+			
+			\textbf{Pergunta:} Qual deve ser o tamanho da amostra?
 			
 		\end{block}
+		
 	\end{frame}
 	
-	\begin{frame}{Regra empírica para uma distribuição normal}
+	\begin{frame}{Exemplo - Determinação do Tamanho Amostral}
+		\vspace{-0.5cm}
+		\small
 		\begin{block}{}
-			\justifying
-			Define-se \textbf{valores usuais} aqueles que são típicos e não muito extremos. Como sabemos que em uma distribuição (aproximadamente) normal, aproximadamente 95\% dos dados encontram-se a 2 desvios-padrões acima e
-			abaixo da média, temos que
-			\begin{align*}
-				4\sigma &= (\max - \min) \\
-				\sigma &= \frac{(\max - \min)}{4}
-			\end{align*}
-			pode ser utilizado como uma estimativa para $\sigma$.  
-		\end{block}
-	\end{frame}
-	
-	\begin{frame}{}
-		\begin{block}{Exemplo}
-			\justifying
-			Um professor deseja estimar o salário médio de professores do Ensino Médio de uma cidade. Quantos professores devem ser selecionados para termos 90\% de confiança que a média amostral esteja a menos de R\$30,00 da média populacional? Sabe-se apenas que os
-			salários variam entre R\$800,00 e R\$1.200,00. Use
-			$$
-			n = \left[ \frac{z_{\gamma/2} \cdot \sigma}{e} \right]^2
-			$$  
-			\nocite{Apostila}
-			%\begin{verbatim}
-			%zcrit <- qnorm(0.95)
-			%erro <- 30
-			%sigma <- (1200 - 800)/4
-			%((zcrit * sigma)/erro)^2    
-			%\end{verbatim}
+			
+			Estimando o desvio padrão usando a regra empírica:
+			
+			\[
+			\sigma = \frac{50 - 10}{4} = 10
+			\]
+			
+			Para 90\% de confiança, \(z_{0,05} = 1,645\).
+			
+			Aplicando a fórmula:
+			
+			\[
+			n = \left( \frac{1,645 \cdot 10}{5} \right)^2 = (3,29)^2 = 10,82
+			\]
+			\[
+			n = 11 \text{ (arredondado para o inteiro superior)}
+			\]
+			
+			\textbf{Conclusão:} É necessário amostrar pelo menos 11 pacientes para estimar a média do tempo de espera com a precisão desejada.
+			
 		\end{block}
 		\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}
 	\end{frame}
+	
+	
+	
+	%\begin{frame}{Exemplo - Determinação do Tamanho Amostral}
+	%
+	%\begin{block}{}
+	%\justifying
+	%Um professor deseja estimar o \textbf{tempo médio que seus alunos passam no WhatsApp por semana}.
+	%
+	%Ele quer garantir que a média amostral esteja, no máximo, \textbf{2 horas distante da média real}, com \textbf{90\% de confiança}.
+	%
+	%Sabe-se que, segundo levantamentos informais, os tempos variam entre \textbf{10 horas e 30 horas por semana}.
+	%
+	%\textbf{Pergunta:} Qual deve ser o tamanho da amostra?
+	%        
+	%        \end{block}
+	%
+	%\pause
+	%
+	%\begin{block}{Solução}
+	%
+	%Estimando o desvio padrão usando a regra empírica:
+	%        
+	%        \[
+	%                \sigma = \frac{30 - 10}{4} = 5
+	%                \]
+	%
+	%Para 90\% de confiança, \(z_{0,05} = 1,645\).
+	%
+	%Usando a fórmula:
+	%        
+	%        \[
+	%                n = \left( \frac{1,645 \cdot 5}{2} \right)^2 = \left(4,1125\right)^2 = 16,92
+	%                \]
+	%\[
+	%        n = 17 \text{ (arredondado para o inteiro superior)}
+	%        \]
+	%
+	%\textbf{Conclusão:} É necessário amostrar pelo menos 17 alunos.
+	%
+	%\end{block}
+	%
+	%\end{frame}
+	%
+	%
+	%\begin{frame}{}
+	%\begin{block}{Exemplo}
+	%\justifying
+	%Um professor deseja estimar o salário médio de professores do Ensino Médio de uma cidade. Quantos professores devem ser selecionados para termos 90\% de confiança que a média amostral esteja a menos de R\$30,00 da média populacional? Sabe-se apenas que os
+	%salários variam entre R\$800,00 e R\$1.200,00. Use
+	%$$
+	%        n = \left[ \frac{z_{\gamma/2} \cdot \sigma}{e} \right]^2
+	%$$  
+	%        \nocite{Apostila}
+	%%\begin{verbatim}
+	%%zcrit <- qnorm(0.95)
+	%%erro <- 30
+	%%sigma <- (1200 - 800)/4
+	%%((zcrit * sigma)/erro)^2    
+	%%\end{verbatim}
+	%\end{block}
+	%
+	%\end{frame}
 	
 	\begin{frame}[allowframebreaks]
 		\frametitle{\bf Referências}
