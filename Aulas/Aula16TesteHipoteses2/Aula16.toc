@@ -1,0 +1,11 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Teste de hipóteses para uma média populacional}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Teste-z}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Teste-t}{10}{0}{1}
+\beamer@sectionintoc {2}{Teste de hipóteses para duas médias populacionais}{19}{0}{2}
+\beamer@subsectionintoc {2}{1}{Teste F para Comparação de Variâncias de Duas Populações}{21}{0}{2}
+\beamer@subsectionintoc {2}{2}{Variâncias populacionais conhecidas}{25}{0}{2}
+\beamer@subsectionintoc {2}{3}{Variâncias Desconhecidas e Desiguais}{27}{0}{2}
+\beamer@subsectionintoc {2}{4}{Variâncias Desconhecidas, porém iguais}{29}{0}{2}
+\beamer@sectionintoc {3}{Teste de hipóteses para o caso de duas amostras dependentes}{35}{0}{3}
+\beamer@sectionintoc {4}{Teste $\chi ^{2}$ para a variância}{45}{0}{4}

@@ -2,22 +2,23 @@
 
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
-%\UseRawInputEncoding
 \usepackage[T1]{fontenc}
-%\usepackage{Sweave}
-\usepackage{animate}
+\mathchardef\hyphenmathcode=\mathcode`\-
+\usepackage{listings}
+%\usepackage{xr-hyper}
+
+\usepackage{sansmathaccent}
+\pdfmapfile{+sansmathaccent.map}
 \usepackage{amsbsy}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage[toc,page,title,titletoc]{appendix}
-%\usepackage[fixlanguage]{babelbib}
 %\usepackage[pdftex]{color}
 \usepackage{dsfont}
 \usepackage{esvect}
 \usepackage[labelfont=bf]{caption}
-\usepackage{subcaption}
 \usepackage{float}
 \usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
 %\usepackage{geometry, calc, color, setspace}%
@@ -27,13 +28,11 @@
 \usepackage{lipsum}
 \usepackage{longtable}
 \usepackage{mathtools}
-\usepackage{listings}%Inserir codigo do R no latex
-%\usepackage{slashbox}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 %\usepackage{csquotes}
 %\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
 %\addbibresource{bibliografia.bib}
@@ -54,8 +53,14 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -149,6 +154,7 @@ variância $\dfrac{\sigma^{2}}{n}.$
 
 \begin{frame}{}
 \frametitle{}
+\small
 \begin{block}{}
 \justifying
 Testamos as hipóteses $\Ho:\mu=\mu_{0}$ versus $\Hi$ que pode ser unilateral ou bilateral. A estatística do teste z para uma média é:
@@ -164,6 +170,7 @@ encontrar o valor - p e concluir de acordo com os resultados obtidos. Ao usar o 
 
 \begin{frame}{}
 \frametitle{Exemplo}
+\small
 \begin{block}{}
 \justifying
 Os sistemas de escape da tripulação de uma aeronave funcionam por causa de um propelente sólido. A taxa de queima desse propelente é uma característica importante 
@@ -175,6 +182,7 @@ uma amostra aleatória de $n = 25$ e obtém uma taxa média amostral de queima d
 
 \begin{frame}{}
 \frametitle{Exemplo}
+\small
 \begin{block}{}
 \justifying
 \begin{align*}
@@ -189,6 +197,7 @@ O p-valor do teste é p-valor$=2*(1-\Phi(3.25))=0.0012.$ Os limites das regiões
 
 \begin{frame}{}
 \frametitle{Exemplo}
+\small
 \begin{block}{}
 \justifying
 \begin{figure}
@@ -296,6 +305,7 @@ velocidade de chegada pode quantificar esse efeito mola. A razão de velocidades
 
 \begin{frame}{}
 \frametitle{Exemplo}
+\small
 \begin{block}{}
 \justifying
 Um experimento foi feito, em que $15$ tacos direcionadores, produzidos por determinado fabricante de tacos, foram selecionados ao acaso e seus coeficientes de 
@@ -340,6 +350,7 @@ A média e o desvio-padrão da amostra são $\bx = 0,83725$ e $s = 0,02456.$
 
 \begin{frame}[fragile]{}
 \frametitle{Exemplo}
+\small
 \begin{block}{}
 O gráfico de probabilidade normal dos dados suporta a suposição de que o coeficiente médio de restituição é normalmente distribuído.
 \end{block}
@@ -367,6 +378,7 @@ O gráfico de probabilidade normal dos dados suporta a suposição de que o coef
 
 \begin{frame}{}
 \frametitle{Exemplo}
+\small
 \begin{block}{}
 \justifying
 Logo, podemos utilizar o teste t:
@@ -385,6 +397,7 @@ O limite da região critíca é $t_{tab}=t_{0.05}(14)=1,76$
 \section{Teste de hipóteses para duas médias populacionais}
 \begin{frame}{}
 \frametitle{Teste de hipóteses para duas médias populacionais}
+\small
 \begin{block}{}
 \justifying
 O objetivo deste teste é verificar se duas populações, digamos população 1 e população 2 apresentam um mesmo valor médio para uma determinada característica, isto é, deseja-se verificar se $\mu_{1}=\mu_{2}$. Com esta finalidade é necessário obter uma amostra de cada população. Estas duas amostras podem ser relacionadas ou não, ou seja, podem ser dependentes ou 
@@ -397,6 +410,7 @@ diferentes. Para cada caso também temos um teste. Antes de ver tais testes, pre
 \subsection{Teste F para Comparação de Variâncias de Duas Populações}
 \begin{frame}{}
 \frametitle{Teste F para Comparação de Variâncias de Duas Populações}
+\small
 \begin{block}{}
 \justifying
 Este teste é indicado para verificar se duas populações, digamos 1 e 2, apresentam igual valor para o parâmetro variância. Em termos de hipóteses estatísticas teríamos:
@@ -440,6 +454,7 @@ valor de $F_{tab}=F_{\alpha}(n_{1},n_{2}).$ Se $F_{cal}>F_{tab}$ Rejeita-se $\Ho
 
 \begin{frame}{}
 \frametitle{Exemplo}
+\small
 \begin{block}{}
 \justifying
 Com o intuito de controlar a homogeneidade da produção de certas partes ao longo do tempo, amostras semanais são retiradas da produção corrente. Uma primeira 
@@ -489,6 +504,7 @@ Contudo, nas situações de interesse prático, as variâncias não são conheci
 \subsection{Variâncias Desconhecidas e Desiguais}
 \begin{frame}{Variâncias Desconhecidas e Desiguais}
 \frametitle{}
+\small
 \begin{block}{}
 \justifying
 Quando a hipótese de igualdade de variâncias for rejeitada pelo teste F, devemos usar a estatística $$t_{cal}=\dfrac{\bar{X}-\bar{Y}}{\sqrt{\dfrac{S_{1}^{2}}{n}+\dfrac{S_{2}^{2}}{m}}}$$ o número de graus de liberdade é dado aproximadamente por:
@@ -531,6 +547,7 @@ $$s_{c}^{2}=\dfrac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2}$$ em qu
 
 \begin{frame}{}
 \frametitle{}
+\small
 \begin{block}{}
 \justifying
 Uma vez obtidas estas estimativas, calcula-se o valor da estatística 
@@ -562,6 +579,7 @@ Concreto 2 & 50 & 54 & 56 & 52 & 53
 
 \begin{frame}{}
 \frametitle{Exemplo}
+\small
 \begin{block}{}
 {\bf *}Procedemos o teste F e não rejeitamos $\Ho:\sigma_{1}^{2}=\sigma_{2}^{2}$
 \justifying
@@ -579,6 +597,7 @@ O limite da região critíca é $t_{tab}=t_{0.05}(8)=1,86$\\
 \section{Teste de hipóteses para o caso de duas amostras dependentes}
 \begin{frame}{}
 \frametitle{Teste de hipóteses para o caso de duas amostras dependentes}
+\small
 \begin{block}{}
 \justifying
 Duas amostras de elementos são ditas serem dependentes quando existe algo que as relacione. Por exemplo, se os valores de duas amostras foram obtidos de um mesmo conjunto de elementos amostrais, podemos dizer que as duas amostras de valores são dependentes uma vez que foram tomados de um conjunto de elementos
@@ -662,6 +681,7 @@ $t_{tab}=t_{\alpha}(n-1)$ nos leva a conclusão do teste.
 
 \begin{frame}{}
 \frametitle{Exemplo}
+\small
 \begin{block}{}
 \justifying
 Com o objetivo de avaliar se determinado produto químico é eficiente para repelir insetos domésticos, foi realizada uma 
@@ -697,6 +717,7 @@ O limite da região critíca é $t_{tab}=t_{0.05}(6)=1,94$\\
 \section{Teste \texorpdfstring{$\chi^{2}$}{$x^{2}$} para a variância}
 \begin{frame}{}
 \frametitle{Teste $\chi^{2}$ para a variância}
+\small
 \begin{block}{}
 \justifying
 Suponha que desejamos testar a hipótese de que a variância de uma população normal $\sigma^{2}$ seja igual a um valor específico, como $\sigma^{2}_{0}$, ou 
@@ -733,6 +754,7 @@ Uma máquina de enchimento automático é usada para encher garrafas com deterge
 
 \begin{frame}{}
 \frametitle{Exemplo}
+\small
 \begin{block}{}
 \justifying
 \begin{align*}
@@ -746,6 +768,12 @@ O limite da região critíca é $\chi_{tab}=\chi_{0.05}(19)=30,14$\\
 \textbf{Conclusão:} Como $|\chi_{cal}|<|\chi_{tab}|$ não rejeita-se $\Ho$ ao nível de $\alpha=5\%$ de significância. Logo, não há forte evidência de um problema com 
 garrafas preenchidas incorretamente.
 \end{block}
+\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{\bf Referências}
+\printbibliography
 \end{frame}
 
 

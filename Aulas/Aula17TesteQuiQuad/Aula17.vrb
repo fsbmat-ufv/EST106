@@ -1,0 +1,22 @@
+\frametitle{}
+\begin{block}{}
+%\begin{schunk}
+%\begin{Sinput}
+\begin{verbatim}
+> Xsq <- chisq.test(M, correct = TRUE)
+> Xsq
+\end{verbatim}
+
+%\end{Sinput}
+%\begin{Soutput}
+\begin{verbatim}
+Pearson's Chi-squared test with Yates' continuity correction
+
+data:  M
+X-squared = 10.976, df = 1, p-value = 0.000923
+\end{verbatim}
+
+%\end{Soutput}
+%\end{schunk}
+\end{block}
+\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}

@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Aula16.blg'
+[113] biber-MSWIN64:340> INFO - === 
+[151] Biber.pm:419> INFO - Reading 'Aula16.bcf'
+[281] Biber.pm:979> INFO - Found 6 citekeys in bib section 0
+[296] Biber.pm:4419> INFO - Processing section 0
+[308] Biber.pm:4610> INFO - Looking for bibtex file '../Referencias/Referencias.bib' for section 0
+[371] bibtex.pm:1713> INFO - LaTeX decoding ...
+[388] bibtex.pm:1519> INFO - Found BibTeX data source '../Referencias/Referencias.bib'
+[449] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[449] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[449] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'pt-BR'
+[449] Biber.pm:4245> INFO - No sort tailoring available for locale 'pt-BR'
+[458] bbl.pm:660> INFO - Writing 'Aula16.bbl' with encoding 'UTF-8'
+[461] bbl.pm:763> INFO - Output to Aula16.bbl

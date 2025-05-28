@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Aula17.blg'
+[111] biber-MSWIN64:340> INFO - === 
+[151] Biber.pm:419> INFO - Reading 'Aula17.bcf'
+[270] Biber.pm:979> INFO - Found 7 citekeys in bib section 0
+[285] Biber.pm:4419> INFO - Processing section 0
+[297] Biber.pm:4610> INFO - Looking for bibtex file '../Referencias/Referencias.bib' for section 0
+[362] bibtex.pm:1713> INFO - LaTeX decoding ...
+[379] bibtex.pm:1519> INFO - Found BibTeX data source '../Referencias/Referencias.bib'
+[445] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[445] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[445] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'pt-BR'
+[445] Biber.pm:4245> INFO - No sort tailoring available for locale 'pt-BR'
+[455] bbl.pm:660> INFO - Writing 'Aula17.bbl' with encoding 'UTF-8'
+[458] bbl.pm:763> INFO - Output to Aula17.bbl
+[458] Biber.pm:131> WARN - legacy month field 'Julho' in entry 'walmes' is not an integer - this will probably not sort properly.
+[458] Biber.pm:133> INFO - WARNINGS: 1

@@ -2,22 +2,23 @@
 
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
-%\UseRawInputEncoding
 \usepackage[T1]{fontenc}
-%\usepackage{Sweave}
-\usepackage{animate}
+\mathchardef\hyphenmathcode=\mathcode`\-
+\usepackage{listings}
+%\usepackage{xr-hyper}
+
+\usepackage{sansmathaccent}
+\pdfmapfile{+sansmathaccent.map}
 \usepackage{amsbsy}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage[toc,page,title,titletoc]{appendix}
-%\usepackage[fixlanguage]{babelbib}
 %\usepackage[pdftex]{color}
 \usepackage{dsfont}
 \usepackage{esvect}
 \usepackage[labelfont=bf]{caption}
-\usepackage{subcaption}
 \usepackage{float}
 \usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
 %\usepackage{geometry, calc, color, setspace}%
@@ -27,13 +28,11 @@
 \usepackage{lipsum}
 \usepackage{longtable}
 \usepackage{mathtools}
-\usepackage{listings}%Inserir codigo do R no latex
-%\usepackage{slashbox}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 %\usepackage{csquotes}
 %\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
 %\addbibresource{bibliografia.bib}
@@ -54,8 +53,14 @@
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+\usetheme{metropolis}
+\definecolor{mycolor}{RGB}{34, 45, 50}
+\setbeamercolor{structure}{fg=mycolor}
+\usepackage{mathpazo} % Fonte elegante para matemática
+\usepackage{helvet} % Fonte sans-serif para texto
+\renewcommand{\familydefault}{\sfdefault} % Definir fonte padrão como sans-serif
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
@@ -145,6 +150,7 @@ Um teste qui-quadrado, também escrito como teste $\chi^{2}$, é qualquer teste 
 
 \begin{frame}{}
 \frametitle{}
+\small
 \begin{block}{}
 \justifying
 Existem três tipos:
@@ -193,7 +199,7 @@ especificada $P_{0},$ isto é, queremos testar a hipótese $\Ho: P = P_{0}.$ O p
 \begin{block}{}
 \justifying
 Supondo $\Ho$ verdadeira, 
-$$\chi^{2}={\displaystyle \sum_{i=1}^{k}\dfrac{(f_{oi}-f_{ei})^{2}}{f_{ei}}}\sim \chi^{2}_{q},$$
+$$\chi^{2}_{cal}={\displaystyle \sum_{i=1}^{k}\dfrac{(f_{oi}-f_{ei})^{2}}{f_{ei}}}\sim \chi^{2}_{q},$$
 em que $q=k-1$ representa o número de graus de liberdade. 
 
 {\bf Observação:} Este resultado é válido para $n$ grande e para $f_{ei}\geq 5, i=1,2,\cdots, k.$
@@ -206,7 +212,7 @@ em que $q=k-1$ representa o número de graus de liberdade.
 \justifying
 {\bf Regra de decisão:} Pode ser baseada no nível descritivo ou valor-P, neste caso
 $$valor-p=P(\chi^{2}_{q}\geq \chi^{2}_{cal}),$$
-em que $\chi^{2}_{cal}$ é o valor calculado, a partir dos dados, usando a expressão apresentada para $\chi^{2}.$ Se para $\alpha$ fixado, $p-valor<\alpha$ rejeitamos $\Ho.$
+em que $\chi^{2}_{cal}$ é o valor calculado, a partir dos dados, usando a expressão apresentada para $\chi^{2}_{cal}.$ Se para $\alpha$ fixado, $p-valor<\alpha$ rejeitamos $\Ho.$
 
 \end{block}
 \end{frame}
@@ -243,6 +249,8 @@ Freq. Esperada  &50&50&50&50&50&50&300\\
 
 \begin{frame}[fragile]{}
 \frametitle{}
+\vspace{-0.5cm}
+\small
 \begin{block}{}
 \justifying
 \begin{align*}
@@ -254,77 +262,71 @@ $$\chi^{2}_{cal}=\dfrac{(43-50)^{2}}{50}+\cdots+\dfrac{(41-50)^{2}}{50}=8.96$$
 %\begin{Schunk}
 %\begin{Sinput}
 \begin{verbatim}
-> (x2_t <- qchisq(0.05,df,lower.tail = FALSE))
+(x2_t <- qchisq(0.05, df, lower.tail = FALSE)) #No R
 \end{verbatim}
+$\chi^{2}_{tab}=11,0705$
 
-%\end{Sinput}
-%\begin{Soutput}
+
 \begin{verbatim}
-[1] 11.0705
+(pvalor <- pchisq(x2_c,df,lower.tail = FALSE))
 \end{verbatim}
-
-%\end{Soutput}
-%\begin{Sinput}
-\begin{verbatim}
-> (pvalor <- pchisq(x2_c,df,lower.tail = FALSE))
-\end{verbatim}
-
-%\end{Sinput}
-%\begin{Soutput}
-\begin{verbatim}
-[1] 0.1106703
-\end{verbatim}
-%\end{Soutput}
-%\begin{Sinput}
-%\begin{verbatim}
-%> #(chisq.test(obs))
-%\end{verbatim}
-
-%\end{Sinput}
-%\end{Schunk}
+$\chi^{2}_{tab}=0,1106703$
 
 {\bf Conclusão:} Não rejeitamos $H_{0}$ ao nível de $5\%$ de significância.
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{}
-\frametitle{}
-\begin{block}{}
-%\begin{Schunk}
-%\begin{Sinput}
-\begin{verbatim}
-> #Frequencia de acidentes nos dias da semana
-> #hipótese H_0 é de as frequências são dadas por uma 
-> #distribuição uniforme discreta com n=5, ou seja, 
-> #p_i=1/5 para todo i={seg,ter,qua,qui,sex} 
-> #Bussab & Morettin-Estatística Básica-6 edição, pg-404
-> Oi <- c(seg=32,ter=40,qua=20,qui=25,sex=33)
-> Ei <- sum(Oi)*1/length(Oi)  #esperados sob H_0
-> (X2 <- sum((Oi-Ei)^2/Ei))   #estatística do teste
-\end{verbatim}
-
-%\end{Sinput}
-%\begin{Soutput}
-\begin{verbatim}
-[1] 7.933333
-\end{verbatim}
-%\end{Soutput}
-%\begin{Sinput}
-\begin{verbatim}
-> nu <- length(Oi)-1          #graus de liberdade
-> (pchisq(X2, df=nu, lower.tail=FALSE))#valor-p do teste
-\end{verbatim}
-
-%\end{Sinput}
-%\begin{Soutput}
-\begin{verbatim}
-[1] 0.09405103
-\end{verbatim}
-%\end{Soutput}
-%\end{Schunk}
-\nocite{walmes}
-\end{block}
+\begin{frame}[fragile]
+	\frametitle{Exercício}
+	
+	\small
+	\vspace{-0.5cm}
+	\begin{block}{}
+		\begin{center}
+			\begin{tabular}{lccccc}
+				\hline
+				Dia      & Seg & Ter & Qua & Qui & Sex \\ 
+				\hline
+				Acidentes & 32  & 40  & 20  & 25  & 33  \\ 
+				\hline
+			\end{tabular}
+		\end{center}
+		
+		Deseja-se testar, ao nível de 5\%, se os acidentes estão uniformemente distribuídos durante a semana.
+		
+		\textbf{Hipóteses:}
+		\begin{itemize}
+			\item $H_0$: Frequências uniformes ($p_i = 1/5$).
+			\item $H_1$: Pelo menos um dia difere.
+		\end{itemize}
+		
+		\textbf{Pergunta:} Com base no teste qui-quadrado, há evidências para rejeitar $H_0$?
+		
+	\end{block}
 \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Resolução}
+	
+	\small
+	\begin{block}{Cálculos}
+		\justifying
+		\begin{itemize}
+			\item Total de acidentes: $150$
+			\item Esperado por dia: $E_i = 150/5 = 30$
+			\item Estatística do teste:
+			\[
+			X^2_{cal} = \sum \frac{(O_i - E_i)^2}{E_i} = 7.933
+			\]
+			\item Graus de liberdade: $k-1 = 4$
+			\item Valor-p$ = P(\chi^2_4 > 7.933) \approx 0.094$
+		\end{itemize}
+		\vspace{-0.3cm}
+		\textbf{Conclusão:} Como $p = 0{,}094 > 0{,}05$, não rejeitamos $H_0$. Não há evidências suficientes para afirmar que as frequências diferem da distribuição uniforme.
+		
+	\end{block}
+\end{frame}
+
 
 \subsection{Teste de Independência}
 \begin{frame}{Teste de Independência}
@@ -337,6 +339,7 @@ O teste de independência supõe a existência de duas v.a.’s $X$ e $Y,$ e os 
 
 \begin{frame}[fragile]{}
 \frametitle{Exemplo 14.3 - \cite{Morettin09}}
+\small
 \begin{block}{}
 \justifying
 Uma companhia de seguros analisou a frequência com que 2.000 segurados (1.000 homens e 1.000 mulheres) usaram hospitais. Os resultados estão na Tabela abaixo. A hipótese a testar é que o uso de hospital independe do sexo do segurado.
@@ -365,6 +368,7 @@ nao_usaram_hospital    900      850
 
 \begin{frame}[fragile]{}
 \frametitle{Exemplo}
+\small
 \begin{block}{}
 \justifying
 Uma companhia de seguros analisou a frequência com que 2.000 segurados (1.000 homens e 1.000 mulheres) usaram hospitais. Os resultados estão na Tabela abaixo. A hipótese a testar é que o uso de hospital independe do sexo do segurado.
@@ -390,6 +394,7 @@ X-squared = 11.429, df = 1, p-value = 0.0007232
 \end{frame}
 
 \begin{frame}[fragile]{}
+	\small
 \begin{block}{}
 %\begin{schunk}
 %\begin{Sinput}
@@ -459,13 +464,13 @@ X-squared = 10.976, df = 1, p-value = 0.000923
 %\end{Soutput}
 %\end{schunk}
 \end{block}    
+\nocite{Morettin09, Apostila, eric, montgomery2016, meyer1982probabilidade, Bastos2025}
 \end{frame}
 
-\begin{frame}%[allowframebreaks]
+\begin{frame}[allowframebreaks]
 \frametitle{\bf Referências}
-\bibliography{Referencias/Referencias.bib}
+\printbibliography
 \end{frame}
-
 
 \end{document}
 

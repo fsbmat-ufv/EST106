@@ -1,0 +1,4 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Testes $\chi ^{2}$ de Pearson}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Teste de Aderência}{9}{0}{1}
+\beamer@subsectionintoc {1}{2}{Teste de Independência}{17}{0}{1}
