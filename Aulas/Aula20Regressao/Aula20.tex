@@ -5,7 +5,7 @@
 %\UseRawInputEncoding
 \usepackage[T1]{fontenc}
 %\usepackage{Sweave}
-%\usepackage{animate}
+\usepackage{animate}
 \usepackage{amsbsy}
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -31,12 +31,9 @@
 %\usepackage{slashbox}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{natbib}
-\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
-\bibliographystyle{abbrvnat}
-%\usepackage{csquotes}
-%\usepackage[natbib=true,style=abnt, sorting=none]{biblatex}
-%\addbibresource{bibliografia.bib}
+\usepackage{csquotes}
+\usepackage[maxcitenames=2,terseinits=true,natbib=true, style=authoryear, maxbibnames=99]{biblatex}
+\addbibresource{../Referencias/Referencias.bib}
 \usepackage[figuresright]{rotating}
 \usepackage{spalign}
 %\usepackage{pgfpages}
@@ -45,21 +42,41 @@
 \usepackage{tikz}
 \usepackage{color, colortbl}
 \usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
-\definecolor{Gray}{gray}{0.9}
-\definecolor{LightCyan}{rgb}{0.88,1,1}
-\definecolor{Lightblue}{RGB}{50, 149, 168}
-%\usepackage{grffile}
-
 \usepackage[all]{xy}
 
 
 
-\usetheme{Madrid}
-\usecolortheme[RGB={193,0,0}]{structure}
+%\usetheme{Madrid}
+%\usecolortheme[RGB={193,0,0}]{structure}
+
+\usetheme{CambridgeUS}
+\definecolor{Gray}{gray}{0.7}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{Lightblue}{RGB}{50, 149, 168}
+\definecolor{graygreen}{RGB}{60, 90, 100}
+\usecolortheme[RGB={50, 149, 168}]{structure}
+% Definir cor personalizada acinzentada com verde
+
+% Aplicar essa cor à estrutura e aos elementos-chave
+\setbeamercolor{structure}{fg=graygreen}
+\setbeamercolor{frametitle}{bg=graygreen, fg=white}
+\setbeamercolor{title}{fg=graygreen}
+\setbeamercolor{item}{fg=graygreen}
+\setbeamercolor{block title}{bg=graygreen, fg=white}
+\setbeamercolor{block body}{bg=gray!5, fg=black}
+%\usecolortheme{dove} % ou troque por "teal", "darkgray", ou RGB personalizado
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{headline}{}
+% Definindo as cores de cada parte do rodapé
+\setbeamercolor{author in head/foot}{fg=black, bg=LightCyan}
+\setbeamercolor{title in head/foot}{fg=white, bg=Lightblue}
+\setbeamercolor{site in head/foot}{fg=white, bg=Gray}
+
 
 %\setbeamertemplate{footline}[frame number]
 %\setbeamertemplate{footline}[text line]{%
-%  \parbox{\linewidth}{\vspace*{-8pt}\hfill\date{}\hfill\insertshortauthor\hfill\insertpagenumber}}
+	%  \parbox{\linewidth}{\vspace*{-8pt}\hfill\date{}\hfill\insertshortauthor\hfill\insertpagenumber}}
 \beamertemplatenavigationsymbolsempty
 \renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
 \newtheorem{Teorema}{Teorema}
@@ -825,6 +842,11 @@ $
 \end{center}
 \textbf{Regra de Decisão:} Se $F_{cal}\geq F_{\alpha}(1,n-2)\Rightarrow$ rejeita-se $H_{0}.$
 \end{block}
+\nocite{Morettin09, Apostila, eric, montgomery2016, Bastos2025}
 \end{frame}
 
-\end{document}
+
+\begin{frame}[allowframebreaks]
+\frametitle{}
+\printbibliography
+\end{frame}

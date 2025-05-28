@@ -1,0 +1,30 @@
+\frametitle{}
+\frametitle{ }
+\begin{block}{}
+\begin{center}
+%\begin{Schunk}
+%\begin{Sinput}
+\begin{verbatim}
+#library(texreg)
+summary(Reg)
+\end{verbatim}
+%\end{Sinput}
+%\begin{Soutput}
+\begin{verbatim}
+lm(formula = y ~ x)
+Residuals:
+     Min       1Q   Median       3Q      Max
+-11.8746  -5.8428   0.7893   4.8001  15.3061
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept) -70.4627    24.0148  -2.934 0.018878 *
+x             0.8528     0.1448   5.889 0.000366 ***
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.'
+Residual standard error: 8.854 on 8 degrees of freedom
+Multiple R-squared:  0.8126,	Adjusted R-squared:  0.7891
+F-statistic: 34.68 on 1 and 8 DF,  p-value: 0.0003662
+\end{verbatim}
+%\end{Soutput}
+%\end{Schunk}
+\end{center}
+\end{block}

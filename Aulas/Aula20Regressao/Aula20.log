@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.15)  28 MAY 2025 15:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.15)  28 MAY 2025 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Aula19Nova.tex
-(Aula19Nova.tex
+**./Aula20.tex
+(Aula20.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
@@ -1729,56 +1729,16 @@ loaded) Xy-pic pdf driver: `line' extension support
 loaded) Xy-pic pdf driver: `rotate' extension support
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-ro.tex
 loaded) loaded))
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamertheme-metropolis
-\beamerthememetropolis.sty
-Package: beamerthememetropolis 2017/01/23 v1.2 Metropolis Beamer theme
-
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/pgfopts\pgfopts.sty
-Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks73
-\pgfopts@list@add@b@toks=\toks74
-)
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamertheme-metropolis
-\beamerinnerthememetropolis.sty
-Package: beamerinnerthememetropolis 2017/01/23 Metropolis inner theme
-\metropolis@titleseparator@linewidth=\skip126
-\metropolis@progressonsectionpage=\skip127
-\metropolis@progressonsectionpage@linewidth=\skip128
-\metropolis@blocksep=\skip129
-\metropolis@blockadjust=\skip130
-\metropolis@parskip=\skip131
-)
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamertheme-metropolis
-\beamerouterthememetropolis.sty
-Package: beamerouterthememetropolis 2017/01/23 Metropolis outer theme
-\metropolis@frametitle@padding=\skip132
-\metropolis@progressinheadfoot=\skip133
-\metropolis@progressinheadfoot@linewidth=\skip134
-)
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamertheme-metropolis
-\beamercolorthememetropolis.sty
-Package: beamercolorthememetropolis 2017/01/23 Metropolis color theme
-)
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamertheme-metropolis
-\beamerfontthememetropolis.sty
-Package: beamerfontthememetropolis 2017/01/23 Metropolis font theme
-
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-)
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-
-Package beamerthememetropolis Warning: You need to compile with XeLaTeX or LuaL
-aTeX to use the Fira fonts on input line 95.
-
-)) (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathpazo.sty
-Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
-\symupright=\mathgroup7
-) (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
-Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
-)
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerthemeCamb
+ridgeUS.sty
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerinnerthem
+erounded.sty)
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerouterthem
+einfolines.sty)
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthem
+ebeaver.sty))
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthem
+estructure.sty)
 \c@Teorema=\count555
 \c@Proposicao=\count556
 \c@Definicao=\count557
@@ -1794,44 +1754,32 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 )
 \BKM@id=\count560
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 126.
+Package hyperref Info: Option `colorlinks' set `true' on input line 140.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'brazil'.
+ (Aula20.aux)
+\openout1 = `Aula20.aux'.
 
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/beamertheme-metropolis
-\pgfplotsthemetol.sty
-Package: pgfplotsthemetol 2017/01/23 PGFplots colors based on Paul Tol's SRON t
-echnical note
-)
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 13
-0.
-
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
-File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-)
-(Aula19Nova.aux)
-\openout1 = `Aula19Nova.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1841,14 +1789,14 @@ LaTeX Font Info:    ... okay on input line 130.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(28.45274pt, 398.3386pt, 28.45274pt)
+* h-part:(L,W,R)=(13.72081pt, 427.80246pt, 13.72081pt)
 * v-part:(T,H,B)=(0.0pt, 284.52756pt, 0.0pt)
 * \paperwidth=455.24408pt
 * \paperheight=284.52756pt
-* \textwidth=398.3386pt
+* \textwidth=427.80246pt
 * \textheight=256.07483pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
+* \oddsidemargin=-58.54918pt
+* \evensidemargin=-58.54918pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -1876,12 +1824,12 @@ kii
 \scratchbox=\box148
 \nofMPsegments=\count562
 \nofMParguments=\count563
-\everyMPshowfont=\toks75
+\everyMPshowfont=\toks73
 \MPscratchCnt=\count564
 \MPscratchDim=\dimen395
 \MPnumerator=\count565
 \makeMPintoPDFobject=\count566
-\everyMPtoPDFconversion=\toks76
+\everyMPtoPDFconversion=\toks74
 )
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
 base.sty
@@ -1893,49 +1841,65 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 130.
+Package hyperref Info: Link coloring ON on input line 144.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/ppl/m/n --> OT1/cmss/m/n on input line 130.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 144.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/ppl/b/n --> OT1/cmss/b/n on input line 130.
-\symnumbers=\mathgroup8
-\sympureletters=\mathgroup9
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 144.
+\symnumbers=\mathgroup7
+\sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/ppl/m/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 130.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 144.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/zplm/b/n --> T1/phv/b/n on input line 130.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/zplm/b/n --> T1/phv/b/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 130.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 144.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/phv/m/n on input line 130.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/phv/m/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 130.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 144.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/ppl/m/it --> T1/phv/m/it on input line 130.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/ppl/b/it --> T1/phv/m/it on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 130.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 144.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 130.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 130.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 144.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/phv/m/n --> T1/phv/b/n on input line 130.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 144.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/phv/m/it --> T1/phv/b/it on input line 130.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/ppl/b/n on input line 130.
+(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/phv/b/n --> T1/phv/b/n on input line 130.
+(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/phv/m/n --> T1/phv/b/n on input line 130.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/phv/m/it --> T1/phv/b/it on input line 130.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 144.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 130.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 144.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 144.
+LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
+(Font)              `pureletters' in the math version `normal' on input line 14
+4.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 14
+4.
+LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
+(Font)              `pureletters' in the math version `bold' on input line 144.
+
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 14
+4.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
+ut line 144.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-
 basic-dictionary-English.dict
@@ -1995,132 +1959,108 @@ File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout5 = `Aula19Nova.bcf'.
+\openout5 = `Aula20.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Aula19Nova.bbl' found.
- (Aula19Nova.bbl)
-Package biblatex Info: Reference section=0 on input line 130.
-Package biblatex Info: Reference segment=0 on input line 130.
+Package biblatex Info: ... file 'Aula20.bbl' not found.
 
-Package pgfplots notification 'compat/show suggested version=true': you might b
-enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
+No file Aula20.bbl.
+Package biblatex Info: Reference section=0 on input line 144.
+Package biblatex Info: Reference segment=0 on input line 144.
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-130.
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
-File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
-)
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-130.
-
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
-File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
-)
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-130.
-
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
-File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 130
+LaTeX Font Info:    Trying to load font information for U+msa on input line 144
 .
-
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 130
+LaTeX Font Info:    Trying to load font information for U+msb on input line 144
 .
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-130.
+144.
 
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.fd
 File: uesvect.fd 
 )
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-130.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
+ut line 144.
 
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
-File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1math
+kerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
 )
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
-Package xypdf Info: Line width: 0.57599pt on input line 130.
+Package xypdf Info: Line width: 0.57597pt on input line 144.
 
-(Aula19Nova.nav)
+No file Aula20.nav.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-30.
-
+44.
 (C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 130.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 130.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 130.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 130.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 130.
-<figs/mylogo.png, id=15, 272.01625pt x 195.73125pt>
-File: figs/mylogo.png Graphic file (type png)
-<use figs/mylogo.png>
-Package pdftex.def Info: figs/mylogo.png  used on input line 133.
+<Figuras/mylogo.png, id=27, 272.01625pt x 195.73125pt>
+File: Figuras/mylogo.png Graphic file (type png)
+<use Figuras/mylogo.png>
+Package pdftex.def Info: Figuras/mylogo.png  used on input line 147.
 (pdftex.def)             Requested size: 56.9055pt x 40.94647pt.
-
-Overfull \vbox (69.74646pt too high) detected at line 133
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
-
- []
-
-
-Overfull \vbox (34.74834pt too high) detected at line 133
- []
 
 [1
 
-{C:/Users/fsbmat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/fsb
-mat/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figs/mylogo.p
-ng>] (Aula19Nova.toc) [2
+{C:/Users/fsbmat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Figuras/m
+ylogo.png>]
+No file Aula20.toc.
+[2
 
 ] [3
 
-] [4
-
 ]
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-79.
+\openout4 = `Aula20.vrb'.
 
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+ (Aula20.vrb
+<Figuras/Aula20-002.pdf, id=89, 433.62pt x 433.62pt>
+File: Figuras/Aula20-002.pdf Graphic file (type pdf)
+<use Figuras/Aula20-002.pdf>
+Package pdftex.def Info: Figuras/Aula20-002.pdf  used on input line 23.
+(pdftex.def)             Requested size: 213.90123pt x 213.90482pt.
 )
-[5
-
-]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 209.
-
-Overfull \vbox (63.21973pt too high) detected at line 209
+Overfull \vbox (15.28737pt too high) detected at line 186
  []
 
-[6
+[4
 
-] [7
+ <./Figuras/Aula20-002.pdf>]
+\openout4 = `Aula20.vrb'.
+
+ (Aula20.vrb
+<Figuras/Aula20-004.pdf, id=117, 433.62pt x 433.62pt>
+File: Figuras/Aula20-004.pdf Graphic file (type pdf)
+<use Figuras/Aula20-004.pdf>
+Package pdftex.def Info: Figuras/Aula20-004.pdf  used on input line 22.
+(pdftex.def)             Requested size: 213.90123pt x 213.90482pt.
+)
+Overfull \vbox (32.28737pt too high) detected at line 212
+ []
+
+[5
+
+ <./Figuras/Aula20-004.pdf>]
+\openout4 = `Aula20.vrb'.
+
+ (Aula20.vrb
+<Figuras/Aula20-006.pdf, id=144, 433.62pt x 433.62pt>
+File: Figuras/Aula20-006.pdf Graphic file (type pdf)
+<use Figuras/Aula20-006.pdf>
+Package pdftex.def Info: Figuras/Aula20-006.pdf  used on input line 20.
+(pdftex.def)             Requested size: 213.90123pt x 213.90482pt.
+) [6
+
+ <./Figuras/Aula20-006.pdf>]
+[7
 
 ] [8
 
@@ -2128,92 +2068,21 @@ Overfull \vbox (63.21973pt too high) detected at line 209
 
 ] [10
 
-]
-Overfull \vbox (6.83548pt too high) detected at line 288
- []
+] [11
 
-[11
+] [12
 
-]
-<figs/Intervalo.png, id=127, 325.215pt x 260.975pt>
-File: figs/Intervalo.png Graphic file (type png)
-<use figs/Intervalo.png>
-Package pdftex.def Info: figs/Intervalo.png  used on input line 298.
-(pdftex.def)             Requested size: 278.83578pt x 223.77309pt.
+] [13
 
-Overfull \vbox (9.60036pt too high) detected at line 298
- []
-
-[12
-
- <./figs/Intervalo.png (PNG copy)>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 301.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sigma' on input line 301.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 301.
-
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 21.61124pt on input line 301.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 301.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 21.61124pt on input line 301.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 301.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <20.74> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 301.
-[13
-
-]
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 317.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 317.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 317.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 317.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 317.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 317.
- [14
+] [14
 
 ] [15
 
-]
-Overfull \vbox (1.66202pt too high) detected at line 362
- []
-
-[16
+] [16
 
 ] [17
 
-]
-LaTeX Info: Symbol \textrightarrow not provided by
-            font family phv in TS1 encoding.
-            Default family used instead on input line 401.
-LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-401.
-
-(C:\Users\fsbmat\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmss.fd
-File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 18.00587pt on input line 401.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 18.00587pt on input line 401.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <17.28> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 401.
-
-[18
+] [18
 
 ] [19
 
@@ -2222,43 +2091,31 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <17.28> not available
 ] [21
 
 ]
-<figs/IC3.png, id=218, 505.89pt x 433.62pt>
-File: figs/IC3.png Graphic file (type png)
-<use figs/IC3.png>
-Package pdftex.def Info: figs/IC3.png  used on input line 459.
-(pdftex.def)             Requested size: 303.53633pt x 260.17401pt.
-
-Overfull \vbox (42.10486pt too high) detected at line 459
- []
+<Figuras/Margarina.jpeg, id=515, 642.4pt x 252.945pt>
+File: Figuras/Margarina.jpeg Graphic file (type jpg)
+<use Figuras/Margarina.jpeg>
+Package pdftex.def Info: Figuras/Margarina.jpeg  used on input line 315.
+(pdftex.def)             Requested size: 321.19922pt x 126.47218pt.
 
 [22
 
- <./figs/IC3.png>]
-Overfull \vbox (5.13492pt too high) detected at line 473
- []
+ <./Figuras/Margarina.jpeg>]
+<Figuras/Nicolas.jpeg, id=536, 642.4pt x 252.945pt>
+File: Figuras/Nicolas.jpeg Graphic file (type jpg)
+<use Figuras/Nicolas.jpeg>
+Package pdftex.def Info: Figuras/Nicolas.jpeg  used on input line 329.
+(pdftex.def)             Requested size: 321.19922pt x 126.47218pt.
+ [23
 
-[23
+ <./Figuras/Nicolas.jpeg>]
+<Figuras/Mucarela.jpeg, id=557, 642.4pt x 252.945pt>
+File: Figuras/Mucarela.jpeg Graphic file (type jpg)
+<use Figuras/Mucarela.jpeg>
+Package pdftex.def Info: Figuras/Mucarela.jpeg  used on input line 344.
+(pdftex.def)             Requested size: 321.19922pt x 126.47218pt.
+ [24
 
-]
-Overfull \vbox (0.23pt too high) detected at line 495
- []
-
-[24
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 500.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sigma' on input line 500.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 500.
-
-[25
+ <./Figuras/Mucarela.jpeg>] [25
 
 ] [26
 
@@ -2267,14 +2124,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ] [28
 
 ]
-<figs/ICtStudent.jpeg, id=279, 481.8pt x 411.03563pt>
-File: figs/ICtStudent.jpeg Graphic file (type jpg)
-<use figs/ICtStudent.jpeg>
-Package pdftex.def Info: figs/ICtStudent.jpeg  used on input line 562.
-(pdftex.def)             Requested size: 199.1693pt x 169.91177pt.
- [29
+Overfull \vbox (0.81487pt too high) detected at line 409
+ []
 
- <./figs/ICtStudent.jpeg>] [30
+[29
+
+]
+Overfull \vbox (0.81487pt too high) detected at line 409
+ []
+
+[30
 
 ] [31
 
@@ -2284,8 +2143,7 @@ Package pdftex.def Info: figs/ICtStudent.jpeg  used on input line 562.
 
 ] [34
 
-]
-[35
+] [35
 
 ] [36
 
@@ -2293,165 +2151,125 @@ Package pdftex.def Info: figs/ICtStudent.jpeg  used on input line 562.
 
 ] [38
 
-]
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 746.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 746.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7.6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 746.
-
-Overfull \vbox (7.98584pt too high) detected at line 746
- []
-
-[39
+] [39
 
 ] [40
 
 ] [41
 
+] [42
+
 ]
+\openout4 = `Aula20.vrb'.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 781.
+ (Aula20.vrb
+<Figuras/Aula20-008.pdf, id=988, 433.62pt x 433.62pt>
+File: Figuras/Aula20-008.pdf Graphic file (type pdf)
+<use Figuras/Aula20-008.pdf>
+Package pdftex.def Info: Figuras/Aula20-008.pdf  used on input line 20.
+(pdftex.def)             Requested size: 213.90123pt x 213.90482pt.
+)
+[43
 
+ <./Figuras/Aula20-008.pdf>]
+\openout4 = `Aula20.vrb'.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sigma' on input line 781.
+ (Aula20.vrb) [44
 
+]
+\openout4 = `Aula20.vrb'.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 781.
-
-[42
-
-] [43
-
-] [44
-
-] [45
+ (Aula20.vrb) [45
 
 ] [46
 
-] [47
-
 ]
+[47
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 871.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sigma' on input line 871.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 871.
-
-[48
+] [48
 
 ] [49
 
-]
-<figs/ICEmpirico.png, id=456, 481.8pt x 411.03563pt>
-File: figs/ICEmpirico.png Graphic file (type png)
-<use figs/ICEmpirico.png>
-Package pdftex.def Info: figs/ICEmpirico.png  used on input line 900.
-(pdftex.def)             Requested size: 278.83578pt x 237.88654pt.
+] [50
 
-Overfull \vbox (62.76427pt too high) detected at line 900
- []
-
-[50
-
- <./figs/ICEmpirico.png>] [51
+] [51
 
 ] [52
 
+] [53
+
+] [54
+
+] [55
+
+] [56
+
+] [57
+
 ]
-Overfull \vbox (0.37354pt too high) detected at line 967
+Underfull \hbox (badness 10000) in paragraph at lines 769--769
+
  []
 
-[53
+[58
+
+] [59
+
+] [60
+
+] [61
+
+] [62
+
+] [63
+
+] [64
+
+] [65
+
+] [66
 
 ]
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 1035.
 
-Overfull \hbox (7.2898pt too wide) in paragraph at lines 1035--1035
-[][][]\T1/phv/m/n/14.4 Morettin, P.A. e W.O Bus-sab (2023).[] \T1/phv/b/sl/14.4
- Es-ta-tís-tica bá-sica\T1/phv/b/n/14.4 .[] \T1/phv/m/n/12 10\TS1/phv/m/n/12 ª 
-\T1/phv/m/n/12 ed.
+LaTeX Warning: Citation 'Morettin09' undefined on input line 846.
+
+
+LaTeX Warning: Citation 'Apostila' undefined on input line 846.
+
+
+LaTeX Warning: Citation 'eric' undefined on input line 846.
+
+
+LaTeX Warning: Citation 'montgomery2016' undefined on input line 846.
+
+
+LaTeX Warning: Citation 'Bastos2025' undefined on input line 846.
+
+[67
+
+]
+
+LaTeX Warning: Empty bibliography on input line 852.
+
+
+Underfull \vbox (badness 1163) detected at line 852
  []
 
-[54
+[68
 
- <C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonarti
-cle.pdf>] [55
+])
+! Emergency stop.
+<*> ./Aula20.tex
+                
+*** (job aborted, no legal \end found)
 
-
-]
-\tf@nav=\write7
-\openout7 = `Aula19Nova.nav'.
-
-\tf@toc=\write8
-\openout8 = `Aula19Nova.toc'.
-
-\tf@snm=\write9
-\openout9 = `Aula19Nova.snm'.
-
-
-
-LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (54 not 55).
-               Rerun to correct this.
-
-(Aula19Nova.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
- ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
-Package logreq Info: Writing requests to 'Aula19Nova.run.xml'.
-\openout1 = `Aula19Nova.run.xml'.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 53964 strings out of 474486
- 1197271 string characters out of 5743283
- 2189069 words of memory out of 5000000
- 75078 multiletter control sequences out of 15000+600000
- 680940 words of font info for 240 fonts, out of 8000000 for 9000
+ 53205 strings out of 474486
+ 1183764 string characters out of 5743283
+ 2205688 words of memory out of 5000000
+ 74394 multiletter control sequences out of 15000+600000
+ 586218 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,17n,123p,3223b,1894s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\fsbmat\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ect
-t1200.pk> <C:\Users\fsbmat\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
-600\tcss1440.pk> <C:\Users\fsbmat\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
-/ec/dpi450\ectt0800.pk><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/fsbmat/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/fsbmat/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/fsbmat/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Use
-rs/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pf
-b><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/public/m
-athpazo/fplmr.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/mathpazo/fplmri.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/urw/helvetic/uhvb8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTeX/fon
-ts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/MiKTe
-X/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/fsbmat/AppData/Local/Programs/M
-iKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/fsbmat/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on Aula19Nova.pdf (55 pages, 381785 bytes).
-PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 124 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 128i,19n,123p,3219b,910s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
