@@ -1,0 +1,7 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Regressão Linear Simples}{3}{0}{1}
+\beamer@sectionintoc {2}{Coeficiente de Correlação}{25}{0}{2}
+\beamer@sectionintoc {3}{Modelo de Regressão}{34}{0}{3}
+\beamer@sectionintoc {4}{Estimação por Mínimos Quadrados}{52}{0}{4}
+\beamer@sectionintoc {5}{Teste de Hipótese para Regressão Linear Simples}{57}{0}{5}
+\beamer@sectionintoc {6}{Análise de Variância (ANOVA) para a Regressão Linear Simples}{60}{0}{6}

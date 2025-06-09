@@ -1,0 +1,201 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{Bastos2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2802275559c59ec8447df33c4e1784aa}{%
+           family={Bastos},
+           familyi={B\bibinitperiod},
+           given={Fernando\bibnamedelimb de\bibnamedelima Souza},
+           giveni={F\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{fullhash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{fullhashraw}{2802275559c59ec8447df33c4e1784aa}
+      \strng{bibnamehash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{authorbibnamehash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{authornamehash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{authorfullhash}{2802275559c59ec8447df33c4e1784aa}
+      \strng{authorfullhashraw}{2802275559c59ec8447df33c4e1784aa}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponível online: \url{https://ufvest.shinyapps.io/ApostilaInterativa/}}
+      \field{title}{Apostila Interativa}
+      \field{year}{2025}
+      \true{nocite}
+    \endentry
+    \entry{eric}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=02b107ba4c045c764057a3261a4aa312}{%
+           family={Ferreira},
+           familyi={F\bibinitperiod},
+           given={Eric\bibnamedelima Batista},
+           giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3dd8fb3c82cc8be9cad6be5a2ce48e54}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Marcelo\bibnamedelimb Silva\bibnamedelima de},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim d\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Editora Universidade Federal de Alfenas}%
+      }
+      \strng{namehash}{e0adca686017b329aea02baa8cbec85d}
+      \strng{fullhash}{e0adca686017b329aea02baa8cbec85d}
+      \strng{fullhashraw}{e0adca686017b329aea02baa8cbec85d}
+      \strng{bibnamehash}{e0adca686017b329aea02baa8cbec85d}
+      \strng{authorbibnamehash}{e0adca686017b329aea02baa8cbec85d}
+      \strng{authornamehash}{e0adca686017b329aea02baa8cbec85d}
+      \strng{authorfullhash}{e0adca686017b329aea02baa8cbec85d}
+      \strng{authorfullhashraw}{e0adca686017b329aea02baa8cbec85d}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introdução à Estatística com R}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.unifal-mg.edu.br/bibliotecas/wp-content/uploads/sites/125/2021/12/32-EBR_Unifal.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.unifal-mg.edu.br/bibliotecas/wp-content/uploads/sites/125/2021/12/32-EBR_Unifal.pdf
+      \endverb
+    \endentry
+    \entry{montgomery2016}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=715badfd1c8a22d771ef5233487a019d}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={D.\bibnamedelimi C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=45998111dd12ad7787110d28e2516e4f}{%
+           family={Runger},
+           familyi={R\bibinitperiod},
+           given={G.\bibnamedelimi C},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {São Paulo}%
+      }
+      \list{publisher}{1}{%
+        {Grupo Gen-LTC}%
+      }
+      \strng{namehash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{fullhash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{fullhashraw}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{bibnamehash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{authorbibnamehash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{authornamehash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{authorfullhash}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \strng{authorfullhashraw}{86b322212a3f6c3ead4b9d5da5fd65a8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6}
+      \field{title}{Estatística Aplicada E Probabilidade Para Engenheiros.}
+      \field{year}{2016}
+      \true{nocite}
+    \endentry
+    \entry{Morettin09}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=142c7fc1886fe33fde341f7ef2a5274b}{%
+           family={Morettin},
+           familyi={M\bibinitperiod},
+           given={P.A.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=baad1723fa25882fca0572a0b9bc49b2}{%
+           family={Bussab},
+           familyi={B\bibinitperiod},
+           given={W.O},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {São Paulo}%
+      }
+      \list{publisher}{1}{%
+        {Editora Saraiva}%
+      }
+      \strng{namehash}{775043f2fa37b654211bf563adc82e77}
+      \strng{fullhash}{775043f2fa37b654211bf563adc82e77}
+      \strng{fullhashraw}{775043f2fa37b654211bf563adc82e77}
+      \strng{bibnamehash}{775043f2fa37b654211bf563adc82e77}
+      \strng{authorbibnamehash}{775043f2fa37b654211bf563adc82e77}
+      \strng{authornamehash}{775043f2fa37b654211bf563adc82e77}
+      \strng{authorfullhash}{775043f2fa37b654211bf563adc82e77}
+      \strng{authorfullhashraw}{775043f2fa37b654211bf563adc82e77}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10}
+      \field{title}{Estatística básica}
+      \field{year}{2023}
+      \true{nocite}
+    \endentry
+    \entry{Apostila}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=622c698282c67ad16d20f293d69d96b1}{%
+           family={Peternelli},
+           familyi={P\bibinitperiod},
+           given={Luiz\bibnamedelima Alexandre},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{fullhash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{fullhashraw}{622c698282c67ad16d20f293d69d96b1}
+      \strng{bibnamehash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{authorbibnamehash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{authornamehash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{authorfullhash}{622c698282c67ad16d20f293d69d96b1}
+      \strng{authorfullhashraw}{622c698282c67ad16d20f293d69d96b1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Formato slide Disponível no PVANet - Moodle}
+      \field{title}{Apostila (EST 106)}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
